@@ -28,7 +28,6 @@ Name  | Type | Description
 
 - [Moobile.ScrollView](View/ScrollView.md) This scroll view.
 
-
 -----
 
 ### scrollToPage(pageX, pageY, time)
@@ -45,8 +44,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
-
+- [Moobile.ScrollView](View/ScrollView.md) This scroll view.
 
 -----
 
@@ -63,8 +61,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
-
+- [Moobile.ScrollView](View/ScrollView.md) This scroll view.
 
 -----
 
@@ -120,7 +117,6 @@ The element that wraps the content and make it scrollable.
 The class options.
 
 -----
-
 
 Events {#events}
 --------------------------------------------------------------------------------
