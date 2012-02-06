@@ -4,10 +4,10 @@ Moobile.Control
 
 Provides the base class for controls.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setDisabled(value)
@@ -200,7 +200,7 @@ state.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### Boolean disabled
@@ -240,5 +240,5 @@ The control options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

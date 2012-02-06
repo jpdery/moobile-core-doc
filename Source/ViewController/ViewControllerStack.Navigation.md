@@ -5,14 +5,14 @@ Moobile.ViewControllerStack.Navigation
 Provides a view controller stack that also handles a navigation bar
        and its back button.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### Object options
@@ -22,5 +22,5 @@ The class options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

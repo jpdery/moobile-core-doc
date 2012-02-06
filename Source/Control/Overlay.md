@@ -4,10 +4,10 @@ Moobile.Moobile.Overlay
 
 Provides an overlay control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### showAnimated()
@@ -40,9 +40,9 @@ customize the animation.
 
 -----
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

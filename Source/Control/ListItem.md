@@ -4,10 +4,10 @@ Moobile.ListItem
 
 Provides a list item control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setImage(image)
@@ -88,7 +88,7 @@ Returns the detail label.
 
 -----
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### *[Moobile.Image](Control/Image.md)* image
@@ -107,5 +107,5 @@ The label.
 
 The detail label.
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

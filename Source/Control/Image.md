@@ -4,10 +4,10 @@ Moobile.Image
 
 Provides an image control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setSource(source)
@@ -46,7 +46,7 @@ element if this image's element is an `img`.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### The class options. options
@@ -56,5 +56,5 @@ Members
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

@@ -5,10 +5,10 @@ Moobile.ScrollView
 Provides supports for displaying content that is larger tha this view
        size.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### scrollTo(x, y, time)
@@ -99,7 +99,7 @@ This method will return the content's size as an object with two keys,
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [Scroller](Docs/Scroller/Scroller.md) scroller
@@ -121,5 +121,5 @@ The class options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

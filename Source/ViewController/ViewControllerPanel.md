@@ -4,10 +4,10 @@ Moobile.ViewControllerPanel
 
 Provides an object used to manage a view panel.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setMainViewController(mainViewController)
@@ -79,7 +79,7 @@ Returns the side view controller.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [ViewController](Docs/ViewController/ViewController.md) mainViewController
@@ -95,5 +95,5 @@ The side view controller.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

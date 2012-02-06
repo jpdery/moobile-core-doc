@@ -5,10 +5,10 @@ Moobile.View
 Provides an entity that handles an area in which a user can
        interract.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### enableTouch()
@@ -250,7 +250,7 @@ Name  | Type | Description
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [ViewContent](Docs/View/ViewContent.md) content
@@ -266,5 +266,5 @@ The view that owns this view.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

@@ -4,10 +4,10 @@ Moobile.WindowController
 
 Provides a view controller that manages a window.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setRootViewController(rootViewController)
@@ -50,7 +50,7 @@ will destroy the existing one.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [ViewController](Docs/ViewController/ViewController.md) rootViewController
@@ -60,5 +60,5 @@ The root view controller.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

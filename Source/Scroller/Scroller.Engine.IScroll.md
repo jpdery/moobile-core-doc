@@ -4,10 +4,10 @@ Moobile.Scroller.Engine.IScroll
 
 Provides an engine that uses the iScroll scroller.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### initialize(content, options)
@@ -138,9 +138,9 @@ This method will return the content's size as an object with two keys,
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

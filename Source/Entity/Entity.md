@@ -5,10 +5,10 @@ Moobile.Entity
 
 Provides the base class for objects that encapsulates a DOM element.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### initialize(element, options, name)
@@ -593,7 +593,7 @@ the end of your implementation.
 
 - *[Moobile.Entity](Entity/Entity.md)* This entity.
 
-Static Methods
+Static Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### Moobile.Entity.fromElement(element, property, type)
@@ -642,7 +642,7 @@ Name     | Type                                 | Description
 
 -----
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### *Object* style
@@ -691,5 +691,5 @@ Whether this entity is ready.
 
 The class options.
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

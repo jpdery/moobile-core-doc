@@ -4,10 +4,10 @@ Moobile.ButtonGroup
 
 Provides a button group control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setSelectedButton(selectedButton)
@@ -141,7 +141,7 @@ Removes all buttons.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [Button](Control/Button.md) selectedButton
@@ -163,5 +163,5 @@ The class options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

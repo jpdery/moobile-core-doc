@@ -4,10 +4,10 @@ Moobile.ViewPanel
 
 Provides a view that handles a panel with two panes.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### getSidePanel()
@@ -41,9 +41,9 @@ then the main panel element.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

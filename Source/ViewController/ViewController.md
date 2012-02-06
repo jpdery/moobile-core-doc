@@ -4,10 +4,10 @@ Moobile.ViewController
 
 Provides a controller used to manage a view.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### initialize(options, name)
@@ -739,7 +739,7 @@ the end of your implementation.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### String name
@@ -827,5 +827,5 @@ The child view controllers.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

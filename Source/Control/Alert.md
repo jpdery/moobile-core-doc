@@ -4,10 +4,10 @@ Moobile.Alert
 
 Provides a modal alert control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setTitle(title)
@@ -104,7 +104,7 @@ Hides the overlay with an animation by adding the `hide-animated` CSS class to t
 
 -----
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### *[Moobile.Text](Control/Text.md)* title
@@ -155,7 +155,7 @@ The alert overlay.
 
 -----
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------
 
 ### buttonclick

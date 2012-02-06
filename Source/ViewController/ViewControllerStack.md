@@ -4,10 +4,10 @@ Moobile.ViewControllerStack
 
 Provides a controller that manages a view stack.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### pushViewController(viewController, viewTransition)
@@ -165,7 +165,7 @@ Name  | Type | Description
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### Boolean inTransition
@@ -181,5 +181,5 @@ The top view controller.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

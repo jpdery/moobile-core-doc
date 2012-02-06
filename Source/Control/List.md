@@ -4,10 +4,10 @@ Moobile.List
 
 Provides a list control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setSelectedItem(selectedItem)
@@ -141,7 +141,7 @@ Removes all buttons.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [ListItem](Docs/Control/ListItem.md) selectedItem
@@ -163,5 +163,5 @@ The class options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

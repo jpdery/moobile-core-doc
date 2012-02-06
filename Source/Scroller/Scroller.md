@@ -4,10 +4,10 @@ Moobile.Scroller
 
 Provides the class that wraps a scroller engine.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### initialize(content, options)
@@ -220,7 +220,7 @@ Returns the wrapper element.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [Scroller.Engine](Docs/Scroller/Scroller.Engine.md) engine
@@ -272,5 +272,5 @@ The class options.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

@@ -4,10 +4,10 @@ Moobile.Bar
 
 Provides a bar control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setItem(item)
@@ -37,7 +37,7 @@ images and so on in a bar control.
 
 - *[Moobile.BarItem](Docs/Control/BarItem.md)* The bar item.
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### *[Moobile.BarItem](Docs/Control/BarItem.md)* item

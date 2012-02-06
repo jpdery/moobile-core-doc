@@ -4,17 +4,17 @@ Moobile.ActivityIndicator
 
 Provides an activity indicator control.
 
-Initialization
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 #### Syntax
 
 	var activityIndicator = new Moobile.ActivityIndicator([element], [events], [options]);
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
-### start()
+### start() {#start}
 
 Starts the indicator animation by adding the `activity` CSS class to the element. Update the properties of this CSS class to customize the animation.
 
@@ -24,7 +24,7 @@ Starts the indicator animation by adding the `activity` CSS class to the element
 
 -----
 
-### stop()
+### stop() {#stop}
 
 Stops the indicator animation by removing the `activity` CSS class to the element. Update the properties of this CSS class to customize the animation.
 
@@ -32,10 +32,10 @@ Stops the indicator animation by removing the `activity` CSS class to the elemen
 
 - *[Moobile.ActivityIndicator](Control/ActivityIndicator.md)* This activity indicator.
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------
 
-Styles
+Styles {#styles}
 --------------------------------------------------------------------------------
 
 This element does not have any perticular styles.

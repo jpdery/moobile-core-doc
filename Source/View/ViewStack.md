@@ -5,16 +5,16 @@ Moobile.ViewStack
 Provides a view that handles an infinite number of views arrenged as
        a stack, one on the top of each others.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
---------------------------------------------------------------------------------
-
-
-Members
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 
-Events
+Members {#members}
+--------------------------------------------------------------------------------
+
+
+Events {#events}
 --------------------------------------------------------------------------------

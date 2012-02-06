@@ -4,10 +4,10 @@ Moobile.Button
 
 Provides a button control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setLabel(label)
@@ -44,7 +44,7 @@ Returns the label.
 -----
 
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [Moobile.Text](Control/Text.md) label
@@ -54,5 +54,5 @@ This button's label.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

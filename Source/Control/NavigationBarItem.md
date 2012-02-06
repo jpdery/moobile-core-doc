@@ -4,7 +4,7 @@ Moobile.NavigationBarItem
 
 Provides a navigation bar item control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
 **Creates the element**
@@ -13,7 +13,7 @@ Initialization
 		<div class="title"></div>
 	</div>
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setTitle(title)
@@ -98,7 +98,7 @@ Removes all bar buttons.
 
 -----
 
-Members
+Members {#members}
 --------------------------------------------------------------------------------
 
 ### [Moobile.Text](Control/Text.md) title
@@ -108,5 +108,5 @@ The title.
 -----
 
 
-Events
+Events {#events}
 --------------------------------------------------------------------------------

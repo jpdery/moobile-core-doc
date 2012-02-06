@@ -4,14 +4,14 @@ Moobile.Text
 
 Provides a text control.
 
-Initialization
+Initialization {#initialiation}
 --------------------------------------------------------------------------------
 
 #### Syntax
 
 	var myText = new Moobile.Text([element], [options], [name]);
 
-Methods
+Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setText(text)
