@@ -1,0 +1,48 @@
+Moobile.Moobile.Overlay
+================================================================================
+##### Extends *[Moobile.Control](Docs/Control/Control.md)*
+
+Provides an overlay control.
+
+Initialization
+--------------------------------------------------------------------------------
+
+Methods
+--------------------------------------------------------------------------------
+
+### showAnimated()
+
+Shows the overlay with an animation.
+
+This method will show the overlay by adding the `show-animated` CSS
+class to the element. Update the properties of this CSS class to
+customize the animation.
+
+
+#### Returns:
+
+- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+
+-----
+
+### hideAnimated()
+
+Hides the overlay with an animation.
+
+This method will hide the overlay by adding the `hide-animated` CSS
+class to the element. Update the properties of this CSS class to
+customize the animation.
+
+
+#### Returns:
+
+- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+
+-----
+
+Members
+--------------------------------------------------------------------------------
+
+
+Events
+--------------------------------------------------------------------------------

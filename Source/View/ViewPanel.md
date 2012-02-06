@@ -1,0 +1,49 @@
+Moobile.ViewPanel
+================================================================================
+##### Extends [View](Docs/View/View.md), Implements `Events`, `Options`, `Class.Binds`
+
+Provides a view that handles a panel with two panes.
+
+Initialization
+--------------------------------------------------------------------------------
+
+Methods
+--------------------------------------------------------------------------------
+
+### getSidePanel()
+
+Returns the side panel.
+
+This method is a conveniant shortcut that retrieves the view content
+then the side panel element.
+
+
+#### Returns:
+
+- Element The side panel.
+
+
+-----
+
+### getMainPanel()
+
+Returns the main panel.
+
+This method is a conveniant shortcut that retrieves the view content
+then the main panel element.
+
+
+#### Returns:
+
+- Element The main panel.
+
+
+-----
+
+
+Members
+--------------------------------------------------------------------------------
+
+
+Events
+--------------------------------------------------------------------------------
