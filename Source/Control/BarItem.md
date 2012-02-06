@@ -5,7 +5,7 @@ Moobile.BarItem
 
 Provides a bar item control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

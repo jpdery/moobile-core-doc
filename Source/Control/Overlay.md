@@ -5,7 +5,7 @@ Moobile.Overlay
 
 Provides an overlay control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

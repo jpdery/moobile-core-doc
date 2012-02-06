@@ -5,7 +5,7 @@ Moobile.ButtonGroup
 
 Provides a button group control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

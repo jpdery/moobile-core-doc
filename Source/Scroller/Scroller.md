@@ -5,7 +5,7 @@ Moobile.Scroller
 
 Provides the class that wraps a scroller engine.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

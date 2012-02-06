@@ -5,7 +5,7 @@ Moobile.NavigationBar
 
 Provides a navigation bar control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

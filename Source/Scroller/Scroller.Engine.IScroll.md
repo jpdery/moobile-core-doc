@@ -5,7 +5,7 @@ Moobile.Scroller.Engine.IScroll
 
 Provides an engine that uses the iScroll scroller.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

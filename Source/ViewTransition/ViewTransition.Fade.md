@@ -5,7 +5,7 @@ Moobile.ViewTransition.Fade
 
 Provides a transition that fade under the current view.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

@@ -5,7 +5,7 @@ Moobile.Text
 
 Provides a text control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 #### Syntax

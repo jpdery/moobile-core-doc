@@ -5,7 +5,7 @@ Moobile.Bar
 
 Provides a bar control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

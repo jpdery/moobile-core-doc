@@ -5,7 +5,7 @@ Moobile.Scroller.Engine.Native
 
 Provides an engine that uses the native scroller overflow.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

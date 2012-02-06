@@ -5,7 +5,7 @@ Moobile.WindowController
 
 Provides a view controller that manages a window.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

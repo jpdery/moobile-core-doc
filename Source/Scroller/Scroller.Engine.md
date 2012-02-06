@@ -5,7 +5,7 @@ Moobile.Scroller.Engine
 
 Provides the base class for scroller engine.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

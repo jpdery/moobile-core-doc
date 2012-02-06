@@ -5,7 +5,7 @@ Moobile.Control
 
 Provides the base class for controls.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

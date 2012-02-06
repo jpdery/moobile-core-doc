@@ -5,7 +5,7 @@ Moobile.ViewControllerPanel
 
 Provides an object used to manage a view panel.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

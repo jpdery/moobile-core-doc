@@ -5,7 +5,7 @@ Moobile.ViewTransition.None
 
 Provide a non-animated view transition.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

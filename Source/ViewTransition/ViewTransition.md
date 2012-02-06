@@ -5,7 +5,7 @@ Moobile.ViewTransition
 
 Provides the base class for view transitions.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

@@ -5,7 +5,7 @@ Moobile.Alert
 
 Provides a modal alert control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

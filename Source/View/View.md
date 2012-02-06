@@ -6,7 +6,7 @@ Moobile.View
 Provides an entity that handles an area in which a user can
        interract.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

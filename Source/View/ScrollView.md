@@ -6,7 +6,7 @@ Moobile.ScrollView
 Provides supports for displaying content that is larger tha this view
        size.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

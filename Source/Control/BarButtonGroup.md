@@ -5,7 +5,7 @@ Moobile.BarButtonGroup
 
 Provides a bar button group control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

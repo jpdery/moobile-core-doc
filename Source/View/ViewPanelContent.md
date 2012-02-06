@@ -5,7 +5,7 @@ Moobile.ViewPanelContent
 
 Provides an entity that manages the content of a view panel.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

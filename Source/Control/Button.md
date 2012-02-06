@@ -5,7 +5,7 @@ Moobile.Button
 
 Provides a button control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

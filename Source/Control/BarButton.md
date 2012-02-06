@@ -5,7 +5,7 @@ Moobile.BarButton
 
 Provides a bar button control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

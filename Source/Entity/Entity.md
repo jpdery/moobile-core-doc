@@ -5,7 +5,7 @@ Moobile.Entity
 
 Provides the base class for objects that encapsulates a DOM element.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

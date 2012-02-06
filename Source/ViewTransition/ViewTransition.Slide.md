@@ -5,7 +5,7 @@ Moobile.ViewTransition.Slide
 
 Provide an horizontal slide view transition effect.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

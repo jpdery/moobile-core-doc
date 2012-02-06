@@ -5,7 +5,7 @@ Moobile.List
 
 Provides a list control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

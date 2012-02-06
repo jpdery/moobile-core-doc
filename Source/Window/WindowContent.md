@@ -5,7 +5,7 @@ Moobile.WindowContent
 
 Provides an entity that manages the content of a window.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

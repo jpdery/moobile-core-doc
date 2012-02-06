@@ -5,7 +5,7 @@ Moobile.ViewTransition.Cubic
 
 Provide a cubic view transition.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

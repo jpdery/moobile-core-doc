@@ -5,7 +5,7 @@ Moobile.ViewTransition.Flip
 
 Provides a transition that flips the current view.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

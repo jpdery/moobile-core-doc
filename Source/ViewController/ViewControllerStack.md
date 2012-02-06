@@ -5,7 +5,7 @@ Moobile.ViewControllerStack
 
 Provides a controller that manages a view stack.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

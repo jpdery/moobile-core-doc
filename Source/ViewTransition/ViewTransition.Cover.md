@@ -5,7 +5,7 @@ Moobile.ViewTransition.Cover
 
 Provides a view transition that covers the current view.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

@@ -5,7 +5,7 @@ Moobile.ViewContent
 
 Provides an entity that manages the content of a view.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

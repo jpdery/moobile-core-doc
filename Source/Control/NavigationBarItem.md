@@ -5,7 +5,7 @@ Moobile.NavigationBarItem
 
 Provides a navigation bar item control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 **Creates the element**

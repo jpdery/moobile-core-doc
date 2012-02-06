@@ -5,7 +5,7 @@ Moobile.ViewController
 
 Provides a controller used to manage a view.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

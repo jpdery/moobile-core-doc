@@ -5,7 +5,7 @@ Moobile.ListItem
 
 Provides a list item control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

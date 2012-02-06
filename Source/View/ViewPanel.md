@@ -5,7 +5,7 @@ Moobile.ViewPanel
 
 Provides a view that handles a panel with two panes.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

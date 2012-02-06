@@ -5,7 +5,7 @@ Moobile.Slider
 
 Provides a slider control.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

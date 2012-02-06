@@ -5,7 +5,7 @@ Moobile.ViewStackContent
 
 Provides an entity that manages the content of a view stack.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}

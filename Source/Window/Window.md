@@ -5,7 +5,7 @@ Moobile.Window
 
 Provides the root view of the entire view hierarchy.
 
-Initialization {#initialiation}
+Initialization {#initialization}
 --------------------------------------------------------------------------------
 
 Methods {#methods}
