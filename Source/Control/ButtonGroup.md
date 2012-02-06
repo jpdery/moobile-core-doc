@@ -1,6 +1,7 @@
 Moobile.ButtonGroup
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*, Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides a button group control.
 
@@ -27,7 +28,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ButtonGroup](Docs/Control/ButtonGroup.md) This button group.
+- [ButtonGroup](Control/ButtonGroup.md) This button group.
 
 
 -----
@@ -61,7 +62,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ButtonGroup](Docs/Control/ButtonGroup.md) This button group.
+- [ButtonGroup](Control/ButtonGroup.md) This button group.
 
 
 -----
@@ -86,7 +87,7 @@ Clear the selected button.
 
 #### Returns:
 
-- [ButtonGroup](Docs/Control/ButtonGroup.md) This button group.
+- [ButtonGroup](Control/ButtonGroup.md) This button group.
 
 
 -----

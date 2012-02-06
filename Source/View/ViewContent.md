@@ -1,6 +1,7 @@
 Moobile.ViewContent
 ================================================================================
-##### Extends [Moobile.Entity](Entity/Entity.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [Moobile.Entity](Entity/Entity.md)
 
 Provides an entity that manages the content of a view.
 

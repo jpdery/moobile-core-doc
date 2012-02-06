@@ -1,6 +1,7 @@
 Moobile.ViewControllerStack
 ================================================================================
-##### Extends [ViewController](Docs/ViewController/ViewController.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewController](ViewController/ViewController.md)
 
 Provides a controller that manages a view stack.
 
@@ -23,12 +24,12 @@ view controller will be popped.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
 `viewTransition` *Optional* | viewTransition | The view transition.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) This view controller.
+- [ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -44,7 +45,7 @@ controller once the transition finishes.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) This view controller.
+- [ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -61,11 +62,11 @@ finishes.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller to pop to.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller to pop to.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) This view controller.
+- [ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -77,7 +78,7 @@ Returns the top view controller.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) The top view controller.
+- [ViewController](ViewController/ViewController.md) The top view controller.
 
 
 -----
@@ -108,7 +109,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -125,7 +126,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -142,7 +143,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -159,7 +160,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -174,7 +175,7 @@ Whether a child view is in a transition.
 
 -----
 
-### [ViewController](Docs/ViewController/ViewController.md) topViewController
+### [ViewController](ViewController/ViewController.md) topViewController
 
 The top view controller.
 

@@ -1,6 +1,7 @@
 Moobile.BarButtonGroup
 ================================================================================
-##### Extends [ButtonGroup](Docs/Control/ButtonGroup.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ButtonGroup](Control/ButtonGroup.md)
 
 Provides a bar button group control.
 

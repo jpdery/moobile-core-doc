@@ -1,6 +1,7 @@
 Moobile.ScrollView
 ================================================================================
-##### Extends [View](Docs/View/View.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [View](View/View.md)
 
 Provides supports for displaying content that is larger tha this view
        size.
@@ -25,7 +26,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ScrollView](Docs/View/ScrollView.md) This scroll view.
+- [ScrollView](View/ScrollView.md) This scroll view.
 
 
 -----
@@ -44,7 +45,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -62,7 +63,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -102,7 +103,7 @@ This method will return the content's size as an object with two keys,
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Scroller](Docs/Scroller/Scroller.md) scroller
+### [Scroller](Scroller/Scroller.md) scroller
 
 The scroller.
 

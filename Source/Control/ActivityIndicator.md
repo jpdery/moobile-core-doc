@@ -1,5 +1,6 @@
 Moobile.ActivityIndicator
 ================================================================================
+
 ##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides an activity indicator control.

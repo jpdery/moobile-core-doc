@@ -1,6 +1,7 @@
 Moobile.WindowController
 ================================================================================
-##### Extends [ViewController](Docs/ViewController/ViewController.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewController](ViewController/ViewController.md)
 
 Provides a view controller that manages a window.
 
@@ -23,11 +24,11 @@ existing one will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`rootViewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The root view controller.
+`rootViewController` *Optional* | [ViewController](ViewController/ViewController.md) | The root view controller.
 
 #### Returns:
 
-- [WindowController](Docs/Window/WindowController.md) This window controller.
+- [WindowController](Window/WindowController.md) This window controller.
 
 
 -----
@@ -44,7 +45,7 @@ will destroy the existing one.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) The root view controller.
+- [ViewController](ViewController/ViewController.md) The root view controller.
 
 
 -----
@@ -53,7 +54,7 @@ will destroy the existing one.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ViewController](Docs/ViewController/ViewController.md) rootViewController
+### [ViewController](ViewController/ViewController.md) rootViewController
 
 The root view controller.
 

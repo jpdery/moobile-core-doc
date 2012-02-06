@@ -1,6 +1,7 @@
 Moobile.Slider
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides a slider control.
 

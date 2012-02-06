@@ -1,6 +1,7 @@
 Moobile.Window
 ================================================================================
-##### Extends [View](Docs/View/View.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [View](View/View.md)
 
 Provides the root view of the entire view hierarchy.
 

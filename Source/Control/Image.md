@@ -1,6 +1,7 @@
 Moobile.Image
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*, Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides an image control.
 

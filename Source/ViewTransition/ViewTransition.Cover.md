@@ -1,6 +1,7 @@
 Moobile.ViewTransition.Cover
 ================================================================================
-##### Extends [ViewTransition](Docs/ViewTransition/ViewTransition.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
 
 Provides a view transition that covers the current view.
 

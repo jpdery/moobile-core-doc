@@ -1,6 +1,7 @@
 Moobile.ViewPanelContent
 ================================================================================
-##### Extends [ViewContent](Docs/View/ViewContent.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewContent](View/ViewContent.md)
 
 Provides an entity that manages the content of a view panel.
 

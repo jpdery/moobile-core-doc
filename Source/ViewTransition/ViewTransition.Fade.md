@@ -1,6 +1,7 @@
 Moobile.ViewTransition.Fade
 ================================================================================
-##### Extends [ViewTransition](Docs/ViewTransition/ViewTransition.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
 
 Provides a transition that fade under the current view.
 

@@ -1,6 +1,7 @@
 Moobile.Scroller.Engine
 ================================================================================
-##### Extends , Implements `Events`, `Options`, `Class.Binds`
+
+##### Implements *Events*, *Options*, *Class.Binds*
 
 Provides the base class for scroller engine.
 
@@ -37,7 +38,7 @@ element.
 
 #### Returns:
 
-- [Scroller.Engine](Docs/Scroller/Scroller.Engine.md) This scroller engine.
+- [Scroller.Engine](Scroller/Scroller.Engine.md) This scroller engine.
 
 
 -----
@@ -56,7 +57,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller.Engine](Docs/Scroller/Scroller.Engine.md) This scroller engine.
+- [Scroller.Engine](Scroller/Scroller.Engine.md) This scroller engine.
 
 
 -----
@@ -74,7 +75,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller.Engine](Docs/Scroller/Scroller.Engine.md) This scroller engine.
+- [Scroller.Engine](Scroller/Scroller.Engine.md) This scroller engine.
 
 
 -----
@@ -86,7 +87,7 @@ Refreshes this scroller engine.
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----

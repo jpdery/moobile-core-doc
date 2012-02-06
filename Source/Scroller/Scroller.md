@@ -1,6 +1,7 @@
 Moobile.Scroller
 ================================================================================
-##### Extends , Implements `Events`, `Options`, `Class.Binds`
+
+##### Implements *Events*, *Options*, *Class.Binds*
 
 Provides the class that wraps a scroller engine.
 
@@ -41,7 +42,7 @@ will not be removed upon destruction as the content wrapper will.
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -60,7 +61,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -79,7 +80,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -97,7 +98,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -113,7 +114,7 @@ when the `snapToPage` option is enabled.
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -128,7 +129,7 @@ implementation of the `refresh` method.
 
 #### Returns:
 
-- [Scroller](Docs/Scroller/Scroller.md) This scroller.
+- [Scroller](Scroller/Scroller.md) This scroller.
 
 
 -----
@@ -223,7 +224,7 @@ Returns the wrapper element.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Scroller.Engine](Docs/Scroller/Scroller.Engine.md) engine
+### [Scroller.Engine](Scroller/Scroller.Engine.md) engine
 
 The engine.
 

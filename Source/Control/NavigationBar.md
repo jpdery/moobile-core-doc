@@ -1,6 +1,7 @@
 Moobile.NavigationBar
 ================================================================================
-##### Extends [Bar](Docs/Control/Bar.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [Bar](Control/Bar.md)
 
 Provides a navigation bar control.
 

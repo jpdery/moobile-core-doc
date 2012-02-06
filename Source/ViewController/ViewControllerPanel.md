@@ -1,6 +1,7 @@
 Moobile.ViewControllerPanel
 ================================================================================
-##### Extends [ViewController](Docs/ViewController/ViewController.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewController](ViewController/ViewController.md)
 
 Provides an object used to manage a view panel.
 
@@ -23,11 +24,11 @@ will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`mainViewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The main view controller.
+`mainViewController` *Optional* | [ViewController](ViewController/ViewController.md) | The main view controller.
 
 #### Returns:
 
-- [ViewControllerPanel](Docs/ViewController/ViewControllerPanel.md) This view controller panel.
+- [ViewControllerPanel](ViewController/ViewControllerPanel.md) This view controller panel.
 
 
 -----
@@ -39,7 +40,7 @@ Returns the main view controller.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) The main view controller.
+- [ViewController](ViewController/ViewController.md) The main view controller.
 
 
 -----
@@ -57,11 +58,11 @@ will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`sideViewController` *Optional* | [ViewController](Docs/ViewController/ViewController.md) | The side view controller.
+`sideViewController` *Optional* | [ViewController](ViewController/ViewController.md) | The side view controller.
 
 #### Returns:
 
-- [ViewControllerPanel](Docs/ViewController/ViewControllerPanel.md) This view controller panel.
+- [ViewControllerPanel](ViewController/ViewControllerPanel.md) This view controller panel.
 
 
 -----
@@ -73,7 +74,7 @@ Returns the side view controller.
 
 #### Returns:
 
-- [ViewController](Docs/ViewController/ViewController.md) The side view controller.
+- [ViewController](ViewController/ViewController.md) The side view controller.
 
 
 -----
@@ -82,13 +83,13 @@ Returns the side view controller.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ViewController](Docs/ViewController/ViewController.md) mainViewController
+### [ViewController](ViewController/ViewController.md) mainViewController
 
 The main view controller.
 
 -----
 
-### [ViewController](Docs/ViewController/ViewController.md) sideViewController
+### [ViewController](ViewController/ViewController.md) sideViewController
 
 The side view controller.
 

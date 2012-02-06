@@ -1,6 +1,7 @@
 Moobile.Moobile.Overlay
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides an overlay control.
 
@@ -21,7 +22,7 @@ customize the animation.
 
 #### Returns:
 
-- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
@@ -36,7 +37,7 @@ customize the animation.
 
 #### Returns:
 
-- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
 
 -----
 

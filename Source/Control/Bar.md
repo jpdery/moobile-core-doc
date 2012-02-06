@@ -1,6 +1,7 @@
 Moobile.Bar
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides a bar control.
 
@@ -18,11 +19,11 @@ Sets the bar item.
 
 Name   | Type                                | Description
 ------ | ----------------------------------- | -----------
-`item` | [Moobile.BarItem](Docs/Control/BarItem.md) | The bar item.
+`item` | [Moobile.BarItem](Control/BarItem.md) | The bar item.
 
 #### Returns:
 
-- *[Bar](Docs/Control/Bar.md)* This bar.
+- *[Bar](Control/Bar.md)* This bar.
 
 -----
 
@@ -35,11 +36,11 @@ images and so on in a bar control.
 
 #### Returns:
 
-- *[Moobile.BarItem](Docs/Control/BarItem.md)* The bar item.
+- *[Moobile.BarItem](Control/BarItem.md)* The bar item.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *[Moobile.BarItem](Docs/Control/BarItem.md)* item
+### *[Moobile.BarItem](Control/BarItem.md)* item
 
 The bar item.

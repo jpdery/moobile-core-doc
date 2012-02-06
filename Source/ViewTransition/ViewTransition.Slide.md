@@ -1,6 +1,7 @@
 Moobile.ViewTransition.Slide
 ================================================================================
-##### Extends [ViewTransition](Docs/ViewTransition/ViewTransition.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
 
 Provide an horizontal slide view transition effect.
 

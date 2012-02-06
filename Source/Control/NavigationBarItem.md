@@ -1,6 +1,7 @@
 Moobile.NavigationBarItem
 ================================================================================
-##### Extends *[Moobile.BarItem](Docs/Control/BarItem.md)*
+
+##### Extends *[Moobile.BarItem](Control/BarItem.md)*
 
 Provides a navigation bar item control.
 

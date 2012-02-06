@@ -1,6 +1,7 @@
 Moobile.ListItem
 ================================================================================
-##### Extends *[Moobile.Control](Docs/Control/Control.md)*, Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides a list item control.
 
@@ -22,7 +23,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[ListItem](Docs/Control/ListItem.md)* This list item.
+- *[ListItem](Control/ListItem.md)* This list item.
 
 -----
 
@@ -48,7 +49,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[ListItem](Docs/Control/ListItem.md)* This list item.
+- *[ListItem](Control/ListItem.md)* This list item.
 
 -----
 
@@ -74,7 +75,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[ListItem](Docs/Control/ListItem.md)* This list item.
+- *[ListItem](Control/ListItem.md)* This list item.
 
 -----
 

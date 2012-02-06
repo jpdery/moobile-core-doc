@@ -1,6 +1,7 @@
 Moobile.ViewTransition.Cubic
 ================================================================================
-##### Extends [ViewTransition](Docs/ViewTransition/ViewTransition.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
 
 Provide a cubic view transition.
 

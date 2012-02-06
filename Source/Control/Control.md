@@ -1,6 +1,7 @@
 Moobile.Control
 ================================================================================
-##### Extends *[Moobile.Entity](Entity/Entity.md)*, Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends *[Moobile.Entity](Entity/Entity.md)*
 
 Provides the base class for controls.
 
@@ -27,7 +28,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Docs/Control/Control.md)* This control.
+- *[Moobile.Control](Control/Control.md)* This control.
 
 
 -----
@@ -65,7 +66,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Docs/Control/Control.md)* This control.
+- *[Moobile.Control](Control/Control.md)* This control.
 
 
 -----
@@ -103,7 +104,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Docs/Control/Control.md)* This control.
+- *[Moobile.Control](Control/Control.md)* This control.
 
 
 -----
@@ -140,7 +141,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Docs/Control/Control.md)* This control.
+- *[Moobile.Control](Control/Control.md)* This control.
 
 
 -----
@@ -177,7 +178,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Docs/Control/Control.md)* This control.
+- *[Moobile.Control](Control/Control.md)* This control.
 
 
 -----

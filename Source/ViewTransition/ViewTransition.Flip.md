@@ -1,6 +1,7 @@
 Moobile.ViewTransition.Flip
 ================================================================================
-##### Extends [ViewTransition](Docs/ViewTransition/ViewTransition.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
 
 Provides a transition that flips the current view.
 

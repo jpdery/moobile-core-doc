@@ -1,6 +1,7 @@
 Moobile.View
 ================================================================================
-##### Extends [Moobile.Entity](Entity/Entity.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [Moobile.Entity](Entity/Entity.md)
 
 Provides an entity that handles an area in which a user can
        interract.
@@ -22,7 +23,7 @@ the CSS class from `disable` to `enable`. This will set the CSS style
 
 #### Returns:
 
-- [View](Docs/View/View.md) This view.
+- [View](View/View.md) This view.
 
 
 -----
@@ -38,7 +39,7 @@ the CSS class from `enable` to `disable`. This will set the CSS style
 
 #### Returns:
 
-- [View](Docs/View/View.md) This view.
+- [View](View/View.md) This view.
 
 
 -----
@@ -158,7 +159,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [View](Docs/View/View.md) This view.
+- [View](View/View.md) This view.
 
 
 -----
@@ -173,7 +174,7 @@ an view instead of a view content.
 
 #### Returns:
 
-- [View](Docs/View/View.md) The view that owns this view.
+- [View](View/View.md) The view that owns this view.
 
 
 -----
@@ -190,11 +191,11 @@ view's header or footer.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`content` *Optional* | [ViewContent](Docs/View/ViewContent.md) | The view content.
+`content` *Optional* | [ViewContent](View/ViewContent.md) | The view content.
 
 #### Returns:
 
-- [View](Docs/View/View.md) This view.
+- [View](View/View.md) This view.
 
 
 -----
@@ -210,7 +211,7 @@ view's header or footer.
 
 #### Returns:
 
-- [ViewContent](Docs/View/ViewContent.md) The view content.
+- [ViewContent](View/ViewContent.md) The view content.
 
 
 -----
@@ -227,7 +228,7 @@ the content of this method may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`parentView` *Optional* | [View](Docs/View/View.md) | The view that will own this view.
+`parentView` *Optional* | [View](View/View.md) | The view that will own this view.
 
 
 -----
@@ -244,7 +245,7 @@ the content of this method may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`parentView` *Optional* | [View](Docs/View/View.md) | The view that owns this view.
+`parentView` *Optional* | [View](View/View.md) | The view that owns this view.
 
 
 -----
@@ -253,13 +254,13 @@ Name  | Type | Description
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ViewContent](Docs/View/ViewContent.md) content
+### [ViewContent](View/ViewContent.md) content
 
 The view content.
 
 -----
 
-### [View](Docs/View/View.md) parentView
+### [View](View/View.md) parentView
 
 The view that owns this view.
 

@@ -1,7 +1,7 @@
 Moobile.Entity
 ================================================================================
 
-##### Implements `Events`, `Options`, `Class.Binds`
+##### Implements *Events*, *Options*, *Class.Binds*
 
 Provides the base class for objects that encapsulates a DOM element.
 
@@ -304,7 +304,7 @@ Returns the window that contains this entity.
 
 #### Returns:
 
-- *[Moobile.Window](Docs/Window/Window.md)* The window.
+- *[Moobile.Window](Window/Window.md)* The window.
 
 -----
 
@@ -675,7 +675,7 @@ The entity that contains this entity.
 
 -----
 
-### *[Moobile.Window](Docs/Window/Window.md)* window
+### *[Moobile.Window](Window/Window.md)* window
 
 The window that contains this entity.
 

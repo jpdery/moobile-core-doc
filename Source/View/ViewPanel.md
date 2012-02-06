@@ -1,6 +1,7 @@
 Moobile.ViewPanel
 ================================================================================
-##### Extends [View](Docs/View/View.md), Implements `Events`, `Options`, `Class.Binds`
+
+##### Extends [View](View/View.md)
 
 Provides a view that handles a panel with two panes.
 

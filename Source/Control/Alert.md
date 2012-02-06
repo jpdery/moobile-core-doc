@@ -1,5 +1,6 @@
 Moobile.Alert
 ================================================================================
+
 ##### Extends *[Moobile.Control](Control/Control.md)*
 
 Provides a modal alert control.
@@ -22,7 +23,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Alert](Docs/Control/Alert.md)* This alert.
+- *[Alert](Control/Alert.md)* This alert.
 
 -----
 
@@ -54,7 +55,7 @@ Name      | Type  | Description
 
 #### Returns:
 
-- *[Alert](Docs/Control/Alert.md)* This alert.
+- *[Alert](Control/Alert.md)* This alert.
 
 -----
 
@@ -80,7 +81,7 @@ Name     | Type                        | Description
 
 #### Returns:
 
-- *[Alert](Docs/Control/Alert.md)* This alert.
+- *[Alert](Control/Alert.md)* This alert.
 
 -----
 
@@ -90,7 +91,7 @@ Shows the overlay with an animation by adding the `show-animated` CSS class to t
 
 #### Returns:
 
-- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
@@ -100,7 +101,7 @@ Hides the overlay with an animation by adding the `hide-animated` CSS class to t
 
 #### Returns:
 
-- *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
@@ -149,7 +150,7 @@ The dialog content element.
 
 -----
 
-### *[Moobile.Overlay](Docs/Control/Moobile.Overlay.md)* overlay
+### *[Moobile.Overlay](Control/Moobile.Overlay.md)* overlay
 
 The alert overlay.
 

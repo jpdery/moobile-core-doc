@@ -1,6 +1,7 @@
 Moobile.ViewTransition
 ================================================================================
-##### Extends , Implements `Events`, `Options`, `Class.Binds`
+
+##### Implements *Events*, *Options*, *Class.Binds*
 
 Provides the base class for view transitions.
 
