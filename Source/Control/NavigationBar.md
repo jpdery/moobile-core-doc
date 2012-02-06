@@ -1,7 +1,7 @@
 Moobile.NavigationBar
 ================================================================================
 
-##### Extends [Bar](Control/Bar.md)
+##### Extends [Moobile.Bar](Control/Bar.md)
 
 Provides a navigation bar control.
 

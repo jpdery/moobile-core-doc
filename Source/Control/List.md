@@ -23,12 +23,12 @@ parameter.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`selectedItem` *Optional* | [ListItem](Control/ListItem.md) | The selected item or `null` to clear the
+`selectedItem` *Optional* | [Moobile.ListItem](Control/ListItem.md) | The selected item or `null` to clear the
                                selection.
 
 #### Returns:
 
-- [List](Control/List.md) This list.
+- [Moobile.List](Control/List.md) This list.
 
 
 -----
@@ -40,7 +40,7 @@ Returns the selected item.
 
 #### Returns:
 
-- [ListItem](Control/ListItem.md) The selected item or `null` if no items were
+- [Moobile.ListItem](Control/ListItem.md) The selected item or `null` if no items were
                    selected.
 
 
@@ -62,7 +62,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [List](Control/List.md) This list.
+- [Moobile.List](Control/List.md) This list.
 
 
 -----
@@ -87,7 +87,7 @@ Clear the selected button.
 
 #### Returns:
 
-- [List](Control/List.md) This list.
+- [Moobile.List](Control/List.md) This list.
 
 
 -----
@@ -145,7 +145,7 @@ Removes all buttons.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ListItem](Control/ListItem.md) selectedItem
+### [Moobile.ListItem](Control/ListItem.md) selectedItem
 
 The selected item.
 

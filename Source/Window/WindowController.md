@@ -1,7 +1,7 @@
 Moobile.WindowController
 ================================================================================
 
-##### Extends [ViewController](ViewController/ViewController.md)
+##### Extends [Moobile.ViewController](ViewController/ViewController.md)
 
 Provides a view controller that manages a window.
 
@@ -24,11 +24,11 @@ existing one will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`rootViewController` *Optional* | [ViewController](ViewController/ViewController.md) | The root view controller.
+`rootViewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The root view controller.
 
 #### Returns:
 
-- [WindowController](Window/WindowController.md) This window controller.
+- [Moobile.WindowController](Window/WindowController.md) This window controller.
 
 
 -----
@@ -45,7 +45,7 @@ will destroy the existing one.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) The root view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) The root view controller.
 
 
 -----
@@ -54,7 +54,7 @@ will destroy the existing one.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ViewController](ViewController/ViewController.md) rootViewController
+### [Moobile.ViewController](ViewController/ViewController.md) rootViewController
 
 The root view controller.
 

@@ -1,7 +1,7 @@
 Moobile.ViewTransition.None
 ================================================================================
 
-##### Extends [ViewTransition](ViewTransition/ViewTransition.md)
+##### Extends [Moobile.ViewTransition](ViewTransition/ViewTransition.md)
 
 Provide a non-animated view transition.
 

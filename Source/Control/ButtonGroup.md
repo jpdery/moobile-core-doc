@@ -23,7 +23,7 @@ passing `null` as parameter.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`selectedButton` *Optional* | [Button](Control/Button.md) | The selected button or `null` to clear
+`selectedButton` *Optional* | [Moobile.Button](Control/Button.md) | The selected button or `null` to clear
                                the selection.
 
 #### Returns:
@@ -40,7 +40,7 @@ Returns the selected button.
 
 #### Returns:
 
-- [Button](Control/Button.md) The selected button or `null` if no buttons were
+- [Moobile.Button](Control/Button.md) The selected button or `null` if no buttons were
                  selected.
 
 
@@ -145,7 +145,7 @@ Removes all buttons.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Button](Control/Button.md) selectedButton
+### [Moobile.Button](Control/Button.md) selectedButton
 
 The selected button.
 

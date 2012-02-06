@@ -23,7 +23,7 @@ Name   | Type                                | Description
 
 #### Returns:
 
-- *[Bar](Control/Bar.md)* This bar.
+- *[Moobile.Bar](Control/Bar.md)* This bar.
 
 -----
 

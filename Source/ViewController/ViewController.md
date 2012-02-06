@@ -27,7 +27,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 -----
 
@@ -56,7 +56,7 @@ parameter.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The child view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The child view controller.
 
 #### Returns:
 
@@ -81,7 +81,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) The child view controller or `null` if no child
+- [Moobile.ViewController](ViewController/ViewController.md) The child view controller or `null` if no child
                          view controllers were found.
 
 
@@ -96,7 +96,7 @@ view controller.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 #### Returns:
 
@@ -130,7 +130,7 @@ to destroy the given child view controller, you must do so manually.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller to remove.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller to remove.
 
 #### Returns:
 
@@ -170,12 +170,12 @@ the modal view controller.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
-`viewTransition` *Optional* | [ViewTransition](ViewTransition/ViewTransition.md) | The view transition.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
+`viewTransition` *Optional* | [Moobile.ViewTransition](ViewTransition/ViewTransition.md) | The view transition.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -191,7 +191,7 @@ destroyed at the end of the transition animation.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -224,7 +224,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -257,7 +257,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -313,7 +313,7 @@ Returns the managed view.
 
 #### Returns:
 
-- [View](View/View.md) The managed view.
+- [Moobile.View](View/View.md) The managed view.
 
 
 -----
@@ -330,11 +330,11 @@ need this method as it's mostly used internally.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewTransition` *Optional* | [ViewTransition](ViewTransition/ViewTransition.md) | The view transition.
+`viewTransition` *Optional* | [Moobile.ViewTransition](ViewTransition/ViewTransition.md) | The view transition.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -350,7 +350,7 @@ internally.
 
 #### Returns:
 
-- [ViewTransition](ViewTransition/ViewTransition.md) The view transition.
+- [Moobile.ViewTransition](ViewTransition/ViewTransition.md) The view transition.
 
 
 -----
@@ -367,12 +367,12 @@ used internally.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewControllerStack` *Optional* | [ViewControllerStack](ViewController/ViewControllerStack.md) | The view controller
+`viewControllerStack` *Optional* | [Moobile.ViewControllerStack](ViewController/ViewControllerStack.md) | The view controller
                                                  stack.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -388,7 +388,7 @@ mostly used internally.
 
 #### Returns:
 
-- [ViewControllerStack](ViewController/ViewControllerStack.md) The view controller stack or `null` if
+- [Moobile.ViewControllerStack](ViewController/ViewControllerStack.md) The view controller stack or `null` if
                               this view controller is not owned by a
                               view controller stack.
 
@@ -407,12 +407,12 @@ used internally.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewControllerPanel` *Optional* | [ViewControllerPanel](ViewController/ViewControllerPanel.md) | The view controller
+`viewControllerPanel` *Optional* | [Moobile.ViewControllerPanel](ViewController/ViewControllerPanel.md) | The view controller
                                                  panel.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -433,7 +433,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [ViewControllerStack](ViewController/ViewControllerStack.md) The view controller panel or `null` if
+- [Moobile.ViewControllerStack](ViewController/ViewControllerStack.md) The view controller panel or `null` if
                               this view controller is not owned by a
                               view controller panel.
 
@@ -452,11 +452,11 @@ it's mostly used internally.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`parentViewController` *Optional* | [ViewController](ViewController/ViewController.md) | The parent view controller.
+`parentViewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The parent view controller.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -472,7 +472,7 @@ as it's mostly used internally.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) The parent view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) The parent view controller.
 
 
 -----
@@ -489,7 +489,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller
 
 
 -----
@@ -506,7 +506,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -524,7 +524,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -541,7 +541,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -558,7 +558,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The parent view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The parent view controller.
 
 
 -----
@@ -575,7 +575,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The parent view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The parent view controller.
 
 
 -----
@@ -767,7 +767,7 @@ Whether this view controller is modal.
 
 -----
 
-### [View](View/View.md) view
+### [Moobile.View](View/View.md) view
 
 The managed view.
 
@@ -779,25 +779,25 @@ Whether the managed view is ready.
 
 -----
 
-### [ViewTransition](ViewTransition/ViewTransition.md) viewTransition
+### [Moobile.ViewTransition](ViewTransition/ViewTransition.md) viewTransition
 
 The view transition.
 
 -----
 
-### [WindowController](Window/WindowController.md) windowController
+### [Moobile.WindowController](Window/WindowController.md) windowController
 
 The window controller
 
 -----
 
-### [ViewControllerStack](ViewController/ViewControllerStack.md) viewControllerStack
+### [Moobile.ViewControllerStack](ViewController/ViewControllerStack.md) viewControllerStack
 
 The view controller stack.
 
 -----
 
-### [ViewControllerPanel](ViewController/ViewControllerPanel.md) viewControllerPanel
+### [Moobile.ViewControllerPanel](ViewController/ViewControllerPanel.md) viewControllerPanel
 
 The view controller panel.
 
@@ -809,13 +809,13 @@ The view controller tabs.
 
 -----
 
-### [ViewController](ViewController/ViewController.md) parentViewController
+### [Moobile.ViewController](ViewController/ViewController.md) parentViewController
 
 The parent view controller.
 
 -----
 
-### [ViewController](ViewController/ViewController.md) modalViewController
+### [Moobile.ViewController](ViewController/ViewController.md) modalViewController
 
 The modal view controller being presented.
 

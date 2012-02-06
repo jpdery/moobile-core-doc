@@ -1,7 +1,7 @@
 Moobile.ViewStackContent
 ================================================================================
 
-##### Extends [ViewContent](View/ViewContent.md)
+##### Extends [Moobile.ViewContent](View/ViewContent.md)
 
 Provides an entity that manages the content of a view stack.
 

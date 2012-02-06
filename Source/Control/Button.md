@@ -27,7 +27,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Button](Control/Button.md) This button.
+- [Moobile.Button](Control/Button.md) This button.
 
 
 -----

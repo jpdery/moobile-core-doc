@@ -23,7 +23,7 @@ the CSS class from `disable` to `enable`. This will set the CSS style
 
 #### Returns:
 
-- [View](View/View.md) This view.
+- [Moobile.View](View/View.md) This view.
 
 
 -----
@@ -39,7 +39,7 @@ the CSS class from `enable` to `disable`. This will set the CSS style
 
 #### Returns:
 
-- [View](View/View.md) This view.
+- [Moobile.View](View/View.md) This view.
 
 
 -----
@@ -159,7 +159,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [View](View/View.md) This view.
+- [Moobile.View](View/View.md) This view.
 
 
 -----
@@ -174,7 +174,7 @@ an view instead of a view content.
 
 #### Returns:
 
-- [View](View/View.md) The view that owns this view.
+- [Moobile.View](View/View.md) The view that owns this view.
 
 
 -----
@@ -191,11 +191,11 @@ view's header or footer.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`content` *Optional* | [ViewContent](View/ViewContent.md) | The view content.
+`content` *Optional* | [Moobile.ViewContent](View/ViewContent.md) | The view content.
 
 #### Returns:
 
-- [View](View/View.md) This view.
+- [Moobile.View](View/View.md) This view.
 
 
 -----
@@ -211,7 +211,7 @@ view's header or footer.
 
 #### Returns:
 
-- [ViewContent](View/ViewContent.md) The view content.
+- [Moobile.ViewContent](View/ViewContent.md) The view content.
 
 
 -----
@@ -228,7 +228,7 @@ the content of this method may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`parentView` *Optional* | [View](View/View.md) | The view that will own this view.
+`parentView` *Optional* | [Moobile.View](View/View.md) | The view that will own this view.
 
 
 -----
@@ -245,7 +245,7 @@ the content of this method may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`parentView` *Optional* | [View](View/View.md) | The view that owns this view.
+`parentView` *Optional* | [Moobile.View](View/View.md) | The view that owns this view.
 
 
 -----
@@ -254,13 +254,13 @@ Name  | Type | Description
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [ViewContent](View/ViewContent.md) content
+### [Moobile.ViewContent](View/ViewContent.md) content
 
 The view content.
 
 -----
 
-### [View](View/View.md) parentView
+### [Moobile.View](View/View.md) parentView
 
 The view that owns this view.
 

@@ -23,7 +23,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Alert](Control/Alert.md)* This alert.
+- *[Moobile.Alert](Control/Alert.md)* This alert.
 
 -----
 
@@ -55,7 +55,7 @@ Name      | Type  | Description
 
 #### Returns:
 
-- *[Alert](Control/Alert.md)* This alert.
+- *[Moobile.Alert](Control/Alert.md)* This alert.
 
 -----
 
@@ -77,11 +77,11 @@ Adds the given button at the bottom of the element that contains buttons. The pr
 
 Name     | Type                        | Description
 -------- | --------------------------- | -----------
-`button` | [Button](Control/Button.md) | The button.
+`button` | [Moobile.Button](Control/Button.md) | The button.
 
 #### Returns:
 
-- *[Alert](Control/Alert.md)* This alert.
+- *[Moobile.Alert](Control/Alert.md)* This alert.
 
 -----
 

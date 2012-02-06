@@ -1,7 +1,7 @@
 Moobile.BarButton
 ================================================================================
 
-##### Extends [Button](Control/Button.md)
+##### Extends [Moobile.Button](Control/Button.md)
 
 Provides a bar button control.
 

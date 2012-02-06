@@ -1,7 +1,7 @@
 Moobile.ViewControllerStack
 ================================================================================
 
-##### Extends [ViewController](ViewController/ViewController.md)
+##### Extends [Moobile.ViewController](ViewController/ViewController.md)
 
 Provides a controller that manages a view stack.
 
@@ -24,12 +24,12 @@ view controller will be popped.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 `viewTransition` *Optional* | viewTransition | The view transition.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -45,7 +45,7 @@ controller once the transition finishes.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -62,11 +62,11 @@ finishes.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller to pop to.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller to pop to.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) This view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) This view controller.
 
 
 -----
@@ -78,7 +78,7 @@ Returns the top view controller.
 
 #### Returns:
 
-- [ViewController](ViewController/ViewController.md) The top view controller.
+- [Moobile.ViewController](ViewController/ViewController.md) The top view controller.
 
 
 -----
@@ -109,7 +109,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -126,7 +126,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -143,7 +143,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -160,7 +160,7 @@ may change in the future.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`viewController` *Optional* | [ViewController](ViewController/ViewController.md) | The view controller.
+`viewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The view controller.
 
 
 -----
@@ -175,7 +175,7 @@ Whether a child view is in a transition.
 
 -----
 
-### [ViewController](ViewController/ViewController.md) topViewController
+### [Moobile.ViewController](ViewController/ViewController.md) topViewController
 
 The top view controller.
 

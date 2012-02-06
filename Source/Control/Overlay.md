@@ -1,4 +1,4 @@
-Moobile.Moobile.Overlay
+Moobile.Overlay
 ================================================================================
 
 ##### Extends *[Moobile.Control](Control/Control.md)*
