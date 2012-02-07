@@ -219,6 +219,25 @@ p + h4 {
 	margin-top: 20px;
 }
 
+h4 + pre {
+	background: #f9f9f9;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	color: #383838;
+	font-family: Monaco, Monospace;
+	font-style: normal;
+	font-size: 12px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+h4 + pre code {
+	font-family: Monaco, Monospace;
+	font-size: 12px;
+	line-height: 125%;
+}
+
 h4 + table {
 	margin-top: 0px;
 	margin-bottom: 20px;
@@ -232,7 +251,6 @@ h4 + table th {
 	text-align: left;
 }
 
-
 h4 + table td {
 	border: 1px solid #dddddd;
 	padding: 10px;
@@ -242,8 +260,14 @@ h4 + table td:first-child {
 	white-space: pre;
 }
 
-h4 + table td:last-child {
-	width: 99%;
+h4 + table td:nth-child(3),
+h4 + table td:nth-child(4) {
+/*	width: 99%;*/
+}
+
+h4 + table td:nth-child(1),
+h4 + table td:nth-child(2) {
+	width: 1%;
 }
 
 h4 + table tbody tr:nth-child(odd) {
@@ -257,7 +281,7 @@ h4 + table code {
 	color: #383838;
 	font-family: Monaco, Monospace;
 	font-style: normal;
-	font-size: 85%;
+	font-size: 12px;
 	padding: 3px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -302,7 +326,7 @@ h5 code {
 	color: #383838;
 	font-family: Monaco, Monospace;
 	font-style: normal;
-	font-size: 75%;
+	font-size: 12px;
 	padding: 3px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -342,4 +366,30 @@ p + hr {
 
 ul + hr {
 	margin-top: 30px;
+}
+
+/* Geshi */
+.kw1 {
+	color: #1b609a;
+}
+.kw2 {
+	color: #9a6f1b;
+}
+.me1 {
+	color: #666;
+}
+.kw3, .re0, .sc1 {
+	color: #784e0c;
+}
+.br0 {
+	color: #444;
+}
+.st0 {
+	color: #489a1b;
+}
+.co1, .coMULTI {
+	color: #888;
+}
+.nu0 {
+	color: #70483d;
 }
