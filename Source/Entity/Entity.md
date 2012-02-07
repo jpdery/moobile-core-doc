@@ -8,16 +8,11 @@ Provides the base class for objects that encapsulates a DOM element.
 Initialization {#initialization}
 --------------------------------------------------------------------------------
 
-Methods {#methods}
---------------------------------------------------------------------------------
+#### Syntax
 
-### initialize(element, options, name)
+	var entity = new Moobile.Entity([element], [options], [name])
 
-Initializes this entity.
-
-The `element` given to this entity must be an instance of an `Element`, an element id or an HTML string that represents an element. An empty element is automatically created if none of the above were supplied.
-
-If you override this method, make sure you call the parent method at the beginning of your implementation.
+The `element` given to this entity must be an an Element object, an element id or an HTML string that represents an element. An empty element is automatically created if none of the above were supplied.
 
 #### Parameters:
 
@@ -27,11 +22,32 @@ Name                 | Type    | Description
 `options` *Optional* | Object  | The options.
 `name`    *Optional* | String  | The name.
 
------
+#### Options
 
-### addChild(entity, where, context)
+Name        | Type   | Description                              | Default
+----------- | ------ | ---------------------------------------- | ---------
+`className` | String | The class name of this entity's element. | `null`
+`styleName` | String | The style name.                          | `null`
+`tagName`   | String | The default type of element to build.    | `div`
 
-Adds a child entity at the bottom of this entity. You may specify the location of the child entity using the `where` parameter combined with the optional `context` parameter.
+#### Example 1: *Create an empty entity*
+
+	var entity = new Moobile.Entity();
+
+#### Example 2: *Create an entity using an element from the DOM*
+
+	var entity = new Moobile.Entity(document.id('my-element'));
+
+#### Example 3: *Create an entity using raw HTML*
+
+	var entity = new Moobile.Entity('<div><strong>Lorem</strong><div>');
+
+Methods {#methods}
+--------------------------------------------------------------------------------
+
+### addChild(entity, [where], [context]) {#addChild}
+
+Adds a child entity at the bottom of this entity. You may specify the location of the child entity using the `where` parameter combined with the `context` parameter.
 
 If specified, the child entity can be added at the `top`, `bottom`, `before` or `after` this entity. If an element is given as the `context`, the location will be relative to this element.
 
@@ -49,9 +65,66 @@ Name                 | Type                               | Description
 
 - *[Moobile.Entity](Entity/Entity.md)* This entity.
 
+#### Example 1: Adding a child entity
+
+	var parentEntity = new Moobile.Entity();
+	parentEntity.addClass('parent');
+
+	var childEntity = new Moobile.Entity();
+	childEntity.addClass('child');
+
+	parentEntity.addChild(childEntity);
+
+	/* Creates
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+	*/
+
+#### Example 2: Adding a child entity at a specific location
+
+	var parentEntityHTML = '<div><div class="middle"></div></div>';
+
+	var parentEntity = new Moobile.Entity(parentEntityHTML);
+	parentEntity.addClass('parent');
+
+	var childEntity = new Moobile.Entity();
+	childEntity.addClass('child');
+
+	parentEntity.addChild(childEntity, 'top');
+
+	/* Creates
+	<div class="parent">
+		<div class="child"></div>
+		<div class="middle"></div>
+	</div>
+	*/
+
+#### Example 3: Adding a child entity relative to an element
+
+	var parentEntityHTML = '<div><div class="middle"></div></div>';
+
+	var parentEntity = new Moobile.Entity(parentEntityHTML);
+	parentEntity.addClass('parent');
+
+	var childEntity = new Moobile.Entity();
+	childEntity.addClass('child');
+
+	var middleElement = parentEntity.getElement('.middle');
+
+	parentEntity.addChild(childEntity, 'bottom', middleElement);
+
+	/* Creates
+	<div class="parent">
+		<div class="middle">
+			<div class="child"></div>
+		</div>
+	</div>
+	*/
+
 -----
 
-### getChild(name)
+### getChild(name) {#getChild}
 
 Return an entity from its own entites that matches the given name.
 
@@ -65,9 +138,17 @@ Name   | Type   | Description
 
 - *[Moobile.Entity](Entity/Entity.md)* The child entity or `null` if no entities were found using the given name.
 
+#### Example
+
+	var parentEntity = new Moobile.Entity();
+	var childEntity = new Moobile.Entity(null, null, 'child-entity'); // we're giving a name
+	parentEntity.addChild(childEntity);
+
+	parentEntity.getChild('child-entity'); // return childEntity
+
 -----
 
-### hasChild(entity)
+### hasChild(entity) {#hasChild}
 
 Indicates whether this entity is the direct parent of a given entity.
 
@@ -83,7 +164,7 @@ Name     | Type                               | Description
 
 -----
 
-### getChildren(type)
+### getChildren(type) {#getChildren}
 
 Returns all the child entities.
 
@@ -99,7 +180,7 @@ Name              | Type  | Description
 
 -----
 
-### replaceChild(oldEntity, newEntity)
+### replaceChild(oldEntity, newEntity) {#replaceChild}
 
 Replaces a child entity with another.
 
@@ -116,7 +197,7 @@ Name        | Type                               | Description
 
 -----
 
-### removeChild(entity)
+### removeChild(entity) {#removeChild}
 
 Removes a child entity. The removed entity will not be destroyed  since it could be added to another entity. If you wish to destroy the given entity, you must do it manually by calling the `destroy` method.
 
@@ -132,9 +213,9 @@ Name     | Type                               | Description
 
 -----
 
-### removeAllChildren()
+### removeChildren() {#removeChildren}
 
-Removes all children.The removed entities will not be destroyed  since it could be added to another entity. If you wish to destroy the given entity, you must do it manually by calling the `destroy` method.
+Removes  children.The removed entities will not be destroyed  since it could be added to another entity. If you wish to destroy the given entity, you must do it manually by calling the `destroy` method.
 
 #### Returns:
 
@@ -142,7 +223,7 @@ Removes all children.The removed entities will not be destroyed  since it could 
 
 -----
 
-### removeFromParent()
+### removeFromParent() {#removeFromParent}
 
 Removes this entity from its parent without destroying it.  If you wish to destroy the given entity, you must do it manually by calling the `destroy` method.
 
@@ -152,7 +233,7 @@ Removes this entity from its parent without destroying it.  If you wish to destr
 
 -----
 
-### setStyle(name)
+### setStyle(name) {#setStyle}
 
 Sets the entity's style. Do not be confused with the `Element.setStyle` as it does not set a CSS style. Instead, this method is used to set a style defined with `Moobile.Entity.defineStyle`.
 
@@ -168,7 +249,7 @@ Name   | Type   | Description
 
 -----
 
-### getStyle()
+### getStyle() {#getStyle}
 
 Returns the name of the style that is current applied.
 
@@ -178,7 +259,7 @@ Returns the name of the style that is current applied.
 
 -----
 
-### addClass(name)
+### addClass(name) {#addClass}
 
 Adds a CSS class to this entity's element.
 
@@ -194,7 +275,7 @@ Name   | Type   | Description
 
 -----
 
-### removeClass(name)
+### removeClass(name) {#removeClass}
 
 Removes a CSS class from this entity's element.
 
@@ -210,7 +291,7 @@ Name   | Type   | Description
 
 -----
 
-### toggleClass(name)
+### toggleClass(name) {#toggleClass}
 
 Adds or removes a CSS class from this entity.
 
@@ -226,7 +307,7 @@ Name   | Type   | Description
 
 -----
 
-### setParent(parent)
+### setParent(parent) {#setParent}
 
 Sets the entity that contains this entity. This method is handled by the API and should not be called manually.
 
@@ -242,7 +323,7 @@ Name     | Type                               | Description
 
 -----
 
-### getParent()
+### getParent() {#getParent}
 
 Returns the entity that contains this entitiy.
 
@@ -252,7 +333,7 @@ Returns the entity that contains this entitiy.
 
 -----
 
-### hasParent()
+### hasParent() {#hasParent}
 
 Indicates whether this entity has a parent.
 
@@ -262,7 +343,7 @@ Indicates whether this entity has a parent.
 
 -----
 
-### setReady()
+### setReady() {#setReady}
 
 Marks this entity as begin ready meaning its element is part of the DOM and can be, for instance, measured. This method is handled by the API and should not be called manually.
 
@@ -272,7 +353,7 @@ Marks this entity as begin ready meaning its element is part of the DOM and can 
 
 -----
 
-### isReady()
+### isReady() {#isReady}
 
 Indicates whether this entity is ready.
 
@@ -282,7 +363,7 @@ Indicates whether this entity is ready.
 
 -----
 
-### setWindow(window)
+### setWindow(window) {#setWindow}
 
 Sets the window that contains this entity. This method is handled by the API and should not be called manually.
 
@@ -298,7 +379,7 @@ Name     | Type                        | Description
 
 -----
 
-### getWindow()
+### getWindow() {#getWindow}
 
 Returns the window that contains this entity.
 
@@ -308,7 +389,7 @@ Returns the window that contains this entity.
 
 -----
 
-### hasWindow()
+### hasWindow() {#hasWindow}
 
 Indicates whether this entity has a window.
 
@@ -318,7 +399,7 @@ Indicates whether this entity has a window.
 
 -----
 
-### getName()
+### getName() {#getName}
 
 Return the name used to identify this entity among its siblings. Given at initialization, the name does not need to be absolutely unique, only different from its siblings.
 
@@ -328,7 +409,7 @@ Return the name used to identify this entity among its siblings. Given at initia
 
 -----
 
-### getElement(selector)
+### getElement(selector) {#getElement}
 
 Returns this entity's element or the first element within this entity's element that matches the given selector.
 
@@ -344,7 +425,7 @@ Name                  | Type   | Description
 
 -----
 
-### getElements(selector)
+### getElements(selector) {#getElements}
 
 Returns a collection of elements from the entity's element that matches the given selector.
 
@@ -360,7 +441,7 @@ Name                  | Type   | Description
 
 -----
 
-### hasElement(element)
+### hasElement(element) {#hasElement}
 
 Indicates whether an element within this entity's element.
 
@@ -376,7 +457,7 @@ Name      | Type    | Description
 
 -----
 
-### getRoleElement(role)
+### getRoleElement(role) {#getRoleElement}
 
 Returns an element with a given `data-role` attribute.
 
@@ -394,7 +475,7 @@ Name   | Type   | Description
 
 -----
 
-### getRoleElements(role)
+### getRoleElements(role) {#getRoleElements}
 
 Returns a collection of element with a given `data-role` attribute.
 
@@ -412,7 +493,7 @@ Name   | Type   | Description
 
 -----
 
-### attachRole(element, role)
+### attachRole(element, role) {#attachRole}
 
 Executes a role definition opon an element.
 
@@ -429,7 +510,7 @@ Name      | Type    | Description
 
 -----
 
-### getSize()
+### getSize() {#getSize}
 
 Returns this entity's size as an object with two keys, `x` to indicate the
 width and `y` to indicate the height.
@@ -440,7 +521,7 @@ width and `y` to indicate the height.
 
 -----
 
-### show()
+### show() {#show}
 
 Shows this entity using the `display` CSS property of this entity's element.
 
@@ -450,7 +531,7 @@ Shows this entity using the `display` CSS property of this entity's element.
 
 -----
 
-### hide()
+### hide() {#hide}
 
 Hides this entity using the `display` CSS property of this entity's element.
 
@@ -460,7 +541,7 @@ Hides this entity using the `display` CSS property of this entity's element.
 
 -----
 
-### willBuild()
+### willBuild() {#willBuild}
 
 Tells the entity it's about to be loaded.
 
@@ -470,7 +551,7 @@ and applying style have taken place.
 
 -----
 
-### didBuild()
+### didBuild() {#didBuild}
 
 Tells the entity it's has been loaded.
 
@@ -480,13 +561,13 @@ loaded.
 
 -----
 
-### didBecomeReady()
+### didBecomeReady() {#didBecomeReady}
 
 Tells the entity it has become part of the DOM document.
 
 -----
 
-### willAddChild(entity)
+### willAddChild(entity) {#willAddChild}
 
 Tells the entity a child entity is about to be added.
 
@@ -498,7 +579,7 @@ Name     | Type                               | Description
 
 -----
 
-### didAddChild(entity)
+### didAddChild(entity) {#didAddChild}
 
 Tell the entity a child entity has been added.
 
@@ -510,7 +591,7 @@ Name     | Type                               | Description
 
 -----
 
-### willRemoveChild(entity)
+### willRemoveChild(entity) {#willRemoveChild}
 
 Tell the entity a child entity is about to be removed.
 
@@ -522,7 +603,7 @@ Name     | Type                               | Description
 
 -----
 
-### didRemoveChild(entity)
+### didRemoveChild(entity) {#didRemoveChild}
 
 Tell the entity a child entity has been removed.
 
@@ -534,7 +615,7 @@ Name     | Type                               | Description
 
 -----
 
-### parentWillChange(parent)
+### parentWillChange(parent) {#parentWillChange}
 
 Tell the entity it's about to be moved to a new entity.
 
@@ -546,7 +627,7 @@ Name     | Type                               | Description
 
 -----
 
-### parentDidChange(parent)
+### parentDidChange(parent) {#parentDidChange}
 
 Tell the entity it has been moved to a new entity.
 
@@ -558,31 +639,31 @@ Name     | Type                               | Description
 
 -----
 
-### willShow()
+### willShow() {#willShow}
 
 Tell the entity it's about to become visible.
 
 -----
 
-### didShow()
+### didShow() {#didShow}
 
 Tell the entity it became visible.
 
 -----
 
-### willHide()
+### willHide() {#willHide}
 
 Tell the entity it's about to become hidden.
 
 -----
 
-### didHide()
+### didHide() {#didHide}
 
 Tell the entity it became hidden.
 
 -----
 
-### destroy()
+### destroy() {#destroy}
 
 Destroy this entity after it's been removed from its parent.
 
@@ -596,7 +677,7 @@ the end of your implementation.
 Static Methods {#methods}
 --------------------------------------------------------------------------------
 
-### Moobile.Entity.fromElement(element, property, type)
+### Moobile.Entity.fromElement(element, property, type) {#fromElement}
 
 Instantiates an entity based on a data-attribute stored on an element and validates the instance type. If the data-attribute is missing, an instance of the `type` will be returned.
 
@@ -614,7 +695,7 @@ Name       | Type    | Description
 
 -----
 
-### Moobile.Entity.defineRole(name, target, behavior)
+### Moobile.Entity.defineRole(name, target, behavior) {#defineRole}
 
 Defines the behavior of a role for an entity or all entities if the `target` parameter is `null`. The `behavior` function will be bound to the entity and receive it's element upon execution.
 
@@ -628,7 +709,7 @@ Name     | Type                                 | Description
 
 -----
 
-### Moobile.Entity.defineStyle(name, target, behavior)
+### Moobile.Entity.defineStyle(name, target, behavior) {#defineStyle}
 
 Defines a style for an entity or all entities if the `target` parameter is `null`. The `behavior` object needs an `attach` and `detach` method that will be used to install or remove the style. Both method will be bound to the entity upon execution.
 
@@ -645,51 +726,69 @@ Name     | Type                                 | Description
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *Object* style
+### *Object* style {#style}
 
 The current style.
 
 -----
 
-### *String* name
+### *String* name {#name}
 
 The name.
 
 -----
 
-### *Element* element
+### *Element* element {#element}
 
 The root element.
 
 -----
 
-### *Array* children
+### *Array* children {#children}
 
 The child entities.
 
 -----
 
-### *[Moobile.Entity](Entity/Entity.md)* parentEntity
+### *[Moobile.Entity](Entity/Entity.md)* parentEntity {#parentEntity}
 
 The entity that contains this entity.
 
 -----
 
-### *[Moobile.Window](Window/Window.md)* window
+### *[Moobile.Window](Window/Window.md)* window {#window}
 
 The window that contains this entity.
 
 -----
 
-### *Boolean* ready
+### *Boolean* ready {#ready}
 
 Whether this entity is ready.
 
 -----
 
-### *Object* options
+### *Object* options {#options}
 
 The class options.
 
 Events {#events}
 --------------------------------------------------------------------------------
+
+#### tap
+
+#### tapstart
+
+#### tapmove
+
+#### tapend
+
+#### touchstart
+
+#### touchmove
+
+#### touchend
+
+#### pinch
+
+#### swipe
