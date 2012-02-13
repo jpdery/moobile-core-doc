@@ -1,137 +1,94 @@
 Moobile.Control
 ================================================================================
 
-##### Extends *[Moobile.Entity](Entity/Entity.md)*
+##### Extends *[Moobile.Component]*
 
-Provides the base class for controls.
-
-Initialization {#initialization}
---------------------------------------------------------------------------------
+Provides the base class for controls. Do not instantiate this class directly, instead subclass it to create your own components.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### setDisabled(value)
+### setDisabled(value) {#setDisabled}
 
-Sets whether the control is disabled.
-
-This method will add the `is-disabled` CSS class to the control's
-element upon disabling. What can and cannot be done when a control is
-disabled is up to the control's implementation, however, core events
-will not be propagated when a control is disabled.
+Sets whether the control is disabled by adding or removing the `is-disabled` CSS class to the control's element. Events won't be fired when the control is disabled.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`value` *Optional* | Boolean | Whether the control is disabled.
+Name    | Type    | Description
+------- | ------- | -----------
+`value` | Boolean | Whether the control is disabled.
 
 #### Returns:
 
-- *[Moobile.Control](Control/Control.md)* This control.
-
+- *[Moobile.Control]* This Moobile.Control instance.
 
 -----
 
-### isDisabled()
+### isDisabled() {#isDisabled}
 
 Indicate whether the control is disabled.
-
-What can and cannot be done when a control is disabled is up to the
-control's implementation, however, core events will not be propagated when a
-control is disabled.
-
 
 #### Returns:
 
 - *Boolean* Whether the control is disabled.
 
-
 -----
 
-### setSelected(value)
+### setSelected(value) {#setSelected}
 
-Sets whether the control is selected.
-
-This method will add the `is-selected` CSS class to the control's
-element upon selecting. What can and cannot be done when a control is
-selected is up to the control's implementation as the selected state
-is mostly used for presentation purposes.
+Sets whether the control is selected by adding or removing the `is-selected` CSS class to the control's element.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`value` *Optional* | Boolean | Whether the control is selected.
+Name    | Type    | Description
+------- | ------- | -----------
+`value` | Boolean | Whether the control is selected.
 
 #### Returns:
 
-- *[Moobile.Control](Control/Control.md)* This control.
-
+- *[Moobile.Control]* This Moobile.Control instance.
 
 -----
 
-### isSelected()
+### isSelected() {#isSelected}
 
 Indicates whether the control is selected.
-
-What can and cannot be done when a control is selected is up to the
-control's implementation as the selected state is mostly used for
-presentation purposes.
-
 
 #### Returns:
 
 - *Boolean* Whether the control is selected.
 
-
 -----
 
-### setHighlighted(value)
+### setHighlighted(value) {#setHighlighted}
 
-Sets whether the control is highlighted.
-
-This method will add the `is-highlighted` CSS class to the control's
-element upon highlighting. What can and cannot be done when a control is
-selected is up to the control's implementation as the highlighted state
-is mostly used for presentation purposes.
+Sets whether the control is selected by adding or removing the `is-highlighted` CSS class to the control's element.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`value` *Optional* | Boolean | Whether the control is highlighted.
+Name    | Type    | Description
+------- | ------- | -----------
+`value` | Boolean | Whether the control is highlighted.
 
 #### Returns:
 
-- *[Moobile.Control](Control/Control.md)* This control.
-
+- *[Moobile.Control]* This Moobile.Control instance.
 
 -----
 
-### isHighlighted()
+### isHighlighted() {#isHighlighted}
 
 Indicate whether the control is highlighted.
-
-What can and cannot be done when a control is highlighted is up to the
-control's implementation as the highlighted state is mostly used for
-presentation purposes.
-
 
 #### Returns:
 
 - *Boolean* Whether the control is highlighted.
 
-
 -----
 
-### setSelectable(value)
+### setSelectable(value) {#setSelectable}
 
 Sets whether the control is selectable.
-
-This method will set whether this control can go from an unselected
-state to a selected state. However, it will not be locked as the control
-will always be able to go to the unselected state.
 
 #### Parameters:
 
@@ -141,105 +98,112 @@ Name  | Type | Description
 
 #### Returns:
 
-- *[Moobile.Control](Control/Control.md)* This control.
-
+- *[Moobile.Control]* This Moobile.Control instance.
 
 -----
 
-### isSelectable()
+### isSelectable() {#isSelectable}
 
 Indicates whether the control is selectable.
-
-This method will indicate whether this control can go from an unselected
-state to a selected state. However, it will not be locked as the control
-will always be able to go to the unselected state.
-
 
 #### Returns:
 
 - *Boolean* Whether the control is selectable.
 
-
 -----
 
-### setHighlightable(value)
+### setHighlightable(value) {#setHighlightable}
 
 Sets whether the control is highlightable.
 
-This method will set whether this control can go from an unhighlighted
-state to an highlighted state. However, it will not be locked as the
-control will always be able to go to the unhighlighted state.
-
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`value` *Optional* | Boolean | Whether the control is highlightable.
+Name    | Type    | Description
+------- | ------- | -----------
+`value` | Boolean | Whether the control is highlightable.
 
 #### Returns:
 
-- *[Moobile.Control](Control/Control.md)* This control.
-
+- *[Moobile.Control]* This Moobile.Control instance.
 
 -----
 
-### isHighlightable()
+### isHighlightable() {#isHighlightable}
 
 Indicates whether the control is highlightable.
-
-This method will indicate whether this control can go from an
-unhighlighted state to an highlighted state. However, it will not be
-locked as the control will always be able to go to the unhighlighted
-state.
-
 
 #### Returns:
 
 - *Boolean* selectable Whether the control is highlightable.
 
+-----
+
+### willSetState(state, value) {#willSetState}
+
+Tell the control one of its state is about to be set.
+
+Name    | Type    | Description
+------- | ------- | -----------
+`state` | String  | The state that will be set.
+`value` | Boolean | The state value.
 
 -----
 
+### didSetState(state, value) {#didSetState}
+
+Tell the control one of its state has been set.
+
+Name    | Type    | Description
+------- | ------- | -----------
+`state` | String  | The state that will be set.
+`value` | Boolean | The state value.
+
+-----
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### Boolean disabled
+### *Boolean* disabled {#disabled}
 
 Whether the control is disabled.
 
 -----
 
-### Boolean selected
+### *Boolean* selected {#selected}
 
 Whether the control is selected.
 
 -----
 
-### Boolean highlighted
+### *Boolean* highlighted {#highlighted}
 
 Whether the control is highlighted.
 
 -----
 
-### Boolean selectable
+### *Boolean* selectable {#selectable}
 
 Whether the control is selectable.
 
 -----
 
-### Boolean highlightable
+### *Boolean* highlightable {#highlightable}
 
 Whether the control is highlightable.
 
 -----
 
-### Object options
+### *Object* options  {#options}
 
-The control options.
+The control options with values inherited from [Moobile.Component].
 
------
-
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The control's extra CSS class name.
+`styleName` | String | The control's default style.
+`tagName`   | String | The control's default element type.
 
 Events {#events}
 --------------------------------------------------------------------------------
+
+Inherited from [Moobile.Component]

@@ -439,7 +439,7 @@ Override this method to provide your custom implementation.
 
 ### didBecomeReady() {#didBecomeReady}
 
-Tells the component it has become part of the DOM document.
+Tells the component it has become part of the DOM.
 
 Override this method to provide your custom implementation.
 
@@ -648,27 +648,23 @@ Whether this component is ready.
 
 The class options.
 
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The component's extra CSS class name.
+`styleName` | String | The component's default style.
+`tagName`   | String | The component's default element type.
+
 Events {#events}
 --------------------------------------------------------------------------------
 
-#### tap
-
-#### tapstart
-
-#### tapmove
-
-#### tapend
-
-#### touchstart
-
-#### touchmove
-
-#### touchend
-
-#### pinch
-
-#### swipe
-
-#### show
-
-#### hide
+- tap
+- tapstart
+- tapmove
+- tapend
+- touchstart
+- touchmove
+- touchend
+- pinch
+- swipe
+- show
+- hide

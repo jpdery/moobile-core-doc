@@ -1,7 +1,7 @@
 Moobile.Button
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)*
+##### Extends *[Moobile.Control]()*
 
 Provides a button control.
 
@@ -16,21 +16,30 @@ Initialization {#initialization}
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`element` *Optional* | Element | The Element, element id or string.
-`options` *Optional* | Object  | The options.
-`name`    *Optional* | String  | The name.
+`element` *Optional* | Element | The button's element, element id or html string.
+`options` *Optional* | Object  | The button's options, see below.
+`name`    *Optional* | String  | The button's name.
 
-#### Element:
+#### Options:
+
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The button's default CSS class name, defaults to `null`.
+`styleName` | String | The button's default style, defaults to `null`.
+`tagName`   | String | The button's element tag name, defaults to `div`.
+
+#### Generates:
 
 	<div class="button">
-		<div class="text label"></div>
+		<div data-role="label" class="text label"></div>
 	</div>
 
-#### Roles:
+#### Defined roles:
 
-Name    | Type  | Description
-------- | ----- | -----------
-`label` | Mixed | The label as a string or a `Moobile.Text` object.
+Name     | Description
+-------- | -----------
+`button` | Defines the element that act as a button. Use the `data-button` property to specify a subclass instead.
+`label`  | Defines the element that act as a button label. If unspecified, the contents of the button's element will act as its label.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -47,7 +56,20 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.Button](Control/Button.md) This button.
+- *[Moobile.Button]()* This Moobile.Button instance.
+
+#### Example 1: *Setting the label using a string*
+
+	var button = new Moobile.Button();
+	button.setLabel('Lorem');
+
+#### Example 2: *Setting the label using a Moobile.Text object*
+
+	var label = new Moobile.Text();
+	label.setText('Lorem');
+
+	var button = new Moobile.Button();
+	button.setLabel(label);
 
 -----
 
@@ -57,16 +79,29 @@ Returns the label.
 
 #### Returns:
 
-- [Moobile.Text](Control/Text.md) The label.
+- [Moobile.Text]() The label.
 
------
+#### Example:
+
+	var button = new Moobile.Button();
+	button.setLabel('Lorem');
+
+	button.getLabel(); // Returns an instance of Moobile.Text
+	button.getLabel().getText(); // Returns 'Lorem';
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Moobile.Text](Control/Text.md) label {#label}
+### *[Moobile.Text]()* label {#label}
 
 This button's label.
 
 Events {#events}
 --------------------------------------------------------------------------------
+
+Events inherited from [Moobile.Control]().
+
+Styles {#styles}
+--------------------------------------------------------------------------------
+
+This component does not define styles.
