@@ -23,7 +23,7 @@ the CSS class from `disable` to `enable`. This will set the CSS style
 
 #### Returns:
 
-- [Moobile.View](View/View.md) This view.
+- *[Moobile.View](../View/View.md)* This view.
 
 
 -----
@@ -39,7 +39,7 @@ the CSS class from `enable` to `disable`. This will set the CSS style
 
 #### Returns:
 
-- [Moobile.View](View/View.md) This view.
+- *[Moobile.View](../View/View.md)* This view.
 
 
 -----
@@ -159,7 +159,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.View](View/View.md) This view.
+- *[Moobile.View](../View/View.md)* This view.
 
 
 -----
@@ -174,7 +174,7 @@ an view instead of a view content.
 
 #### Returns:
 
-- [Moobile.View](View/View.md) The view that owns this view.
+- *[Moobile.View](../View/View.md)* The view that owns this view.
 
 
 -----
@@ -195,7 +195,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.View](View/View.md) This view.
+- *[Moobile.View](../View/View.md)* This view.
 
 
 -----

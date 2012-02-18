@@ -1,7 +1,7 @@
 Moobile.ViewControllerPanel
 ================================================================================
 
-##### Extends [Moobile.ViewController](ViewController/ViewController.md)
+##### Extends [Moobile.ViewController](../ViewController/ViewController.md)
 
 Provides an object used to manage a view panel.
 
@@ -24,11 +24,11 @@ will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`mainViewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The main view controller.
+`mainViewController` *Optional* | [Moobile.ViewController](../ViewController/ViewController.md) | The main view controller.
 
 #### Returns:
 
-- [Moobile.ViewControllerPanel](ViewController/ViewControllerPanel.md) This view controller panel.
+- [Moobile.ViewControllerPanel](../ViewController/ViewControllerPanel.md) This view controller panel.
 
 
 -----
@@ -40,7 +40,7 @@ Returns the main view controller.
 
 #### Returns:
 
-- [Moobile.ViewController](ViewController/ViewController.md) The main view controller.
+- [Moobile.ViewController](../ViewController/ViewController.md) The main view controller.
 
 
 -----
@@ -58,11 +58,11 @@ will destroy the existing one.
 
 Name  | Type | Description
 ----- | ---- | -----------
-`sideViewController` *Optional* | [Moobile.ViewController](ViewController/ViewController.md) | The side view controller.
+`sideViewController` *Optional* | [Moobile.ViewController](../ViewController/ViewController.md) | The side view controller.
 
 #### Returns:
 
-- [Moobile.ViewControllerPanel](ViewController/ViewControllerPanel.md) This view controller panel.
+- [Moobile.ViewControllerPanel](../ViewController/ViewControllerPanel.md) This view controller panel.
 
 
 -----
@@ -74,7 +74,7 @@ Returns the side view controller.
 
 #### Returns:
 
-- [Moobile.ViewController](ViewController/ViewController.md) The side view controller.
+- [Moobile.ViewController](../ViewController/ViewController.md) The side view controller.
 
 
 -----
@@ -83,13 +83,13 @@ Returns the side view controller.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Moobile.ViewController](ViewController/ViewController.md) mainViewController
+### [Moobile.ViewController](../ViewController/ViewController.md) mainViewController
 
 The main view controller.
 
 -----
 
-### [Moobile.ViewController](ViewController/ViewController.md) sideViewController
+### [Moobile.ViewController](../ViewController/ViewController.md) sideViewController
 
 The side view controller.
 

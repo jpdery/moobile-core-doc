@@ -1,7 +1,7 @@
 Moobile.ViewControllerStack.Navigation
 ================================================================================
 
-##### Extends [Moobile.ViewControllerStack](ViewController/ViewControllerStack.md)
+##### Extends [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)
 
 Provides a view controller stack that also handles a navigation bar
        and its back button.

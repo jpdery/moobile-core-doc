@@ -1,7 +1,7 @@
 Moobile.ViewTransition.Fade
 ================================================================================
 
-##### Extends [Moobile.ViewTransition](ViewTransition/ViewTransition.md)
+##### Extends [Moobile.ViewTransition](../ViewTransition/ViewTransition.md)
 
 Provides a transition that fade under the current view.
 

@@ -26,7 +26,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Image](Control/Image.md) This image.
+- *[Moobile.Image](../Control/Image.md)* This image.
 
 
 -----
