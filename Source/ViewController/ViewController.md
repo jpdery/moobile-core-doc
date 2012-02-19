@@ -260,13 +260,13 @@ Returns the title.
 
 ### setImage(image) {#setImage}
 
-Sets the image using either a string or a `Moobile.Image` object. When provided with a string, this methods creates a `Moobile.Image` object and assign the given string as its source.
+Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this methods creates a `Moobile.Image` instance and assign the given string as its source.
 
 #### Parameters:
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`image` | Mixed | The image as a string or a `Moobile.Image` object.
+`image` | Mixed | The image as a string or a `Moobile.Image` instance.
 
 #### Returns:
 
@@ -591,4 +591,4 @@ Destroys this view controller's view controller hierarchy as well as the view it
 Events {#events}
 --------------------------------------------------------------------------------
 
-This class does not fire events.
+This class does not fire events at the moment.

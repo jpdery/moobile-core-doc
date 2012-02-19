@@ -3,25 +3,35 @@ Moobile.ViewControllerStack.Navigation
 
 ##### Extends [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)
 
-Provides a view controller stack that also handles a navigation bar
-       and its back button.
+Provides a view controller stack that automatically creates a navigation bar to the view
 
 Initialization {#initialization}
 --------------------------------------------------------------------------------
 
+#### Syntax:
+
+	var navigationViewControllerStack = new Moobile.ViewControllerStack.Navigation([options], [name]);
+
+#### Parameters:
+
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`options` *Optional* | Object  | The navigation view controller stack's options, see below.
+`name`    *Optional* | String  | The navigation view controller stack's name.
+
+#### Options:
+
+Name              | Type    | Description
+----------------- | ------- | -----------
+`backButton`      | Boolean | Whether it needs to create a back button when necessary.
+`backButtonLabel` | String  | The back button label, defaults to `Back`.
+
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-
-Members {#members}
---------------------------------------------------------------------------------
-
-### Object options
-
-The class options.
-
------
-
+This class does not defines any new methods at the moment.
 
 Events {#events}
 --------------------------------------------------------------------------------
+
+This class does not fire events at the moment.
