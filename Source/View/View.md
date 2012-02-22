@@ -16,9 +16,9 @@ Methods {#methods}
 
 Enables the touch interraction of the view.
 
-This method will enable the touch interraction of this view by swapping
-the CSS class from `disable` to `enable`. This will set the CSS style
-`pointer-events` to `auto` thus enabling touch events.
+This method will enable touch interaction by toggling the css class
+from `disable` to `enable`. This will set the CSS style
+`pointer-events` to `auto`, thus enabling touch events.
 
 
 #### Returns:
@@ -32,9 +32,9 @@ the CSS class from `disable` to `enable`. This will set the CSS style
 
 Disables the touch interaction of the view.
 
-This method will disable the touch interraction of this view by swapping
+This method will disable touch interaction by toggling
 the CSS class from `enable` to `disable`. This will set the CSS style
-`pointer-events` to `none` thus disabling touch events.
+`pointer-events` to `none`, thus disabling touch events.
 
 
 #### Returns:
@@ -81,7 +81,7 @@ Name  | Type | Description
 
 ### hasChild(entity)
 
-Indicates whether an entity is owned by this view.
+Indicates whether the entity owns the entity.
 
 This method will attempt to find the given child entity from this view's
 content entity then from the view itself if the former failed.
@@ -97,10 +97,10 @@ Name  | Type | Description
 
 ### getChildren(type)
 
-Returns all the child entities from this view.
+Returns all children entities for this view.
 
-This method will return an array that contains both the child entites
-from this view and the child entities from this view's content entity.
+This method will return an array containing both children entites
+and view content's children.
 
 #### Parameters:
 
