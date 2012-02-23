@@ -3,7 +3,7 @@ Moobile.ViewControllerStack
 
 ##### Extends [Moobile.ViewController](../ViewController/ViewController.md)
 
-Provides a controller that manages stack of controllers with methods to move from one view controller to another using a transition.
+Provides a controller for managing a stack of controllers with methods to move from one view controller to another using a transition.
 
 Initialization {#initialization}
 --------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ Name             | Type                                                         
 
 ### popViewController() {#popViewController}
 
-Removes top view controller using the same view transition that was used to push it and destroy it.
+Removes the top view controller using the same view transition that was used to push it and destroy it.
 
 #### Returns:
 
@@ -71,7 +71,7 @@ Name             | Type                                                         
 
 ### getTopViewController() {#getTopViewController}
 
-Returns the currently view controller.
+Returns the current view controller.
 
 #### Returns:
 

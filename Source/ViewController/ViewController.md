@@ -3,14 +3,14 @@ Moobile.ViewController
 
 ##### Extends *[Moobile.EventDispatcher](../Event/EventDispatcher.md)*
 
-Provides an object which manages a view and it's view controller hierarchy. You rarely instantiate a `Moobile.ViewController` directly, instead you instantiate a subclass of `Moobile.ViewController` based on the task it performs.
+Provides an object for managing a view and its view controller hierarchy. You will rarely instantiate a `Moobile.ViewController` directly, instead you would instantiate a subclass of `Moobile.ViewController` based on the task it performs.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
 ### *[Moobile.View](../View/View.md)* view {#view}
 
-The view which the view controller manages. Must be initialized using the `loadView` method.
+The view managed by the current view controller instance. Must be initialized using the `loadView` method.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ Name             | Type                                                         
 
 ### getChildViewControllers() {#getChildViewControllers}
 
-Return an array containing all children view controllers.
+Return an array containing all child view controllers.
 
 #### Returns:
 
@@ -131,7 +131,7 @@ Return an array containing all children view controllers.
 
 ### hasChildViewController(viewController) {#hasChildViewController}
 
-Indicates whether the given viewController is a child of this view controller.
+Indicates whether the given viewController is a child of the current instance.
 
 #### Parameters:
 
@@ -360,7 +360,7 @@ Returns the view transition.
 
 ### setViewControllerStack(viewControllerStack) {#setViewControllerStack}
 
-Sets the view controller stack. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller stack. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
@@ -386,7 +386,7 @@ Returns the view controller stack that contains this view controller.
 
 ### setViewControllerPanel(viewControllerPanel) {#setViewControllerPanel}
 
-Sets the view controller panel containing this view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller panel containing this view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
@@ -412,7 +412,7 @@ Returns the view controller panel containing this view controller.
 
 ### setParentViewController(parentViewController) {#setParentViewController}
 
-Sets the parent view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the parent view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
