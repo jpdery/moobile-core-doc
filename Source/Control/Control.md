@@ -1,7 +1,7 @@
 Moobile.Control
 ================================================================================
 
-##### Extends *[Moobile.Component]*
+##### Extends *[Moobile.Component](../Component/Component.md)*
 
 Provides the base class for controls. Do not instantiate this class directly, instead subclass it to create your own components.
 
@@ -195,7 +195,7 @@ Whether the control is highlightable.
 
 ### *Object* options  {#options}
 
-The control options with values inherited from [Moobile.Component].
+The control options with values inherited from [Moobile.Component](../Component/Component.md).
 
 Name        | Type   | Description
 ----------- | ------ | -----------
@@ -206,4 +206,4 @@ Name        | Type   | Description
 Events {#events}
 --------------------------------------------------------------------------------
 
-Inherited from [Moobile.Component]
+Inherited from [Moobile.Component](../Component/Component.md)
