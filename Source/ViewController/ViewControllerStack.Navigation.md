@@ -3,7 +3,7 @@ Moobile.ViewControllerStack.Navigation
 
 ##### Extends [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)
 
-Provides a view controller stack that automatically creates a navigation bar to the view
+Provides a view controller stack which automatically creates a navigation bar for the view
 
 Initialization {#initialization}
 --------------------------------------------------------------------------------

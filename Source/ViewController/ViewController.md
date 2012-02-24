@@ -3,21 +3,21 @@ Moobile.ViewController
 
 ##### Extends *[Moobile.EventDispatcher](../Event/EventDispatcher.md)*
 
-Provides an object that manages a view and its view controller hierarchy. You rarely instantiate a `Moobile.ViewController` directly, instead you instantiate subclass of `Moobile.ViewController` based on the task it performs.
+Provides an object for managing a view and its view controller hierarchy. You will rarely instantiate a `Moobile.ViewController` directly, instead you would instantiate a subclass of `Moobile.ViewController` based on the task it performs.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
 ### *[Moobile.View](../View/View.md)* view {#view}
 
-The view that the view controller manages. Must be initialized it using the `loadView` method.
+The view managed by the current view controller instance. Must be initialized using the `loadView` method.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### loadView() {#loadView}
 
-Creates the view that the view controller manages. Overrides this method and assign the view to the `view` member of this class. Do not call the parent of this method as it could overwrite your view.
+Creates the view managed by this view controller instance. Override this method and assign a view instance to the `view` member of this class. Do not call the parent method as it could overwrite your view.
 
 -----
 
@@ -73,7 +73,7 @@ Name             | Type                                                         
 
 ### getChildViewController(name) {#getChildViewController}
 
-Returns a child view controller that matches the given name.
+Returns a child view controller matching a given name.
 
 #### Parameters:
 
@@ -121,17 +121,17 @@ Name             | Type                                                         
 
 ### getChildViewControllers() {#getChildViewControllers}
 
-Return the array that contains all the child view controllers.
+Return an array containing all child view controllers.
 
 #### Returns:
 
-- *Array* The array that contains all the child view controllers.
+- *Array* Array containing all children view controllers.
 
 -----
 
 ### hasChildViewController(viewController) {#hasChildViewController}
 
-Indicates whether a given view controller is a child of this view controller.
+Indicates whether the given viewController is a child of the current instance.
 
 #### Parameters:
 
@@ -148,7 +148,7 @@ Name             | Type                                                         
 
 ### removeChildViewController(viewController, [destroy]) {#removeChildViewController}
 
-Removes a given child view controller from this view controller. If `destroy` is `true`, the given child view controller will also be destroyed.
+Removes the given viewController from the child view controllers. If `destroy` is `true`, the given viewController will also be destroyed.
 
 #### Parameters:
 
@@ -165,7 +165,7 @@ Name             | Type                                                         
 
 ### removeChildViewControllers(, [destroy]) {#removeChildViewControllers}
 
-Removes all child view controllers from this view controller. If `destroy` is `true`, the given child view controller will also be destroyed.
+Removes all child view controllers. If `destroy` is `true`, All child view controllers will also be destroyed.
 
 #### Parameters:
 
@@ -181,7 +181,7 @@ Name      | Type    | Description
 
 ### removeFromParentViewController([destroy]) {#removeFromParentViewController}
 
-Removes this view controller from its parent.
+Removes the current instance from its parent.
 
 #### Parameters:
 
@@ -197,7 +197,7 @@ Name      | Type    | Description
 
 ### presentModalViewController(viewController, [viewTransition]) {#presentModalViewController}
 
-Display a child view controller over this view controller using a given transition. The view controller presented as modal will only have a reference to its parent view controller and will use it to dismiss the modal view controller.
+Displays a child view controller over this view controller using a given transition. The view controller presented as modal will only have a reference to its parent view controller and will use it to dismiss the modal view controller.
 
 #### Parameters:
 
@@ -224,7 +224,7 @@ Dismisses the current modal view controller and destroy it.
 
 ### getName() {#getName}
 
-Return this view controller's name.
+Returns the view controller name.
 
 #### Returns:
 
@@ -286,7 +286,7 @@ Returns the image.
 
 ### setModal(modal) {#isModal}
 
-Sets whether this view controller is being presented as the modal view controller of another view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets whether the current instance is being presented as the modal view controller of another view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
@@ -302,7 +302,7 @@ Name    | Type    | Description
 
 ### isModal() {#isModal}
 
-Indicates whether this view controller is being presented as the modal view controller of another view controller.
+Indicates whether the current instance is being presented as a modal view controller of another view controller.
 
 #### Returns:
 
@@ -360,7 +360,7 @@ Returns the view transition.
 
 ### setViewControllerStack(viewControllerStack) {#setViewControllerStack}
 
-Sets the view controller stack. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller stack. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
@@ -386,7 +386,7 @@ Returns the view controller stack that contains this view controller.
 
 ### setViewControllerPanel(viewControllerPanel) {#setViewControllerPanel}
 
-Sets the view controller panel that contains this view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller panel containing this view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 
@@ -402,7 +402,7 @@ Name                  | Type                                                    
 
 ### getViewControllerPanel() {#getViewControllerPanel}
 
-Returns the view controller panel that contains this view controller.
+Returns the view controller panel containing this view controller.
 
 #### Returns:
 
@@ -412,7 +412,7 @@ Returns the view controller panel that contains this view controller.
 
 ### setParentViewController(parentViewController) {#setParentViewController}
 
-Sets the parent view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the parent view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
 
 #### Parameters:
 

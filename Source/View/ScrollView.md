@@ -3,7 +3,7 @@ Moobile.ScrollView
 
 ##### Extends [Moobile.View](View/View.md)
 
-Provides supports for displaying content that is larger tha this view
+Provides support for displaying content that is larger than the view
        size.
 
 Initialization {#initialization}
@@ -14,7 +14,7 @@ Methods {#methods}
 
 ### scrollTo(x, y, time)
 
-Scrolls to a set of coordinates.
+Scrolls to a set of coordinate.
 
 #### Parameters:
 
@@ -83,9 +83,9 @@ indicates the vertical scroll of this entity.
 
 ### getScrollSize()
 
-Returns the content's size including the scrolling area.
+Returns the content size including the scrolling area.
 
-This method will return the content's size as an object with two keys,
+This method will return the content size as an object with two keys,
 `x` which indicates the width and `y` which indicates the height.
 
 

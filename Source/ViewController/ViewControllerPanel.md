@@ -3,7 +3,7 @@ Moobile.ViewControllerPanel
 
 ##### Extends [Moobile.ViewController](../ViewController/ViewController.md)
 
-Provides a controller that manages two side-by-sides view controllers.
+Provides a controller for managing two side-by-sides view controllers.
 
 Initialization {#initialization}
 --------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Methods {#methods}
 
 ### setMainViewController(mainViewController) {#setMainViewController}
 
-Sets the main view controller and add its view to this view's side panel. There can be only one main view controller at time meaning setting a new one will destroy the current.
+Sets the main view controller and add its view to this view's side panel. There can be only one main view controller at a given time, meaning setting a new one will destroy the current.
 
 #### Parameters:
 
@@ -54,7 +54,7 @@ Returns the main view controller.
 
 ### setSideViewController(sideViewController) {#setSideViewController}
 
-Sets the side view controller and add its view to this view's side panel. There can be only one main view controller at time meaning setting a new one will destroy the current.
+Sets the side view controller and add its view to this view's side panel. There can be only one main view controller at a given time, meaning setting a new one will destroy the current.
 
 #### Parameters:
 
