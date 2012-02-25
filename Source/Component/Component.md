@@ -19,45 +19,67 @@ Fired when this component becomes ready.
 
 A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
+-----
+
 ### tap
 
 Fired when this component receives a `tap` event.
+
+-----
 
 ### tapstart
 
 Fired when this component receives a `tapstart` event.
 
+-----
+
 ### tapmove
 
 Fired when this component receives a `tapmove` event.
+
+-----
 
 ### tapend
 
 Fired when this component receives a `tapend` event.
 
+-----
+
 ### touchstart
 
 Fired when this component receives a `touchstart` event.
+
+-----
 
 ### touchmove
 
 Fired when this component receives a `touchmove` event.
 
+-----
+
 ### touchend
 
 Fired when this component receives a `touchend` event.
+
+-----
 
 ### pinch
 
 Fired when this component receives a `pinch` event.
 
+-----
+
 ### swipe
 
 Fired when this component receives a `swipe` event.
 
+-----
+
 ### show
 
 Fired when this component becomes visible.
+
+-----
 
 ### hide
 
@@ -69,6 +91,8 @@ Members {#members}
 ### *Element* element {#element}
 
 The element managed by the component.
+
+-----
 
 ### *Object* options {#options}
 
