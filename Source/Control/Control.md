@@ -13,27 +13,27 @@ This class should not be instantiated, instead you should subclass it and create
 Events {#events}
 --------------------------------------------------------------------------------
 
-The `Moobile.Control` class does not define additional events.
+This class does not define additional events.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-The `Moobile.Control` class does not define additional members.
+This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setDisabled(value) {#setDisabled}
 
-Sets whether the control is disabled. The CSS class `is-disabled` is added to the control element upon being disabled.
+Sets whether this control is disabled. The CSS class `is-disabled` is added to the control element upon being disabled.
 
-Events won't be fired when the control is disabled.
+Events won't be fired when this control is disabled.
 
 #### Parameters:
 
 Name    | Type    | Description
 ------- | ------- | -----------
-`value` | Boolean | Whether the control is disabled.
+`value` | Boolean | Whether this control is disabled.
 
 #### Returns:
 
@@ -43,23 +43,23 @@ Name    | Type    | Description
 
 ### isDisabled() {#isDisabled}
 
-Indicate whether the control is disabled.
+Indicate whether this control is disabled.
 
 #### Returns:
 
-- `Boolean` Whether the control is disabled.
+- `Boolean` Whether this control is disabled.
 
 -----
 
 ### setSelected(value) {#setSelected}
 
-Sets whether the control is selected. The CSS class `is-selected` is added to the control element upon being disabled.
+Sets whether this control is selected. The CSS class `is-selected` is added to the control element upon being disabled.
 
 #### Parameters:
 
 Name    | Type    | Description
 ------- | ------- | -----------
-`value` | Boolean | Whether the control is selected.
+`value` | Boolean | Whether this control is selected.
 
 #### Returns:
 
@@ -69,23 +69,23 @@ Name    | Type    | Description
 
 ### isSelected() {#isSelected}
 
-Indicates whether the control is selected.
+Indicates whether this control is selected.
 
 #### Returns:
 
-- `Boolean` Whether the control is selected.
+- `Boolean` Whether this control is selected.
 
 -----
 
 ### setHighlighted(value) {#setHighlighted}
 
-Sets whether the control is selected. The CSS class `is-highlighted` is added to the control element upon being highlighted.
+Sets whether this control is selected. The CSS class `is-highlighted` is added to the control element upon being highlighted.
 
 #### Parameters:
 
 Name    | Type    | Description
 ------- | ------- | -----------
-`value` | Boolean | Whether the control is highlighted.
+`value` | Boolean | Whether this control is highlighted.
 
 #### Returns:
 
@@ -95,11 +95,11 @@ Name    | Type    | Description
 
 ### isHighlighted() {#isHighlighted}
 
-Indicate whether the control is highlighted.
+Indicate whether this control is highlighted.
 
 #### Returns:
 
-- `Boolean` Whether the control is highlighted.
+- `Boolean` Whether this control is highlighted.
 
 -----
 

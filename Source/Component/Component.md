@@ -719,6 +719,8 @@ Override this method to provide your own implementation.
 
 Tells this component a component is about to be added.
 
+Override this method to provide your own implementation.
+
 #### Parameters:
 
 Name        | Type                                           | Description
@@ -730,6 +732,8 @@ Name        | Type                                           | Description
 ### didAddChild(component) {#didAddChild}
 
 Tells this component a component has been added.
+
+Override this method to provide your own implementation.
 
 #### Parameters:
 
@@ -743,6 +747,8 @@ Name        | Type                                           | Description
 
 Tell the component a child component is about to be removed.
 
+Override this method to provide your own implementation.
+
 #### Parameters:
 
 Name        | Type                                           | Description
@@ -754,6 +760,8 @@ Name        | Type                                           | Description
 ### didRemoveChild(component) {#didRemoveChild}
 
 Tell the component a child component has been removed.
+
+Override this method to provide your own implementation.
 
 #### Parameters:
 
@@ -767,6 +775,8 @@ Name        | Type                                           | Description
 
 Tell the component it's about to be moved to another component.
 
+Override this method to provide your own implementation.
+
 #### Parameters:
 
 Name     | Type                                           | Description
@@ -778,6 +788,8 @@ Name     | Type                                           | Description
 ### parentDidChange(parent) {#parentDidChange}
 
 Tell the component it has been moved to a new component.
+
+Override this method to provide your own implementation.
 
 #### Parameters:
 
@@ -791,11 +803,15 @@ Name     | Type                                           | Description
 
 Tell the component it's about to become visible.
 
+Override this method to provide your own implementation.
+
 -----
 
 ### didShow() {#didShow}
 
 Tell the component it became visible.
+
+Override this method to provide your own implementation.
 
 -----
 
@@ -803,11 +819,15 @@ Tell the component it became visible.
 
 Tell the component it's about to become hidden.
 
+Override this method to provide your own implementation.
+
 -----
 
 ### didHide() {#didHide}
 
 Tell the component it became hidden.
+
+Override this method to provide your own implementation.
 
 -----
 
