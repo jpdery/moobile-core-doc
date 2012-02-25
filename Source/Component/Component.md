@@ -17,7 +17,7 @@ Events {#events}
 
 Fired when this component becomes ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 -----
 
@@ -486,7 +486,7 @@ Indicates whether this component has a window.
 
 Sets whether this component is ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 This method is handled by the `Moobile.Component` class and should not be called manually.
 
@@ -500,7 +500,7 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 Indicates whether this component is ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 #### Returns:
 
@@ -709,7 +709,7 @@ Override this method to provide your own implementation.
 
 Tells this component it became ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 Override this method to provide your own implementation.
 
