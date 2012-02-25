@@ -1,16 +1,74 @@
 Moobile.Component
 ================================================================================
 
-##### Extends *[Moobile.Component](../Component/Component.md)(Entity/Entity.md)*
+##### Extends *[Moobile.EventDispatcher](../Event/EventDispatcher.md)*
 
-Provides the base class for objects that encapsulates a DOM element and it hierarchy. Do not instantiate this class directly, instead subclass it to create your own components.
+Provides the base class for most visual objects the user will interact with. A component encapsulates a DOM element and provides methods to handle a hierarchy of components.
+
+Initialization {#initialize}
+--------------------------------------------------------------------------------
+
+This class should not be instantiated, instead you should subclass it and create your own components.
+
+Events {#events}
+--------------------------------------------------------------------------------
+
+### ready
+
+Fired when this component becomes ready.
+
+A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+
+### tap
+
+Fired when this component receives a `tap` event.
+
+### tapstart
+
+Fired when this component receives a `tapstart` event.
+
+### tapmove
+
+Fired when this component receives a `tapmove` event.
+
+### tapend
+
+Fired when this component receives a `tapend` event.
+
+### touchstart
+
+Fired when this component receives a `touchstart` event.
+
+### touchmove
+
+Fired when this component receives a `touchmove` event.
+
+### touchend
+
+Fired when this component receives a `touchend` event.
+
+### pinch
+
+Fired when this component receives a `pinch` event.
+
+### swipe
+
+Fired when this component receives a `swipe` event.
+
+### show
+
+Fired when this component becomes visible.
+
+### hide
+
+Fired when this component becomes hidden.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
 ### *Element* element {#element}
 
-The element managed by the component. The element is also the root element of the component's hierarchy.
+The element managed by the component.
 
 ### *Object* options {#options}
 
@@ -27,16 +85,14 @@ Methods {#methods}
 
 ### addChild(component, [where]) {#addChild}
 
-Adds a child component to the `top` or `bottom` of this component. If the `where` parameter is unspecified, the child compoment will be added at the `bottom` of this component.
-
-If the child component's element is already within this component's element, it won't be move, only the reference of the component itself will be stored.
+Add the specified component at the `top` or `bottom` of this component. If `where` is unspecified, the component will be added at the bottom of this component. The component's element will also be added at the `top` or `bottom` of this component's element hierarchy. However, the component's element will stay at its current location if it's already in this component's element hierarchy and `where` is unspecified.
 
 #### Parameters:
 
 Name               | Type                                           | Description
 ------------------ | ---------------------------------------------- | -----------
-`component`        | [Moobile.Component](../Component/Component.md) | The child component.
-`where` *Optional* | String                                         | The child component's location, cam be either `top` or `bottom`, defaults to `bottom`.
+`component`        | [Moobile.Component](../Component/Component.md) | The component.
+`where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -46,17 +102,17 @@ Name               | Type                                           | Descriptio
 
 ### addChildInside(component, element, [where]) {#addChildInside}
 
-Adds a child component to the `top` or `bottom` of one of this component's child element. If the `where` parameter is unspecified, the child compoment will be added at the `bottom` of this component's child element.
+Adds the specified component at the `top` or `bottom` of a component's element. If `where` is unspecified, the component will be added at the `bottom` of the component's element.
 
-If the child component's element is already within this component's element, it won't be move, only the reference of the component itself will be stored.
+This methods will remove the component from its current parent before adding it.
 
 #### Parameters:
 
 Name               | Type                                           | Description
 ------------------ | ---------------------------------------------- | -----------
-`component`        | [Moobile.Component](../Component/Component.md) | The child component.
-`element`          | Element                                        | The component's child element to put the child component inside.
-`where` *Optional* | String                                         | The child component's location, cam be either `top` or `bottom`, defaults to `bottom`.
+`component`        | [Moobile.Component](../Component/Component.md) | The component.
+`element`          | Element                                        | The component's element.
+`where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -66,16 +122,16 @@ Name               | Type                                           | Descriptio
 
 ### addChildAfter(component, after) {#addChildAfter}
 
-Adds a child component after another child component of this component.
+Adds the specified component after another child of this component.
 
-If the child component's element is already within this component's element, it won't be move, only the reference of the component itself will be stored.
+This methods will remove the component from its current parent before adding it.
 
 #### Parameters:
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The child component.
-`after`     | [Moobile.Component](../Component/Component.md) | The child component will be placed after this component.
+`component` | [Moobile.Component](../Component/Component.md) | The component.
+`after`     | [Moobile.Component](../Component/Component.md) | The component will be placed after this component.
 
 #### Returns:
 
@@ -85,16 +141,16 @@ Name        | Type                                           | Description
 
 ### addChildBefore(component, before) {#addChildBefore}
 
-Adds a child component before another child component of this component.
+Adds the specified component before another child of this component.
 
-If the child component's element is already within this component's element, it won't be move, only the reference of the component itself will be stored.
+This methods will remove the component from its current parent before adding it.
 
 #### Parameters:
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The child component.
-`after`     | [Moobile.Component](../Component/Component.md) | The child component will be placed before this component.
+`component` | [Moobile.Component](../Component/Component.md) | The component.
+`after`     | [Moobile.Component](../Component/Component.md) | The component will be placed before this component.
 
 #### Returns:
 
@@ -104,7 +160,7 @@ Name        | Type                                           | Description
 
 ### getChild(name) {#getChild}
 
-Return a child component that matches the given name.
+Return a component that matches the specified name.
 
 #### Parameters:
 
@@ -114,13 +170,13 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The child component or `null` if no components were found using the given name.
+- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components were found with the name.
 
 -----
 
 ### getChildOfType(type, name) {#getChildOfType}
 
-Return a child component of a given type that matches the given name.
+Return a component of a specified type that matches the specified name.
 
 #### Parameters:
 
@@ -131,17 +187,13 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The child component or `null` if no components were found using the given name.
-
-#### Example:
-
-	component.getChildOfType(Moobile.Button, 'foo');
+- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components of that type were found with the name.
 
 -----
 
 ### getChildAt(index) {#getChildAt}
 
-Return a child component at a given index.
+Return a component at a specified index.
 
 #### Parameters:
 
@@ -151,13 +203,13 @@ Name    | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The child component or `null` if no components were found using the given name.
+- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components were found at the index.
 
 -----
 
 ### getChildOfTypeAt(type, index) {#getChildOfTypeAt}
 
-Return a child component of a certain type at a given index.
+Return a component of a specified type at a specified index.
 
 #### Parameters:
 
@@ -168,63 +220,13 @@ Name    | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The child component or `null` if no components were found using the given name.
-
-#### Example:
-
-	component.getChildOfTypeAt(Moobile.Button, 2); // returns the third button
+- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components of that type were found at the index.
 
 -----
 
 ### getChildIndex(component) {#getChildIndex}
 
-Returns the index of a given component or `-1` if the component is not a child of this component.
-
-#### Parameters:
-
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The child component to retrieve its index.
-
-#### Returns:
-
-- *Number* The child component index or `-1` if the given component is not a child of this component.
-
------
-
-### getChildren() {#getChildren}
-
-Returns all the child components of this component.
-
-#### Returns:
-
-- *Array* The child components.
-
------
-
-### getChildrenOfType() {#getChildrenOfType}
-
-Returns all the child components of this component of a given type
-
-#### Parameters:
-
-Name   | Type  | Description
------- | ----- | -----------
-`type` | Class | The component's class.
-
-#### Returns:
-
-- *Array* The child components.
-
-#### Example:
-
-	component.getChildrenOfType(Moobile.Button);
-
------
-
-### hasChild(component) {#hasChild}
-
-Indicates whether a component is a child of this component.
+Returns the index of a specified component or `-1` if the component is not present in this component.
 
 #### Parameters:
 
@@ -234,13 +236,23 @@ Name        | Type                                           | Description
 
 #### Returns:
 
-- *Boolean* Whether the component is a child of this component.
+- *Number* The component index or `-1` if the component is not present in this component.
 
 -----
 
-### hasChildOfType(type) {#hasChild}
+### getChildren() {#getChildren}
 
-Indicates whether a component has at least one child of the given type.
+Returns all the components in this component.
+
+#### Returns:
+
+- *Array* An array of all the components in this component.
+
+-----
+
+### getChildrenOfType(type) {#getChildrenOfType}
+
+Returns all the components of a specified type in this component.
 
 #### Parameters:
 
@@ -250,13 +262,45 @@ Name   | Type  | Description
 
 #### Returns:
 
-- *Boolean* Whether a component has at least one child of the given type.
+- *Array* An array of all the components of the type in this component.
+
+-----
+
+### hasChild(component) {#hasChild}
+
+Indicates whether a component is present in this component.
+
+#### Parameters:
+
+Name        | Type                                           | Description
+----------- | ---------------------------------------------- | -----------
+`component` | [Moobile.Component](../Component/Component.md) | The component to search for.
+
+#### Returns:
+
+- *Boolean* Whether the component is present in this component.
+
+-----
+
+### hasChildOfType(type) {#hasChild}
+
+Indicates whether this component has at least one component of the specified type.
+
+#### Parameters:
+
+Name   | Type  | Description
+------ | ----- | -----------
+`type` | Class | The component's class.
+
+#### Returns:
+
+- *Boolean* Whether this component has at least one component of that type.
 
 -----
 
 ### replaceChild(component, replacement, destroy) {#replaceChild}
 
-Replaces a child component with another.
+Replaces a component with another.
 
 #### Parameters:
 
@@ -274,7 +318,7 @@ Name          | Type                                           | Description
 
 ### removeChild(component, destroy) {#removeChild}
 
-Removes a child component.
+Removes a component.
 
 #### Parameters:
 
@@ -291,7 +335,7 @@ Name          | Type                                           | Description
 
 ### removeChildren(destroy) {#removeChildren}
 
-Removes all the child components.
+Removes all components.
 
 #### Parameters:
 
@@ -307,7 +351,7 @@ Name      | Type    | Description
 
 ### removeChildrenOfType(type, destroy) {#removeChildrenOfType}
 
-Removes all the child components of a given type.
+Removes all components of a specified type.
 
 #### Parameters:
 
@@ -324,7 +368,7 @@ Name      | Type    | Description
 
 ### removeFromParent(destroy) {#removeFromParent}
 
-Removes this component from its parent component.
+Removes this component from its parent.
 
 #### Parameters:
 
@@ -340,7 +384,9 @@ Name      | Type    | Description
 
 ### setParent(parent) {#setParent}
 
-Sets the parent component of this component. This method is handled by the API and should not be called manually.
+Sets the parent of this component.
+
+This method is handled by the `Moobile.Component` class and should not be called manually.
 
 #### Parameters:
 
@@ -356,7 +402,7 @@ Name     | Type                                           | Description
 
 ### getParent() {#getParent}
 
-Returns the parent component of this component.
+Returns the parent of this component.
 
 #### Returns:
 
@@ -370,13 +416,15 @@ Indicates whether this component has a parent.
 
 #### Returns:
 
-- *Boolean* Whether this component has an parent.
+- *Boolean* Whether this component has a parent.
 
 ----
 
 ### setWindow(window) {#setWindow}
 
-Sets the window that contains this component. This method is handled by the API and should not be called manually.
+Sets the window that contains this component.
+
+This method is handled by the `Moobile.Component` class and should not be called manually.
 
 #### Parameters:
 
@@ -412,9 +460,11 @@ Indicates whether this component has a window.
 
 ### setReady() {#setReady}
 
-Marks this component as being ready. This method is handled by the API and should not be called manually.
+Sets whether this component is ready.
 
- ***Note:*** A component is ready when its element is part of the DOM.
+A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+
+This method is handled by the `Moobile.Component` class and should not be called manually.
 
 #### Returns:
 
@@ -426,27 +476,27 @@ Marks this component as being ready. This method is handled by the API and shoul
 
 Indicates whether this component is ready.
 
-***Note:*** A component is ready when its element is part of the DOM.
+A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 #### Returns:
 
-- *Boolean* Whether the component is ready.
+- *Boolean* Whether this component is ready.
 
 ----
 
 ### getName() {#getName}
 
-Returns the component name given at initialization.
+Returns this component name's name.
 
 #### Returns:
 
-- *String* The name.
+- *String* This component's name.
 
 -----
 
 ### setStyle(name) {#setStyle}
 
-Sets a predefined style to this component.
+Set the style of this component.
 
 #### Parameters:
 
@@ -462,17 +512,17 @@ Name   | Type   | Description
 
 ### getStyle() {#getStyle}
 
-Returns the name of the current style of this component.
+Returns the current style name.
 
 #### Returns:
 
-- *String* The style name or `null`.
+- *String* The current style name or `null` if no style were set.
 
 -----
 
 ### addClass(name) {#addClass}
 
-Adds a CSS class to this component's element.
+Adds the specified CSS class to this component's element.
 
 #### Parameters:
 
@@ -488,7 +538,7 @@ Name   | Type   | Description
 
 ### removeClass(name) {#removeClass}
 
-Removes a CSS class from this component's element.
+Removes the specified CSS class from this component's element.
 
 #### Parameters:
 
@@ -504,7 +554,7 @@ Name   | Type   | Description
 
 ### toggleClass(name) {#toggleClass}
 
-Adds or removes a CSS class from this component.
+Adds or removes the specified CSS class from this component.
 
 #### Parameters:
 
@@ -516,12 +566,11 @@ Name   | Type   | Description
 
 - *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
 
-
 -----
 
 ### getElement(selector) {#getElement}
 
-Returns this component's element or the first element within this component's element that matches the given selector.
+Returns this component's element or the first element within this component's element that matches the specified selector.
 
 #### Parameters:
 
@@ -537,13 +586,13 @@ Name                  | Type   | Description
 
 ### getElements(selector) {#getElements}
 
-Returns a collection of elements from the component's element that matches the given selector.
+Returns a collection of elements from the component's element that matches the specified selector.
 
 #### Parameters:
 
-Name                  | Type   | Description
---------------------- | ------ | -----------
-`selector` *Optional* | String | The CSS selector.
+Name       | Type   | Description
+---------- | ------ | -----------
+`selector` | String | The CSS selector.
 
 #### Returns:
 
@@ -553,7 +602,7 @@ Name                  | Type   | Description
 
 ### hasElement(element) {#hasElement}
 
-Indicates whether an element within this component's element.
+Indicates whether the specified element is a child of this component's element.
 
 #### Parameters:
 
@@ -572,6 +621,8 @@ Name      | Type    | Description
 Returns this component's size as an object with two keys, `x` to indicate the
 width and `y` to indicate the height.
 
+The component must be *ready* when calling this method otherwise it won't be measured.
+
 #### Returns:
 
 - *Object* This component's size.
@@ -580,7 +631,9 @@ width and `y` to indicate the height.
 
 ### getPosition([relative]) {#getPosition}
 
-Returns this component's position relative to an element. If unspecified, the position returned will be relative to its parent component.
+Returns this component's position relative to a specified element. If unspecified, the position returned will be relative to its parent.
+
+The component must be *ready* when calling this method otherwise it won't be measured.
 
 #### Returns:
 
@@ -590,7 +643,9 @@ Returns this component's position relative to an element. If unspecified, the po
 
 ### show() {#show}
 
-Shows this component using the `display` CSS property of this component's element.
+Shows this component. This method will also remove the `hidden` CSS class from this component's element.
+
+This method fires the `show` event.
 
 #### Returns:
 
@@ -600,7 +655,9 @@ Shows this component using the `display` CSS property of this component's elemen
 
 ### hide() {#hide}
 
-Hides this component using the `display` CSS property of this component's element.
+Hides this component. This method will also add the `hidden` CSS class from this component's element.
+
+This method fires the `hide` event.
 
 #### Returns:
 
@@ -610,57 +667,51 @@ Hides this component using the `display` CSS property of this component's elemen
 
 ### willBuild() {#willBuild}
 
-Tells the component it's about to be build.
+Tells this component it's about to be built. This method is called once the component's element is set and before its roles are being processed.
 
-This method is called once the component's element has been set and before
-other pieces of the initialization such as processing elements with role
-and applying style have taken place.
-
-Override this method to provide your custom implementation.
+Override this method to provide your own implementation.
 
 -----
 
 ### didBuild() {#didBuild}
 
-Tells the component it's has been built.
+Tells this component it has been built.
 
-This method is called once the entire initialization process is
-completed, after elements with roles were processed and style was
-loaded.
-
-Override this method to provide your custom implementation.
+Override this method to provide your own implementation.
 
 -----
 
 ### didBecomeReady() {#didBecomeReady}
 
-Tells the component it has become part of the DOM.
+Tells this component it became ready.
 
-Override this method to provide your custom implementation.
+A component is *ready* when it's hierarchy is assigned to a window and therefor in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+
+Override this method to provide your own implementation.
 
 -----
 
 ### willAddChild(component) {#willAddChild}
 
-Tells the component a child component is about to be added.
+Tells this component a component is about to be added.
 
 #### Parameters:
 
-Name        | Type                | Description
------------ | ------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that is going to be added.
+Name        | Type                                           | Description
+----------- | ---------------------------------------------- | -----------
+`component` | [Moobile.Component](../Component/Component.md) | The component that is about to be added.
 
 -----
 
 ### didAddChild(component) {#didAddChild}
 
-Tell the component a child component has been added.
+Tells this component a component has been added.
 
 #### Parameters:
 
-Name        | Type                | Description
------------ | ------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that was added.
+Name        | Type                                           | Description
+----------- | ---------------------------------------------- | -----------
+`component` | [Moobile.Component](../Component/Component.md) | The component that has been added.
 
 -----
 
@@ -670,9 +721,9 @@ Tell the component a child component is about to be removed.
 
 #### Parameters:
 
-Name        | Type                | Description
------------ | ------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that will be removed.
+Name        | Type                                           | Description
+----------- | ---------------------------------------------- | -----------
+`component` | [Moobile.Component](../Component/Component.md) | The component that is about to be removed.
 
 -----
 
@@ -682,21 +733,21 @@ Tell the component a child component has been removed.
 
 #### Parameters:
 
-Name     | Type                   | Description
--------- | ---------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that was removed.
+Name        | Type                                           | Description
+----------- | ---------------------------------------------- | -----------
+`component` | [Moobile.Component](../Component/Component.md) | The component that has been removed.
 
 -----
 
 ### parentWillChange(parent) {#parentWillChange}
 
-Tell the component it's about to be moved to a new component.
+Tell the component it's about to be moved to another component.
 
 #### Parameters:
 
-Name     | Type                | Description
--------- | ------------------- | -----------
-`parent` | [Moobile.Component](../Component/Component.md) | The component that will own this component.
+Name     | Type                                           | Description
+-------- | ---------------------------------------------- | -----------
+`parent` | [Moobile.Component](../Component/Component.md) | The component this component will be moved to.
 
 -----
 
@@ -706,9 +757,9 @@ Tell the component it has been moved to a new component.
 
 #### Parameters:
 
-Name     | Type                | Description
--------- | ------------------- | -----------
-`parent` | [Moobile.Component](../Component/Component.md) | The component that owns this component.
+Name     | Type                                           | Description
+-------- | ---------------------------------------------- | -----------
+`parent` | [Moobile.Component](../Component/Component.md) | The component this component has been moved to.
 
 -----
 
@@ -738,7 +789,7 @@ Tell the component it became hidden.
 
 ### destroy() {#destroy}
 
-Remove this component from its parent and destroy its hierarchy.
+Remove this component from its parent, destroy its hierarchy prepares it for garbage collection.
 
 If you override this method, make sure you call the parent method at
 the end of your implementation.
@@ -747,7 +798,7 @@ the end of your implementation.
 
 - *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
 
-Static Methods {#static-methods}
+Static Methods {#static}
 --------------------------------------------------------------------------------
 
 ### Moobile.Component.defineRole(name, target, behavior) {#defineRole}
@@ -756,28 +807,22 @@ Define the process to execute upon finding an element with the given role.
 
 #### Parameters:
 
-Name       | Type                | Description
----------- | ------------------- | -----------
-`name`     | String              | The name.
+Name       | Type                                           | Description
+---------- | ---------------------------------------------- | -----------
+`name`     | String                                         | The name.
 `target`   | [Moobile.Component](../Component/Component.md) | The target component or `null` to define the role for all components.
-`behavior` | Function            | The function that defines the role's behavior.
+`behavior` | Function                                       | The function that defines the role's behavior.
 
-#### Example:
+#### Examples:
 
-	/**
-	 * For every elements with the <code>data-role="wrapped"</code> attribute
-	 * found in all type of components, an element will be created and wrapped
-	 * around it.
-	 */
+For every elements with the `data-role="wrapped"` attribute found in all type of components, an element will be created and wrapped around it.
+
 	 Moobile.Component.defineRole('wrapped', null, function(element) {
 	 	new Element('div.wrapped').wraps(element);
 	 });
 
-	/**
-	 * For every elements with the <code>data-role="popup"</code> attribute, a
-	 * new <code>Alert</code> object will be created and added to the view as
-	 * a child component.
-	 */
+For every elements with the `data-role="popup"` attribute, a new `Moobile.Alert` instance will be created and added to the view as a child component.
+
 	Moobile.Component.defineRole('warning', Moobile.View, function(element) {
 		var alert = new Moobile.Alert();
 		alert.setMessage(element.get('html'));
@@ -793,11 +838,11 @@ Defines a style for a component or all components if `target` is set to `null`.
 
 #### Parameters:
 
-Name       | Type                | Description
----------- | ------------------- | -----------
-`name`     | String              | The style name.
+Name       | Type                                           | Description
+---------- | ---------------------------------------------- | -----------
+`name`     | String                                         | The style name.
 `target`   | [Moobile.Component](../Component/Component.md) | The target component or `null` to define the role for all components.
-`behavior` | Object              | The style definition which consists of an object with an `attach` and `detach` method.
+`behavior` | Object                                         | The style definition which consists of an object with an `attach` and `detach` method.
 
 #### Example:
 
@@ -808,58 +853,4 @@ Name       | Type                | Description
 		detach: function() {
 			this.removeClass('glow');
 		}
-	})
-
------
-
-Members {#members}
---------------------------------------------------------------------------------
-
-### *Object* style {#style}
-
-The current style.
-
------
-
-### *String* name {#name}
-
-The name.
-
------
-
-### *Element* element {#element}
-
-The element.
-
------
-
-### *Boolean* ready {#ready}
-
-Whether this component is ready.
-
------
-
-### *Object* options {#options}
-
-The class options.
-
-Name        | Type   | Description
------------ | ------ | -----------
-`className` | String | The component's extra CSS class name.
-`styleName` | String | The component's default style.
-`tagName`   | String | The component's default element type.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-- tap
-- tapstart
-- tapmove
-- tapend
-- touchstart
-- touchmove
-- touchend
-- pinch
-- swipe
-- show
-- hide
+	});
