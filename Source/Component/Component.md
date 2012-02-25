@@ -88,13 +88,13 @@ Fired when this component becomes hidden.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *Element* element {#element}
+### `Element` element {#element}
 
 The element managed by the component.
 
 -----
 
-### *Object* options {#options}
+### `Object` options {#options}
 
 The component's options.
 
@@ -120,7 +120,7 @@ Name               | Type                                           | Descriptio
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -140,7 +140,7 @@ Name               | Type                                           | Descriptio
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -159,7 +159,7 @@ Name        | Type                                           | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -178,7 +178,7 @@ Name        | Type                                           | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -194,7 +194,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components were found with the name.
+- `[Moobile.Component](../Component/Component.md)` The component or `null` if no components were found with the name.
 
 -----
 
@@ -211,7 +211,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components of that type were found with the name.
+- `[Moobile.Component](../Component/Component.md)` The component or `null` if no components of that type were found with the name.
 
 -----
 
@@ -227,7 +227,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components were found at the index.
+- `[Moobile.Component](../Component/Component.md)` The component or `null` if no components were found at the index.
 
 -----
 
@@ -244,7 +244,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The component or `null` if no components of that type were found at the index.
+- `[Moobile.Component](../Component/Component.md)` The component or `null` if no components of that type were found at the index.
 
 -----
 
@@ -260,7 +260,7 @@ Name        | Type                                           | Description
 
 #### Returns:
 
-- *Number* The component index or `-1` if the component is not present in this component.
+- `Number` The component index or `-1` if the component is not present in this component.
 
 -----
 
@@ -270,7 +270,7 @@ Returns all the components in this component.
 
 #### Returns:
 
-- *Array* An array of all the components in this component.
+- `Array` An array of all the components in this component.
 
 -----
 
@@ -286,7 +286,7 @@ Name   | Type  | Description
 
 #### Returns:
 
-- *Array* An array of all the components of the type in this component.
+- `Array` An array of all the components of the type in this component.
 
 -----
 
@@ -302,7 +302,7 @@ Name        | Type                                           | Description
 
 #### Returns:
 
-- *Boolean* Whether the component is present in this component.
+- `Boolean` Whether the component is present in this component.
 
 -----
 
@@ -318,7 +318,7 @@ Name   | Type  | Description
 
 #### Returns:
 
-- *Boolean* Whether this component has at least one component of that type.
+- `Boolean` Whether this component has at least one component of that type.
 
 -----
 
@@ -336,7 +336,7 @@ Name          | Type                                           | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -353,7 +353,7 @@ Name          | Type                                           | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -369,7 +369,7 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -386,7 +386,7 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -402,7 +402,7 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -420,7 +420,7 @@ Name     | Type                                           | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -430,7 +430,7 @@ Returns the parent of this component.
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* The parent component.
+- `[Moobile.Component](../Component/Component.md)` The parent component.
 
 -----
 
@@ -440,7 +440,7 @@ Indicates whether this component has a parent.
 
 #### Returns:
 
-- *Boolean* Whether this component has a parent.
+- `Boolean` Whether this component has a parent.
 
 ----
 
@@ -458,7 +458,7 @@ Name     | Type                                  | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -468,7 +468,7 @@ Returns the window that contains this component.
 
 #### Returns:
 
-- *[Moobile.Window](../Window/Window.md)* The window.
+- `[Moobile.Window](../Window/Window.md)` The window.
 
 -----
 
@@ -478,7 +478,7 @@ Indicates whether this component has a window.
 
 #### Returns:
 
-- *Boolean* Whether this component as a window.
+- `Boolean` Whether this component as a window.
 
 ----
 
@@ -492,7 +492,7 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -504,7 +504,7 @@ A component is *ready* when it's hierarchy is assigned to a window and therefor 
 
 #### Returns:
 
-- *Boolean* Whether this component is ready.
+- `Boolean` Whether this component is ready.
 
 ----
 
@@ -514,7 +514,7 @@ Returns this component name's name.
 
 #### Returns:
 
-- *String* This component's name.
+- `String` This component's name.
 
 -----
 
@@ -530,7 +530,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -540,7 +540,7 @@ Returns the current style name.
 
 #### Returns:
 
-- *String* The current style name or `null` if no style were set.
+- `String` The current style name or `null` if no style were set.
 
 -----
 
@@ -556,7 +556,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -572,7 +572,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -588,7 +588,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -604,7 +604,7 @@ Name                  | Type   | Description
 
 #### Returns:
 
-- *Element* This component's element or the first element that matches the selector.
+- `Element` This component's element or the first element that matches the selector.
 
 -----
 
@@ -620,7 +620,7 @@ Name       | Type   | Description
 
 #### Returns:
 
-- *Elements* A collection of elements.
+- `Elements` A collection of elements.
 
 -----
 
@@ -636,7 +636,7 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *Boolean* Whether the element exists.
+- `Boolean` Whether the element exists.
 
 ----
 
@@ -649,7 +649,7 @@ The component must be *ready* when calling this method otherwise it won't be mea
 
 #### Returns:
 
-- *Object* This component's size.
+- `Object` This component's size.
 
 ----
 
@@ -661,7 +661,7 @@ The component must be *ready* when calling this method otherwise it won't be mea
 
 #### Returns:
 
-- *Object* This component's position.
+- `Object` This component's position.
 
 -----
 
@@ -673,7 +673,7 @@ This method fires the `show` event.
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -685,7 +685,7 @@ This method fires the `hide` event.
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 -----
 
@@ -820,7 +820,7 @@ the end of your implementation.
 
 #### Returns:
 
-- *[Moobile.Component](../Component/Component.md)* This Moobile.Component instance.
+- `[Moobile.Component](../Component/Component.md)` This Moobile.Component instance.
 
 Static Methods {#static}
 --------------------------------------------------------------------------------
