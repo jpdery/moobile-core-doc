@@ -1,7 +1,7 @@
 Moobile.ActivityIndicator
 ================================================================================
 
-##### Extends *[Moobile.Control]()*
+##### Extends *[Moobile.Control](../Control/Control.md)*
 
 Provides an activity indicator control.
 
@@ -24,13 +24,13 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The button's default CSS class name, defaults to `null`.
-`styleName` | String | The button's default style, defaults to `null`.
-`tagName`   | String | The button's element tag name, defaults to `div`.
+`className` | String | The activity indicator's default CSS class name, defaults to `null`.
+`styleName` | String | The activity indicator's default style, defaults to `null`.
+`tagName`   | String | The activity indicator's element tag name, defaults to `div`.
 
 #### Generates:
 
-<div class="activity-indicator"></div>
+	<div class="activity-indicator"></div>
 
 #### Defined roles:
 
@@ -62,7 +62,7 @@ Stops the indicator animation by removing the `activity` CSS class to the elemen
 Events {#events}
 --------------------------------------------------------------------------------
 
-Events inherited from [Moobile.Control]().
+Events inherited from [Moobile.Control](../Control/Control.md).
 
 Styles {#styles}
 --------------------------------------------------------------------------------

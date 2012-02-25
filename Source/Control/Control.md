@@ -1,7 +1,7 @@
 Moobile.Control
 ================================================================================
 
-##### Extends *[Moobile.Component](../Component/Component.md)*
+##### Extends [Moobile.Component](../Component/Component.md)
 
 Provides the base class for controls such has buttons and list and includes method for getting and setting state.
 

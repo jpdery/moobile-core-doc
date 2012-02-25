@@ -1,7 +1,7 @@
 Moobile.Component
 ================================================================================
 
-##### Extends *[Moobile.EventDispatcher](../Event/EventDispatcher.md)*
+##### Extends [Moobile.EventDispatcher](../Event/EventDispatcher.md)
 
 Provides the base class for most visual objects the user will interact with. A component encapsulates a DOM element and provides methods to handle a hierarchy of components.
 

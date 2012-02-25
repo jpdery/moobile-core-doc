@@ -1,7 +1,7 @@
 Moobile.Button
 ================================================================================
 
-##### Extends *[Moobile.Control]()*
+##### Extends *[Moobile.Control](../Control/Control.md)*
 
 Provides a button control.
 
@@ -41,6 +41,16 @@ Name     | Description
 `button` | Defines the element that act as a button. Use the `data-button` property to specify a subclass instead.
 `label`  | Defines the element that act as a button label. If unspecified, the contents of the button's element will act as its label.
 
+Events {#events}
+--------------------------------------------------------------------------------
+
+This class does not define additional events.
+
+Members {#members}
+--------------------------------------------------------------------------------
+
+This class does not define additional members.
+
 Methods {#methods}
 --------------------------------------------------------------------------------
 
@@ -56,7 +66,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Moobile.Button]()* This Moobile.Button instance.
+- [Moobile.Button](../Control/Button.md) This Moobile.Button instance.
 
 #### Example 1: *Setting the label using a string*
 
@@ -79,7 +89,7 @@ Returns the label.
 
 #### Returns:
 
-- [Moobile.Text]() The label.
+- [Moobile.Text](../Control/Text.md) The label.
 
 #### Example:
 
@@ -88,18 +98,6 @@ Returns the label.
 
 	button.getLabel(); // Returns an instance of Moobile.Text
 	button.getLabel().getText(); // Returns 'Lorem';
-
-Members {#members}
---------------------------------------------------------------------------------
-
-### *[Moobile.Text]()* label {#label}
-
-This button's label.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-Events inherited from [Moobile.Control]().
 
 Styles {#styles}
 --------------------------------------------------------------------------------
