@@ -1,7 +1,7 @@
 Moobile.ViewController
 ================================================================================
 
-##### Extends *[Moobile.EventDispatcher](../Event/EventDispatcher.md)*
+##### Extends [Moobile.EventDispatcher](../Event/EventDispatcher.md)
 
 Provides an object for managing a view and its view controller hierarchy. You will rarely instantiate a `Moobile.ViewController` directly, instead you would instantiate a subclass of `Moobile.ViewController` based on the task it performs.
 
@@ -254,7 +254,7 @@ Returns the title.
 
 #### Returns:
 
-- [Moobile.Text](Control/Text.md) The title.
+- [Moobile.Text](../Control/Text.md) The title.
 
 -----
 

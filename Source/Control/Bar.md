@@ -1,12 +1,51 @@
 Moobile.Bar
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar control.
+Provides a bar control used to manage a [Moobile.BarItem](../Control/BarItem.md) control.
 
-Initialization {#initialization}
+#### Syntax:
+
+	var bar = new Moobile.Bar([element], [options], [name]);
+
+#### Parameters:
+
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`element` *Optional* | Element | The bar's element, element id or html string.
+`options` *Optional* | Object  | The bar's options, see below.
+`name`    *Optional* | String  | The bar's name.
+
+#### Options:
+
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The bar's default CSS class name, defaults to `null`.
+`styleName` | String | The bar's default style, defaults to `null`.
+`tagName`   | String | The bar's element tag name, defaults to `div`.
+
+#### Generates:
+
+	<div class="bar">
+		<div data-role="item" class="bar-item"></div>
+	</div>
+
+#### Defined roles:
+
+Name  | Description
+----- | -----------
+`bar` | Defines the element that act as a ar. Use the `data-bar` property to specify a subclass instead.
+
+Events {#events}
 --------------------------------------------------------------------------------
+
+This class does not define additional events.
+
+Members {#members}
+--------------------------------------------------------------------------------
+
+This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -31,16 +70,13 @@ Name   | Type                                | Description
 
 Returns the bar item.
 
-This method will return the object that contains buttons, button groupes,
-images and so on in a bar control.
-
 #### Returns:
 
 - *[Moobile.BarItem](Control/BarItem.md)* The bar item.
 
-Members {#members}
+Styles {#styles}
 --------------------------------------------------------------------------------
 
-### *[Moobile.BarItem](Control/BarItem.md)* item
+### dark
 
-The bar item.
+[TODO: Image]

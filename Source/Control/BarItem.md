@@ -1,20 +1,26 @@
 Moobile.BarItem
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)
+##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar item control.
+Provides the base class for bar items.
 
-Initialization {#initialization}
+Initialization {#initialize}
 --------------------------------------------------------------------------------
 
-Methods {#methods}
+This class should not be instantiated, instead you should subclass it and create your own bar item.
+
+Events {#events}
 --------------------------------------------------------------------------------
 
+This class does not define additional events.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
+This class does not define additional members.
 
-Events {#events}
+Methods {#methods}
 --------------------------------------------------------------------------------
+
+This class does not define additional methods.

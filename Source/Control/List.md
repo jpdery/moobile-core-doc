@@ -1,7 +1,7 @@
 Moobile.List
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)*
+##### Extends *[Moobile.Control](../Control/Control.md)*
 
 Provides a list control.
 

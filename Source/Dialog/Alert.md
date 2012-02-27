@@ -1,7 +1,7 @@
 Moobile.Alert
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides a modal alert control.
 
@@ -34,7 +34,7 @@ Returns the title.
 
 #### Returns:
 
-- *[Moobile.Text](Control/Text.md)* The title.
+- *[Moobile.Text](../Control/Text.md)* The title.
 
 
 -----
@@ -65,7 +65,7 @@ Returns the message.
 
 #### Returns:
 
-- *[Moobile.Text](Control/Text.md)* The message.
+- *[Moobile.Text](../Control/Text.md)* The message.
 
 -----
 
@@ -77,7 +77,7 @@ Adds the given button at the bottom of the element that contains buttons. The pr
 
 Name     | Type                        | Description
 -------- | --------------------------- | -----------
-`button` | [Moobile.Button](Control/Button.md) | The button.
+`button` | [Moobile.Button](../Control/Button.md) | The button.
 
 #### Returns:
 
@@ -108,13 +108,13 @@ Hides the overlay with an animation by adding the `hide-animated` CSS class to t
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *[Moobile.Text](Control/Text.md)* title
+### *[Moobile.Text](../Control/Text.md)* title
 
 The title.
 
 -----
 
-### *[Moobile.Text](Control/Text.md)* message
+### *[Moobile.Text](../Control/Text.md)* message
 
 The message.
 

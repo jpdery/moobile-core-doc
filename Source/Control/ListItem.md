@@ -1,7 +1,7 @@
 Moobile.ListItem
 ================================================================================
 
-##### Extends *[Moobile.Control](Control/Control.md)*
+##### Extends *[Moobile.Control](../Control/Control.md)*
 
 Provides a list item control.
 
@@ -59,7 +59,7 @@ Returns the label.
 
 #### Returns:
 
-- *[Moobile.Text](Control/Text.md)* The label.
+- *[Moobile.Text](../Control/Text.md)* The label.
 
 -----
 
@@ -85,7 +85,7 @@ Returns the detail label.
 
 #### Returns:
 
-- *[Moobile.Text](Control/Text.md)* The detail label.
+- *[Moobile.Text](../Control/Text.md)* The detail label.
 
 -----
 
@@ -98,13 +98,13 @@ The image.
 
 -----
 
-### *[Moobile.Text](Control/Text.md)* label
+### *[Moobile.Text](../Control/Text.md)* label
 
 The label.
 
 -----
 
-### *[Moobile.Text](Control/Text.md)* detail
+### *[Moobile.Text](../Control/Text.md)* detail
 
 The detail label.
 

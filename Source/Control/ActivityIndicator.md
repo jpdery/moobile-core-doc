@@ -1,11 +1,11 @@
 Moobile.ActivityIndicator
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides an activity indicator control.
+Provides a control that informs the user an operation is running.
 
-Initialization {#initialization}
+Initialization {#initialize}
 --------------------------------------------------------------------------------
 
 #### Syntax:
@@ -36,35 +36,40 @@ Name        | Type   | Description
 
 Name                 | Description
 -------------------- | -----------
-`activity-indicator` | Defines the element that act as an activity-indicator. Use the `data-activity-indicator` property to specify a subclass instead.
+`activity-indicator` | Defines the element that act as an activity indicator. Use the `data-activity-indicator` property to specify a subclass instead.
+
+Events {#events}
+--------------------------------------------------------------------------------
+
+This class does not define additional events.
+
+Members {#members}
+--------------------------------------------------------------------------------
+
+This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### start() {#start}
 
-Starts the indicator animation by adding the `activity` CSS class to the element. Edit the properties of this CSS class to customize the animation.
+Starts this activity indicator animation. This method adds the `activity` CSS class to the element upon starting.
 
 #### Returns:
 
-- *[Moobile.ActivityIndicator]()* This Moobile.ActivityIndicator instance.
+- [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
 
 -----
 
 ### stop() {#stop}
 
-Stops the indicator animation by removing the `activity` CSS class to the element.
+Stops this activity indicator animation. This method removes the `activity` CSS class to the element upon stopping.
 
 #### Returns:
 
-- *[Moobile.ActivityIndicator]()* This Moobile.ActivityIndicator instance.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-Events inherited from [Moobile.Control](../Control/Control.md).
+- [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
 
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-This component does not define styles.
+This control does not define any styles.

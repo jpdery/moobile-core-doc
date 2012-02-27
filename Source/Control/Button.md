@@ -1,7 +1,7 @@
 Moobile.Button
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides a button control.
 
@@ -31,7 +31,7 @@ Name        | Type   | Description
 #### Generates:
 
 	<div class="button">
-		<div data-role="label" class="text label"></div>
+		<span data-role="label" class="text label"></span>
 	</div>
 
 #### Defined roles:
@@ -102,4 +102,4 @@ Returns the label.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-This component does not define styles.
+This control does not define any styles.
