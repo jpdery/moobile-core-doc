@@ -68,21 +68,6 @@ The element used to create this slider's track.
 
 The element used to create this slider's thumb.
 
------
-
-### `Object` options {#options}
-
-The slider's options.
-
-Name        | Type   | Description
------------ | ------ | -----------
-`className` | String | The slider's default CSS class name, defaults to `null`.
-`styleName` | String | The slider's default style, defaults to `null`.
-`tagName`   | String | The slider's element tag name, defaults to `div`.
-`min`       | Number | The slider's minimal value, defaults to `0`.
-`max`       | Number | The slider's maximal value, defaults to `100`.
-`value`     | Number | The slider's initial value, defaults tp `0`.
-
 Methods {#methods}
 --------------------------------------------------------------------------------
 

@@ -107,6 +107,8 @@ Indicate whether this control is highlighted.
 
 Tell this control it's about to change state.
 
+Override this method to provide your own implementation.
+
 Name    | Type   | Description
 ------- | ------ | -----------
 `state` | String | The state that will be set.
@@ -117,6 +119,8 @@ Name    | Type   | Description
 
 Tell this control it has changed state.
 
+Override this method to provide your own implementation.
+
 Name    | Type   | Description
 ------- | ------ | -----------
 `state` | String | The state that will be set.
@@ -126,6 +130,8 @@ Name    | Type   | Description
 ### shouldAllowState(state) {#shouldAllowState}
 
 Indicate whether the specified state is applicable to this control.
+
+Override this method if you wish to limit the states that can be applied to this control.
 
 Name    | Type   | Description
 ------- | ------ | -----------

@@ -5,6 +5,9 @@ Moobile.Bar
 
 Provides a bar control used to manage a [Moobile.BarItem](../Control/BarItem.md) control.
 
+Initialization {#initialize}
+--------------------------------------------------------------------------------
+
 #### Syntax:
 
 	var bar = new Moobile.Bar([element], [options], [name]);
@@ -50,29 +53,29 @@ This class does not define additional members.
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### setItem(item)
+### setItem(item) {#setItem}
 
 Sets the bar item.
 
 #### Parameters:
 
-Name   | Type                                | Description
------- | ----------------------------------- | -----------
-`item` | [Moobile.BarItem](Control/BarItem.md) | The bar item.
+Name   | Type                                     | Description
+------ | ---------------------------------------- | -----------
+`item` | [Moobile.BarItem](../Control/BarItem.md) | The bar item.
 
 #### Returns:
 
-- *[Moobile.Bar](Control/Bar.md)* This bar.
+- [Moobile.Bar](../Control/Bar.md) This bar.
 
 -----
 
-### getItem()
+### getItem() {#getItem}
 
 Returns the bar item.
 
 #### Returns:
 
-- *[Moobile.BarItem](Control/BarItem.md)* The bar item.
+- [Moobile.BarItem](../Control/BarItem.md) The bar item.
 
 Styles {#styles}
 --------------------------------------------------------------------------------

@@ -33,6 +33,17 @@ Name           | Type    | Description
 
 	<div class="button-group bar-button-group"></div>
 
+#### Note:
+
+Bar buttons can be added to the bar button group by adding elements with the `bar-button` data-role attribute:
+
+	<div data-role="bar-button-group">
+		<div data-role="bar-button">Bar Button 1</div>
+		<div data-role="bar-button">Bar Button 2</div>
+		<div data-role="bar-button">Bar Button 3</div>
+		<div data-role="bar-button">Bar Button 4</div>
+	</div>
+
 #### Defined roles:
 
 Name               | Description

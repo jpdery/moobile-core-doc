@@ -30,12 +30,12 @@ Name        | Type   | Description
 
 #### Generates:
 
-	<div class="text"></div>
+	<span class="text"></span>
 
 #### Defined roles:
 
-Name     | Description
--------- | -----------
+Name   | Description
+------ | -----------
 `text` | Defines the element that act as a text. Use the `data-text` property to specify a subclass instead.
 
 Events {#events}

@@ -78,11 +78,11 @@ Returns the title.
 
 #### Returns:
 
-- [Moobile.Text](Control/Text.js) The title.
+- [Moobile.Text](../Control/Text.js) The title.
 
 -----
 
-### addLeftButton(button) {#addLeftButton}
+### addLeftBarButton(button) {#addLeftBarButton}
 
 Adds a bar button at the left of the title.
 
@@ -90,7 +90,7 @@ Adds a bar button at the left of the title.
 
 Name     | Type                                      | Description
 -------- | ----------------------------------------- | -----------
-`button` | [Moobile.BarButton](Control/BarButton.md) | The button.
+`button` | [Moobile.BarButton](../Control/BarButton.md) | The button.
 
 #### Returns:
 
@@ -98,7 +98,7 @@ Name     | Type                                      | Description
 
 -----
 
-### addRightButton(button) {#addRightButton}
+### addRightBarButton(button) {#addRightBarButton}
 
 Adds a bar button at the right of the title.
 
@@ -106,7 +106,7 @@ Adds a bar button at the right of the title.
 
 Name     | Type                                      | Description
 -------- | ----------------------------------------- | -----------
-`button` | [Moobile.BarButton](Control/BarButton.md) | The button.
+`button` | [Moobile.BarButton](../Control/BarButton.md) | The button.
 
 #### Returns:
 
@@ -114,7 +114,7 @@ Name     | Type                                      | Description
 
 -----
 
-### getButton(name) {#getButton}
+### getBarButton(name) {#getBarButton}
 
 Return a bar button that matches the specified name.
 
@@ -130,7 +130,7 @@ Name   | Type   | Description
 
 -----
 
-### removeButton(button, [destroy]) {#removeButton}
+### removeBarButton(button, [destroy]) {#removeBarButton}
 
 Removes a bar button.
 
@@ -147,7 +147,7 @@ Name      | Type                                         | Description
 
 -----
 
-### removeAllButtons([destroy]) {#removeAllButtons}
+### removeAllBarButtons([destroy]) {#removeAllBarButtons}
 
 Removes all bar buttons.
 

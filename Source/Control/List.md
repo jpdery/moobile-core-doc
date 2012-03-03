@@ -1,168 +1,257 @@
 Moobile.List
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides a list control.
 
-Initialization {#initialization}
+Initialization {#initialize}
 --------------------------------------------------------------------------------
+
+#### Syntax:
+
+	var list = new Moobile.List([element], [options], [name]);
+
+#### Parameters:
+
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`element` *Optional* | Element | The list group's element, element id or html string.
+`options` *Optional* | Object  | The list group's options, see below.
+`name`    *Optional* | String  | The list group's name.
+
+#### Options:
+
+Name           | Type    | Description
+-------------- | ------- | -----------
+`className`    | String  | The list group's default CSS class name, defaults to `null`.
+`styleName`    | String  | The list group's default style, defaults to `null`.
+`tagName`      | String  | The list group's element tag name, defaults to `ul`.
+
+#### Generates:
+
+	<ul class="list"></div>
+
+#### Note:
+
+List items can be added to the list by adding elements with the `list-item` data-role attribute:
+
+	<ul data-role="list"></div>
+		<li data-role="list-item">Item 1</li>
+		<li data-role="list-item">Item 2</li>
+		<li data-role="list-item">Item 3</li>
+		<li data-role="list-item">Item 4</li>
+	</div>
+
+#### Defined roles:
+
+Name   | Description
+------ | -----------
+`list` | Defines the element that act as a list. Use the `data-list` property to specify a subclass instead.
+
+Events {#events}
+--------------------------------------------------------------------------------
+
+### select
+
+Fired when a button is selected.
+
+#### Arguments
+
+Name     | Type                                    | Description
+-------- | --------------------------------------- | -----------
+`button` | [Moobile.Button](../Control/Button.md)  | The button that was selected.
+
+### deselect
+
+Fired when a button is deselected.
+
+#### Arguments
+
+Name     | Type                                    | Description
+-------- | --------------------------------------- | -----------
+`button` | [Moobile.Button](../Control/Button.md)  | The button that was deselected.
+
+Members {#members}
+--------------------------------------------------------------------------------
+
+This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### setSelectedItem(selectedItem)
+### setSelectedItem(selectedItem) {#setSelectedItem}
 
-Sets the selected item.
+Selects the specified item and deselect the currently selected item if any. You can also clear the selected item by specifying `null` instead of an item.
 
-This method will select the given item and deselect the current selected
-item if any. You can also clear the selected item by passing `null` as
-parameter.
+This methods fires the `deselect` and `select` events.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`selectedItem` *Optional* | [Moobile.ListItem](Control/ListItem.md) | The selected item or `null` to clear the
-                               selection.
+Name           | Type                                       | Description
+-------------- | ------------------------------------------ | -----------
+`selectedItem` | [Moobile.ListItem](../Control/ListItem.md) | The selected item or `null` to clear the selection.
 
 #### Returns:
 
-- [Moobile.List](Control/List.md) This list.
-
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### getSelectedItem()
+### getSelectedItem() {#getSelectedItem}
 
 Returns the selected item.
 
-
 #### Returns:
 
-- [Moobile.ListItem](Control/ListItem.md) The selected item or `null` if no items were
-                   selected.
-
+- [Moobile.ListItem](../Control/ListItem.md) The selected item or `null` if no items are selected.
 
 -----
 
-### setSelectedItemIndex(index)
+### setSelectedItemIndex(index) {#setSelectedItemIndex}
 
-Sets the selected item index.
-
-This method will select an item using its index, 0 being the first item
-in the list. Passing an index that matches no items will clear the
-selection.
+Selects an item using a specified index, `0` being the first item in the list. Specifying an index that matches no buttons will clear the selection.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`index` *Optional* | Number | The selected item index.
+Name    | Type   | Description
+------- | ------ | -----------
+`index` | Number | The selected item index.
 
 #### Returns:
 
-- [Moobile.List](Control/List.md) This list.
-
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### getSelectedItemIndex()
+### getSelectedItemIndex() {#getSelectedItemIndex}
 
 Returns the selected item index.
 
+#### Returns:
+
+- `Number` The selected item index or `-1` if no items are selected.
+
+-----
+
+### clearSelectedItem() {#clearSelectedItem}
+
+Unselects the selected item.
 
 #### Returns:
 
-- Number The selected item index or `-1` if no items were
-                 selected.
-
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### clearSelectedItem()
+### addItem(item, where) {#addItem}
 
-Clear the selected button.
+Adds the specified item at the `top` or `bottom` of this list. If `where` is unspecified, the item will be added at the bottom of this list.
 
+#### Parameters:
+
+Name               | Type                                       | Description
+------------------ | ------------------------------------------ | -----------
+`item`             | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`where` *Optional* | String                                     | The item's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
-- [Moobile.List](Control/List.md) This list.
-
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### addItem(item, where, context)
+### addItemAfter(item, after) {#addItemAfter}
 
-Adds an item.
+Adds the specified item after an item from this list.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`item` *Optional* |  |
-`where` *Optional* |  |
-`context` *Optional* |  |
+Name     | Type                                       | Description
+-------- | ------------------------------------------ | -----------
+`button` | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`after`  | [Moobile.ListItem](../Control/ListItem.md) | The item will be placed after this item.
 
+#### Returns:
+
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### getItem(name)
+### addItemBefore(item, before) {#addItemBefore}
 
-Returns an item.
+Adds the specified item before an item from this list.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`name` *Optional* |  |
+Name     | Type                                       | Description
+-------- | ------------------------------------------ | -----------
+`button` | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`before` | [Moobile.ListItem](../Control/ListItem.md) | The item will be placed before this item.
 
+#### Returns:
+
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
-### removeItem(item)
+### getItem(name) {#getItem}
+
+Returns an item that matches the specified name.
+
+#### Parameters:
+
+Name   | Type   | Description
+------ | ------ | -----------
+`name` | String | The item's name to search for.
+
+#### Returns:
+
+- [Moobile.ListItem](../Control/ListItem.md) The item or `null` if no items were found with the name.
+
+-----
+
+### getItemAt(index) {#getItemAt}
+
+Return an item at a specified index.
+
+#### Parameters:
+
+Name    | Type   | Description
+------- | ------ | -----------
+`index` | Number | The item's index.
+
+#### Returns:
+
+- [Moobile.ListItem](../Control/ListItem.md) The item or `null` if no items were found at the index.
+
+-----
+
+### removeItem(item, destroy) {#removeItem}
 
 Removes an item.
 
 #### Parameters:
 
-Name  | Type | Description
------ | ---- | -----------
-`item` *Optional* |  |
+Name      | Type                                       | Description
+--------- | ------------------------------------------ | -----------
+`item`    | [Moobile.ListItem](../Control/ListItem.md) | The item to remove.
+`destroy` | Boolean                                    | Whether to destroy the item upon removal.
 
+#### Returns:
 
------
-
-### removeAllItems()
-
-Removes all buttons.
-
-
+- [Moobile.List](../Control/List.md) This Moobile.List instance.
 
 -----
 
+### removeAllItems() {#removeAllItems}
 
-Members {#members}
---------------------------------------------------------------------------------
+Removes all items.
 
-### [Moobile.ListItem](Control/ListItem.md) selectedItem
+Name      | Type     | Description
+--------- | -------- | -----------
+`destroy` | Boolean  | Whether to destroy the item upon removal.
 
-The selected item.
+#### Returns:
 
------
-
-### Number selectedItemIndex
-
-The selected item index.
-
------
-
-### Object options
-
-The class options.
-
------
-
-
-Events {#events}
---------------------------------------------------------------------------------
+- [Moobile.List](../Control/List.md) This Moobile.List instance.

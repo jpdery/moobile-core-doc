@@ -23,7 +23,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Moobile.Alert](Control/Alert.md)* This alert.
+- [Moobile.Alert](../Control/Alert.md) This alert.
 
 -----
 
@@ -34,7 +34,7 @@ Returns the title.
 
 #### Returns:
 
-- *[Moobile.Text](../Control/Text.md)* The title.
+- [Moobile.Text](../Control/Text.md) The title.
 
 
 -----
@@ -55,7 +55,7 @@ Name      | Type  | Description
 
 #### Returns:
 
-- *[Moobile.Alert](Control/Alert.md)* This alert.
+- [Moobile.Alert](../Control/Alert.md) This alert.
 
 -----
 
@@ -65,7 +65,7 @@ Returns the message.
 
 #### Returns:
 
-- *[Moobile.Text](../Control/Text.md)* The message.
+- [Moobile.Text](../Control/Text.md) The message.
 
 -----
 
@@ -81,7 +81,7 @@ Name     | Type                        | Description
 
 #### Returns:
 
-- *[Moobile.Alert](Control/Alert.md)* This alert.
+- [Moobile.Alert](../Control/Alert.md) This alert.
 
 -----
 
@@ -91,7 +91,7 @@ Shows the overlay with an animation by adding the `show-animated` CSS class to t
 
 #### Returns:
 
-- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
@@ -101,20 +101,20 @@ Hides the overlay with an animation by adding the `hide-animated` CSS class to t
 
 #### Returns:
 
-- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *[Moobile.Text](../Control/Text.md)* title
+### [Moobile.Text](../Control/Text.md) title
 
 The title.
 
 -----
 
-### *[Moobile.Text](../Control/Text.md)* message
+### [Moobile.Text](../Control/Text.md) message
 
 The message.
 
@@ -150,7 +150,7 @@ The dialog content element.
 
 -----
 
-### *[Moobile.Overlay](Control/Moobile.Overlay.md)* overlay
+### *[Moobile.Overlay](../Control/Moobile.Overlay.md)* overlay
 
 The alert overlay.
 

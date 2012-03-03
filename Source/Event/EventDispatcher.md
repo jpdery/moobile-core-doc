@@ -43,7 +43,9 @@ Name               | Type   | Description
 
 ### eventShouldFire(type, args) {#eventShouldFire}
 
-Indicates whether the specified event can be fired. Override this method if you wish to limit the events that can be fired.
+Indicates whether the specified event can be fired.
+
+Override this method if you wish to limit the events that can be fired.
 
 #### Parameters:
 

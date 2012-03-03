@@ -56,13 +56,13 @@ Methods {#methods}
 
 ### setLabel(label) {#setLabel}
 
-Sets the label using either a string or a `Moobile.Text` object. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the label using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`label` | Mixed | The label as a string or a `Moobile.Text` object.
+`label` | Mixed | The label as a string or a `Moobile.Text` instance.
 
 #### Returns:
 

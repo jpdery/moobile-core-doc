@@ -5,108 +5,142 @@ Moobile.ListItem
 
 Provides a list item control.
 
-Initialization {#initialization}
+Initialization {#initialize}
 --------------------------------------------------------------------------------
+
+#### Syntax:
+
+	var item = new Moobile.ListItem([element], [options], [name]);
+
+#### Parameters:
+
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`element` *Optional* | Element | The list item's element, element id or html string.
+`options` *Optional* | Object  | The list item's options, see below.
+`name`    *Optional* | String  | The list item's name.
+
+#### Options:
+
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The list item's default CSS class name, defaults to `null`.
+`styleName` | String | The list item's default style, defaults to `null`.
+`tagName`   | String | The list item's element tag name, defaults to `li`.
+
+#### Generates:
+
+	<li class="list-item">Lorem</li>
+
+#### Defined roles:
+
+Name        | Description
+----------- | -----------
+`list-item` | Defines the element that act as a list item. Use the `data-list-item` property to specify a subclass instead.
+`label`     | Defines the element that act as a list item label. If unspecified, the contents of the button's element will act as its label.
+`image`     | Defines the element that act as a list item image.
+`detail`    | Defines the element that act as a list item detail text.
+
+Events {#events}
+--------------------------------------------------------------------------------
+
+This class does not define additional events.
+
+Members {#members}
+--------------------------------------------------------------------------------
+
+This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### setImage(image)
+### setLabel(label) {#setLabel}
 
-Sets the image using either a string or a `Moobile.Image` object. When provided with a string, this methods creates a `Moobile.Image` object and assign the string as it source.
-
-#### Parameters:
-
-Name    | Type  | Description
-------- | ----- | -----------
-`image` | Mixed | The string or a `Moobile.Image` object.
-
-#### Returns:
-
-- *[Moobile.ListItem](Control/ListItem.md)* This list item.
-
------
-
-### getImage()
-
-Returns the image.
-
-#### Returns:
-
-- *[Moobile.Image](Control/Image.md)* The image.
-
------
-
-### setLabel(label)
-
-Sets the label using either a string or a `Moobile.Text` object. When provided with a string, this methods creates a `Moobile.Text` object and assign the string as its text.
+Sets the label using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`label` | Mixed | The label text or a `Moobile.Text` object.
+`label` | Mixed | The label as a string or a `Moobile.Text` instance.
 
 #### Returns:
 
-- *[Moobile.ListItem](Control/ListItem.md)* This list item.
+- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
 
 -----
 
-### getLabel()
+### getLabel() {#setLabel}
 
 Returns the label.
 
 #### Returns:
 
-- *[Moobile.Text](../Control/Text.md)* The label.
+- [Moobile.Text](../Control/Text.md) The label.
 
 -----
 
-### setDetail(label)
+### setImage(image) {#setImage}
 
-Sets the detail label using either a string or a `Moobile.Text` object. When provided with a string, this methods creates a `Moobile.Text` object and assign the string as its text.
+Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this methods creates a `Moobile.Image` object and assign the given string as its source.
 
 #### Parameters:
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`label` | Mixed | The label as a string or a `Moobile.Text` object.
+`image` | Mixed | The image as a string or a `Moobile.Image` instance.
 
 #### Returns:
 
-- *[Moobile.ListItem](Control/ListItem.md)* This list item.
+- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
 
 -----
 
-### getDetail()
+### getImage() {#getImage}
+
+Returns the image.
+
+#### Returns:
+
+- [Moobile.Image](../Control/Image.md) The image.
+
+-----
+
+### setDetail(detail) {#setDetail}
+
+Sets the detail text using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+
+#### Parameters:
+
+Name     | Type  | Description
+-------- | ----- | -----------
+`detail` | Mixed | The detail text as a string or a `Moobile.Text` instance.
+
+#### Returns:
+
+- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
+
+-----
+
+### getDetail() {#getDetail}
 
 Returns the detail label.
 
 #### Returns:
 
-- *[Moobile.Text](../Control/Text.md)* The detail label.
+- [Moobile.Text](../Control/Text.md) The detail label.
 
------
-
-Members {#members}
+Styles {#styles}
 --------------------------------------------------------------------------------
 
-### *[Moobile.Image](Control/Image.md)* image
+#### checked
 
-The image.
+[Todo:Image]
 
------
+#### disclosed
 
-### *[Moobile.Text](../Control/Text.md)* label
+[Todo:Image]
 
-The label.
+#### detailed
 
------
-
-### *[Moobile.Text](../Control/Text.md)* detail
-
-The detail label.
-
-Events {#events}
---------------------------------------------------------------------------------
+[Todo:Image]

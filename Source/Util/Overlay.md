@@ -22,7 +22,7 @@ customize the animation.
 
 #### Returns:
 
-- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
 
 -----
 
@@ -37,7 +37,7 @@ customize the animation.
 
 #### Returns:
 
-- *[Moobile.Overlay](Control/Moobile.Overlay.md)* This overlay.
+- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
 
 -----
 

@@ -33,6 +33,17 @@ Name           | Type    | Description
 
 	<div class="button-group"></div>
 
+#### Note:
+
+Buttons can be added to the button group by adding elements with the `button` data-role attribute:
+
+	<div data-role="button-group">
+		<div data-role="button">Button 1</div>
+		<div data-role="button">Button 2</div>
+		<div data-role="button">Button 3</div>
+		<div data-role="button">Button 4</div>
+	</div>
+
 #### Defined roles:
 
 Name           | Description
@@ -126,7 +137,7 @@ Returns the index of the selected button or `-1` if no buttons are selected.
 
 ### clearSelectedButton() {#clearSelectedButton}
 
-Unselect the selected button.
+Unselects the selected button.
 
 #### Returns:
 
@@ -136,7 +147,7 @@ Unselect the selected button.
 
 ### addButton(button, [where]) {#addButton}
 
-Add the specified button at the `top` or `bottom` of this button group. If `where` is unspecified, the button will be added at the bottom of this button group.
+Adds the specified button at the `top` or `bottom` of this button group. If `where` is unspecified, the button will be added at the bottom of this button group.
 
 #### Parameters:
 
@@ -153,7 +164,7 @@ Name               | Type                                   | Description
 
 ### addButtonAfter(button, after) {#addButtonAfter}
 
-Add the specified button a button from this button group.
+Adds the specified button after a button from this button group.
 
 #### Parameters:
 
@@ -168,9 +179,9 @@ Name     | Type                                   | Description
 
 -----
 
-### addButtonBefore(button, after) {#addButtonBefore}
+### addButtonBefore(button, before) {#addButtonBefore}
 
-Add the specified button before a button from this button group.
+Adds the specified button before a button from this button group.
 
 #### Parameters:
 
@@ -187,7 +198,7 @@ Name     | Type                                   | Description
 
 ### getButton(name) {#getButton}
 
-Return a button that matches the specified name.
+Returns a button that matches the specified name.
 
 #### Parameters:
 
@@ -228,6 +239,9 @@ Name      | Type                                   | Description
 `button`  | [Moobile.Button](../Control/Button.md) | The button to remove.
 `destroy` | Boolean                                | Whether to destroy the button upon removal.
 
+#### Returns:
+
+- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
 
 -----
 
@@ -240,3 +254,7 @@ Removes all buttons.
 Name      | Type     | Description
 --------- | -------- | -----------
 `destroy` | Boolean  | Whether to destroy the button upon removal.
+
+#### Returns:
+
+- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
