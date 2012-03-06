@@ -116,7 +116,7 @@ Name     | Type                                      | Description
 
 ### getBarButton(name) {#getBarButton}
 
-Return a bar button that matches the specified name.
+Return a bar button that matching the specified name.
 
 #### Parameters:
 

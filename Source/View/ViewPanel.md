@@ -1,7 +1,7 @@
 Moobile.ViewPanel
 ================================================================================
 
-##### Extends [Moobile.View](View/View.md)
+##### Extends [Moobile.View](../View/View.md)
 
 Provides a view that handles a panel with two panes.
 

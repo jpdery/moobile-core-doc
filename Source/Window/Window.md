@@ -1,7 +1,7 @@
 Moobile.Window
 ================================================================================
 
-##### Extends [Moobile.View](View/View.md)
+##### Extends [Moobile.View](../View/View.md)
 
 Provides the root view of the entire view hierarchy.
 

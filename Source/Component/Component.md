@@ -184,7 +184,7 @@ Name        | Type                                           | Description
 
 ### getChild(name) {#getChild}
 
-Return a component that matches the specified name.
+Return a component that matching the specified name.
 
 #### Parameters:
 
@@ -200,7 +200,7 @@ Name   | Type   | Description
 
 ### getChildOfType(type, name) {#getChildOfType}
 
-Return a component of a specified type that matches the specified name.
+Return a component of a specified type that matching the specified name.
 
 #### Parameters:
 

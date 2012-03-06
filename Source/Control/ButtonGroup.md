@@ -198,7 +198,7 @@ Name     | Type                                   | Description
 
 ### getButton(name) {#getButton}
 
-Returns a button that matches the specified name.
+Returns a button that matching the specified name.
 
 #### Parameters:
 

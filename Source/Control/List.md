@@ -197,7 +197,7 @@ Name     | Type                                       | Description
 
 ### getItem(name) {#getItem}
 
-Returns an item that matches the specified name.
+Returns an item that matching the specified name.
 
 #### Parameters:
 

@@ -28,7 +28,7 @@ Methods {#methods}
 
 ### pushViewController(viewController, viewTransition) {#pushViewController}
 
-Pushes a view controller at the end of the stack and present it using a given view transition. This transition will be stored into the view controller so the same will be used when the view controller will be popped.
+Pushes a view controller at the end of the stack and present it using a specified view transition. The specified transition will be used automatically when the view controller will pop.
 
 #### Parameters:
 
@@ -55,7 +55,7 @@ Removes the top view controller using the same view transition that was used to 
 
 ### popViewControllerUntil(viewController) {#popViewControllerUntil}
 
-Pops view controllers until a given view controller is reached.
+Pops view controllers until a specified view controller is reached.
 
 #### Parameters:
 
@@ -95,6 +95,8 @@ Name             | Type                                                         
 
 Tells the view controller it pushed a view controller.
 
+Override this method to provide your own implementation.
+
 #### Parameters:
 
 Name             | Type                                                          | Description
@@ -107,6 +109,8 @@ Name             | Type                                                         
 
 Tells the view controller it's about to pop a view controller.
 
+Override this method to provide your own implementation.
+
 #### Parameters:
 
 Name             | Type                                                          | Description
@@ -118,6 +122,8 @@ Name             | Type                                                         
 ### didPopViewController(viewController) {#didPopViewController}
 
 Tells the view controller it popped a view controller.
+
+Override this method to provide your own implementation.
 
 #### Parameters:
 

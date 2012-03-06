@@ -8,22 +8,22 @@ Provides an object for managing a view and its view controller hierarchy. You wi
 Members {#members}
 --------------------------------------------------------------------------------
 
-### *[Moobile.View](../View/View.md)* view {#view}
+### [Moobile.View](../View/View.md) view {#view}
 
-The view managed by the current view controller instance. Must be initialized using the `loadView` method.
+The view managed by the current view controller. Must be initialized using the `loadView` method.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### loadView() {#loadView}
 
-Creates the view managed by this view controller instance. Override this method and assign a view instance to the `view` member of this class. Do not call the parent method as it could overwrite your view.
+Creates the view managed by this view controller. Override this method and assign a view instance to the `view` member of this class. Do not call the parent method as it could overwrite your view.
 
 -----
 
 ### addChildViewController(viewController) {#addChildViewController}
 
-Adds a child view controller at the bottom the view controller hierarchy. The child view controller's view is added to the bottom of this view controller's view.
+Adds the specified view controller at the bottom this view controller hierarchy.
 
 #### Parameters:
 
@@ -39,14 +39,14 @@ Name             | Type                                                         
 
 ### addChildViewControllerAfter(viewController, after) {#addChildViewControllerAfter}
 
-Adds a child view controller to the view controller hierarchy after a given view controller. The child view controller's view is added after the given view controller's view.
+Adds the specified view controller to the view controller hierarchy after a specified view controller. The specified view controller's view is added after the second view controller's view.
 
 #### Parameters:
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
 `viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to add to the hierarchy.
-`after`          | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller used as a context to put the child view controller after.
+`after`          | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller used as a context to put the specified view controller after.
 
 #### Returns:
 
@@ -56,7 +56,7 @@ Name             | Type                                                         
 
 ### addChildViewControllerBefore(viewController, before) {#addChildViewControllerBefore}
 
-Adds a child view controller to the view controller hierarchy before a given view controller. The child view controller's view is added before the given view controller's view.
+Adds specified view controller to the view controller hierarchy before a specified view controller. The specified view controller's view is added before the given second controller's view.
 
 #### Parameters:
 
@@ -73,7 +73,7 @@ Name             | Type                                                         
 
 ### getChildViewController(name) {#getChildViewController}
 
-Returns a child view controller matching a given name.
+Returns a child view controller matching a specified name.
 
 #### Parameters:
 
@@ -89,7 +89,7 @@ Name   | Type   | Description
 
 ### getChildViewControllerAt(index) {#getChildViewControllerAt}
 
-Returns a child view controller at a given index.
+Returns a child view controller at a specified index.
 
 #### Parameters:
 
@@ -105,7 +105,7 @@ Name    | Type   | Description
 
 ### getChildViewControllerIndex(index) {#getChildViewControllerIndex}
 
-Returns the index of a given view controller.
+Returns the index of a specified view controller.
 
 #### Parameters:
 
@@ -197,7 +197,7 @@ Name      | Type    | Description
 
 ### presentModalViewController(viewController, [viewTransition]) {#presentModalViewController}
 
-Displays a child view controller over this view controller using a given transition. The view controller presented as modal will only have a reference to its parent view controller and will use it to dismiss the modal view controller.
+Displays a child view controller over this view controller using a specified transition. The view controller presented as modal will only have a reference to its parent view controller and will use it to dismiss the modal view controller.
 
 #### Parameters:
 
@@ -328,7 +328,7 @@ Returns the managed view.
 
 #### Returns:
 
-- *[Moobile.View](../View/View.md)* The managed view.
+- [Moobile.View](../View/View.md) The managed view.
 
 -----
 
