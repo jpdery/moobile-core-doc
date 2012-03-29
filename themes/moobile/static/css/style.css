@@ -148,11 +148,11 @@ a:visited {
 
 /* API List */
 
-.sidebar ul.api-list {
+.sidebar ul.file-list {
 	margin-top: 0px;
 }
 
-.sidebar ul.api-list li span {
+.sidebar ul.file-list li span {
 	font-style: italic;
 	opacity: 0.5;
 }

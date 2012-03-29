@@ -61,6 +61,7 @@
 				<filterreader classname="classes.phing.filters.MarkdownFilter">
 					 <param name="decorator" value="themes/${theme}/decorator/class.php" />
 				</filterreader>
+				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
 				</replacetokens>

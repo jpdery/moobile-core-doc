@@ -10,7 +10,7 @@ class MarkdownFilter extends BaseParamFilterReader implements ChainableReader {
 
 	function read($len = null) {
 
-		if (!$this->getInitialized() ) {
+		if (!$this->getInitialized()) {
 			$this->_initialize();
 			$this->setInitialized(true);
 		}
@@ -19,10 +19,11 @@ class MarkdownFilter extends BaseParamFilterReader implements ChainableReader {
 		if ($buffer === -1)
 			return -1;
 
-		ob_start();
 		$vars = array();
+		$vars['title'] = 'Moobile.' . basename($this->in->getResource());
 		$vars['content'] = markdown($buffer);
-		$vars['title']   = 'Moobile.' . basename($this->in->getResource());
+
+		ob_start();
 		include $this->decorator;
 		$out = ob_get_contents();
 		ob_get_clean();
@@ -37,7 +38,7 @@ class MarkdownFilter extends BaseParamFilterReader implements ChainableReader {
 	private function _initialize() {
 		$params = $this->getParameters();
 		if ($params !== null) {
-			for ($i = 0 ; $i < count($params) ; $i++) {
+			for ($i = 0; $i < count($params); $i++) {
 				if ('decorator' === $params[$i]->getName()) {
 					$this->decorator = $params[$i]->getValue();
 					break;
