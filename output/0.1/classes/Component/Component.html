@@ -1,0 +1,1748 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Moobile.Component.md | Moobile 0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+	<div id="sidebar" class="sidebar">
+
+		<h1>Classes</h1>
+
+		<h2>Component</h2>
+
+		<ul class="file-list">
+			<li><a href="../Component/Component.html"><span>Moobile.</span>Component</a></li>
+		</ul>
+
+		<h2>Control</h2>
+
+		<ul class="file-list">
+
+			<li><a href="../Control/ActivityIndicator.html"><span>Moobile.</span>ActivityIndicator</a></li>
+			<li><a href="../Control/Bar.html"><span>Moobile.</span>Bar</a></li>
+			<li><a href="../Control/BarItem.html"><span>Moobile.</span>BarItem</a></li>
+			<li><a href="../Control/Button.html"><span>Moobile.</span>Button</a></li>
+			<li><a href="../Control/ButtonGroup.html"><span>Moobile.</span>ButtonGroup</a></li>
+			<li><a href="../Control/Control.html"><span>Moobile.</span>Control</a></li>
+			<li><a href="../Control/Image.html"><span>Moobile.</span>Image</a></li>
+			<li><a href="../Control/List.html"><span>Moobile.</span>List</a></li>
+			<li><a href="../Control/ListItem.html"><span>Moobile.</span>ListItem</a></li>
+			<li><a href="../Control/NavigationBar.html"><span>Moobile.</span>NavigationBar</a></li>
+			<li><a href="../Control/NavigationBarItem.html"><span>Moobile.</span>NavigationBarItem</a></li>
+			<li><a href="../Control/Slider.html"><span>Moobile.</span>Slider</a></li>
+			<li><a href="../Control/Text.html"><span>Moobile.</span>Text</a></li>
+		</ul>
+
+		<h2>View</h2>
+
+		<ul class="file-list">
+			<li><a href="../View/View.html"><span>Moobile.</span>View</a></li>
+			<li><a href="../View/ScrollView.html"><span>Moobile.</span>ScrollView</a></li>
+		</ul>
+
+	</div>
+	<div id="content" class="content"><h1>Moobile.Component</h1>
+
+<h5>Extends <a href="../Event/EventFirer.html">Moobile.EventFirer</a></h5>
+
+<p>Provides the base class for most visual objects the user will interact with. A component encapsulates a DOM element and provides methods to handle a hierarchy of components.</p>
+
+<h2 id="initialize">Initialization</h2>
+
+<h4>Syntax:</h4>
+
+<pre><code>var bar = new Moobile.Component([element], [options], [name]);
+</code></pre>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>element</code> <em>Optional</em></td>
+  <td>Element</td>
+  <td>The component's element, element id or html string.</td>
+</tr>
+<tr>
+  <td><code>options</code> <em>Optional</em></td>
+  <td>Object</td>
+  <td>The component's options, see below.</td>
+</tr>
+<tr>
+  <td><code>name</code>    <em>Optional</em></td>
+  <td>String</td>
+  <td>The component's name.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Options:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>className</code></td>
+  <td>String</td>
+  <td>The component's extended CSS class name, defaults to <code>null</code>.</td>
+</tr>
+<tr>
+  <td><code>styleName</code></td>
+  <td>String</td>
+  <td>The component's default style, defaults to <code>null</code>.</td>
+</tr>
+<tr>
+  <td><code>tagName</code></td>
+  <td>String</td>
+  <td>The component's element tag name, defaults to <code>div</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Notes:</h4>
+
+<p>Upon initialization, a component builds it's hierarchy using the <code>Element</code> given to the constructor. It will looks for elements with the <code>data-role</code> attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.</p>
+
+<h4>Subclassing Notes:</h4>
+
+<p>This class should not be instantiated directly, instead you should subclass it to create your own components.</p>
+
+<h4>Examples:</h4>
+
+<p>Creating an empty component:</p>
+
+<pre><code>var component = new Moobile.Component();
+</code></pre>
+
+<p>Creating a component with a single child:</p>
+
+<pre><code>var element =
+    '&lt;div&gt;' +
+        '&lt;div data-role="button" data-name="my-button"&gt;Button&lt;/div&gt;' +
+    '&lt;/div&gt;';
+var component = new Moobile.Component(element);
+component.getChild('my-button'); // Returns a Moobile.Button instance
+</code></pre>
+
+<p>Creating a component with multiple children:</p>
+
+<pre><code>var element =
+    '&lt;div&gt;' +
+        '&lt;img data-role="image" data-name="my-image" /&gt;' +
+        '&lt;div data-role="button" data-name="my-button-1"&gt;Button 1&lt;/div&gt;' +
+        '&lt;div data-role="button" data-name="my-button-2"&gt;Button 2&lt;/div&gt;' +
+    '&lt;/div&gt;';
+var component = new Moobile.Component(element);
+component.getChild('my-image'); // Returns a Moobile.Image instance
+component.getChild('my-button-1'); // Returns a Moobile.Button instance
+component.getChild('my-button-2'); // Returns a Moobile.Button instance
+</code></pre>
+
+<p>Creating a component with a complex hierarchy:</p>
+
+<pre><code>var element =
+    '&lt;div&gt;' +
+        '&lt;div data-role="button" data-name="my-button"&gt;' +
+            '&lt;img data-role="image" data-name="my-button-image" /&gt;' +
+            '&lt;div data-role="label"&gt;Button 2&lt;/div&gt;' +
+        '&lt;/div&gt;' +
+    '&lt;/div&gt;';
+var component = new Moobile.Component(element);
+component.getChild('my-button-image'); // Returns null! The image is a child of the button.
+component.getChild('my-button').getChild('my-button-image'); // Returns a Moobile.Image instance.
+</code></pre>
+
+<h2 id="events">Events</h2>
+
+<h3>ready</h3>
+
+<p>Fired when this component becomes ready.</p>
+
+<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+
+<hr />
+
+<h3>tap</h3>
+
+<p>Fired when this component receives a <code>tap</code> event.</p>
+
+<hr />
+
+<h3>tapstart</h3>
+
+<p>Fired when this component receives a <code>tapstart</code> event.</p>
+
+<hr />
+
+<h3>tapmove</h3>
+
+<p>Fired when this component receives a <code>tapmove</code> event.</p>
+
+<hr />
+
+<h3>tapend</h3>
+
+<p>Fired when this component receives a <code>tapend</code> event.</p>
+
+<hr />
+
+<h3>touchstart</h3>
+
+<p>Fired when this component receives a <code>touchstart</code> event.</p>
+
+<hr />
+
+<h3>touchmove</h3>
+
+<p>Fired when this component receives a <code>touchmove</code> event.</p>
+
+<hr />
+
+<h3>touchend</h3>
+
+<p>Fired when this component receives a <code>touchend</code> event.</p>
+
+<hr />
+
+<h3>pinch</h3>
+
+<p>Fired when this component receives a <code>pinch</code> event.</p>
+
+<hr />
+
+<h3>swipe</h3>
+
+<p>Fired when this component receives a <code>swipe</code> event.</p>
+
+<hr />
+
+<h3>show</h3>
+
+<p>Fired when this component becomes visible.</p>
+
+<hr />
+
+<h3>hide</h3>
+
+<p>Fired when this component becomes hidden.</p>
+
+<h2 id="members">Members</h2>
+
+<h3 id="element"><code>Element</code> element</h3>
+
+<p>The element managed by the component.</p>
+
+<hr />
+
+<h3 id="options"><code>Object</code> options</h3>
+
+<p>The component's options.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>className</code></td>
+  <td>String</td>
+  <td>The component's extended CSS class name, defaults to <code>null</code>.</td>
+</tr>
+<tr>
+  <td><code>styleName</code></td>
+  <td>String</td>
+  <td>The component's default style, defaults to <code>null</code>.</td>
+</tr>
+<tr>
+  <td><code>tagName</code></td>
+  <td>String</td>
+  <td>The component's element tag name, defaults to <code>div</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="addChild">addChild(component, [where])</h3>
+
+<p>Adds the specified component at the <code>top</code> or <code>bottom</code> of this component. If <code>where</code> is unspecified, the component will be added at the bottom.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component.</td>
+</tr>
+<tr>
+  <td><code>where</code> <em>Optional</em></td>
+  <td>String</td>
+  <td>The component's location, either <code>top</code> or <code>bottom</code>, defaults to <code>bottom</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<h4>Examples:</h4>
+
+<p>Adding a component at the top:</p>
+
+<pre><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
+var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
+myFirstComponent.addChild(mySecondComponent, 'top');
+</code></pre>
+
+<p>Resulting hierarchy:</p>
+
+<pre><code>&lt;div class="first"&gt;
+    &lt;div class="second"&gt;&lt;/div&gt;
+    &lt;span&gt;Lorem&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Adding a component at the botom:</p>
+
+<pre><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
+var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
+myFirstComponent.addChild(mySecondComponent, 'bottom');
+</code></pre>
+
+<p>Resulting hierarchy:</p>
+
+<pre><code>&lt;div class="first"&gt;
+    &lt;span&gt;Lorem&lt;/span&gt;
+    &lt;div class="second"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="addChildInside">addChildInside(component, element, [where])</h3>
+
+<p>Adds the specified component at the <code>top</code> or <code>bottom</code> of a component's element. If <code>where</code> is unspecified, the component will be added at the <code>bottom</code> of the component's element.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component.</td>
+</tr>
+<tr>
+  <td><code>element</code></td>
+  <td>Mixed</td>
+  <td>The component's element or a CSS selector.</td>
+</tr>
+<tr>
+  <td><code>where</code> <em>Optional</em></td>
+  <td>String</td>
+  <td>The component's location, either <code>top</code> or <code>bottom</code>, defaults to <code>bottom</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<h4>Example:</h4>
+
+<pre><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;div class="me"&gt;&lt;/div&gt;&lt;/div&gt;')
+var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
+myFirstComponent.addChildInside(mySecondComponent, '.me');
+</code></pre>
+
+<p>Resulting hierarchy:</p>
+
+<pre><code>&lt;div class="first"&gt;
+    &lt;div class="me"&gt;
+        &lt;div class="second"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="addChildAfter">addChildAfter(component, after)</h3>
+
+<p>Adds the specified component after another child of this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component.</td>
+</tr>
+<tr>
+  <td><code>after</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component will be placed after this component.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<h4>Example:</h4>
+
+<pre><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;/div&gt;');
+var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
+var myThrdComponent   = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
+myFirstComponent.addChild(mySecondComponent);
+myFirstComponent.addChildAfter(myThirdComponent, mySecondComponent);
+</code></pre>
+
+<p>Resulting hierarchy:</p>
+
+<pre><code>&lt;div class="first"&gt;
+    &lt;div class="second"&gt;&lt;/div&gt;
+    &lt;div class="third"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="addChildBefore">addChildBefore(component, before)</h3>
+
+<p>Adds the specified component before another child of this component.</p>
+
+<p>This methods will remove the component from its current parent before adding it.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component.</td>
+</tr>
+<tr>
+  <td><code>before</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component will be placed before this component.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<h4>Example:</h4>
+
+<pre><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;/div&gt;');
+var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
+var myThrdComponent   = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
+myFirstComponent.addChild(mySecondComponent);
+myFirstComponent.addChildBefore(myThirdComponent, mySecondComponent);
+</code></pre>
+
+<p>Resulting hierarchy:</p>
+
+<pre><code>&lt;div class="first"&gt;
+    &lt;div class="third"&gt;&lt;/div&gt;
+    &lt;div class="second"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="getChild">getChild(name)</h3>
+
+<p>Returns a component that matches the specified name.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The component's name to search for.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components were found with that name.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildOfType">getChildOfType(type, name)</h3>
+
+<p>Returns a component of a specified type that matches the specified name.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>type</code></td>
+  <td>Class</td>
+  <td>The component's class.</td>
+</tr>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The component's name to search for.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components of that type were found with the name.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildAt">getChildAt(index)</h3>
+
+<p>Returns a component at a specified index.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>index</code></td>
+  <td>Number</td>
+  <td>The component's index.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components were found at the index.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildOfTypeAt">getChildOfTypeAt(type, index)</h3>
+
+<p>Returns a component of a specified type at a specified index.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>type</code></td>
+  <td>Class</td>
+  <td>The component's class.</td>
+</tr>
+<tr>
+  <td><code>index</code></td>
+  <td>Number</td>
+  <td>The component's index.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components of that type were found at the index.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildIndex">getChildIndex(component)</h3>
+
+<p>Returns the index of a specified component or <code>-1</code> if the component is not present in this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component to search for.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Number</code> The component index or <code>-1</code> if the component is not present in this component.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildren">getChildren()</h3>
+
+<p>Returns all the components in this component.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Array</code> An array of all the components in this component.</li>
+</ul>
+
+<hr />
+
+<h3 id="getChildrenOfType">getChildrenOfType(type)</h3>
+
+<p>Returns all the components of a specified type in this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>type</code></td>
+  <td>Class</td>
+  <td>The component's class.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Array</code> An array of all the components of the type in this component.</li>
+</ul>
+
+<hr />
+
+<h3 id="hasChild">hasChild(component)</h3>
+
+<p>Indicates whether a component is present in this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component to search for.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether the component is present in this component.</li>
+</ul>
+
+<hr />
+
+<h3 id="hasChild">hasChildOfType(type)</h3>
+
+<p>Indicates whether this component has at least one component of the specified type.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>type</code></td>
+  <td>Class</td>
+  <td>The component's class.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether this component has at least one component of that type.</li>
+</ul>
+
+<hr />
+
+<h3 id="replaceChild">replaceChild(component, replacement, [destroy])</h3>
+
+<p>Replaces a component with another.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component to remove.</td>
+</tr>
+<tr>
+  <td><code>replacement</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component to replace with.</td>
+</tr>
+<tr>
+  <td><code>destroy</code> <em>Optional</em></td>
+  <td>Boolean</td>
+  <td>Whether to destroy the old component.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="removeChild">removeChild(component, [destroy])</h3>
+
+<p>Removes a component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component to remove.</td>
+</tr>
+<tr>
+  <td><code>destroy</code> <em>Optional</em></td>
+  <td>Boolean</td>
+  <td>Whether to destroy the component upon removal.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="removeChildren">removeChildren([destroy])</h3>
+
+<p>Removes all components.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>destroy</code> <em>Optional</em></td>
+  <td>Boolean</td>
+  <td>Whether to destroy the components upon removal.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="removeChildrenOfType">removeChildrenOfType(type, [destroy])</h3>
+
+<p>Removes all components of a specified type.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>type</code></td>
+  <td>Class</td>
+  <td>The component's class.</td>
+</tr>
+<tr>
+  <td><code>destroy</code> <em>Optional</em></td>
+  <td>Boolean</td>
+  <td>Whether to destroy the components upon removal.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="removeFromParent">removeFromParent([destroy])</h3>
+
+<p>Removes this component from its parent.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>destroy</code> <em>Optional</em></td>
+  <td>Boolean</td>
+  <td>Whether to destroy the component upon removal.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="setParent">setParent(parent)</h3>
+
+<p>Sets the parent of this component.</p>
+
+<p>This method is handled by the <code>Moobile.Component</code> class and should not be called manually.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>parent</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The parent.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="getParent">getParent()</h3>
+
+<p>Returns the parent of this component.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> The parent component.</li>
+</ul>
+
+<hr />
+
+<h3 id="hasParent">hasParent()</h3>
+
+<p>Indicates whether this component has a parent.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether this component has a parent.</li>
+</ul>
+
+<hr />
+
+<h3 id="setWindow">setWindow(window)</h3>
+
+<p>Sets the window that contains this component.</p>
+
+<p>This method is handled by the <code>Moobile.Component</code> class and should not be called manually.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>window</code></td>
+  <td><a href="../Window/Window.html">Moobile.Window</a></td>
+  <td>The window.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="getWindow">getWindow()</h3>
+
+<p>Returns the window that contains this component.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Window/Window.html">Moobile.Window</a> The window.</li>
+</ul>
+
+<hr />
+
+<h3 id="hasWindow">hasWindow()</h3>
+
+<p>Indicates whether this component has a window.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether this component as a window.</li>
+</ul>
+
+<hr />
+
+<h3 id="setReady">setReady()</h3>
+
+<p>Sets whether this component is ready.</p>
+
+<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+
+<p>This method is handled by the <code>Moobile.Component</code> class and should not be called manually.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="isReady">isReady()</h3>
+
+<p>Indicates whether this component is ready.</p>
+
+<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether this component is ready.</li>
+</ul>
+
+<hr />
+
+<h3 id="getName">getName()</h3>
+
+<p>Returns this component name's name.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>String</code> This component's name.</li>
+</ul>
+
+<hr />
+
+<h3 id="setStyle">setStyle(name)</h3>
+
+<p>Sets the style of this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The style name.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="getStyle">getStyle()</h3>
+
+<p>Returns the current style name.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>String</code> The current style name or <code>null</code> if no style were set.</li>
+</ul>
+
+<hr />
+
+<h3 id="addClass">addClass(name)</h3>
+
+<p>Adds the specified CSS class to this component's element.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The CSS class.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="removeClass">removeClass(name)</h3>
+
+<p>Removes the specified CSS class from this component's element.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The CSS class.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="toggleClass">toggleClass(name)</h3>
+
+<p>Adds or removes the specified CSS class from this component.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The CSS class.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="getElement">getElement(selector)</h3>
+
+<p>Returns this component's element or the first element within this component's element that matches the specified selector.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>selector</code> <em>Optional</em></td>
+  <td>String</td>
+  <td>An CSS selector.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Element</code> This component's element or the first element that matches the selector.</li>
+</ul>
+
+<hr />
+
+<h3 id="getElements">getElements(selector)</h3>
+
+<p>Returns a collection of elements from the component's element that matches the specified selector.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>selector</code></td>
+  <td>String</td>
+  <td>The CSS selector.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Elements</code> A collection of elements.</li>
+</ul>
+
+<hr />
+
+<h3 id="hasElement">hasElement(element)</h3>
+
+<p>Indicates whether the specified element is a child of this component's element.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>element</code></td>
+  <td>Element</td>
+  <td>The element.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Boolean</code> Whether the element exists.</li>
+</ul>
+
+<hr />
+
+<h3 id="getSize">getSize()</h3>
+
+<p>Returns this component's size as an object with two keys, <code>x</code> to indicate the
+width and <code>y</code> to indicate the height.</p>
+
+<p>The component must be <em>ready</em> when calling this method otherwise it won't be measured.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Object</code> This component's size.</li>
+</ul>
+
+<hr />
+
+<h3 id="getPosition">getPosition([relative])</h3>
+
+<p>Returns this component's position relative to a specified element. If unspecified, the position returned will be relative to its parent.</p>
+
+<p>The component must be <em>ready</em> when calling this method otherwise it won't be measured.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><code>Object</code> This component's position.</li>
+</ul>
+
+<hr />
+
+<h3 id="show">show()</h3>
+
+<p>Shows this component. This method will also remove the <code>hidden</code> CSS class from this component's element.</p>
+
+<p>This method fires the <code>show</code> event.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="hide">hide()</h3>
+
+<p>Hides this component. This method will also add the <code>hidden</code> CSS class from this component's element.</p>
+
+<p>This method fires the <code>hide</code> event.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<hr />
+
+<h3 id="willBuild">willBuild()</h3>
+
+<p>Tells this component it's about to be built. This method is called once the component's element is set and before its roles are being processed.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="didBuild">didBuild()</h3>
+
+<p>Tells this component it has been built.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="didBecomeReady">didBecomeReady()</h3>
+
+<p>Tells this component it became ready.</p>
+
+<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="willAddChild">willAddChild(component)</h3>
+
+<p>Tells this component a component is about to be added.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component that is about to be added.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="didAddChild">didAddChild(component)</h3>
+
+<p>Tells this component a component has been added.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component that has been added.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="willRemoveChild">willRemoveChild(component)</h3>
+
+<p>Tell the component a child component is about to be removed.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component that is about to be removed.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="didRemoveChild">didRemoveChild(component)</h3>
+
+<p>Tell the component a child component has been removed.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>component</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component that has been removed.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="parentWillChange">parentWillChange(parent)</h3>
+
+<p>Tell the component it's about to be moved to another component.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>parent</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component this component will be moved to.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="parentDidChange">parentDidChange(parent)</h3>
+
+<p>Tell the component it has been moved to a new component.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>parent</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The component this component has been moved to.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="willShow">willShow()</h3>
+
+<p>Tell the component it's about to become visible.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="didShow">didShow()</h3>
+
+<p>Tell the component it became visible.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="willHide">willHide()</h3>
+
+<p>Tell the component it's about to become hidden.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="didHide">didHide()</h3>
+
+<p>Tell the component it became hidden.</p>
+
+<p>Override this method to provide your own implementation.</p>
+
+<hr />
+
+<h3 id="destroy">destroy()</h3>
+
+<p>Remove this component from its parent, destroy its hierarchy prepares it for garbage collection.</p>
+
+<p>If you override this method, make sure you call the parent method at
+the end of your implementation.</p>
+
+<h4>Returns:</h4>
+
+<ul>
+<li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
+</ul>
+
+<h2 id="static">Static Methods</h2>
+
+<h3 id="defineRole">Moobile.Component.defineRole(name, target, behavior)</h3>
+
+<p>Define the process to execute upon finding an element with the given role.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The name.</td>
+</tr>
+<tr>
+  <td><code>target</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The target component or <code>null</code> to define the role for all components.</td>
+</tr>
+<tr>
+  <td><code>behavior</code></td>
+  <td>Function</td>
+  <td>The function that defines the role's behavior.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Examples:</h4>
+
+<p>For every elements with the <code>data-role="wrapped"</code> attribute found in all type of components, an element will be created and wrapped around it.</p>
+
+<pre><code> Moobile.Component.defineRole('wrapped', null, function(element) {
+    new Element('div.wrapped').wraps(element);
+ });
+</code></pre>
+
+<p>For every elements with the <code>data-role="popup"</code> attribute, a new <code>Moobile.Alert</code> instance will be created and added to the view as a child component.</p>
+
+<pre><code>Moobile.Component.defineRole('warning', Moobile.View, function(element) {
+    var alert = new Moobile.Alert();
+    alert.setMessage(element.get('html'));
+    this.addChild(alert, 'after', element);
+    element.destroy();
+});
+</code></pre>
+
+<hr />
+
+<h3 id="defineStyle">Moobile.Component.defineStyle(name, target, behavior)</h3>
+
+<p>Defines a style for a component or all components if <code>target</code> is set to <code>null</code>.</p>
+
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td>String</td>
+  <td>The style name.</td>
+</tr>
+<tr>
+  <td><code>target</code></td>
+  <td><a href="../Component/Component.html">Moobile.Component</a></td>
+  <td>The target component or <code>null</code> to define the role for all components.</td>
+</tr>
+<tr>
+  <td><code>behavior</code></td>
+  <td>Object</td>
+  <td>The style definition which consists of an object with an <code>attach</code> and <code>detach</code> method.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Example:</h4>
+
+<pre><code>Moobile.Component.defineStyle('glowing', Moobile.Button, {
+    attach: function() {
+        this.addClass('glow');
+    },
+    detach: function() {
+        this.removeClass('glow');
+    }
+});
+</code></pre>
+</div>
+</body>
+</html>
