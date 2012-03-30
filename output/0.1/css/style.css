@@ -267,15 +267,13 @@ a:visited {
 
 /* Pre */
 
-.content code {
-	-webkit-border-radius: 4px;
-	border: 1px solid #cccccc;
-	background: #fefefe;
-	color: #222222;
+.content a {
+	font-family: Monospace;
 	font-size: 14px;
-	padding: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
+}
+
+.content code {
+	color: #111111;
 }
 
 .content pre {
@@ -289,6 +287,8 @@ a:visited {
 }
 
 .content pre code {
+	color: #222222;
+	font-size: 14px;
 	border: none;
 	background: none;
 	padding: 0px;
@@ -347,29 +347,6 @@ a:visited {
 	margin-bottom: 25px;
 }
 
-/* Geshi */
-.kw1 {
-	color: #1b609a;
-}
-.kw2 {
-	color: #9a6f1b;
-}
-.me1 {
-	color: #666;
-}
-.kw3, .re0, .sc1 {
-	color: #784e0c;
-}
-.br0 {
-	color: #444;
-}
-.st0 {
-	color: #489a1b;
-}
-.co1, .coMULTI {
-	color: #888;
-}
-.nu0 {
-	color: #70483d;
-}
+/* Google Prettify */
 
+.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}

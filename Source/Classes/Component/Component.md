@@ -191,7 +191,7 @@ Name               | Type                                           | Descriptio
 
 #### Examples:
 
-Adding a component at the top:
+##### Adding a component at the top:
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
@@ -204,7 +204,7 @@ Resulting element:
 		<span>Lorem</span>
 	</div>
 
-Adding a component at the botom:
+##### Adding a component at the botom:
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
