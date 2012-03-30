@@ -11,6 +11,8 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="../../css/reset.css">
 	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../syntax/prettify.css">
+	<script src="../../syntax/prettify.js"></script>
 	<script src="../../js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
@@ -51,6 +53,11 @@
 		</ul>
 
 	</div>
+
 	<div id="content" class="content"><?php echo isset($vars['content']) ? $vars['content'] : '' ?></div>
+
+	<script type="text/javascript">
+		prettyPrint();
+	</script>
 </body>
 </html>

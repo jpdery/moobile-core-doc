@@ -331,6 +331,13 @@ Name   | Type   | Description
 
 - [Moobile.Component](../Component/Component.md) The component or `null` if no components were found with that name.
 
+#### Example:
+
+	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
+	var mySecondComponent = new Moobile.Component('<div class="second"></div>', null, 'my-second-component');
+	myFirstComponent.addChild(mySecondComponent);
+	myFirstComponent.getChild('my-second-component'); // Returns mySecondComponent
+
 -----
 
 ### getChildOfType(type, name) {#getChildOfType}
@@ -348,6 +355,15 @@ Name   | Type   | Description
 
 - [Moobile.Component](../Component/Component.md) The component or `null` if no components of that type were found with the name.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button(null, null, 'foo');
+	var myImage      = new Moobile.Image(null, null, 'foo');
+	myComponent.addChild(myButton);
+	myComponent.addChild(myImage);
+	myComponent.getChildOfType(Moobile.Image, 'foo'); // Returns myImage
+
 -----
 
 ### getChildAt(index) {#getChildAt}
@@ -363,6 +379,15 @@ Name    | Type   | Description
 #### Returns:
 
 - [Moobile.Component](../Component/Component.md) The component or `null` if no components were found at the index.
+
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton);
+	myComponent.addChild(myImage);
+	myComponent.getChildAt(0); // Returns myButton
 
 -----
 
@@ -381,6 +406,15 @@ Name    | Type   | Description
 
 - [Moobile.Component](../Component/Component.md) The component or `null` if no components of that type were found at the index.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton);
+	myComponent.addChild(myImage);
+	myComponent.getChildOfTypeAt(Moobile.Image, 0); // Returns myImage
+
 -----
 
 ### getChildIndex(component) {#getChildIndex}
@@ -397,6 +431,15 @@ Name        | Type                                           | Description
 
 - `Number` The component index or `-1` if the component is not present in this component.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton);
+	myComponent.addChild(myImage);
+	myComponent.getChildIndex(Moobile.Image); // Returns 1
+
 -----
 
 ### getChildren() {#getChildren}
@@ -406,6 +449,17 @@ Returns all the components in this component.
 #### Returns:
 
 - `Array` An array of all the components in this component.
+
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton1     = new Moobile.Button();
+	var myButton2     = new Moobile.Button();
+	var myButton3     = new Moobile.Button();
+	myComponent.addChild(myButton1);
+	myComponent.addChild(myButton2);
+	myComponent.addChild(myButton3);
+	myComponent.getChildren(); // Returns [myButton1, myButton2, myButton3]
 
 -----
 
@@ -423,6 +477,19 @@ Name   | Type  | Description
 
 - `Array` An array of all the components of the type in this component.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton1    = new Moobile.Button();
+	var myButton2    = new Moobile.Button();
+	var myButton3    = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton1);
+	myComponent.addChild(myButton2);
+	myComponent.addChild(myButton3);
+	myComponent.addChild(myImage);
+	myComponent.getChildrenOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+
 -----
 
 ### hasChild(component) {#hasChild}
@@ -439,6 +506,13 @@ Name        | Type                                           | Description
 
 - `Boolean` Whether the component is present in this component.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	myComponent.addChild(myButton);
+	myComponent.hasChid(myButton); // Returns true
+
 -----
 
 ### hasChildOfType(type) {#hasChild}
@@ -454,6 +528,15 @@ Name   | Type  | Description
 #### Returns:
 
 - `Boolean` Whether this component has at least one component of that type.
+
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton);
+	myComponent.addChild(myImage);
+	myComponent.hasChildOfType(Moobile.Image); // Returns true
 
 -----
 
@@ -473,6 +556,14 @@ Name                 | Type                                           | Descript
 
 - [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
 
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton1    = new Moobile.Button();
+	var myButton2    = new Moobile.Button();
+	myComponent.addChild(myButton1);
+	myComponent.replaceChild(myButton1, myButton2); // Replaces myButton1 with myButton2
+
 -----
 
 ### removeChild(component, [destroy]) {#removeChild}
@@ -489,6 +580,13 @@ Name                 | Type                                           | Descript
 #### Returns:
 
 - [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton     = new Moobile.Button();
+	myComponent.addChild(myButton);
+	myComponent.removeChild(myButton); // Removes myButton
 
 -----
 
@@ -522,6 +620,19 @@ Name                 | Type    | Description
 #### Returns:
 
 - [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+
+#### Example:
+
+	var myComponent  = new Moobile.Component();
+	var myButton1    = new Moobile.Button();
+	var myButton2    = new Moobile.Button();
+	var myButton3    = new Moobile.Button();
+	var myImage      = new Moobile.Image();
+	myComponent.addChild(myButton1);
+	myComponent.addChild(myButton2);
+	myComponent.addChild(myButton3);
+	myComponent.addChild(myImage);
+	myComponent.removeChildrenOfType(Moobile.Button); // Removes myButton1, myButton2, myButton3
 
 -----
 
