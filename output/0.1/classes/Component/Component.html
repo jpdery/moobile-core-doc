@@ -758,7 +758,7 @@ var myButton3     = new Moobile.Button();
 myComponent.addChild(myButton1);
 myComponent.addChild(myButton2);
 myComponent.addChild(myButton3);
-myComponent.getChildrenOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+myComponent.getChildren(); // Returns [myButton1, myButton2, myButton3]
 </code></pre>
 
 <hr />
@@ -977,7 +977,7 @@ myComponent.replaceChild(myButton1, myButton2); // Replaces myButton1 with myBut
 <pre><code>var myComponent  = new Moobile.Component();
 var myButton     = new Moobile.Button();
 myComponent.addChild(myButton);
-myComponent.removeChild(myButton);
+myComponent.removeChild(myButton); // Removes myButton
 </code></pre>
 
 <hr />

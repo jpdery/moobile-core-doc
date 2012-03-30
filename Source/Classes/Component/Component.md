@@ -905,6 +905,12 @@ Returns this component's position relative to a specified element. If unspecifie
 
 The component must be *ready* when calling this method otherwise it won't be measured.
 
+#### Parameters:
+
+Name       | Type    | Description
+---------- | ------- | -----------
+`relative` | Mixed   | The position will be relative to this element or component
+
 #### Returns:
 
 - `Object` This component's position.
