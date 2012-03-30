@@ -10,7 +10,7 @@ Initialization {#initialize}
 
 #### Syntax:
 
-	var bar = new Moobile.Component([element], [options], [name]);
+	var component = new Moobile.Component([element], [options], [name]);
 
 #### Parameters:
 
@@ -30,7 +30,7 @@ Name        | Type   | Description
 
 #### Notes:
 
-Upon initialization, a component builds it's hierarchy using the `Element` given to the constructor. It will looks for elements with the `data-role` attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.
+Upon initialization, a component builds it's hierarchy using the `element` given to the constructor. It will looks for elements with the `data-role` attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.
 
 #### Subclassing Notes:
 
@@ -197,7 +197,7 @@ Adding a component at the top:
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
 	myFirstComponent.addChild(mySecondComponent, 'top');
 
-Resulting hierarchy:
+Resulting element:
 
 	<div class="first">
 		<div class="second"></div>
@@ -210,7 +210,7 @@ Adding a component at the botom:
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
 	myFirstComponent.addChild(mySecondComponent, 'bottom');
 
-Resulting hierarchy:
+Resulting element:
 
 	<div class="first">
 		<span>Lorem</span>
@@ -241,7 +241,7 @@ Name               | Type                                           | Descriptio
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
 	myFirstComponent.addChildInside(mySecondComponent, '.me');
 
-Resulting hierarchy:
+Resulting element:
 
 	<div class="first">
 		<div class="me">
@@ -274,7 +274,7 @@ Name        | Type                                           | Description
 	myFirstComponent.addChild(mySecondComponent);
 	myFirstComponent.addChildAfter(myThirdComponent, mySecondComponent);
 
-Resulting hierarchy:
+Resulting element:
 
 	<div class="first">
 		<div class="second"></div>
@@ -308,7 +308,7 @@ Name        | Type                                           | Description
 	myFirstComponent.addChild(mySecondComponent);
 	myFirstComponent.addChildBefore(myThirdComponent, mySecondComponent);
 
-Resulting hierarchy:
+Resulting element:
 
 	<div class="first">
 		<div class="third"></div>
@@ -732,7 +732,7 @@ Indicates whether this component has a window.
 
 Sets whether this component is ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 This method is handled by the `Moobile.Component` class and should not be called manually.
 
@@ -746,7 +746,7 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 Indicates whether this component is ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 #### Returns:
 
@@ -961,7 +961,7 @@ Override this method to provide your own implementation.
 
 Tells this component it became ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
 
 Override this method to provide your own implementation.
 

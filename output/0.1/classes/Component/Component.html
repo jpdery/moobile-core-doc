@@ -64,7 +64,7 @@
 
 <h4>Syntax:</h4>
 
-<pre><code>var bar = new Moobile.Component([element], [options], [name]);
+<pre><code>var component = new Moobile.Component([element], [options], [name]);
 </code></pre>
 
 <h4>Parameters:</h4>
@@ -127,7 +127,7 @@
 
 <h4>Notes:</h4>
 
-<p>Upon initialization, a component builds it's hierarchy using the <code>Element</code> given to the constructor. It will looks for elements with the <code>data-role</code> attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.</p>
+<p>Upon initialization, a component builds it's hierarchy using the <code>element</code> given to the constructor. It will looks for elements with the <code>data-role</code> attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.</p>
 
 <h4>Subclassing Notes:</h4>
 
@@ -336,7 +336,7 @@ var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/di
 myFirstComponent.addChild(mySecondComponent, 'top');
 </code></pre>
 
-<p>Resulting hierarchy:</p>
+<p>Resulting element:</p>
 
 <pre><code>&lt;div class="first"&gt;
     &lt;div class="second"&gt;&lt;/div&gt;
@@ -351,7 +351,7 @@ var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/di
 myFirstComponent.addChild(mySecondComponent, 'bottom');
 </code></pre>
 
-<p>Resulting hierarchy:</p>
+<p>Resulting element:</p>
 
 <pre><code>&lt;div class="first"&gt;
     &lt;span&gt;Lorem&lt;/span&gt;
@@ -407,7 +407,7 @@ var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/di
 myFirstComponent.addChildInside(mySecondComponent, '.me');
 </code></pre>
 
-<p>Resulting hierarchy:</p>
+<p>Resulting element:</p>
 
 <pre><code>&lt;div class="first"&gt;
     &lt;div class="me"&gt;
@@ -461,7 +461,7 @@ myFirstComponent.addChild(mySecondComponent);
 myFirstComponent.addChildAfter(myThirdComponent, mySecondComponent);
 </code></pre>
 
-<p>Resulting hierarchy:</p>
+<p>Resulting element:</p>
 
 <pre><code>&lt;div class="first"&gt;
     &lt;div class="second"&gt;&lt;/div&gt;
@@ -516,7 +516,7 @@ myFirstComponent.addChild(mySecondComponent);
 myFirstComponent.addChildBefore(myThirdComponent, mySecondComponent);
 </code></pre>
 
-<p>Resulting hierarchy:</p>
+<p>Resulting element:</p>
 
 <pre><code>&lt;div class="first"&gt;
     &lt;div class="third"&gt;&lt;/div&gt;
@@ -1212,7 +1212,7 @@ myComponent.removeChildrenOfType(Moobile.Button); // Removes myButton1, myButton
 
 <p>Sets whether this component is ready.</p>
 
-<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+<p>A component is <em>ready</em> when it's element is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
 
 <p>This method is handled by the <code>Moobile.Component</code> class and should not be called manually.</p>
 
@@ -1228,7 +1228,7 @@ myComponent.removeChildrenOfType(Moobile.Button); // Removes myButton1, myButton
 
 <p>Indicates whether this component is ready.</p>
 
-<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+<p>A component is <em>ready</em> when it's element is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
 
 <h4>Returns:</h4>
 
@@ -1500,6 +1500,25 @@ width and <code>y</code> to indicate the height.</p>
 
 <p>The component must be <em>ready</em> when calling this method otherwise it won't be measured.</p>
 
+<h4>Parameters:</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>relative</code></td>
+  <td>Mixed</td>
+  <td>The position will be relative to this element or component</td>
+</tr>
+</tbody>
+</table>
+
 <h4>Returns:</h4>
 
 <ul>
@@ -1556,7 +1575,7 @@ width and <code>y</code> to indicate the height.</p>
 
 <p>Tells this component it became ready.</p>
 
-<p>A component is <em>ready</em> when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
+<p>A component is <em>ready</em> when it's element is assigned to a window and therefore in the DOM. Upon begin <em>ready</em>, a component can access its window and perform tasks such as measuring.</p>
 
 <p>Override this method to provide your own implementation.</p>
 
