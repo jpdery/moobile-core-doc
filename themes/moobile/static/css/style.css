@@ -217,6 +217,7 @@ a:visited {
 }
 
 .content h1 + h5 {
+	color: #888888;
 	font-family: "Helvetica Neue", Arial, Sans-Serif;
 	font-size: 15px;
 	margin-top: 0px;
@@ -252,14 +253,16 @@ a:visited {
 }
 
 .content h4 {
-	color: #444444;
+	color: #333333;
 	font-size: 18px;
 	margin-top: 25px;
 	margin-bottom: 10px;
 }
 
 .content h5 {
-	color: #888888;
+	font-size: 15px;
+	margin-bottom: 10px;
+	color: #444444;
 }
 
 /* Pre */

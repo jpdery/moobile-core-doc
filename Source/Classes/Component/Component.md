@@ -38,11 +38,11 @@ This class should not be instantiated directly, instead you should subclass it t
 
 #### Examples:
 
-Creating an empty component:
+##### Creating an empty component:
 
 	var component = new Moobile.Component();
 
-Creating a component with a single child:
+##### Creating a component with a single child:
 
 	var element =
 		'<div>' +
@@ -51,7 +51,7 @@ Creating a component with a single child:
 	var component = new Moobile.Component(element);
 	component.getChild('my-button'); // Returns a Moobile.Button instance
 
-Creating a component with multiple children:
+##### Creating a component with multiple children:
 
 	var element =
 		'<div>' +
@@ -64,7 +64,7 @@ Creating a component with multiple children:
 	component.getChild('my-button-1'); // Returns a Moobile.Button instance
 	component.getChild('my-button-2'); // Returns a Moobile.Button instance
 
-Creating a component with a complex hierarchy:
+##### Creating a component with a complex hierarchy:
 
 	var element =
 		'<div>' +
