@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type    | Description
 ----------- | ------- | -----------
-`className` | String  | The image's second CSS class name, defaults to `null`.
+`className` | String  | The image's extended CSS class name, defaults to `null`.
 `styleName` | String  | The image's default style, defaults to `null`.
 `tagName`   | String  | The image's element tag name, defaults to `img`.
 `preload`   | Boolean | Whether to preload the image.

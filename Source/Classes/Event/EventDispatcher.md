@@ -1,4 +1,4 @@
-Moobile.EventDispatcher
+Moobile.EventFirer
 ================================================================================
 
 ##### Implements *Events*, *Options*, *Class.Binds*

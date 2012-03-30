@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The bar button's second CSS class name, defaults to `null`.
+`className` | String | The bar button's extended CSS class name, defaults to `null`.
 `styleName` | String | The bar button's default style, defaults to `null`.
 `tagName`   | String | The bar button's element tag name, defaults to `div`.
 

@@ -18,6 +18,12 @@
 
 		<h1>Classes</h1>
 
+		<h2>Component</h2>
+
+		<ul class="file-list">
+			<li><a href="../Component/Component.html"><span>Moobile.</span>Component</a></li>
+		</ul>
+
 		<h2>Control</h2>
 
 		<ul class="file-list">

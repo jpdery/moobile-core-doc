@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The list item's second CSS class name, defaults to `null`.
+`className` | String | The list item's extended CSS class name, defaults to `null`.
 `styleName` | String | The list item's default style, defaults to `null`.
 `tagName`   | String | The list item's element tag name, defaults to `li`.
 

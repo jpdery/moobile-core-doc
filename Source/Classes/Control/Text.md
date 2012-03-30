@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The text's second CSS class name, defaults to `null`.
+`className` | String | The text's extended CSS class name, defaults to `null`.
 `styleName` | String | The text's default style, defaults to `null`.
 `tagName`   | String | The text's element tag name, defaults to `span`.
 

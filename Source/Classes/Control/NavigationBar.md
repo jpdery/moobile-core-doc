@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The navigation bar's second CSS class name, defaults to `null`.
+`className` | String | The navigation bar's extended CSS class name, defaults to `null`.
 `styleName` | String | The navigation bar's default style, defaults to `null`.
 `tagName`   | String | The navigation bar's element tag name, defaults to `div`.
 

@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name           | Type    | Description
 -------------- | ------- | -----------
-`className`    | String  | The button group's second CSS class name, defaults to `null`.
+`className`    | String  | The button group's extended CSS class name, defaults to `null`.
 `styleName`    | String  | The button group's default style, defaults to `null`.
 `tagName`      | String  | The button group's element tag name, defaults to `div`.
 `deselectable` | Boolean | Whether a button can be deselected, defaults to `false`.

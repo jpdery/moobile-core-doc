@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The activity indicator's second CSS class name, defaults to `null`.
+`className` | String | The activity indicator's extended CSS class name, defaults to `null`.
 `styleName` | String | The activity indicator's default style, defaults to `null`.
 `tagName`   | String | The activity indicator's element tag name, defaults to `div`.
 

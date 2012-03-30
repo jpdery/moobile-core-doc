@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The button's second CSS class name, defaults to `null`.
+`className` | String | The button's extended CSS class name, defaults to `null`.
 `styleName` | String | The button's default style, defaults to `null`.
 `tagName`   | String | The button's element tag name, defaults to `div`.
 
