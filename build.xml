@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="moobile-doc-generator" default="main">
+
+	<property name="version" value="0.1" />
+	<property name="theme" value="moobile" />
+
+	<!-- <taskdef name="build-navigation" classname="Build.Tasks.BuildNavigationTask" />
+ -->
+	<!-- ============================================  -->
+	<!-- Target: setup                                 -->
+	<!-- ============================================  -->
+
+	<target name="setup">
+		<echo msg="Creating 'output/${version}' directory." />
+		<mkdir dir="./output/${version}" />
+		<mkdir dir="./output/${version}/tmp" />
+		<mkdir dir="./output/${version}/guides" />
+		<mkdir dir="./output/${version}/classes" />
+	</target>
+
+	<!-- ============================================  -->
+	<!-- Target: main                                  -->
+	<!-- ============================================  -->
+
+	<target name="main" depends="setup">
+
+		<echo msg="Building..." />
+
+		<fileset dir="./Source/Classes" id="classes-fileset">
+			 <include name="**/*.md" />
+		</fileset>
+
+		<fileset dir="./Source/Guides" id="guides-fileset">
+			 <include name="**/*.md" />
+		</fileset>
+
+		<!-- copy the static theme -->
+		<copy todir="./output/${version}">
+
+			<fileset dir="./themes/${theme}/static">
+				 <include name="**" />
+			</fileset>
+
+			<filterchain>
+				<replacetokens begintoken="%%" endtoken="%%">
+					<token key="VERSION" value="${version}" />
+				</replacetokens>
+			</filterchain>
+
+		</copy>
+
+		<!-- generates classes html -->
+		<copy todir="./output/${version}/classes">
+
+			<mapper type="glob" from="*.md" to="*.html" />
+
+			<fileset refid="classes-fileset" />
+
+			<filterchain>
+				<filterreader classname="classes.phing.filters.MarkdownFilter">
+					 <param name="decorator" value="themes/${theme}/decorator/class.php" />
+				</filterreader>
+ 				<replacetokens begintoken="%%" endtoken="%%">
+					<token key="VERSION" value="${version}" />
+				</replacetokens>
+			</filterchain>
+
+		</copy>
+
+		<!--
+		<copy todir="./Output/${version}/tmp">
+			<fileset dir="./Build/Templates">
+				 <include name="navigation.html" />
+			</fileset>
+			 <filterchain>
+				<build-navigation>
+					<fileset refid="classes-fileset" />
+					<fileset refid="guides-fileset" />
+				</build-navigation>
+			</filterchain>
+		<copy>
+		-->
+
+
+		<!--
+		<copy todir="./Output/${version}">
+			<fileset dir="./Template/Base">
+				<include name="**" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="./Output/${version}/api" />
+		<mkdir dir="./Output/${version}/guides" />
+
+		<copy dir="./Output/${version}/api">
+			<mapper type="glob" from="*.md" to="*.html" />
+			<fileset dir="./Template/Base">
+				<include name="*.md" />
+			</fileset>
+			<filterchain>
+				markdown
+				 tidy
+			</filterchain>
+		</copy>
+		-->
+
+	</target>
+
+</project>

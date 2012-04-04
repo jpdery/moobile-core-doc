@@ -1,0 +1,359 @@
+/* Fonts
+-----------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Museo500';
+	src: url('../fonts/museo500-regular-webfont.eot');
+	src: url('../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/museo500-regular-webfont.woff') format('woff'),
+		 url('../fonts/museo500-regular-webfont.ttf') format('truetype'),
+		 url('../fonts/museo500-regular-webfont.svg#Museo500') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Body
+-----------------------------------------------------------------------------*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background: rgb(229, 229, 229);
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(229, 229, 229)));
+	background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(229, 229, 229));
+	background:    -moz-radial-gradient(rgb(255, 255, 255), rgb(229, 229, 229));
+	background:      -o-radial-gradient(rgb(255, 255, 255), rgb(229, 229, 229));
+	background:         radial-gradient(rgb(255, 255, 255), rgb(229, 229, 229));
+	color: #555555;
+	font-family: "Helvetica Neue", Arial, Sans-Serif;
+	font-weight: 400;
+	font-size: 16px;
+	min-height: 740px;
+}
+
+/* Typography
+-----------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Museo500', Georgia, Serif;
+	font-weight: 500;
+	color: #222222;
+	margin: 0px;
+}
+
+a,
+a:link,
+a:visited {
+	color: #ffffff;
+}
+
+/* Button
+-----------------------------------------------------------------------------*/
+
+.button {
+	background: #ffffff;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: 'Museo500', Georgia, Serif;
+	font-weight: 500;
+	font-size: 24px;
+	list-style: none;
+	list-style-position: outside;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.button a {
+	font-size: 18px;
+	color: #ffffff;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 0px;
+	padding-right: 30px;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+	text-decoration: none;
+}
+
+/* Sidebar
+-----------------------------------------------------------------------------*/
+
+.sidebar {
+	-webkit-overflow-scrolling: touch;
+	background: #2c2f32;
+	bottom: 25px;
+	color: #ffffff;
+	overflow: scroll;
+	padding-bottom: 15px;
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+	width: 275px;
+}
+
+.sidebar h1 {
+	color: #ffffff;
+	background: #373a3c;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sidebar h2 {
+	border-bottom: 1px dotted #626669;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: auto;
+	margin: 0px;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+
+.sidebar ul {
+	margin: 0px;
+	margin-bottom: 25px;
+	padding: 0px;
+}
+
+.sidebar ul:last-child {
+	margin-bottom: 0px !important;
+}
+
+.sidebar li {
+	font-size: 15px;
+	font-weight: 400;
+	list-style: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.sidebar li:last-child {
+	margin-bottom: 0px !important;
+}
+
+.sidebar li:hover {
+	background: #45A5D2;
+}
+
+/* API List */
+
+.sidebar ul.api-list {
+	margin-top: 0px;
+}
+
+.sidebar ul.api-list li span {
+	font-style: italic;
+	opacity: 0.5;
+}
+
+/* Tutorial List */
+
+.sidebar ul.tutorial-list li {
+	margin-bottom: 10px;
+}
+
+.sidebar ul.tutorial-list li .descr {
+	display: none;
+}
+
+/* Content
+-----------------------------------------------------------------------------*/
+
+.content {
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+	   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+	        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+	background: white;
+	bottom: 25px;
+	left: 325px;
+	overflow: scroll;
+	right: 25px;
+	padding: 50px;
+	position: fixed;
+	top: 25px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.content a {
+	color: #45a5d2;
+}
+
+/* Paragraphs */
+
+.content p {
+	font-size: 15px;
+	line-height: 125%;
+	margin: 15px 0px;
+}
+
+.content h1 + p,
+.content h2 + p,
+.content h3 + p,
+.content h4 + p,
+.content h5 + p,
+.content h6 + p {
+	margin-top: 0px;
+}
+
+/* Headers */
+
+.content h1 {
+	color: #383838;
+	font-size: 36px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.content h1 + h5 {
+	font-family: "Helvetica Neue", Arial, Sans-Serif;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.content h1 + h5 + p {
+	font-size: 18px;
+	font-weight: 500;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.content h2 {
+	background: #45a5d2;
+	color: #ffffff;
+	font-size: 22px;
+	letter-spacing: -1px;
+	margin: 25px;
+	margin-left: -50px;
+	margin-right: -50px;
+	padding: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+	width: 250px;
+}
+
+.content h3 {
+	color: #222222;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.content h4 {
+	color: #444444;
+	font-size: 15px;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.content h5 {
+	color: #888888;
+}
+
+/* Pre */
+
+.content code {
+	-webkit-border-radius: 4px;
+	border: 1px solid #cccccc;
+	background: #fefefe;
+	color: #222222;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.content pre {
+	border: 1px solid #cccccc;
+	background: #fcfcfc;
+	color: #222222;
+	font-family: Monospace;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	padding: 10px;
+}
+
+.content pre code {
+	border: none;
+	background: none;
+	padding: 0px;
+}
+
+/* Table */
+
+.content table {
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+
+.content table tr:nth-child(2n) {
+	background-color: #F8F8F8;
+}
+
+.content table thead tr {
+	background: #2C2F32;
+}
+
+.content table thead tr th {
+	color: white;
+	font-family: 'Museo500', Georgia, Serif;
+	font-weight: 500;
+	font-size: 15px;
+	border: none;
+	padding: 10px;
+	text-shadow: none;
+}
+
+.content table th,
+.content table td {
+	font-size: 15px;
+	padding: 10px;
+	text-align: left;
+}
+
+.content table th {
+	border: 1px solid #2C2F32;
+}
+
+.content table td {
+	border: 1px solid #cccccc;
+}
+
+
+/* Geshi */
+.kw1 {
+	color: #1b609a;
+}
+.kw2 {
+	color: #9a6f1b;
+}
+.me1 {
+	color: #666;
+}
+.kw3, .re0, .sc1 {
+	color: #784e0c;
+}
+.br0 {
+	color: #444;
+}
+.st0 {
+	color: #489a1b;
+}
+.co1, .coMULTI {
+	color: #888;
+}
+.nu0 {
+	color: #70483d;
+}
+
