@@ -3,7 +3,7 @@ Moobile.Bar
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar control used to manage a [Moobile.BarItem](../Control/BarItem.md) control.
+Provides a bar control that's usually positionned at the top of bottom of a view. The bar itself is not meant to contain components such as buttons or text, instead it has a [Moobile.BarItem](../Control/BarItem.md) control which may contain these components.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The bar's default CSS class name, defaults to `null`.
+`className` | String | The bar's second CSS class name, defaults to `null`.
 `styleName` | String | The bar's default style, defaults to `null`.
 `tagName`   | String | The bar's element tag name, defaults to `div`.
 
@@ -38,7 +38,49 @@ Name        | Type   | Description
 
 Name  | Description
 ----- | -----------
-`bar` | Defines the element that act as a ar. Use the `data-bar` property to specify a subclass instead.
+`bar` | Defines an element acting as a [Moobile.BarItem](../Control/BarItem.md) control. Use the `data-bar` property to specify a subclass instead.
+
+#### Examples:
+
+Creating a [Moobile.Bar](../Control/Bar.md) control using the `data-role` attribute of an element:
+
+	<div data-role="bar"></div>
+
+Creating a [Moobile.Bar](../Control/Bar.md) control using the `data-role` attribute of an element and specifying a subclass:
+
+	<div data-role="bar" data-bar="MyBarClass"></div>
+
+Creating a [Moobile.Bar](../Control/Bar.md) control specifying the element that will act as its [Moobile.BarItem](../Control/BarItem.md) control.
+
+	<div data-role="bar">
+		<div data-role="bar-item"></div>
+	</div>
+
+#### Notes:
+
+Upon initialization, this control creates a [Moobile.BarItem](../Control/BarItem.md) control using the bar element's content. For instance, if you define a [Moobile.Bar](../Control/Bar.md) control like this:
+
+	<div data-role="bar">
+		<div class="element-1"></div>
+		<div class="element-2"></div>
+	</div>
+
+It will become this:
+
+	<div data-role="bar">
+		<div data-role="item" class="bar-item">
+			<div class="element-1"></div>
+			<div class="element-2"></div>
+		</div>
+	</div>
+
+If you wish to put elements before and/or after the [Moobile.Bar](../Control/Bar.md) control's element, you will have to specify which element acts as the [Moobile.BarItem](../Control/BarItem.md) control's element:
+
+	<div data-role="bar">
+		<div class="element-1"></div>
+		<div data-role="item" class="bar-item"></div>
+		<div class="element-2"></div>
+	</div>
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -55,7 +97,7 @@ Methods {#methods}
 
 ### setItem(item) {#setItem}
 
-Sets the bar item.
+Sets this bar's [Moobile.BarItem](../Control/BarItem.md) control.
 
 #### Parameters:
 
@@ -71,7 +113,7 @@ Name   | Type                                     | Description
 
 ### getItem() {#getItem}
 
-Returns the bar item.
+Returns this bar's [Moobile.BarItem](../Control/BarItem.md) control.
 
 #### Returns:
 
@@ -79,6 +121,10 @@ Returns the bar item.
 
 Styles {#styles}
 --------------------------------------------------------------------------------
+
+### default style
+
+[TODO: Image]
 
 ### dark
 

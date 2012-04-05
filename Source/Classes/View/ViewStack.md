@@ -25,7 +25,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The view's default CSS class name, defaults to `null`.
+`className` | String | The view's second CSS class name, defaults to `null`.
 `styleName` | String | The view's default style, defaults to `null`.
 `tagName`   | String | The view's element tag name, defaults to `div`.
 
@@ -39,8 +39,8 @@ Name        | Type   | Description
 
 Name           | Description
 -------------- | -----------
-`view`         | Defines the element that act as a view. Use the `data-view` property to specify a subclass instead.
-`view-content` | Defines the element that act as a view's content. If unspecified, the contents of the content's element will act as its view content.
+`view`         | Defines an element acting as a view. Use the `data-view` property to specify a subclass instead.
+`view-content` | Defines an element acting as a view's content. If unspecified, the contents of the content's element will act as its view content.
 
 #### Note:
 

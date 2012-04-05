@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The navigation bar item's default CSS class name, defaults to `null`.
+`className` | String | The navigation bar item's second CSS class name, defaults to `null`.
 `styleName` | String | The navigation bar item's default style, defaults to `null`.
 `tagName`   | String | The navigation bar item's element tag name, defaults to `div`.
 
@@ -40,8 +40,8 @@ Name        | Type   | Description
 
 Name    | Description
 ------- | -----------
-`item`  | Defines the element that act as a navigation bar item. Use the `data-item` property to specify a subclass instead.
-`title` | Defines the element that act as a navigation bar item title. If unspecified, the contents of the navigation bar item's element will act as its label.
+`item`  | Defines an element acting as a navigation bar item. Use the `data-item` property to specify a subclass instead.
+`title` | Defines an element acting as a navigation bar item title. If unspecified, the contents of the navigation bar item's element will act as its label.
 
 Events {#events}
 --------------------------------------------------------------------------------

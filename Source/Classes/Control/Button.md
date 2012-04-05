@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The button's default CSS class name, defaults to `null`.
+`className` | String | The button's second CSS class name, defaults to `null`.
 `styleName` | String | The button's default style, defaults to `null`.
 `tagName`   | String | The button's element tag name, defaults to `div`.
 
@@ -38,8 +38,8 @@ Name        | Type   | Description
 
 Name     | Description
 -------- | -----------
-`button` | Defines the element that act as a button. Use the `data-button` property to specify a subclass instead.
-`label`  | Defines the element that act as a button label. If unspecified, the contents of the button's element will act as its label.
+`button` | Defines an element acting as a button. Use the `data-button` property to specify a subclass instead.
+`label`  | Defines an element acting as a button label. If unspecified, the contents of the button's element will act as its label.
 
 Events {#events}
 --------------------------------------------------------------------------------

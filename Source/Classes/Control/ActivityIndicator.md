@@ -3,7 +3,7 @@ Moobile.ActivityIndicator
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a control that informs the user an operation is running.
+Provides a visual progress feedback for tasks of unknown duration.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The activity indicator's default CSS class name, defaults to `null`.
+`className` | String | The activity indicator's second CSS class name, defaults to `null`.
 `styleName` | String | The activity indicator's default style, defaults to `null`.
 `tagName`   | String | The activity indicator's element tag name, defaults to `div`.
 
@@ -36,7 +36,17 @@ Name        | Type   | Description
 
 Name                 | Description
 -------------------- | -----------
-`activity-indicator` | Defines the element that act as an activity indicator. Use the `data-activity-indicator` property to specify a subclass instead.
+`activity-indicator` | Defines an element acting as a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control. Use the `data-activity-indicator` property to specify a subclass instead.
+
+#### Examples:
+
+Creating a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control using the `data-role` attribute of an element:
+
+	<div data-role="activity-indicator"></div>
+
+Creating a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control using the `data-role` attribute of an element and specifying a subclass:
+
+	<div data-role="activity-indicator" data-activity-indicator="MyActivityIndicatorSubclass"></div>
 
 Events {#events}
 --------------------------------------------------------------------------------

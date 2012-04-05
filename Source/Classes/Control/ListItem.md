@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The list item's default CSS class name, defaults to `null`.
+`className` | String | The list item's second CSS class name, defaults to `null`.
 `styleName` | String | The list item's default style, defaults to `null`.
 `tagName`   | String | The list item's element tag name, defaults to `li`.
 
@@ -36,10 +36,10 @@ Name        | Type   | Description
 
 Name        | Description
 ----------- | -----------
-`list-item` | Defines the element that act as a list item. Use the `data-list-item` property to specify a subclass instead.
-`label`     | Defines the element that act as a list item label. If unspecified, the contents of the button's element will act as its label.
-`image`     | Defines the element that act as a list item image.
-`detail`    | Defines the element that act as a list item detail text.
+`list-item` | Defines an element acting as a list item. Use the `data-list-item` property to specify a subclass instead.
+`label`     | Defines an element acting as a list item label. If unspecified, the contents of the button's element will act as its label.
+`image`     | Defines an element acting as a list item image.
+`detail`    | Defines an element acting as a list item detail text.
 
 Events {#events}
 --------------------------------------------------------------------------------

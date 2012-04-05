@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name           | Type    | Description
 -------------- | ------- | -----------
-`className`    | String  | The button group's default CSS class name, defaults to `null`.
+`className`    | String  | The button group's second CSS class name, defaults to `null`.
 `styleName`    | String  | The button group's default style, defaults to `null`.
 `tagName`      | String  | The button group's element tag name, defaults to `div`.
 `deselectable` | Boolean | Whether a button can be deselected, defaults to `false`.
@@ -48,7 +48,7 @@ Buttons can be added to the button group by adding elements with the `button` da
 
 Name           | Description
 -------------- | -----------
-`button-group` | Defines the element that act as a button group. Use the `data-button-group` property to specify a subclass instead.
+`button-group` | Defines an element acting as a button group. Use the `data-button-group` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------

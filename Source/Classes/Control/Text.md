@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The text's default CSS class name, defaults to `null`.
+`className` | String | The text's second CSS class name, defaults to `null`.
 `styleName` | String | The text's default style, defaults to `null`.
 `tagName`   | String | The text's element tag name, defaults to `span`.
 
@@ -36,7 +36,7 @@ Name        | Type   | Description
 
 Name   | Description
 ------ | -----------
-`text` | Defines the element that act as a text. Use the `data-text` property to specify a subclass instead.
+`text` | Defines an element acting as a text. Use the `data-text` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------

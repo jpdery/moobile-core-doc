@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The view's default CSS class name, defaults to `null`.
+`className` | String | The view's second CSS class name, defaults to `null`.
 `styleName` | String | The view's default style, defaults to `null`.
 `tagName`   | String | The view's element tag name, defaults to `div`.
 

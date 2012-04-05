@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type    | Description
 ----------- | ------- | -----------
-`className` | String  | The image's default CSS class name, defaults to `null`.
+`className` | String  | The image's second CSS class name, defaults to `null`.
 `styleName` | String  | The image's default style, defaults to `null`.
 `tagName`   | String  | The image's element tag name, defaults to `img`.
 `preload`   | Boolean | Whether to preload the image.
@@ -37,7 +37,7 @@ Name        | Type    | Description
 
 Name    | Description
 ------- | -----------
-`image` | Defines the element that act as an image. Use the `data-image` property to specify a subclass instead.
+`image` | Defines an element acting as an image. Use the `data-image` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------

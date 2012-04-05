@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The bar button's default CSS class name, defaults to `null`.
+`className` | String | The bar button's second CSS class name, defaults to `null`.
 `styleName` | String | The bar button's default style, defaults to `null`.
 `tagName`   | String | The bar button's element tag name, defaults to `div`.
 
@@ -38,7 +38,7 @@ Name        | Type   | Description
 
 Name         | Description
 ------------ | -----------
-`bar-button` | Defines the element that act as a bar-button. Use the `data-bar-button` property to specify a subclass instead.
+`bar-button` | Defines an element acting as a bar-button. Use the `data-bar-button` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------

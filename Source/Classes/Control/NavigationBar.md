@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The navigation bar's default CSS class name, defaults to `null`.
+`className` | String | The navigation bar's second CSS class name, defaults to `null`.
 `styleName` | String | The navigation bar's default style, defaults to `null`.
 `tagName`   | String | The navigation bar's element tag name, defaults to `div`.
 
@@ -42,7 +42,7 @@ Name        | Type   | Description
 
 Name             | Description
 ---------------- | -----------
-`navigation-bar` | Defines the element that act as a button. Use the `data-navigation-bar` property to specify a subclass instead.
+`navigation-bar` | Defines an element acting as a button. Use the `data-navigation-bar` property to specify a subclass instead.
 
 Methods {#methods}
 --------------------------------------------------------------------------------

@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name        | Type   | Description
 ----------- | ------ | -----------
-`className` | String | The slider's default CSS class name, defaults to `null`.
+`className` | String | The slider's second CSS class name, defaults to `null`.
 `styleName` | String | The slider's default style, defaults to `null`.
 `tagName`   | String | The slider's element tag name, defaults to `div`.
 
@@ -40,7 +40,7 @@ Name        | Type   | Description
 
 Name     | Description
 -------- | -----------
-`slider` | Defines the element that act as a slider. Use the `data-slider` property to specify a subclass instead.
+`slider` | Defines an element acting as a slider. Use the `data-slider` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------

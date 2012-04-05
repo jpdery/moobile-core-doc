@@ -24,7 +24,7 @@ Name                 | Type    | Description
 
 Name           | Type    | Description
 -------------- | ------- | -----------
-`className`    | String  | The list group's default CSS class name, defaults to `null`.
+`className`    | String  | The list group's second CSS class name, defaults to `null`.
 `styleName`    | String  | The list group's default style, defaults to `null`.
 `tagName`      | String  | The list group's element tag name, defaults to `ul`.
 
@@ -47,7 +47,7 @@ List items can be added to the list by adding elements with the `list-item` data
 
 Name   | Description
 ------ | -----------
-`list` | Defines the element that act as a list. Use the `data-list` property to specify a subclass instead.
+`list` | Defines an element acting as a list. Use the `data-list` property to specify a subclass instead.
 
 Events {#events}
 --------------------------------------------------------------------------------
