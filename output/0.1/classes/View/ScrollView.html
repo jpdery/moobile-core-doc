@@ -1,35 +1,16 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Moobile.ScrollView.md | Moobile 0.1</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="../../css/reset.css">
-	<link rel="stylesheet" href="../../css/style.css">
-	<script src="../../js/libs/prettify.js"></script>
-	<script src="../../js/libs/modernizr-2.5.3.min.js"></script>
-</head>
-<body onload="prettyPrint()">
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><title>Moobile.ScrollView | Moobile 0.1</title><link rel="stylesheet" href="../../css/reset.css"><link rel="stylesheet" href="../../css/style.css"><script src="../../js/libs/prettify.js"></script><script src="../../js/libs/modernizr-2.5.3.min.js"></script></head><body onload="prettyPrint()">
+
 	<div id="sidebar" class="sidebar">
 
 		<h1>Classes</h1>
 
 		<h2>Component</h2>
 
-		<ul class="file-list">
-			<li><a href="../Component/Component.html"><span>Moobile.</span>Component</a></li>
-		</ul>
+		<ul class="file-list"><li><a href="../Component/Component.html"><span>Moobile.</span>Component</a></li>
+		</ul><h2>Control</h2>
 
-		<h2>Control</h2>
-
-		<ul class="file-list">
-
-			<li><a href="../Control/ActivityIndicator.html"><span>Moobile.</span>ActivityIndicator</a></li>
+		<ul class="file-list"><li><a href="../Control/ActivityIndicator.html"><span>Moobile.</span>ActivityIndicator</a></li>
 			<li><a href="../Control/Bar.html"><span>Moobile.</span>Bar</a></li>
 			<li><a href="../Control/BarItem.html"><span>Moobile.</span>BarItem</a></li>
 			<li><a href="../Control/Button.html"><span>Moobile.</span>Button</a></li>
@@ -42,16 +23,11 @@
 			<li><a href="../Control/NavigationBarItem.html"><span>Moobile.</span>NavigationBarItem</a></li>
 			<li><a href="../Control/Slider.html"><span>Moobile.</span>Slider</a></li>
 			<li><a href="../Control/Text.html"><span>Moobile.</span>Text</a></li>
-		</ul>
+		</ul><h2>View</h2>
 
-		<h2>View</h2>
-
-		<ul class="file-list">
-			<li><a href="../View/View.html"><span>Moobile.</span>View</a></li>
+		<ul class="file-list"><li><a href="../View/View.html"><span>Moobile.</span>View</a></li>
 			<li><a href="../View/ScrollView.html"><span>Moobile.</span>ScrollView</a></li>
-		</ul>
-
-	</div>
+		</ul></div>
 
 	<div id="content" class="content"><h1>Moobile.ScrollView</h1>
 
@@ -68,98 +44,54 @@
 
 <h4>Parameters:</h4>
 
-<table>
-<thead>
-<tr>
-  <th>Name</th>
+<table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>element</code> <em>Optional</em></td>
+</tr></thead><tbody><tr><td><code>element</code> <em>Optional</em></td>
   <td>Element</td>
   <td>The view's element, element id or html string.</td>
-</tr>
-<tr>
-  <td><code>options</code> <em>Optional</em></td>
+</tr><tr><td><code>options</code> <em>Optional</em></td>
   <td>Object</td>
   <td>The view's options, see below.</td>
-</tr>
-<tr>
-  <td><code>name</code>    <em>Optional</em></td>
+</tr><tr><td><code>name</code>    <em>Optional</em></td>
   <td>String</td>
   <td>The view's name.</td>
-</tr>
-</tbody>
-</table>
+</tr></tbody></table><h4>Options:</h4>
 
-<h4>Options:</h4>
-
-<table>
-<thead>
-<tr>
-  <th>Name</th>
+<table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>className</code></td>
+</tr></thead><tbody><tr><td><code>className</code></td>
   <td>String</td>
   <td>The view's extended CSS class name, defaults to <code>null</code>.</td>
-</tr>
-<tr>
-  <td><code>styleName</code></td>
+</tr><tr><td><code>styleName</code></td>
   <td>String</td>
   <td>The view's default style, defaults to <code>null</code>.</td>
-</tr>
-<tr>
-  <td><code>tagName</code></td>
+</tr><tr><td><code>tagName</code></td>
   <td>String</td>
   <td>The view's element tag name, defaults to <code>div</code>.</td>
-</tr>
-<tr>
-  <td><code>momentum</code></td>
+</tr><tr><td><code>momentum</code></td>
   <td>Boolean</td>
   <td>Whether the view scrolls with momentum, defaults to <code>true</code>.</td>
-</tr>
-<tr>
-  <td><code>scrollX</code></td>
+</tr><tr><td><code>scrollX</code></td>
   <td>Boolean</td>
   <td>Whether to scroll on the x axis, defaults to <code>true</code>.</td>
-</tr>
-<tr>
-  <td><code>scrollY</code></td>
+</tr><tr><td><code>scrollY</code></td>
   <td>Boolean</td>
   <td>Whether to scroll on the y axis, defaults to <code>true</code>.</td>
-</tr>
-<tr>
-  <td><code>snapToPage</code></td>
+</tr><tr><td><code>snapToPage</code></td>
   <td>Boolean</td>
   <td>Whether to snap to the current page upon release, defaults to <code>false</code>.</td>
-</tr>
-<tr>
-  <td><code>snapToPageAt</code></td>
+</tr><tr><td><code>snapToPageAt</code></td>
   <td>Number</td>
   <td>The percentage moved to snap to the next page, defaults to <code>35</code>.</td>
-</tr>
-<tr>
-  <td><code>snapToPageDuration</code></td>
+</tr><tr><td><code>snapToPageDuration</code></td>
   <td>Number</td>
   <td>The time in miliseconds for the snap animation, defaults to <code>150</code>.</td>
-</tr>
-<tr>
-  <td><code>snapToPageDelay</code></td>
+</tr><tr><td><code>snapToPageDelay</code></td>
   <td>Number</td>
   <td>The view will automatically snap to the next page if the user scrolls for less than this time in miliseconds, defaults to <code>150</code>.</td>
-</tr>
-</tbody>
-</table>
-
-<h4>Generates:</h4>
+</tr></tbody></table><h4>Generates:</h4>
 
 <pre><code>&lt;div class="view scroll-view"&gt;
     &lt;div class="view-content-wrapper scroll-view-content-wrapper scroll"&gt;
@@ -200,141 +132,79 @@
 
 <h4>Parameters:</h4>
 
-<table>
-<thead>
-<tr>
-  <th>Name</th>
+<table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>x</code></td>
+</tr></thead><tbody><tr><td><code>x</code></td>
   <td>Number</td>
   <td>The x coordinate.</td>
-</tr>
-<tr>
-  <td><code>y</code></td>
+</tr><tr><td><code>y</code></td>
   <td>Number</td>
   <td>The y coordinate.</td>
-</tr>
-<tr>
-  <td><code>time</code> <em>Optional</em></td>
+</tr><tr><td><code>time</code> <em>Optional</em></td>
   <td>Number</td>
   <td>The duration of the scroll.</td>
-</tr>
-</tbody>
-</table>
+</tr></tbody></table><h4>Returns:</h4>
 
-<h4>Returns:</h4>
-
-<ul>
-<li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
-</ul>
-
-<hr />
-
-<h3 id="scrollTo">scrollToPage(pageX, pageY, time)</h3>
+<ul><li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
+</ul><hr><h3 id="scrollToPage">scrollToPage(pageX, pageY, time)</h3>
 
 <p>Scrolls to page.</p>
 
 <h4>Parameters:</h4>
 
-<table>
-<thead>
-<tr>
-  <th>Name</th>
+<table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>pageX</code></td>
+</tr></thead><tbody><tr><td><code>pageX</code></td>
   <td>Number</td>
   <td>The horizontal page number.</td>
-</tr>
-<tr>
-  <td><code>pageY</code></td>
+</tr><tr><td><code>pageY</code></td>
   <td>Number</td>
   <td>The vertical page number.</td>
-</tr>
-<tr>
-  <td><code>time</code> <em>Optional</em></td>
+</tr><tr><td><code>time</code> <em>Optional</em></td>
   <td>Number</td>
   <td>The duration of the scroll.</td>
-</tr>
-</tbody>
-</table>
+</tr></tbody></table><h4>Returns:</h4>
 
-<h4>Returns:</h4>
-
-<ul>
-<li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
-</ul>
-
-<hr />
-
-<h3 id="scrollTo">scrollToElement(element, time)</h3>
+<ul><li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
+</ul><hr><h3 id="scrollToElement">scrollToElement(element, time)</h3>
 
 <p>Scrolls to an element.</p>
 
 <h4>Parameters:</h4>
 
-<table>
-<thead>
-<tr>
-  <th>Name</th>
+<table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>element</code></td>
+</tr></thead><tbody><tr><td><code>element</code></td>
   <td>Element</td>
   <td>The element to scroll to.</td>
-</tr>
-<tr>
-  <td><code>time</code> <em>Optional</em></td>
+</tr><tr><td><code>time</code> <em>Optional</em></td>
   <td>Number</td>
   <td>The duration of the scroll.</td>
-</tr>
-</tbody>
-</table>
+</tr></tbody></table><h4>Returns:</h4>
 
-<h4>Returns:</h4>
-
-<ul>
-<li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
-</ul>
-
-<hr />
-
-<h3 id="scrollTo">getScroll()</h3>
+<ul><li><a href="../View/ScrollView.html">Moobile.ScrollView</a> This Moobile.ScrollView instance.</li>
+</ul><hr><h3 id="getScroll">getScroll()</h3>
 
 <p>Returns the current scroll position as an object with two keys, <code>x</code> which indicates the horizontal scroll and <code>y</code> which indicates the vertical scroll of this view.</p>
 
 <h4>Returns:</h4>
 
-<ul>
-<li><code>Object</code> The scroll position.</li>
-</ul>
-
-<hr />
-
-<h3 id="scrollTo">getScrollSize()</h3>
+<ul><li><code>Object</code> The scroll position.</li>
+</ul><hr><h3 id="getScrollSize">getScrollSize()</h3>
 
 <p>Returns the content size including the scrolling area as an object with two keys, <code>x</code> which indicates the width and <code>y</code> which indicates the height.</p>
 
 <h4>Returns:</h4>
 
-<ul>
-<li><code>Object</code> The size including the scrolling area.</li>
-</ul>
-
-<h2 id="styles">Styles</h2>
+<ul><li><code>Object</code> The size including the scrolling area.</li>
+</ul><h2 id="styles">Styles</h2>
 
 <p>This class does not define any styles.</p>
 </div>
+
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a><ul><li><a href="#">Element wrapper</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#scrollTo">scrollTo(x, y, time)</a></li><li><a href="#scrollToPage">scrollToPage(pageX, pageY, time)</a></li><li><a href="#scrollToElement">scrollToElement(element, time)</a></li><li><a href="#getScroll">getScroll()</a></li><li><a href="#getScrollSize">getScrollSize()</a></li></ul></li><li><a href="#styles">Styles</a></li></ul></div>
+
+</body></html>

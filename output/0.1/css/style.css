@@ -83,12 +83,12 @@ a:visited {
 	bottom: 25px;
 	color: #ffffff;
 	overflow: scroll;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	position: fixed;
 	top: 25px;
 	left: 25px;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-	width: 275px;
+	width: 250px;
 }
 
 .sidebar h1 {
@@ -100,8 +100,8 @@ a:visited {
 	margin-top: 25px;
 	margin-bottom: 25px;
 	padding: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .sidebar h2 {
@@ -111,15 +111,15 @@ a:visited {
 	font-weight: 500;
 	letter-spacing: auto;
 	margin: 0px;
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-bottom: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
 	padding-bottom: 5px;
 }
 
 .sidebar ul {
 	margin: 0px;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	padding: 0px;
 }
 
@@ -128,14 +128,14 @@ a:visited {
 }
 
 .sidebar li {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
 	list-style: none;
 	list-style-position: outside;
 	margin: 0px;
 	padding: 2px;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .sidebar li:last-child {
@@ -146,6 +146,10 @@ a:visited {
 	background: #45A5D2;
 }
 
+.sidebar li a {
+	text-decoration: none;
+}
+
 /* API List */
 
 .sidebar ul.file-list {
@@ -153,7 +157,7 @@ a:visited {
 }
 
 .sidebar ul.file-list li span {
-	font-style: italic;
+	font-size: 75%;
 	opacity: 0.5;
 }
 
@@ -177,10 +181,10 @@ a:visited {
 	        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 	background: white;
 	bottom: 25px;
-	left: 325px;
+	left: 305px;
 	overflow: scroll;
-	right: 25px;
-	padding: 50px;
+	right: 250px;
+	padding: 40px;
 	position: fixed;
 	top: 25px;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
@@ -237,11 +241,11 @@ a:visited {
 	font-size: 28px;
 	letter-spacing: -1px;
 	margin: 25px;
-	margin-left: -50px;
-	margin-right: -50px;
+	margin-left: -40px;
+	margin-right: -40px;
 	padding: 10px;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 40px;
+	padding-right: 40px;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
 	width: 250px;
 }
@@ -345,6 +349,61 @@ a:visited {
 .content hr {
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+/* Table of Contents
+-----------------------------------------------------------------------------*/
+
+.toc {
+	-webkit-box-sizing: border-box;
+	color: #333333;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+	bottom: 30px;
+	overflow: scroll;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	width: 225px;
+}
+
+.toc a {
+	color: #555555;
+	text-decoration: none;
+}
+
+.toc h2 {
+	background: rgba(0, 0, 0, 0.15);
+	color: #333333;
+	font-size: 16px;
+	margin: 0px;
+	margin-left: -10px;
+	padding: 10px;
+	padding-bottom: 8px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.toc ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.toc ul li {
+	color: #333333;
+	font-size: 15px;
+	font-weight: 500;
+	list-style: none;
+	list-style-position: outside;
+	margin-left: 0px;
+	margin-bottom: 5px;
+}
+
+.toc ul li li {
+	font-size: 13px;
+	font-weight: 400;
+	margin-left: 10px;
 }
 
 /* Google Prettify */

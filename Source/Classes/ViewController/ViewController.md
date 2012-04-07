@@ -284,7 +284,7 @@ Returns the image.
 
 -----
 
-### setModal(modal) {#isModal}
+### setModal(modal) {#setModal}
 
 Sets whether the current instance is being presented as the modal view controller of another view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
 

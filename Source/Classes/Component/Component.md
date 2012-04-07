@@ -155,15 +155,23 @@ Fired when this component becomes hidden.
 Members {#members}
 --------------------------------------------------------------------------------
 
-### `Element` element {#element}
+### element {#element}
 
 The element managed by the component.
 
+#### Type
+
+ - `Element`
+
 -----
 
-### `Object` options {#options}
+### options {#options}
 
 The component's options.
+
+#### Type
+
+ - `Object`
 
 Name        | Type   | Description
 ----------- | ------ | -----------
@@ -515,7 +523,7 @@ Name        | Type                                           | Description
 
 -----
 
-### hasChildOfType(type) {#hasChild}
+### hasChildOfType(type) {#hasChildOfType}
 
 Indicates whether this component has at least one component of the specified type.
 

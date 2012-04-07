@@ -90,7 +90,7 @@ Name              | Type   | Description
 
 -----
 
-### scrollToPage(pageX, pageY, time) {#scrollTo}
+### scrollToPage(pageX, pageY, time) {#scrollToPage}
 
 Scrolls to page.
 
@@ -108,7 +108,7 @@ Name              | Type   | Description
 
 -----
 
-### scrollToElement(element, time)  {#scrollTo}
+### scrollToElement(element, time)  {#scrollToElement}
 
 Scrolls to an element.
 
@@ -125,7 +125,7 @@ Name              | Type    | Description
 
 -----
 
-### getScroll()  {#scrollTo}
+### getScroll()  {#getScroll}
 
 Returns the current scroll position as an object with two keys, `x` which indicates the horizontal scroll and `y` which indicates the vertical scroll of this view.
 
@@ -135,7 +135,7 @@ Returns the current scroll position as an object with two keys, `x` which indica
 
 -----
 
-### getScrollSize()  {#scrollTo}
+### getScrollSize()  {#getScrollSize}
 
 Returns the content size including the scrolling area as an object with two keys, `x` which indicates the width and `y` which indicates the height.
 

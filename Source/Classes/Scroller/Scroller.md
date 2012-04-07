@@ -11,7 +11,7 @@ Initialization {#initialization}
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### initialize(content, options)
+### initialize(content, options) {#initialize}
 
 Initializes this scroller.
 
@@ -47,7 +47,7 @@ will not be removed upon destruction as the content wrapper will.
 
 -----
 
-### scrollTo(x, y, time)
+### scrollTo(x, y, time) {#scrollTo}
 
 Scrolls to a set of coordinates.
 
@@ -66,7 +66,7 @@ Name  | Type | Description
 
 -----
 
-### scrollToPage(pageX, pageY, time)
+### scrollToPage(pageX, pageY, time) {}
 
 Scrolls to page.
 

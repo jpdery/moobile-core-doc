@@ -12,6 +12,7 @@
 	<!-- ============================================  -->
 
 	<target name="setup">
+		<delete dir="output/${version}" />
 		<echo msg="Creating 'output/${version}' directory." />
 		<mkdir dir="./output/${version}" />
 		<mkdir dir="./output/${version}/tmp" />
@@ -59,52 +60,16 @@
 
 			<filterchain>
 				<filterreader classname="classes.phing.filters.MarkdownFilter">
-					 <param name="decorator" value="themes/${theme}/decorator/class.php" />
+					 <param name="decorator" value="themes/${theme}/decorator/class.tmpl.html" />
 				</filterreader>
 				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
+				<filterreader classname="classes.phing.filters.TableOfContentsFilter" />
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
 				</replacetokens>
 			</filterchain>
 
 		</copy>
-
-		<!--
-		<copy todir="./Output/${version}/tmp">
-			<fileset dir="./Build/Templates">
-				 <include name="navigation.html" />
-			</fileset>
-			 <filterchain>
-				<build-navigation>
-					<fileset refid="classes-fileset" />
-					<fileset refid="guides-fileset" />
-				</build-navigation>
-			</filterchain>
-		<copy>
-		-->
-
-
-		<!--
-		<copy todir="./Output/${version}">
-			<fileset dir="./Template/Base">
-				<include name="**" />
-			</fileset>
-		</copy>
-
-		<mkdir dir="./Output/${version}/api" />
-		<mkdir dir="./Output/${version}/guides" />
-
-		<copy dir="./Output/${version}/api">
-			<mapper type="glob" from="*.md" to="*.html" />
-			<fileset dir="./Template/Base">
-				<include name="*.md" />
-			</fileset>
-			<filterchain>
-				markdown
-				 tidy
-			</filterchain>
-		</copy>
-		-->
 
 	</target>
 

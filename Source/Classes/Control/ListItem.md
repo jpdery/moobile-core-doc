@@ -70,7 +70,7 @@ Name    | Type  | Description
 
 -----
 
-### getLabel() {#setLabel}
+### getLabel() {#getLabel}
 
 Returns the label.
 

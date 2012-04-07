@@ -19,16 +19,20 @@ class MarkdownFilter extends BaseParamFilterReader implements ChainableReader {
 		if ($buffer === -1)
 			return -1;
 
-		$vars = array();
-		$vars['title'] = 'Moobile.' . basename($this->in->getResource());
-		$vars['content'] = markdown($buffer);
+		$title = $this->in->getResource();
+		if ($title) {
+			$title = basename($title);
+			$title = str_replace('.md', '', $title);
+			$title = 'Moobile.' . $title;
+		}
 
-		ob_start();
-		include $this->decorator;
-		$out = ob_get_contents();
-		ob_get_clean();
+		$content = markdown($buffer);
 
-		return $out;
+		$template = file_get_contents($this->decorator);
+		$template = str_replace('%%TITLE%%', $title, $template);
+		$template = str_replace('%%CONTENT%%', $content, $template);
+
+		return $template;
 	}
 
 	public function chain(Reader $reader) {

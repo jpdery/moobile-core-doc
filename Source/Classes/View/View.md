@@ -44,7 +44,7 @@ Events {#events}
 Members {#members}
 --------------------------------------------------------------------------------
 
-### `Element` content {#content}
+### `Element` contentElement {#contentElement}
 
 The element that wraps the content of the view.
 
@@ -71,7 +71,7 @@ Disable touch interaction of the entire view and it's hierarchy.
 
 -----
 
-### setContent(content) {#setContent}
+### setContentElement(content) {#setContentElement}
 
 Sets the element that wraps the content of this view.
 
@@ -89,7 +89,7 @@ Name      | Type    | Description
 
 -----
 
-### getContent() {#getContent}
+### getContentElement() {#getContentElement}
 
 Returns the element that wraps the content of this view.
 
