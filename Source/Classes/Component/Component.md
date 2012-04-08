@@ -229,7 +229,7 @@ Resulting element:
 
 ### addChildInside(component, element, [where]) {#addChildInside}
 
-Adds the specified component at the `top` or `bottom` of a component's element. If `where` is unspecified, the component will be added at the `bottom` of the component's element.
+Adds the specified component at the `top` or `bottom` of this component's element. If `where` is unspecified, the component will be added at the `bottom` of the component's element.
 
 #### Parameters:
 
