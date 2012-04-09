@@ -32,6 +32,12 @@ Name        | Type   | Description
 
 	<div class="activity-indicator"></div>
 
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+
 #### Defined roles:
 
 Name                 | Description
@@ -40,23 +46,13 @@ Name                 | Description
 
 #### Examples:
 
-Creating a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control using the `data-role` attribute of an element:
+##### Creating an activity indicator using the `data-role` attribute of an element:
 
 	<div data-role="activity-indicator"></div>
 
-Creating a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control using the `data-role` attribute of an element and specifying a subclass:
+##### Creating an activity indicator using the `data-role` attribute of an element and specifying a subclass:
 
 	<div data-role="activity-indicator" data-activity-indicator="MyActivityIndicatorSubclass"></div>
-
-Events {#events}
---------------------------------------------------------------------------------
-
-This class does not define additional events.
-
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -69,6 +65,11 @@ Starts this activity indicator animation. This method adds the `activity` CSS cl
 
 - [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
 
+#### Example:
+
+	var activityIndicator = new Moobile.ActivityIndicator();
+	activityIndicator.start();
+
 -----
 
 ### stop() {#stop}
@@ -79,7 +80,7 @@ Stops this activity indicator animation. This method removes the `activity` CSS 
 
 - [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
 
-Styles {#styles}
---------------------------------------------------------------------------------
+#### Example:
 
-This control does not define any styles.
+	var activityIndicator = new Moobile.ActivityIndicator();
+	activityIndicator.stop();

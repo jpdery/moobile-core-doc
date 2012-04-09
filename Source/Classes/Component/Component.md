@@ -278,7 +278,7 @@ Name        | Type                                           | Description
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	var myThrdComponent   = new Moobile.Component('<div class="third"></div>');
+	var myThirdComponent   = new Moobile.Component('<div class="third"></div>');
 	myFirstComponent.addChildComponent(mySecondComponent);
 	myFirstComponent.addChildComponentAfter(myThirdComponent, mySecondComponent);
 
@@ -310,7 +310,7 @@ Name        | Type                                           | Description
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	var myThrdComponent   = new Moobile.Component('<div class="third"></div>');
+	var myThirdComponent   = new Moobile.Component('<div class="third"></div>');
 	myFirstComponent.addChildComponent(mySecondComponent);
 	myFirstComponent.addChildComponentBefore(myThirdComponent, mySecondComponent);
 

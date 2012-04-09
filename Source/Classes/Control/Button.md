@@ -3,7 +3,7 @@ Moobile.Button
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a button control.
+Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a [Moobile.Bar](../Control/Moobile.Bar.md) will look different from a button within a [Moobile.ButtonGroup](../Control/Moobile.ButtonGroup.md) or a [Moobile.View](../Control/View.md);
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -31,8 +31,41 @@ Name        | Type   | Description
 #### Generates:
 
 	<div class="button">
-		<span data-role="label" class="text label"></span>
+		<span data-role="label" class="text button-label"></span>
 	</div>
+
+#### Notes:
+
+Upon initialization, this control creates its label with a [Moobile.Text](../Control/BarItem.md) instance using the button element's content. For instance, if you create a button like this:
+
+	<div data-role="button">
+		<div class="element-1"></div>
+		<div class="element-2"></div>
+	</div>
+
+The result will be:
+
+	<div data-role="button">
+		<div data-role="label" class="button-item">
+			<div class="element-1"></div>
+			<div class="element-2"></div>
+		</div>
+	</div>
+
+If you wish to put elements outside of the button's label, you will have to specify which element has the `label` role:
+
+	<div data-role="bar">
+		<div class="element-1"></div>
+		<div data-role="label"></div>
+		<div class="element-2"></div>
+	</div>
+
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
 
 #### Defined roles:
 
@@ -41,15 +74,21 @@ Name     | Description
 `button` | Defines an element acting as a button. Use the `data-button` property to specify a subclass instead.
 `label`  | Defines an element acting as a button label. If unspecified, the contents of the button's element will act as its label.
 
-Events {#events}
---------------------------------------------------------------------------------
+#### Examples:
 
-This class does not define additional events.
+##### Creating a button using the `data-role` attribute of an element:
 
-Members {#members}
---------------------------------------------------------------------------------
+	<div data-role="button"></div>
 
-This class does not define additional members.
+##### Creating a button using the `data-role` attribute of an element and specifying a subclass:
+
+	<div data-role="button" data-button="MyButtonClass"></div>
+
+##### Creating a button and specifying the element that will act as its label.
+
+	<div data-role="button">
+		<div data-role="label"></div>
+	</div>
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -68,16 +107,17 @@ Name    | Type  | Description
 
 - [Moobile.Button](../Control/Button.md) This Moobile.Button instance.
 
-#### Example 1: *Setting the label using a string*
+#### Examples:
+
+##### Setting the label using a string:
 
 	var button = new Moobile.Button();
-	button.setLabel('Lorem');
+	button.setLabel('Moo');
 
-#### Example 2: *Setting the label using a Moobile.Text object*
+##### Setting the label using a Moobile.Text instance:
 
 	var label = new Moobile.Text();
-	label.setText('Lorem');
-
+	label.setText('Moo');
 	var button = new Moobile.Button();
 	button.setLabel(label);
 
@@ -94,12 +134,25 @@ Returns the label.
 #### Example:
 
 	var button = new Moobile.Button();
-	button.setLabel('Lorem');
-
+	button.setLabel('Moo');
 	button.getLabel(); // Returns an instance of Moobile.Text
-	button.getLabel().getText(); // Returns 'Lorem';
+	button.getLabel().getText(); // Returns 'Moo';
 
-Styles {#styles}
+Methods {#styles}
 --------------------------------------------------------------------------------
 
-This control does not define any styles.
+### active
+
+[TODO: Image]
+
+### warning
+
+[TODO: Image]
+
+### back
+
+[TODO: Image]
+
+### forward
+
+[TODO: Image]

@@ -33,7 +33,7 @@
 
 <h5>Extends <a href="../Control/Control.html">Moobile.Control</a></h5>
 
-<p>Provides a button control.</p>
+<p>Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a <a href="../Control/Moobile.Bar.html">Moobile.Bar</a> will look different from a button within a <a href="../Control/Moobile.ButtonGroup.html">Moobile.ButtonGroup</a> or a <a href="../Control/View.html">Moobile.View</a>;</p>
 
 <h2 id="initialize">Initialization</h2>
 
@@ -73,11 +73,46 @@
 </tr></tbody></table><h4>Generates:</h4>
 
 <pre class="prettyprint"><code>&lt;div class="button"&gt;
-    &lt;span data-role="label" class="text label"&gt;&lt;/span&gt;
+    &lt;span data-role="label" class="text button-label"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Notes:</h4>
+
+<p>Upon initialization, this control creates its label with a <a href="../Control/BarItem.html">Moobile.Text</a> instance using the button element's content. For instance, if you create a button like this:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
+    &lt;div class="element-1"&gt;&lt;/div&gt;
+    &lt;div class="element-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The result will be:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
+    &lt;div data-role="label" class="button-item"&gt;
+        &lt;div class="element-1"&gt;&lt;/div&gt;
+        &lt;div class="element-2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>If you wish to put elements outside of the button's label, you will have to specify which element has the <code>label</code> role:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
+    &lt;div class="element-1"&gt;&lt;/div&gt;
+    &lt;div data-role="label"&gt;&lt;/div&gt;
+    &lt;div class="element-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>destroy</code>  : Call the parent method at the <code>bottom</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
@@ -85,13 +120,24 @@
   <td>Defines an element acting as a button. Use the <code>data-button</code> property to specify a subclass instead.</td>
 </tr><tr><td><code>label</code></td>
   <td>Defines an element acting as a button label. If unspecified, the contents of the button's element will act as its label.</td>
-</tr></tbody></table><h2 id="events">Events</h2>
+</tr></tbody></table><h4>Examples:</h4>
 
-<p>This class does not define additional events.</p>
+<h5>Creating a button using the <code>data-role</code> attribute of an element:</h5>
 
-<h2 id="members">Members</h2>
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;&lt;/div&gt;
+</code></pre>
 
-<p>This class does not define additional members.</p>
+<h5>Creating a button using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button" data-button="MyButtonClass"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Creating a button and specifying the element that will act as its label.</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
+    &lt;div data-role="label"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 <h2 id="methods">Methods</h2>
 
@@ -110,17 +156,18 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Button.html">Moobile.Button</a> This Moobile.Button instance.</li>
-</ul><h4>Example 1: <em>Setting the label using a string</em></h4>
+</ul><h4>Examples:</h4>
+
+<h5>Setting the label using a string:</h5>
 
 <pre class="prettyprint"><code>var button = new Moobile.Button();
-button.setLabel('Lorem');
+button.setLabel('Moo');
 </code></pre>
 
-<h4>Example 2: <em>Setting the label using a Moobile.Text object</em></h4>
+<h5>Setting the label using a Moobile.Text instance:</h5>
 
 <pre class="prettyprint"><code>var label = new Moobile.Text();
-label.setText('Lorem');
-
+label.setText('Moo');
 var button = new Moobile.Button();
 button.setLabel(label);
 </code></pre>
@@ -135,17 +182,30 @@ button.setLabel(label);
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var button = new Moobile.Button();
-button.setLabel('Lorem');
-
+button.setLabel('Moo');
 button.getLabel(); // Returns an instance of Moobile.Text
-button.getLabel().getText(); // Returns 'Lorem';
+button.getLabel().getText(); // Returns 'Moo';
 </code></pre>
 
-<h2 id="styles">Styles</h2>
+<h2 id="styles">Methods</h2>
 
-<p>This control does not define any styles.</p>
+<h3>active</h3>
+
+<p>[TODO: Image]</p>
+
+<h3>warning</h3>
+
+<p>[TODO: Image]</p>
+
+<h3>back</h3>
+
+<p>[TODO: Image]</p>
+
+<h3>forward</h3>
+
+<p>[TODO: Image]</p>
 </div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a><ul><li><a href="#setLabel">setLabel</a></li><li><a href="#getLabel">getLabel</a></li></ul></li><li><a href="#styles">Styles</a></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#setLabel">setLabel</a></li><li><a href="#getLabel">getLabel</a></li></ul></li><li><a href="#styles">Methods</a><ul><li><a href="#">active</a></li><li><a href="#">warning</a></li><li><a href="#">back</a></li><li><a href="#">forward</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

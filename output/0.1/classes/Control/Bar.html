@@ -77,34 +77,9 @@
 &lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
-
-<table><thead><tr><th>Name</th>
-  <th>Description</th>
-</tr></thead><tbody><tr><td><code>bar</code></td>
-  <td>Defines an element acting as a <a href="../Control/BarItem.html">Moobile.BarItem</a> control. Use the <code>data-bar</code> property to specify a subclass instead.</td>
-</tr></tbody></table><h4>Examples:</h4>
-
-<p>Creating a <a href="../Control/Bar.html">Moobile.Bar</a> control using the <code>data-role</code> attribute of an element:</p>
-
-<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;&lt;/div&gt;
-</code></pre>
-
-<p>Creating a <a href="../Control/Bar.html">Moobile.Bar</a> control using the <code>data-role</code> attribute of an element and specifying a subclass:</p>
-
-<pre class="prettyprint"><code>&lt;div data-role="bar" data-bar="MyBarClass"&gt;&lt;/div&gt;
-</code></pre>
-
-<p>Creating a <a href="../Control/Bar.html">Moobile.Bar</a> control specifying the element that will act as its <a href="../Control/BarItem.html">Moobile.BarItem</a> control.</p>
-
-<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
-    &lt;div data-role="bar-item"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
 <h4>Notes:</h4>
 
-<p>Upon initialization, this control creates a <a href="../Control/BarItem.html">Moobile.BarItem</a> control using the bar element's content. For instance, if you define a <a href="../Control/Bar.html">Moobile.Bar</a> control like this:</p>
+<p>Upon initialization, this control creates its item with a <a href="../Control/BarItem.html">Moobile.BarItem</a> instance using the bar element's content. For instance, if you create a bar like this:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
     &lt;div class="element-1"&gt;&lt;/div&gt;
@@ -112,7 +87,7 @@
 &lt;/div&gt;
 </code></pre>
 
-<p>It will become this:</p>
+<p>The result will be:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
     &lt;div data-role="item" class="bar-item"&gt;
@@ -122,22 +97,45 @@
 &lt;/div&gt;
 </code></pre>
 
-<p>If you wish to put elements before and/or after the <a href="../Control/Bar.html">Moobile.Bar</a> control's element, you will have to specify which element acts as the <a href="../Control/BarItem.html">Moobile.BarItem</a> control's element:</p>
+<p>If you wish to put elements outside of the bar item, you will have to specify which element has the <code>item</code> role:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
     &lt;div class="element-1"&gt;&lt;/div&gt;
-    &lt;div data-role="item" class="bar-item"&gt;&lt;/div&gt;
+    &lt;div data-role="item"&gt;&lt;/div&gt;
     &lt;div class="element-2"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h2 id="events">Events</h2>
+<h4>Subclassing Notes:</h4>
 
-<p>This class does not define additional events.</p>
+<p>This class overrides the following method:</p>
 
-<h2 id="members">Members</h2>
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>destroy</code>  : Call the parent method at the <code>bottom</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
-<p>This class does not define additional members.</p>
+<table><thead><tr><th>Name</th>
+  <th>Description</th>
+</tr></thead><tbody><tr><td><code>bar</code></td>
+  <td>Defines an element acting as a <a href="../Control/BarItem.html">Moobile.BarItem</a> control. Use the <code>data-bar</code> property to specify a subclass instead.</td>
+</tr></tbody></table><h4>Examples:</h4>
+
+<h5>Creating a bar using the <code>data-role</code> attribute of an element:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Creating a bar using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="bar" data-bar="MyBarClass"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Creating a bar and specifying the element that will act as its bar item.</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
+    &lt;div data-role="bar-item"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 <h2 id="methods">Methods</h2>
 
@@ -156,7 +154,16 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Bar.html">Moobile.Bar</a> This bar.</li>
-</ul><hr><h3 id="getItem">getItem()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var bar     = new Moobile.Bar();
+var barItem = new Moobile.BarItem();
+var title   = new Moobile.Text().setText('Title');
+item.addChildComponent(title);
+bar.setItem(item);
+</code></pre>
+
+<hr><h3 id="getItem">getItem()</h3>
 
 <p>Returns this bar's <a href="../Control/BarItem.html">Moobile.BarItem</a> control.</p>
 
@@ -174,6 +181,6 @@
 <p>[TODO: Image]</p>
 </div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a><ul><li><a href="#setItem">setItem</a></li><li><a href="#getItem">getItem</a></li></ul></li><li><a href="#styles">Styles</a><ul><li><a href="#">default style</a></li><li><a href="#">dark</a></li></ul></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#setItem">setItem</a></li><li><a href="#getItem">getItem</a></li></ul></li><li><a href="#styles">Styles</a><ul><li><a href="#">default style</a></li><li><a href="#">dark</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

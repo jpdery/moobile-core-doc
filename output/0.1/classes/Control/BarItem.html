@@ -33,25 +33,57 @@
 
 <h5>Extends <a href="../Control/Control.html">Moobile.Control</a></h5>
 
-<p>Provides the base class for bar items.</p>
+<p>Provides a bar item control that will be used as the content of a <a href="../Control/Moobile.Bar.html">Moobile.Bar</a> instance.</p>
 
 <h2 id="initialize">Initialization</h2>
 
-<p>This class should not be instantiated, instead you should subclass it and create your own bar item.</p>
+<h4>Syntax:</h4>
 
-<h2 id="events">Events</h2>
+<pre class="prettyprint"><code>var barItem = new Moobile.BarItem([element], [options], [name]);
+</code></pre>
 
-<p>This class does not define additional events.</p>
+<h4>Parameters:</h4>
 
-<h2 id="members">Members</h2>
+<table><thead><tr><th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr></thead><tbody><tr><td><code>element</code> <em>Optional</em></td>
+  <td>Element</td>
+  <td>The bar item's element, element id or html string.</td>
+</tr><tr><td><code>options</code> <em>Optional</em></td>
+  <td>Object</td>
+  <td>The bar item's options, see below.</td>
+</tr><tr><td><code>name</code>    <em>Optional</em></td>
+  <td>String</td>
+  <td>The bar item's name.</td>
+</tr></tbody></table><h4>Options:</h4>
 
-<p>This class does not define additional members.</p>
+<table><thead><tr><th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr></thead><tbody><tr><td><code>className</code></td>
+  <td>String</td>
+  <td>The bar item's extended CSS class name, defaults to <code>null</code>.</td>
+</tr><tr><td><code>styleName</code></td>
+  <td>String</td>
+  <td>The bar item's default style, defaults to <code>null</code>.</td>
+</tr><tr><td><code>tagName</code></td>
+  <td>String</td>
+  <td>The bar item's element tag name, defaults to <code>div</code>.</td>
+</tr></tbody></table><h4>Generates:</h4>
 
-<h2 id="methods">Methods</h2>
+<pre class="prettyprint"><code>&lt;div class="bar-item"&gt;&lt;/div&gt;
+</code></pre>
 
-<p>This class does not define additional methods.</p>
-</div>
+<h4>Subclassing Notes:</h4>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a></li></ul></div>
+<p>This class should not be instantiated, instead create a <code>Moobile.BarItem</code> subclass and implement your own functionnality.  Take a look at <a href="../Control/NavigationBarItem.html">Moobile.NavigationBarItem</a> as an example.</p>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+</ul></div>
+
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

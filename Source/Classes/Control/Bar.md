@@ -34,38 +34,16 @@ Name        | Type   | Description
 		<div data-role="item" class="bar-item"></div>
 	</div>
 
-#### Defined roles:
-
-Name  | Description
------ | -----------
-`bar` | Defines an element acting as a [Moobile.BarItem](../Control/BarItem.md) control. Use the `data-bar` property to specify a subclass instead.
-
-#### Examples:
-
-Creating a [Moobile.Bar](../Control/Bar.md) control using the `data-role` attribute of an element:
-
-	<div data-role="bar"></div>
-
-Creating a [Moobile.Bar](../Control/Bar.md) control using the `data-role` attribute of an element and specifying a subclass:
-
-	<div data-role="bar" data-bar="MyBarClass"></div>
-
-Creating a [Moobile.Bar](../Control/Bar.md) control specifying the element that will act as its [Moobile.BarItem](../Control/BarItem.md) control.
-
-	<div data-role="bar">
-		<div data-role="bar-item"></div>
-	</div>
-
 #### Notes:
 
-Upon initialization, this control creates a [Moobile.BarItem](../Control/BarItem.md) control using the bar element's content. For instance, if you define a [Moobile.Bar](../Control/Bar.md) control like this:
+Upon initialization, this control creates its item with a [Moobile.BarItem](../Control/BarItem.md) instance using the bar element's content. For instance, if you create a bar like this:
 
 	<div data-role="bar">
 		<div class="element-1"></div>
 		<div class="element-2"></div>
 	</div>
 
-It will become this:
+The result will be:
 
 	<div data-role="bar">
 		<div data-role="item" class="bar-item">
@@ -74,23 +52,42 @@ It will become this:
 		</div>
 	</div>
 
-If you wish to put elements before and/or after the [Moobile.Bar](../Control/Bar.md) control's element, you will have to specify which element acts as the [Moobile.BarItem](../Control/BarItem.md) control's element:
+If you wish to put elements outside of the bar item, you will have to specify which element has the `item` role:
 
 	<div data-role="bar">
 		<div class="element-1"></div>
-		<div data-role="item" class="bar-item"></div>
+		<div data-role="item"></div>
 		<div class="element-2"></div>
 	</div>
 
-Events {#events}
---------------------------------------------------------------------------------
+#### Subclassing Notes:
 
-This class does not define additional events.
+This class overrides the following method:
 
-Members {#members}
---------------------------------------------------------------------------------
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
 
-This class does not define additional members.
+#### Defined roles:
+
+Name  | Description
+----- | -----------
+`bar` | Defines an element acting as a [Moobile.BarItem](../Control/BarItem.md) control. Use the `data-bar` property to specify a subclass instead.
+
+#### Examples:
+
+##### Creating a bar using the `data-role` attribute of an element:
+
+	<div data-role="bar"></div>
+
+##### Creating a bar using the `data-role` attribute of an element and specifying a subclass:
+
+	<div data-role="bar" data-bar="MyBarClass"></div>
+
+##### Creating a bar and specifying the element that will act as its bar item.
+
+	<div data-role="bar">
+		<div data-role="bar-item"></div>
+	</div>
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -108,6 +105,14 @@ Name   | Type                                     | Description
 #### Returns:
 
 - [Moobile.Bar](../Control/Bar.md) This bar.
+
+#### Example:
+
+	var bar     = new Moobile.Bar();
+	var barItem = new Moobile.BarItem();
+	var title   = new Moobile.Text().setText('Title');
+	item.addChildComponent(title);
+	bar.setItem(item);
 
 -----
 

@@ -75,7 +75,12 @@
 <pre class="prettyprint"><code>&lt;div class="activity-indicator"&gt;&lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
@@ -83,23 +88,15 @@
   <td>Defines an element acting as a <a href="../Control/ActivityIndicator.html">Moobile.ActivityIndicator</a> control. Use the <code>data-activity-indicator</code> property to specify a subclass instead.</td>
 </tr></tbody></table><h4>Examples:</h4>
 
-<p>Creating a <a href="../Control/ActivityIndicator.html">Moobile.ActivityIndicator</a> control using the <code>data-role</code> attribute of an element:</p>
+<h5>Creating an activity indicator using the <code>data-role</code> attribute of an element:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="activity-indicator"&gt;&lt;/div&gt;
 </code></pre>
 
-<p>Creating a <a href="../Control/ActivityIndicator.html">Moobile.ActivityIndicator</a> control using the <code>data-role</code> attribute of an element and specifying a subclass:</p>
+<h5>Creating an activity indicator using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="activity-indicator" data-activity-indicator="MyActivityIndicatorSubclass"&gt;&lt;/div&gt;
 </code></pre>
-
-<h2 id="events">Events</h2>
-
-<p>This class does not define additional events.</p>
-
-<h2 id="members">Members</h2>
-
-<p>This class does not define additional members.</p>
 
 <h2 id="methods">Methods</h2>
 
@@ -110,18 +107,26 @@
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/ActivityIndicator.html">Moobile.ActivityIndicator</a> This Moobile.ActivityIndicator instance.</li>
-</ul><hr><h3 id="stop">stop()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var activityIndicator = new Moobile.ActivityIndicator();
+activityIndicator.start();
+</code></pre>
+
+<hr><h3 id="stop">stop()</h3>
 
 <p>Stops this activity indicator animation. This method removes the <code>activity</code> CSS class to the element upon stopping.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/ActivityIndicator.html">Moobile.ActivityIndicator</a> This Moobile.ActivityIndicator instance.</li>
-</ul><h2 id="styles">Styles</h2>
+</ul><h4>Example:</h4>
 
-<p>This control does not define any styles.</p>
+<pre class="prettyprint"><code>var activityIndicator = new Moobile.ActivityIndicator();
+activityIndicator.stop();
+</code></pre>
 </div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a><ul><li><a href="#start">start</a></li><li><a href="#stop">stop</a></li></ul></li><li><a href="#styles">Styles</a></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#start">start</a></li><li><a href="#stop">stop</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

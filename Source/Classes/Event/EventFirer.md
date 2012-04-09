@@ -5,27 +5,12 @@ Moobile.EventFirer
 
 Provides the base class for classes that fire events.
 
-Initialization {#initialize}
---------------------------------------------------------------------------------
-
-This class should not be instantiated, instead you should subclass it.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-This class does not define events.
-
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define members.
-
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### fireEvent(type, [args], [delay]) {#fireEvent}
 
-Fires all events of a specified type if this type allowed to fire. This methods appends a reference to the object who's firing the event to the event arguments.
+Fires all events of a specified type if this type allowed to fire. This method appends a reference of the object that fires the event to the argument list.
 
 #### Parameters:
 
@@ -38,6 +23,21 @@ Name               | Type   | Description
 #### Returns:
 
 - [Moobile.Entity](Entity/Entity.md) This Class instance.
+
+#### Example:
+
+	var Cow = new Class({
+		Extends: Moobile.EventFirer,
+		eat: function() {
+			this.fireEvent('ingest', 'hay']);
+		}
+	});
+	var daisy = new Cow();
+	daisy.addEvent('ingest', function(food, sender) {
+		console.log(food); // 'hay'
+		console.log(sender); // the 'daisy' instance
+	});
+	daisy.eat();
 
 -----
 
@@ -58,6 +58,29 @@ Name   | Type   | Description
 
 - `Boolean` Whether the event can be fired.
 
+#### Example:
+
+	var Cow = new Class({
+		Extends: Moobile.EventFirer,
+		eat: function() {
+			this.fireEvent('ingest', 'hay']);
+			this.fireEvent('ingest', 'mud']);
+		},
+		eventShouldFire: function(type, args) {
+			if (type == 'ingest') {
+				return args[0] === 'hay';
+			}
+			return this.parent(type, args);
+		}
+	});
+	var daisy = new Cow();
+	daisy.addEvent('ingest', function(food, sender) {
+		// this will be called only once because the second event will not fire
+		console.log(food); // 'hay'
+		console.log(sender); // the 'daisy' instance
+	});
+	daisy.eat();
+
 -----
 
 ### willFireEvent(type, args) {#willFireEvent}
@@ -73,6 +96,26 @@ Name   | Type   | Description
 `type` | String | The event's type.
 `args` | Array  | The event's arguments.
 
+#### Example:
+
+	var Cow = new Class({
+		Extends: Moobile.EventFirer,
+		eat: function() {
+			this.fireEvent('ingest', 'hay']);
+		},
+		drink: function() {
+			// ...
+		},
+		willFireEvent: function(type, args) {
+			if (type == 'ingest') {
+				// this will always be called before the event ingest is fired
+				this.drink();
+			}
+		}
+	});
+	var daisy = new Cow();
+	daisy.eat();
+
 -----
 
 ### didFireEvent(type) {#getChildren}
@@ -87,3 +130,23 @@ Name   | Type   | Description
 -------| ------ | --------------------------------------------------
 `type` | String | The event's type.
 `args` | Array  | The event's arguments.
+
+#### Example:
+
+	var Cow = new Class({
+		Extends: Moobile.EventFirer,
+		eat: function() {
+			this.fireEvent('ingest', 'hay']);
+		},
+		cleanup: function() {
+			// ...
+		},
+		didFireEvent: function(type, args) {
+			if (type == 'ingest') {
+				// this will always be called after the event ingest is fired
+				this.cleanup();
+			}
+		}
+	});
+	var daisy = new Cow();
+	daisy.eat();
