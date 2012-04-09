@@ -15,7 +15,6 @@
 		<delete dir="output/${version}" />
 		<echo msg="Creating 'output/${version}' directory." />
 		<mkdir dir="./output/${version}" />
-		<mkdir dir="./output/${version}/tmp" />
 		<mkdir dir="./output/${version}/guides" />
 		<mkdir dir="./output/${version}/classes" />
 	</target>
@@ -63,6 +62,7 @@
 					 <param name="decorator" value="themes/${theme}/decorator/class.tmpl.html" />
 				</filterreader>
 				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
+				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
 				<filterreader classname="classes.phing.filters.TableOfContentsFilter" />
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />

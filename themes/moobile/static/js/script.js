@@ -1,8 +1,4 @@
-/* Author:
 
-*/
-
-
-
-
-
+window.addEvent('domready', function() {
+	prettyPrint()
+})
