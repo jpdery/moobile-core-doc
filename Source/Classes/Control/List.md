@@ -236,7 +236,7 @@ Removes an item.
 Name      | Type                                       | Description
 --------- | ------------------------------------------ | -----------
 `item`    | [Moobile.ListItem](../Control/ListItem.md) | The item to remove.
-`destroy` | Boolean                                    | Whether to destroy the item upon removal.
+`destroy` | Boolean                                    | Whether or not to destroy the item upon removal.
 
 #### Returns:
 
@@ -250,7 +250,7 @@ Removes all items.
 
 Name      | Type     | Description
 --------- | -------- | -----------
-`destroy` | Boolean  | Whether to destroy the item upon removal.
+`destroy` | Boolean  | Whether or not to destroy the item upon removal.
 
 #### Returns:
 

@@ -237,7 +237,7 @@ Removes a button.
 Name      | Type                                   | Description
 --------- | -------------------------------------- | -----------
 `button`  | [Moobile.Button](../Control/Button.md) | The button to remove.
-`destroy` | Boolean                                | Whether to destroy the button upon removal.
+`destroy` | Boolean                                | Whether or not to destroy the button upon removal.
 
 #### Returns:
 
@@ -253,7 +253,7 @@ Removes all buttons.
 
 Name      | Type     | Description
 --------- | -------- | -----------
-`destroy` | Boolean  | Whether to destroy the button upon removal.
+`destroy` | Boolean  | Whether or not to destroy the button upon removal.
 
 #### Returns:
 

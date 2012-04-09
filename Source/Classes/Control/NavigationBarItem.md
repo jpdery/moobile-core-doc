@@ -139,7 +139,7 @@ Removes a bar button.
 Name      | Type                                         | Description
 --------- | -------------------------------------------- | -----------
 `button`  | [Moobile.BarButton](../Control/BarButton.md) | The bar button to remove.
-`destroy` | Boolean                                      | Whether to destroy the bar button upon removal.
+`destroy` | Boolean                                      | Whether or not to destroy the bar button upon removal.
 
 #### Returns:
 
@@ -155,7 +155,7 @@ Removes all bar buttons.
 
 Name      | Type    | Description
 --------- | ------- | -----------
-`destroy` | Boolean | Whether to destroy the bar button upon removal.
+`destroy` | Boolean | Whether or not to destroy the bar button upon removal.
 
 #### Returns:
 

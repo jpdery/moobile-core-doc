@@ -30,7 +30,7 @@ Name        | Type   | Description
 
 #### Notes:
 
-Upon initialization, a component builds it's hierarchy using the `element` given to the constructor. It will looks for elements with the `data-role` attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.
+Upon initialization, a component builds its hierarchy using the `element` given to the constructor. It will looks for elements with the `data-role` attribute and execute their definitions recursively. The example section shows how to create components with complex hierarchies.
 
 #### Subclassing Notes:
 
@@ -84,7 +84,7 @@ Events {#events}
 
 Fired when this component becomes ready.
 
-A component is *ready* when it's hierarchy is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when its hierarchy is assigned to a window and therefore in the DOM. Upon being *ready*, a component can access its window and perform tasks such as measuring.
 
 -----
 
@@ -295,8 +295,6 @@ Resulting element:
 
 Adds the specified component before another child of this component.
 
-This methods will remove the component from its current parent before adding it.
-
 #### Parameters:
 
 Name        | Type                                           | Description
@@ -333,7 +331,7 @@ Returns a component that matches the specified name.
 
 Name   | Type   | Description
 ------ | ------ | -----------
-`name` | String | The component's name to search for.
+`name` | String | The name of the component to search for.
 
 #### Returns:
 
@@ -357,7 +355,7 @@ Returns a component of a specified type that matches the specified name.
 Name   | Type   | Description
 ------ | ------ | -----------
 `type` | Class  | The component's class.
-`name` | String | The component's name to search for.
+`name` | String | The name of the component to search for.
 
 #### Returns:
 
@@ -382,7 +380,7 @@ Returns a component at a specified index.
 
 Name    | Type   | Description
 ------- | ------ | -----------
-`index` | Number | The component's index.
+`index` | Number | The index location of the component.
 
 #### Returns:
 
@@ -427,7 +425,7 @@ Name    | Type   | Description
 
 ### getChildComponentIndex(component) {#getChildComponentIndex}
 
-Returns the index of a specified component or `-1` if the component is not present in this component.
+Returns the index of a specified component or `-1` if the component is not a child of this component.
 
 #### Parameters:
 
@@ -450,7 +448,7 @@ Name        | Type                                           | Description
 
 -----
 
-### getAllChildComponents() {#getAllChildComponents}
+### getChildComponents() {#getChildComponents}
 
 Returns all the components in this component.
 
@@ -467,11 +465,11 @@ Returns all the components in this component.
 	myComponent.addChildComponent(myButton1);
 	myComponent.addChildComponent(myButton2);
 	myComponent.addChildComponent(myButton3);
-	myComponent.getAllChildComponents(); // Returns [myButton1, myButton2, myButton3]
+	myComponent.getChildComponents(); // Returns [myButton1, myButton2, myButton3]
 
 -----
 
-### getAllChildComponentsOfType(type) {#getAllChildComponentOfType}
+### getChildComponentsOfType(type) {#getAllChildComponentOfType}
 
 Returns all the components of a specified type in this component.
 
@@ -496,7 +494,7 @@ Name   | Type  | Description
 	myComponent.addChildComponent(myButton2);
 	myComponent.addChildComponent(myButton3);
 	myComponent.addChildComponent(myImage);
-	myComponent.getAllChildComponentsOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+	myComponent.getChildComponentsOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
 
 -----
 
@@ -557,8 +555,8 @@ Replaces a component with another.
 Name                 | Type                                           | Description
 -------------------- | ---------------------------------------------- | -----------
 `component`          | [Moobile.Component](../Component/Component.md) | The component to remove.
-`replacement`        | [Moobile.Component](../Component/Component.md) | The component to replace with.
-`destroy` *Optional* | Boolean                                        | Whether to destroy the old component.
+`replacement`        | [Moobile.Component](../Component/Component.md) | The component to replace it with.
+`destroy` *Optional* | Boolean                                        | Whether or not to destroy the old component.
 
 #### Returns:
 
@@ -583,7 +581,7 @@ Removes a component.
 Name                 | Type                                           | Description
 -------------------- | ---------------------------------------------- | -----------
 `component`          | [Moobile.Component](../Component/Component.md) | The component to remove.
-`destroy` *Optional* | Boolean                                        | Whether to destroy the component upon removal.
+`destroy` *Optional* | Boolean                                        | Whether or not to destroy the component upon removal.
 
 #### Returns:
 
@@ -606,7 +604,7 @@ Removes all components.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether to destroy the components upon removal.
+`destroy` *Optional* | Boolean | Whether or not to destroy the components upon removal.
 
 #### Returns:
 
@@ -623,7 +621,7 @@ Removes all components of a specified type.
 Name                 | Type    | Description
 -------------------- | ------- | -----------
 `type`               | Class   | The component's class.
-`destroy` *Optional* | Boolean | Whether to destroy the components upon removal.
+`destroy` *Optional* | Boolean | Whether or not to destroy the components upon removal.
 
 #### Returns:
 
@@ -652,7 +650,7 @@ Removes this component from its parent.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether to destroy the component upon removal.
+`destroy` *Optional* | Boolean | Whether or not to destroy the component upon removal.
 
 #### Returns:
 
@@ -740,7 +738,7 @@ Indicates whether this component has a window.
 
 Sets whether this component is ready.
 
-A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when its element is assigned to a window and therefore in the DOM. Upon being *ready*, a component can access its window and perform tasks such as measuring.
 
 This method is handled by the `Moobile.Component` class and should not be called manually.
 
@@ -754,7 +752,7 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 Indicates whether this component is ready.
 
-A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when its element is assigned to a window and therefore in the DOM. Upon being *ready*, a component can access its window and perform tasks such as measuring.
 
 #### Returns:
 
@@ -764,7 +762,7 @@ A component is *ready* when it's element is assigned to a window and therefore i
 
 ### getName() {#getName}
 
-Returns this component name's name.
+Returns this component's name.
 
 #### Returns:
 
@@ -794,7 +792,7 @@ Returns the current style name.
 
 #### Returns:
 
-- `String` The current style name or `null` if no style were set.
+- `String` The current style name or `null` if no style is set.
 
 -----
 
@@ -967,9 +965,9 @@ Override this method to provide your own implementation.
 
 ### didBecomeReady() {#didBecomeReady}
 
-Tells this component it became ready.
+Tells this component it has become ready.
 
-A component is *ready* when it's element is assigned to a window and therefore in the DOM. Upon begin *ready*, a component can access its window and perform tasks such as measuring.
+A component is *ready* when its element is assigned to a window and therefore in the DOM. Upon being *ready*, a component can access its window and perform tasks such as measuring.
 
 Override this method to provide your own implementation.
 
@@ -1093,7 +1091,7 @@ Override this method to provide your own implementation.
 
 ### destroy() {#destroy}
 
-Remove this component from its parent, destroy its hierarchy prepares it for garbage collection.
+Remove this component from its parent, destroy its hierarchy and prepare it for garbage collection.
 
 If you override this method, make sure you call the parent method at
 the end of your implementation.
@@ -1119,7 +1117,7 @@ Name       | Type                                           | Description
 
 #### Examples:
 
-For every elements with the `data-role="wrapped"` attribute found in all type of components, an element will be created and wrapped around it.
+For every element with the `data-role="wrapped"` attribute found in all types of components, an element will be created and wrapped around it.
 
 	 Moobile.Component.defineRole('wrapped', null, function(element) {
 	 	new Element('div.wrapped').wraps(element);
@@ -1146,7 +1144,7 @@ Name       | Type                                           | Description
 ---------- | ---------------------------------------------- | -----------
 `name`     | String                                         | The style name.
 `target`   | [Moobile.Component](../Component/Component.md) | The target component or `null` to define the role for all components.
-`behavior` | Object                                         | The style definition which consists of an object with an `attach` and `detach` method.
+`behavior` | Object                                         | The style definition, which consists of an object with an `attach` and `detach` method.
 
 #### Example:
 
