@@ -49,7 +49,7 @@ This class should not be instantiated directly, instead you should subclass it t
 			'<div data-role="button" data-name="my-button">Button</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChild('my-button'); // Returns a Moobile.Button instance
+	component.getChildComponent('my-button'); // Returns a Moobile.Button instance
 
 ##### Creating a component with multiple children:
 
@@ -60,9 +60,9 @@ This class should not be instantiated directly, instead you should subclass it t
 			'<div data-role="button" data-name="my-button-2">Button 2</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChild('my-image'); // Returns a Moobile.Image instance
-	component.getChild('my-button-1'); // Returns a Moobile.Button instance
-	component.getChild('my-button-2'); // Returns a Moobile.Button instance
+	component.getChildComponent('my-image'); // Returns a Moobile.Image instance
+	component.getChildComponent('my-button-1'); // Returns a Moobile.Button instance
+	component.getChildComponent('my-button-2'); // Returns a Moobile.Button instance
 
 ##### Creating a component with a complex hierarchy:
 
@@ -74,8 +74,8 @@ This class should not be instantiated directly, instead you should subclass it t
 			'</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChild('my-button-image'); // Returns null! The image is a child of the button.
-	component.getChild('my-button').getChild('my-button-image'); // Returns a Moobile.Image instance.
+	component.getChildComponent('my-button-image'); // Returns null! The image is a child of the button.
+	component.getChildComponent('my-button').getChildComponent('my-button-image'); // Returns a Moobile.Image instance.
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -182,7 +182,7 @@ Name        | Type   | Description
 Methods {#methods}
 --------------------------------------------------------------------------------
 
-### addChild(component, [where]) {#addChild}
+### addChildComponent(component, [where]) {#addChildComponent}
 
 Adds the specified component at the `top` or `bottom` of this component. If `where` is unspecified, the component will be added at the bottom.
 
@@ -203,7 +203,7 @@ Name               | Type                                           | Descriptio
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChild(mySecondComponent, 'top');
+	myFirstComponent.addChildComponent(mySecondComponent, 'top');
 
 Resulting element:
 
@@ -216,7 +216,7 @@ Resulting element:
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChild(mySecondComponent, 'bottom');
+	myFirstComponent.addChildComponent(mySecondComponent, 'bottom');
 
 Resulting element:
 
@@ -227,7 +227,7 @@ Resulting element:
 
 -----
 
-### addChildInside(component, element, [where]) {#addChildInside}
+### addChildComponentInside(component, element, [where]) {#addChildComponentInside}
 
 Adds the specified component at the `top` or `bottom` of this component's element. If `where` is unspecified, the component will be added at the `bottom` of the component's element.
 
@@ -247,7 +247,7 @@ Name               | Type                                           | Descriptio
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"><div class="me"></div></div>')
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChildInside(mySecondComponent, '.me');
+	myFirstComponent.addChildComponentInside(mySecondComponent, '.me');
 
 Resulting element:
 
@@ -259,7 +259,7 @@ Resulting element:
 
 -----
 
-### addChildAfter(component, after) {#addChildAfter}
+### addChildComponentAfter(component, after) {#addChildComponentAfter}
 
 Adds the specified component after another child of this component.
 
@@ -279,8 +279,8 @@ Name        | Type                                           | Description
 	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
 	var myThrdComponent   = new Moobile.Component('<div class="third"></div>');
-	myFirstComponent.addChild(mySecondComponent);
-	myFirstComponent.addChildAfter(myThirdComponent, mySecondComponent);
+	myFirstComponent.addChildComponent(mySecondComponent);
+	myFirstComponent.addChildComponentAfter(myThirdComponent, mySecondComponent);
 
 Resulting element:
 
@@ -291,7 +291,7 @@ Resulting element:
 
 -----
 
-### addChildBefore(component, before) {#addChildBefore}
+### addChildComponentBefore(component, before) {#addChildComponentBefore}
 
 Adds the specified component before another child of this component.
 
@@ -313,8 +313,8 @@ Name        | Type                                           | Description
 	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
 	var myThrdComponent   = new Moobile.Component('<div class="third"></div>');
-	myFirstComponent.addChild(mySecondComponent);
-	myFirstComponent.addChildBefore(myThirdComponent, mySecondComponent);
+	myFirstComponent.addChildComponent(mySecondComponent);
+	myFirstComponent.addChildComponentBefore(myThirdComponent, mySecondComponent);
 
 Resulting element:
 
@@ -325,7 +325,7 @@ Resulting element:
 
 -----
 
-### getChild(name) {#getChild}
+### getChildComponent(name) {#getChildComponent}
 
 Returns a component that matches the specified name.
 
@@ -343,12 +343,12 @@ Name   | Type   | Description
 
 	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
 	var mySecondComponent = new Moobile.Component('<div class="second"></div>', null, 'my-second-component');
-	myFirstComponent.addChild(mySecondComponent);
-	myFirstComponent.getChild('my-second-component'); // Returns mySecondComponent
+	myFirstComponent.addChildComponent(mySecondComponent);
+	myFirstComponent.getChildComponent('my-second-component'); // Returns mySecondComponent
 
 -----
 
-### getChildOfType(type, name) {#getChildOfType}
+### getChildComponentOfType(type, name) {#getChildComponentOfType}
 
 Returns a component of a specified type that matches the specified name.
 
@@ -368,13 +368,13 @@ Name   | Type   | Description
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button(null, null, 'foo');
 	var myImage      = new Moobile.Image(null, null, 'foo');
-	myComponent.addChild(myButton);
-	myComponent.addChild(myImage);
-	myComponent.getChildOfType(Moobile.Image, 'foo'); // Returns myImage
+	myComponent.addChildComponent(myButton);
+	myComponent.addChildComponent(myImage);
+	myComponent.getChildComponentOfType(Moobile.Image, 'foo'); // Returns myImage
 
 -----
 
-### getChildAt(index) {#getChildAt}
+### getChildComponentAt(index) {#getChildComponentAt}
 
 Returns a component at a specified index.
 
@@ -393,13 +393,13 @@ Name    | Type   | Description
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton);
-	myComponent.addChild(myImage);
-	myComponent.getChildAt(0); // Returns myButton
+	myComponent.addChildComponent(myButton);
+	myComponent.addChildComponent(myImage);
+	myComponent.getChildComponentAt(0); // Returns myButton
 
 -----
 
-### getChildOfTypeAt(type, index) {#getChildOfTypeAt}
+### getChildComponentOfTypeAt(type, index) {#getChildComponentOfTypeAt}
 
 Returns a component of a specified type at a specified index.
 
@@ -419,13 +419,13 @@ Name    | Type   | Description
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton);
-	myComponent.addChild(myImage);
-	myComponent.getChildOfTypeAt(Moobile.Image, 0); // Returns myImage
+	myComponent.addChildComponent(myButton);
+	myComponent.addChildComponent(myImage);
+	myComponent.getChildComponentOfTypeAt(Moobile.Image, 0); // Returns myImage
 
 -----
 
-### getChildIndex(component) {#getChildIndex}
+### getChildComponentIndex(component) {#getChildComponentIndex}
 
 Returns the index of a specified component or `-1` if the component is not present in this component.
 
@@ -444,13 +444,13 @@ Name        | Type                                           | Description
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton);
-	myComponent.addChild(myImage);
-	myComponent.getChildIndex(Moobile.Image); // Returns 1
+	myComponent.addChildComponent(myButton);
+	myComponent.addChildComponent(myImage);
+	myComponent.getChildComponentIndex(Moobile.Image); // Returns 1
 
 -----
 
-### getChildren() {#getChildren}
+### getAllChildComponents() {#getAllChildComponents}
 
 Returns all the components in this component.
 
@@ -464,14 +464,14 @@ Returns all the components in this component.
 	var myButton1     = new Moobile.Button();
 	var myButton2     = new Moobile.Button();
 	var myButton3     = new Moobile.Button();
-	myComponent.addChild(myButton1);
-	myComponent.addChild(myButton2);
-	myComponent.addChild(myButton3);
-	myComponent.getChildren(); // Returns [myButton1, myButton2, myButton3]
+	myComponent.addChildComponent(myButton1);
+	myComponent.addChildComponent(myButton2);
+	myComponent.addChildComponent(myButton3);
+	myComponent.getAllChildComponents(); // Returns [myButton1, myButton2, myButton3]
 
 -----
 
-### getChildrenOfType(type) {#getChildrenOfType}
+### getAllChildComponentsOfType(type) {#getAllChildComponentOfType}
 
 Returns all the components of a specified type in this component.
 
@@ -492,15 +492,15 @@ Name   | Type  | Description
 	var myButton2    = new Moobile.Button();
 	var myButton3    = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton1);
-	myComponent.addChild(myButton2);
-	myComponent.addChild(myButton3);
-	myComponent.addChild(myImage);
-	myComponent.getChildrenOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+	myComponent.addChildComponent(myButton1);
+	myComponent.addChildComponent(myButton2);
+	myComponent.addChildComponent(myButton3);
+	myComponent.addChildComponent(myImage);
+	myComponent.getAllChildComponentsOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
 
 -----
 
-### hasChild(component) {#hasChild}
+### hasChildComponent(component) {#hasChildComponent}
 
 Indicates whether a component is present in this component.
 
@@ -518,12 +518,12 @@ Name        | Type                                           | Description
 
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
-	myComponent.addChild(myButton);
-	myComponent.hasChid(myButton); // Returns true
+	myComponent.addChildComponent(myButton);
+	myComponent.hasChildComponent(myButton); // Returns true
 
 -----
 
-### hasChildOfType(type) {#hasChildOfType}
+### hasChildComponentOfType(type) {#hasChildComponentOfType}
 
 Indicates whether this component has at least one component of the specified type.
 
@@ -542,13 +542,13 @@ Name   | Type  | Description
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton);
-	myComponent.addChild(myImage);
-	myComponent.hasChildOfType(Moobile.Image); // Returns true
+	myComponent.addChildComponent(myButton);
+	myComponent.addChildComponent(myImage);
+	myComponent.hasChildComponentOfType(Moobile.Image); // Returns true
 
 -----
 
-### replaceChild(component, replacement, [destroy]) {#replaceChild}
+### replaceChildComponent(component, replacement, [destroy]) {#replaceChildComponent}
 
 Replaces a component with another.
 
@@ -569,12 +569,12 @@ Name                 | Type                                           | Descript
 	var myComponent  = new Moobile.Component();
 	var myButton1    = new Moobile.Button();
 	var myButton2    = new Moobile.Button();
-	myComponent.addChild(myButton1);
-	myComponent.replaceChild(myButton1, myButton2); // Replaces myButton1 with myButton2
+	myComponent.addChildComponent(myButton1);
+	myComponent.replaceChildComponent(myButton1, myButton2); // Replaces myButton1 with myButton2
 
 -----
 
-### removeChild(component, [destroy]) {#removeChild}
+### removeChildComponent(component, [destroy]) {#removeChildComponent}
 
 Removes a component.
 
@@ -593,12 +593,12 @@ Name                 | Type                                           | Descript
 
 	var myComponent  = new Moobile.Component();
 	var myButton     = new Moobile.Button();
-	myComponent.addChild(myButton);
-	myComponent.removeChild(myButton); // Removes myButton
+	myComponent.addChildComponent(myButton);
+	myComponent.removeChildComponent(myButton); // Removes myButton
 
 -----
 
-### removeChildren([destroy]) {#removeChildren}
+### removeAllChildComponents([destroy]) {#removeAllChildComponents}
 
 Removes all components.
 
@@ -614,7 +614,7 @@ Name                 | Type    | Description
 
 -----
 
-### removeChildrenOfType(type, [destroy]) {#removeChildrenOfType}
+### removeAllChildComponentsOfType(type, [destroy]) {#removeAllChildComponentsOfType}
 
 Removes all components of a specified type.
 
@@ -636,15 +636,15 @@ Name                 | Type    | Description
 	var myButton2    = new Moobile.Button();
 	var myButton3    = new Moobile.Button();
 	var myImage      = new Moobile.Image();
-	myComponent.addChild(myButton1);
-	myComponent.addChild(myButton2);
-	myComponent.addChild(myButton3);
-	myComponent.addChild(myImage);
-	myComponent.removeChildrenOfType(Moobile.Button); // Removes myButton1, myButton2, myButton3
+	myComponent.addChildComponent(myButton1);
+	myComponent.addChildComponent(myButton2);
+	myComponent.addChildComponent(myButton3);
+	myComponent.addChildComponent(myImage);
+	myComponent.removeAllChildComponentsOfType(Moobile.Button); // Removes myButton1, myButton2, myButton3
 
 -----
 
-### removeFromParent([destroy]) {#removeFromParent}
+### removeFromParentComponent([destroy]) {#removeFromParentComponent}
 
 Removes this component from its parent.
 
@@ -660,7 +660,7 @@ Name                 | Type    | Description
 
 -----
 
-### setParent(parent) {#setParent}
+### setParentComponent(parent) {#setParentComponent}
 
 Sets the parent of this component.
 
@@ -678,7 +678,7 @@ Name     | Type                                           | Description
 
 -----
 
-### getParent() {#getParent}
+### getParentComponent() {#getParentComponent}
 
 Returns the parent of this component.
 
@@ -688,7 +688,7 @@ Returns the parent of this component.
 
 -----
 
-### hasParent() {#hasParent}
+### hasParentComponent() {#hasParentComponent}
 
 Indicates whether this component has a parent.
 
@@ -1130,7 +1130,7 @@ For every elements with the `data-role="popup"` attribute, a new `Moobile.Alert`
 	Moobile.Component.defineRole('warning', Moobile.View, function(element) {
 		var alert = new Moobile.Alert();
 		alert.setMessage(element.get('html'));
-		this.addChild(alert, 'after', element);
+		this.addChildComponent(alert, 'after', element);
 		element.destroy();
 	});
 
