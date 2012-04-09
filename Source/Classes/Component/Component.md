@@ -34,7 +34,7 @@ Upon initialization, a component builds its hierarchy using the `element` given 
 
 #### Subclassing Notes:
 
-This class should not be instantiated directly, instead you should subclass it to create your own components.
+Don't instantiate this class. Instead, extend it by creating subclasses for your own implementation.
 
 #### Examples:
 

@@ -33,7 +33,7 @@
 
 <h5>Extends <em><a href="../Control/Control.html">Moobile.Control</a></em></h5>
 
-<p>Provides a control that groups buttons together and make sure only one is selected at time.</p>
+<p>Provides a control that group buttons and handle the selection of these buttons.</p>
 
 <h2 id="initialize">Initialization</h2>
 
@@ -80,7 +80,7 @@
 
 <h4>Note:</h4>
 
-<p>Buttons can be added to the button group by adding elements with the <code>button</code> data-role attribute:</p>
+<p>Buttons can be added to the button group by adding elements with the <code>button</code> <code>data-role</code> attribute:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="button-group"&gt;
     &lt;div data-role="button"&gt;Button 1&lt;/div&gt;
@@ -90,13 +90,39 @@
 &lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>destroy</code>  : Call the parent method at the <code>bottom</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
 </tr></thead><tbody><tr><td><code>button-group</code></td>
   <td>Defines an element acting as a button group. Use the <code>data-button-group</code> property to specify a subclass instead.</td>
-</tr></tbody></table><h2 id="events">Events</h2>
+</tr></tbody></table><h4>Examples:</h4>
+
+<h5>Creating a button group using the <code>data-role</code> attribute of an element:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button-group"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Creating a button group using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button-group" data-button="MyButtonGroupClass"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Creating a button group and adding buttons:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
+    &lt;div data-role="button"&gt;Button 1&lt;/div&gt;
+    &lt;div data-role="button"&gt;Button 2&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="events">Events</h2>
 
 <h3>select</h3>
 
@@ -122,11 +148,7 @@
 </tr></thead><tbody><tr><td><code>button</code></td>
   <td><a href="../Control/Button.html">Moobile.Button</a></td>
   <td>The button that was deselected.</td>
-</tr></tbody></table><h2 id="members">Members</h2>
-
-<p>This class does not define additional members.</p>
-
-<h2 id="methods">Methods</h2>
+</tr></tbody></table><h2 id="methods">Methods</h2>
 
 <h3 id="setSelectedButton">setSelectedButton(selectedButton)</h3>
 
@@ -145,7 +167,17 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
-</ul><hr><h3 id="getSelectedButton">getSelectedButton()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var buttonGroup = new Moobile.ButtonGroup();
+var button1 = new Moobile.Button();
+var button2 = new Moobile.Button();
+buttonGroup.addButton(button1);
+buttonGroup.addButton(button2);
+buttonGroup.setSelectedButton(button1); // selects the first button
+</code></pre>
+
+<hr><h3 id="getSelectedButton">getSelectedButton()</h3>
 
 <p>Returns the selected button.</p>
 
@@ -167,7 +199,17 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
-</ul><hr><h3 id="getSelectedButtonIndex">getSelectedButtonIndex()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var buttonGroup = new Moobile.ButtonGroup();
+var button1 = new Moobile.Button();
+var button2 = new Moobile.Button();
+buttonGroup.addButton(button1);
+buttonGroup.addButton(button2);
+buttonGroup.setSelectedButtonIndex(0); // selects the first button
+</code></pre>
+
+<hr><h3 id="getSelectedButtonIndex">getSelectedButtonIndex()</h3>
 
 <p>Returns the index of the selected button or <code>-1</code> if no buttons are selected.</p>
 
@@ -199,7 +241,14 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
-</ul><hr><h3 id="addButtonAfter">addButtonAfter(button, after)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var buttonGroup = new Moobile.ButtonGroup();
+var button = new Moobile.Button();
+buttonGroup.addButton(button);
+</code></pre>
+
+<hr><h3 id="addButtonAfter">addButtonAfter(button, after)</h3>
 
 <p>Adds the specified button after a button from this button group.</p>
 
@@ -217,7 +266,18 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
-</ul><hr><h3 id="addButtonBefore">addButtonBefore(button, before)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var buttonGroup = new Moobile.ButtonGroup();
+var button1 = new Moobile.Button();
+var button2 = new Moobile.Button();
+var button3 = new Moobile.Button();
+buttonGroup.addButton(button1);
+buttonGroup.addButton(button2);
+buttonGroup.addButtonAfter(button3, button1); // button3 is between button1 and button2
+</code></pre>
+
+<hr><h3 id="addButtonBefore">addButtonBefore(button, before)</h3>
 
 <p>Adds the specified button before a button from this button group.</p>
 
@@ -235,7 +295,18 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
-</ul><hr><h3 id="getButton">getButton(name)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var buttonGroup = new Moobile.ButtonGroup();
+var button1 = new Moobile.Button();
+var button2 = new Moobile.Button();
+var button3 = new Moobile.Button();
+buttonGroup.addButton(button1);
+buttonGroup.addButton(button2);
+buttonGroup.addButtonBefore(button3, button2); // button3 is between button1 and button2
+</code></pre>
+
+<hr><h3 id="getButton">getButton(name)</h3>
 
 <p>Returns a button that matching the specified name.</p>
 
@@ -246,7 +317,7 @@
   <th>Description</th>
 </tr></thead><tbody><tr><td><code>name</code></td>
   <td>String</td>
-  <td>The button's name to search for.</td>
+  <td>The name of the button to search for.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Button.html">Moobile.Button</a> The button or <code>null</code> if no buttons were found with the name.</li>
@@ -261,7 +332,7 @@
   <th>Description</th>
 </tr></thead><tbody><tr><td><code>index</code></td>
   <td>Number</td>
-  <td>The button's index.</td>
+  <td>The index location of the button.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Button.html">Moobile.Button</a> The button or <code>null</code> if no buttons were found at the index.</li>
@@ -300,6 +371,6 @@
 <ul><li><a href="../Control/ButtonGroup.html">Moobile.ButtonGroup</a> This Moobile.ButtonGroup instance.</li>
 </ul></div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">select</a></li><li><a href="#">deselect</a></li></ul></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a><ul><li><a href="#setSelectedButton">setSelectedButton</a></li><li><a href="#getSelectedButton">getSelectedButton</a></li><li><a href="#setSelectedButtonIndex">setSelectedButtonIndex</a></li><li><a href="#getSelectedButtonIndex">getSelectedButtonIndex</a></li><li><a href="#clearSelectedButton">clearSelectedButton</a></li><li><a href="#addButton">addButton</a></li><li><a href="#addButtonAfter">addButtonAfter</a></li><li><a href="#addButtonBefore">addButtonBefore</a></li><li><a href="#getButton">getButton</a></li><li><a href="#getButtonAt">getButtonAt</a></li><li><a href="#removeButton">removeButton</a></li><li><a href="#removeAllButtons">removeAllButtons</a></li></ul></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">select</a></li><li><a href="#">deselect</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setSelectedButton">setSelectedButton</a></li><li><a href="#getSelectedButton">getSelectedButton</a></li><li><a href="#setSelectedButtonIndex">setSelectedButtonIndex</a></li><li><a href="#getSelectedButtonIndex">getSelectedButtonIndex</a></li><li><a href="#clearSelectedButton">clearSelectedButton</a></li><li><a href="#addButton">addButton</a></li><li><a href="#addButtonAfter">addButtonAfter</a></li><li><a href="#addButtonBefore">addButtonBefore</a></li><li><a href="#getButton">getButton</a></li><li><a href="#getButtonAt">getButtonAt</a></li><li><a href="#removeButton">removeButton</a></li><li><a href="#removeAllButtons">removeAllButtons</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

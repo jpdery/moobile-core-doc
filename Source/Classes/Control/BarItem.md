@@ -34,7 +34,7 @@ Name        | Type   | Description
 
 #### Subclassing Notes:
 
-This class should not be instantiated, instead create a `Moobile.BarItem` subclass and implement your own functionnality.  Take a look at [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) as an example.
+Don't instantiate this class. Instead, extend it by creating subclasses for your own implementation. Look at [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) for an extended `Moobile.BarItem` class.
 
 This class overrides the following method:
 

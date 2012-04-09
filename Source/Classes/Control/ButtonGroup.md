@@ -3,7 +3,7 @@ Moobile.ButtonGroup
 
 ##### Extends *[Moobile.Control](../Control/Control.md)*
 
-Provides a control that groups buttons together and make sure only one is selected at time.
+Provides a control that group buttons and handle the selection of these buttons.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Name           | Type    | Description
 
 #### Note:
 
-Buttons can be added to the button group by adding elements with the `button` data-role attribute:
+Buttons can be added to the button group by adding elements with the `button` `data-role` attribute:
 
 	<div data-role="button-group">
 		<div data-role="button">Button 1</div>
@@ -44,11 +44,35 @@ Buttons can be added to the button group by adding elements with the `button` da
 		<div data-role="button">Button 4</div>
 	</div>
 
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
+
 #### Defined roles:
 
 Name           | Description
 -------------- | -----------
 `button-group` | Defines an element acting as a button group. Use the `data-button-group` property to specify a subclass instead.
+
+#### Examples:
+
+##### Creating a button group using the `data-role` attribute of an element:
+
+	<div data-role="button-group"></div>
+
+##### Creating a button group using the `data-role` attribute of an element and specifying a subclass:
+
+	<div data-role="button-group" data-button="MyButtonGroupClass"></div>
+
+##### Creating a button group and adding buttons:
+
+	<div data-role="button">
+		<div data-role="button">Button 1</div>
+		<div data-role="button">Button 2</div>
+	</div>
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -73,11 +97,6 @@ Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
 `button` | [Moobile.Button](../Control/Button.md)  | The button that was deselected.
 
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define additional members.
-
 Methods {#methods}
 --------------------------------------------------------------------------------
 
@@ -96,6 +115,15 @@ Name             | Type                                   | Description
 #### Returns:
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var button1 = new Moobile.Button();
+	var button2 = new Moobile.Button();
+	buttonGroup.addButton(button1);
+	buttonGroup.addButton(button2);
+	buttonGroup.setSelectedButton(button1); // selects the first button
 
 -----
 
@@ -122,6 +150,15 @@ Name    | Type   | Description
 #### Returns:
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var button1 = new Moobile.Button();
+	var button2 = new Moobile.Button();
+	buttonGroup.addButton(button1);
+	buttonGroup.addButton(button2);
+	buttonGroup.setSelectedButtonIndex(0); // selects the first button
 
 -----
 
@@ -160,6 +197,12 @@ Name               | Type                                   | Description
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
 
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var button = new Moobile.Button();
+	buttonGroup.addButton(button);
+
 -----
 
 ### addButtonAfter(button, after) {#addButtonAfter}
@@ -176,6 +219,16 @@ Name     | Type                                   | Description
 #### Returns:
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var button1 = new Moobile.Button();
+	var button2 = new Moobile.Button();
+	var button3 = new Moobile.Button();
+	buttonGroup.addButton(button1);
+	buttonGroup.addButton(button2);
+	buttonGroup.addButtonAfter(button3, button1); // button3 is between button1 and button2
 
 -----
 
@@ -194,6 +247,16 @@ Name     | Type                                   | Description
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
 
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var button1 = new Moobile.Button();
+	var button2 = new Moobile.Button();
+	var button3 = new Moobile.Button();
+	buttonGroup.addButton(button1);
+	buttonGroup.addButton(button2);
+	buttonGroup.addButtonBefore(button3, button2); // button3 is between button1 and button2
+
 -----
 
 ### getButton(name) {#getButton}
@@ -204,7 +267,7 @@ Returns a button that matching the specified name.
 
 Name   | Type   | Description
 ------ | ------ | -----------
-`name` | String | The button's name to search for.
+`name` | String | The name of the button to search for.
 
 #### Returns:
 
@@ -220,7 +283,7 @@ Return a button at a specified index.
 
 Name    | Type   | Description
 ------- | ------ | -----------
-`index` | Number | The button's index.
+`index` | Number | The index location of the button.
 
 #### Returns:
 
