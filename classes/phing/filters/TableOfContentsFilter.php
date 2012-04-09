@@ -61,6 +61,9 @@ class TableOfContentsFilter extends BaseParamFilterReader implements ChainableRe
             $level = (int) $node->tagName[1];
             $name  = $node->textContent; // no support for formatting
 
+            $name = trim($name);
+            $name = preg_replace('/\(([A-Za-z0-9\,\s\[\]\.])*\)/mis', '', $name);
+
             while ($level > $current_level) {
                 if (!$parents[$current_level-1]->lastChild) {
                     $parents[$current_level-1]->appendChild(
