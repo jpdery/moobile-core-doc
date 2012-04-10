@@ -3,22 +3,31 @@ Moobile.Control
 
 ##### Extends [Moobile.Component](../Component/Component.md)
 
-Provides the base class for controls such has buttons and list and includes method for getting and setting state.
+Provides the base class for controls such has buttons and lists.
 
-Initialization {#initialize}
---------------------------------------------------------------------------------
+#### Syntax:
 
-This class should not be instantiated, instead you should subclass it and create your own controls.
+	var control = new Moobile.Control([element], [options], [name]);
 
-Events {#events}
---------------------------------------------------------------------------------
+#### Parameters:
 
-This class does not define additional events.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`element` *Optional* | Element | The control's element, element id or html string.
+`options` *Optional* | Object  | The control's options, see below.
+`name`    *Optional* | String  | The control's name.
 
-Members {#members}
---------------------------------------------------------------------------------
+#### Options:
 
-This class does not define additional members.
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The control's extended CSS class name, defaults to `null`.
+`styleName` | String | The control's default style, defaults to `null`.
+`tagName`   | String | The control's element tag name, defaults to `div`.
+
+#### Subclassing Notes:
+
+Don't instantiate this class. Instead, extend it by creating subclasses for your own implementation.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -27,7 +36,7 @@ Methods {#methods}
 
 Sets whether this control is disabled. The CSS class `is-disabled` is added to the control element upon being disabled.
 
-Events won't be fired when this control is disabled.
+Events won't be fired when a control is disabled.
 
 #### Parameters:
 
@@ -37,7 +46,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control] This Moobile.Control instance.
+- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
 
 -----
 
@@ -63,7 +72,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control] This Moobile.Control instance.
+- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
 
 -----
 
@@ -89,7 +98,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control] This Moobile.Control instance.
+- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
 
 -----
 
@@ -115,7 +124,7 @@ Name    | Type   | Description
 
 -----
 
-### didSetState(state, value) {#didSetState}
+### didChangeState(state) {#didChangeState}
 
 Tell this control it has changed state.
 
@@ -139,4 +148,17 @@ Name    | Type   | Description
 
 #### Returns:
 
-- `Boolean` Whether the state is applicable to this control.
+- `Boolean` Whether the state can be applied to this control.
+
+#### Example:
+
+	var SpecialControl = new Class({
+		Extends: Moobile.Control,
+		shouldAllowState: function(state) {
+			return state !== 'highlighted'
+		}
+	});
+	var specialControl = new SpecialControl();
+	specialControl.setDisabled(true); // works
+	specialControl.setSelected(true); // works
+	specialControl.setHighlighted(true); // does not work

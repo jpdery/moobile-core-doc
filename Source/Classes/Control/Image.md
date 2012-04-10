@@ -3,14 +3,14 @@ Moobile.Image
 
 ##### Extends *[Moobile.Control](../Control/Control.md)*
 
-Provides an image control.
+Provides an image control that correctly free the memory upon being unloaded.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
 
 #### Syntax:
 
-	var button = new Moobile.Image([element], [options], [name]);
+	var image = new Moobile.Image([element], [options], [name]);
 
 #### Parameters:
 
@@ -39,23 +39,28 @@ Name    | Description
 ------- | -----------
 `image` | Defines an element acting as an image. Use the `data-image` property to specify a subclass instead.
 
+#### Examples:
+
+##### Creating an image using the `data-role` attribute of an element:
+
+	<img data-role="image" />
+
+##### Creating an image using the `data-role` attribute of an element and specifying a subclass:
+
+	<img data-role="image" data-image="MyImageClass" />
+
 Events {#events}
 --------------------------------------------------------------------------------
 
 ### load
 
-Fired when the image is loaded. If the `preload` option is `true`, this event will be fired after the image is preloaded otherwise it will be fired when a valid source is specified.
+Fired when the image is loaded. If the `preload` option is `true`, this event will be fired once the image is preloaded otherwise it will be fired as soon as a source is specified.
 
 -----
 
 ### unload
 
 Fired when the image is unloaded by setting its source to `null`.
-
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -114,7 +119,3 @@ Indicates whether the image is loaded.
 
 - `Boolean` Whether the image is loaded.
 
-Styles {#styles}
---------------------------------------------------------------------------------
-
-This control does not define any styles.
