@@ -41,15 +41,6 @@ Name        | Description
 `image`     | Defines an element acting as a list item image.
 `detail`    | Defines an element acting as a list item detail text.
 
-Events {#events}
---------------------------------------------------------------------------------
-
-This class does not define additional events.
-
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define additional members.
 
 Methods {#methods}
 --------------------------------------------------------------------------------

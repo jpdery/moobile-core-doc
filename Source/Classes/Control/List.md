@@ -34,7 +34,7 @@ Name           | Type    | Description
 
 #### Note:
 
-List items can be added to the list by adding elements with the `list-item` data-role attribute:
+List item can be added to the list by adding elements with the `list-item` `data-role` attribute:
 
 	<ul data-role="list"></div>
 		<li data-role="list-item">Item 1</li>
