@@ -1124,9 +1124,9 @@ Name       | Type                                           | Description
 	 	new Element('div.wrapped').wraps(element);
 	 });
 
-##### For every elements with the `data-role="button"` attribute, a new `Moobile.Button` instance will be created and added to the view as a child component.
+##### For every elements with the `data-role="button"` attribute within a `Moobile.ButtonGroup` control, a new `Moobile.Button` instance will be created and added to the group as a child component.
 
-	Moobile.Component.defineRole('warning', Moobile.View, function(element) {
+	Moobile.Component.defineRole('button', Moobile.ButtonGroup, function(element) {
 		var button = new Moobile.Button(element);
 		this.addChildComponent(button);
 	});
