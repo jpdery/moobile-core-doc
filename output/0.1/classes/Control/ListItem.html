@@ -34,9 +34,9 @@
 
 	<div id="content" class="content"><h1>Moobile.ListItem</h1>
 
-<h5>Extends <em><a href="../Control/Control.html">Moobile.Control</a></em></h5>
+<h5>Extends <a href="../Control/Control.html">Moobile.Control</a></h5>
 
-<p>Provides a list item control.</p>
+<p>Provides a list item control used inside a <a href="../Control/List.html">Moobile.List</a> control.</p>
 
 <h2 id="initialize">Initialization</h2>
 
@@ -75,22 +75,89 @@
   <td>The list item's element tag name, defaults to <code>li</code>.</td>
 </tr></tbody></table><h4>Generates:</h4>
 
-<pre class="prettyprint"><code>&lt;li class="list-item"&gt;Lorem&lt;/li&gt;
+<pre class="prettyprint"><code>&lt;li class="list-item"&gt;
+    &lt;img data-role="image" class="list-item-image" /&gt;
+    &lt;div data-role="label" class="list-item-label"&gt;&lt;/div&gt;
+    &lt;div data-role="detail" class="list-item-detail"&gt;&lt;/div&gt;
+&lt;/li&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Notes:</h4>
+
+<p>Upon initialization, this control creates its label with a <a href="../Control/BarItem.html">Moobile.Text</a> instance using the list item element's content. For instance, if you create a list item like this:</p>
+
+<pre class="prettyprint"><code>&lt;li class="list-item"&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+<p>The result will be:</p>
+
+<pre class="prettyprint"><code>&lt;li class="list-item"&gt;
+    &lt;img data-role="image" class="list-item-image" /&gt;
+    &lt;div data-role="label" class="list-item-label"&gt;
+        &lt;div class="element-one"&gt;&lt;/div&gt;
+        &lt;div class="element-two"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div data-role="detail" class="list-item-detail"&gt;&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+<p>If you wish to put elements outside of the list item's label, you will have to specify which element has the <code>label</code> role:</p>
+
+<pre class="prettyprint"><code>&lt;li class="list-item"&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div data-role="label"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>destroy</code>  : Call the parent method at the <code>bottom</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>list-item</code></td>
-  <td>Defines an element acting as a list item. Use the <code>data-list-item</code> property to specify a subclass instead.</td>
+  <td>Defines an element acting a <code>Moobile.ListItem</code> control</td>
+  <td><code>Moobile.List</code> control</td>
+  <td>Use the <code>data-list-item</code> attribute to specify a subclass instead</td>
 </tr><tr><td><code>label</code></td>
-  <td>Defines an element acting as a list item label. If unspecified, the contents of the button's element will act as its label.</td>
+  <td>Defines the element acting as the list item label</td>
+  <td><a href="../Control/Moobile.ListItem.html">Moobile.ListItem</a> controls</td>
+  <td>If unspecified, the contents of the list item's element will act as its label.</td>
 </tr><tr><td><code>image</code></td>
-  <td>Defines an element acting as a list item image.</td>
+  <td>Defines the element acting as the list item image</td>
+  <td><a href="../Control/Moobile.ListItem.html">Moobile.ListItem</a> controls</td>
+  <td></td>
 </tr><tr><td><code>detail</code></td>
-  <td>Defines an element acting as a list item detail text.</td>
-</tr></tbody></table><h2 id="methods">Methods</h2>
+  <td>Defines the element acting as the list item detail text</td>
+  <td><a href="../Control/Moobile.ListItem.html">Moobile.ListItem</a> controls</td>
+  <td></td>
+</tr></tbody></table><h4>Examples:</h4>
+
+<h5>Specifying an element that acts a list item control using the <code>data-role</code> attribute:</h5>
+
+<pre class="prettyprint"><code>&lt;ul data-role="list"&gt;
+    &lt;li data-role="list-item"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h5>Specifying an element that acts a list item subclass using the <code>data-role</code> attribute:</h5>
+
+<pre class="prettyprint"><code>&lt;ul data-role="list"&gt;
+    &lt;li data-role="list-item" data-list-item="MyListItem" /&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h2 id="methods">Methods</h2>
 
 <h3 id="setLabel">setLabel(label)</h3>
 
@@ -107,14 +174,35 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ListItem.html">Moobile.ListItem</a> This Moobile.ListItem instance</li>
-</ul><hr><h3 id="getLabel">getLabel()</h3>
+</ul><h4>Examples:</h4>
+
+<h5>Setting the label using a string:</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setLabel('Moo');
+</code></pre>
+
+<h5>Setting the label using a <a href="../Control/Moobile.Text">Moobile.Text</a> instance</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setLabel(new Moobile.Text().setText('Moo'));
+</code></pre>
+
+<hr><h3 id="getLabel">getLabel()</h3>
 
 <p>Returns the label.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/Text.html">Moobile.Text</a> The label.</li>
-</ul><hr><h3 id="setImage">setImage(image)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setLabel('Moo');
+listItem.getLabel(); // returns a Moobile.Text instance
+</code></pre>
+
+<hr><h3 id="setImage">setImage(image)</h3>
 
 <p>Sets the image using either a string or a <code>Moobile.Image</code> instance. When provided with a string, this methods creates a <code>Moobile.Image</code> object and assign the given string as its source.</p>
 
@@ -129,14 +217,35 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ListItem.html">Moobile.ListItem</a> This Moobile.ListItem instance</li>
-</ul><hr><h3 id="getImage">getImage()</h3>
+</ul><h4>Examples:</h4>
+
+<h5>Setting the image using a string:</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setImage('path/to/an-image.png');
+</code></pre>
+
+<h5>Setting the image using a <a href="../Control/Moobile.Image">Moobile.Image</a> instance</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setImage(new Moobile.Image().setSource('path/to/an-image.png'));
+</code></pre>
+
+<hr><h3 id="getImage">getImage()</h3>
 
 <p>Returns the image.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/Image.html">Moobile.Image</a> The image.</li>
-</ul><hr><h3 id="setDetail">setDetail(detail)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setImage('path/to/an-image.png');
+listItem.getImage(); // returns a Moobile.Image instance
+</code></pre>
+
+<hr><h3 id="setDetail">setDetail(detail)</h3>
 
 <p>Sets the detail text using either a string or a <code>Moobile.Text</code> instance. When provided with a string, this methods creates a <code>Moobile.Text</code> object and assign the given string as its text.</p>
 
@@ -151,14 +260,35 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/ListItem.html">Moobile.ListItem</a> This Moobile.ListItem instance</li>
-</ul><hr><h3 id="getDetail">getDetail()</h3>
+</ul><h4>Examples:</h4>
+
+<h5>Setting the detail text using a string:</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setLabel('Moo');
+</code></pre>
+
+<h5>Setting the detail text using a <a href="../Control/Moobile.Text">Moobile.Text</a> instance</h5>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setLabel(new Moobile.Text().setText('Moo'));
+</code></pre>
+
+<hr><h3 id="getDetail">getDetail()</h3>
 
 <p>Returns the detail label.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/Text.html">Moobile.Text</a> The detail label.</li>
-</ul><h2 id="styles">Styles</h2>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var listItem = new Moobile.ListItem();
+listItem.setDetail('Moo');
+listItem.getDetail(); // returns a Moobile.Text instance
+</code></pre>
+
+<h2 id="styles">Styles</h2>
 
 <h4>checked</h4>
 

@@ -39,25 +39,25 @@ Name        | Type   | Description
 Upon initialization, this control creates its label with a [Moobile.Text](../Control/BarItem.md) instance using the button element's content. For instance, if you create a button like this:
 
 	<div data-role="button">
-		<div class="element-1"></div>
-		<div class="element-2"></div>
+		<div class="element-one"></div>
+		<div class="element-two"></div>
 	</div>
 
 The result will be:
 
-	<div data-role="button">
-		<div data-role="label" class="button-item">
-			<div class="element-1"></div>
-			<div class="element-2"></div>
+	<div data-role="button" class="button">
+		<div data-role="label" class="button-label">
+			<div class="element-one"></div>
+			<div class="element-two"></div>
 		</div>
 	</div>
 
 If you wish to put elements outside of the button's label, you will have to specify which element has the `label` role:
 
-	<div data-role="bar">
-		<div class="element-1"></div>
+	<div data-role="button">
+		<div class="element-one"></div>
 		<div data-role="label"></div>
-		<div class="element-2"></div>
+		<div class="element-two"></div>
 	</div>
 
 #### Subclassing Notes:
@@ -69,22 +69,22 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name     | Description
--------- | -----------
-`button` | Defines an element acting as a button. Use the `data-button` property to specify a subclass instead.
-`label`  | Defines an element acting as a button label. If unspecified, the contents of the button's element will act as its label.
+Name     | Description                                             | Applies to                | Note
+-------- | ------------------------------------------------------- | ------------------------- | ----
+`button` | Defines an element acting as a `Moobile.Button` control | All components            | Use the `data-button` attribute to specify a subclass instead
+`label`  | Defines the element acting as the button's label        | `Moobile.Button` controls | If unspecified, the contents of the button's element will become its label.
 
 #### Examples:
 
-##### Creating a button using the `data-role` attribute of an element:
+##### Specifying an element that acts a button control using the `data-role` attribute:
 
 	<div data-role="button"></div>
 
-##### Creating a button using the `data-role` attribute of an element and specifying a subclass:
+##### Specifying an element that acts a button subclass using the `data-role` attribute:
 
-	<div data-role="button" data-button="MyButtonClass"></div>
+	<div data-role="button" data-button="MyButton"></div>
 
-##### Creating a button and specifying the element that will act as its label.
+##### Specifying an element that acts a button control and the element that acts as its label:
 
 	<div data-role="button">
 		<div data-role="label"></div>
@@ -95,7 +95,7 @@ Methods {#methods}
 
 ### setLabel(label) {#setLabel}
 
-Sets the label using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the label using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
@@ -114,12 +114,10 @@ Name    | Type  | Description
 	var button = new Moobile.Button();
 	button.setLabel('Moo');
 
-##### Setting the label using a Moobile.Text instance:
+##### Setting the label using a [Moobile.Text](../Control/Moobile.Text) instance
 
-	var label = new Moobile.Text();
-	label.setText('Moo');
 	var button = new Moobile.Button();
-	button.setLabel(label);
+	button.setLabel(new Moobile.Text().setText('Moo'));
 
 -----
 
@@ -135,8 +133,7 @@ Returns the label.
 
 	var button = new Moobile.Button();
 	button.setLabel('Moo');
-	button.getLabel(); // Returns an instance of Moobile.Text
-	button.getLabel().getText(); // Returns 'Moo';
+	button.getLabel(); // returns a Moobile.Text instance
 
 Methods {#styles}
 --------------------------------------------------------------------------------

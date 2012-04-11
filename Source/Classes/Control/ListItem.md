@@ -1,9 +1,9 @@
 Moobile.ListItem
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a list item control.
+Provides a list item control used inside a [Moobile.List](../Control/List.md) control.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -30,17 +30,69 @@ Name        | Type   | Description
 
 #### Generates:
 
-	<li class="list-item">Lorem</li>
+	<li class="list-item">
+		<img data-role="image" class="list-item-image" />
+		<div data-role="label" class="list-item-label"></div>
+		<div data-role="detail" class="list-item-detail"></div>
+	</li>
+
+#### Notes:
+
+Upon initialization, this control creates its label with a [Moobile.Text](../Control/BarItem.md) instance using the list item element's content. For instance, if you create a list item like this:
+
+	<li class="list-item">
+		<div class="element-one"></div>
+		<div class="element-two"></div>
+	</li>
+
+The result will be:
+
+	<li class="list-item">
+		<img data-role="image" class="list-item-image" />
+		<div data-role="label" class="list-item-label">
+			<div class="element-one"></div>
+			<div class="element-two"></div>
+		</div>
+		<div data-role="detail" class="list-item-detail"></div>
+	</li>
+
+If you wish to put elements outside of the list item's label, you will have to specify which element has the `label` role:
+
+	<li class="list-item">
+		<div class="element-one"></div>
+		<div data-role="label"></div>
+		<div class="element-two"></div>
+	</div>
+
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
 
 #### Defined roles:
 
-Name        | Description
------------ | -----------
-`list-item` | Defines an element acting as a list item. Use the `data-list-item` property to specify a subclass instead.
-`label`     | Defines an element acting as a list item label. If unspecified, the contents of the button's element will act as its label.
-`image`     | Defines an element acting as a list item image.
-`detail`    | Defines an element acting as a list item detail text.
+Name        | Description                                             | Applies to                                                  | Note
+----------- | ------------------------------------------------------- | ----------------------------------------------------------- | ----
+`list-item` | Defines an element acting a `Moobile.ListItem` control  | `Moobile.List` control                                      | Use the `data-list-item` attribute to specify a subclass instead
+`label`     | Defines the element acting as the list item label       | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls | If unspecified, the contents of the list item's element will act as its label.
+`image`     | Defines the element acting as the list item image       | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls |
+`detail`    | Defines the element acting as the list item detail text | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls |
 
+#### Examples:
+
+##### Specifying an element that acts a list item control using the `data-role` attribute:
+
+	<ul data-role="list">
+		<li data-role="list-item"></li>
+	</ul>
+
+##### Specifying an element that acts a list item subclass using the `data-role` attribute:
+
+	<ul data-role="list">
+		<li data-role="list-item" data-list-item="MyListItem" />
+	</ul>
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -59,6 +111,18 @@ Name    | Type  | Description
 
 - [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
 
+#### Examples:
+
+##### Setting the label using a string:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setLabel('Moo');
+
+##### Setting the label using a [Moobile.Text](../Control/Moobile.Text) instance
+
+	var listItem = new Moobile.ListItem();
+	listItem.setLabel(new Moobile.Text().setText('Moo'));
+
 -----
 
 ### getLabel() {#getLabel}
@@ -68,6 +132,12 @@ Returns the label.
 #### Returns:
 
 - [Moobile.Text](../Control/Text.md) The label.
+
+#### Example:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setLabel('Moo');
+	listItem.getLabel(); // returns a Moobile.Text instance
 
 -----
 
@@ -85,6 +155,18 @@ Name    | Type  | Description
 
 - [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
 
+#### Examples:
+
+##### Setting the image using a string:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setImage('path/to/an-image.png');
+
+##### Setting the image using a [Moobile.Image](../Control/Moobile.Image) instance
+
+	var listItem = new Moobile.ListItem();
+	listItem.setImage(new Moobile.Image().setSource('path/to/an-image.png'));
+
 -----
 
 ### getImage() {#getImage}
@@ -94,6 +176,12 @@ Returns the image.
 #### Returns:
 
 - [Moobile.Image](../Control/Image.md) The image.
+
+#### Example:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setImage('path/to/an-image.png');
+	listItem.getImage(); // returns a Moobile.Image instance
 
 -----
 
@@ -111,6 +199,18 @@ Name     | Type  | Description
 
 - [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
 
+#### Examples:
+
+##### Setting the detail text using a string:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setLabel('Moo');
+
+##### Setting the detail text using a [Moobile.Text](../Control/Moobile.Text) instance
+
+	var listItem = new Moobile.ListItem();
+	listItem.setLabel(new Moobile.Text().setText('Moo'));
+
 -----
 
 ### getDetail() {#getDetail}
@@ -120,6 +220,12 @@ Returns the detail label.
 #### Returns:
 
 - [Moobile.Text](../Control/Text.md) The detail label.
+
+#### Example:
+
+	var listItem = new Moobile.ListItem();
+	listItem.setDetail('Moo');
+	listItem.getDetail(); // returns a Moobile.Text instance
 
 Styles {#styles}
 --------------------------------------------------------------------------------

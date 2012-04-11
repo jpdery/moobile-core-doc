@@ -40,19 +40,19 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name                 | Description
--------------------- | -----------
-`activity-indicator` | Defines an element acting as a [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) control. Use the `data-activity-indicator` property to specify a subclass instead.
+Name                 | Description                                                        | Applies to      | Note
+-------------------- | ------------------------------------------------------------------ | --------------- | ----
+`activity-indicator` | Defines an element acting as a `Moobile.ActivityIndicator` control |  All components | Use the `data-activity-indicator` attribute to specify a subclass instead
 
 #### Examples:
 
-##### Creating an activity indicator using the `data-role` attribute of an element:
+##### Specifying an element that acts an activity indicator control using the `data-role` attribute:
 
 	<div data-role="activity-indicator"></div>
 
-##### Creating an activity indicator using the `data-role` attribute of an element and specifying a subclass:
+##### Specifying an element that acts an activity indicator subclass using the `data-role` attribute:
 
-	<div data-role="activity-indicator" data-activity-indicator="MyActivityIndicatorSubclass"></div>
+	<div data-role="activity-indicator" data-activity-indicator="MyActivityIndicator"></div>
 
 Methods {#methods}
 --------------------------------------------------------------------------------

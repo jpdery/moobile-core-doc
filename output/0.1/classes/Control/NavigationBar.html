@@ -36,7 +36,7 @@
 
 <h5>Extends <a href="../Control/Bar.html">Moobile.Bar</a></h5>
 
-<p>Provides a navigation bar control.</p>
+<p>Provides an extended <a href="../Control/Bar.html">Moobile.Bar</a> control that handles a <a href="../Control/NavigationBarItem.html">Moobile.NavigationBarItem</a>;</p>
 
 <h2 id="initialize">Initialization</h2>
 
@@ -84,29 +84,63 @@
 &lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Notes:</h4>
+
+<p>Upon initialization, this control creates its item with a <a href="../Control/NavigationBarItem.html">Moobile.NavigationBarItem</a> instance using the navigation bar element's content. For instance, if you create a navigation bar like this:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="navigation-bar"&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The result will be:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="navigation-bar" class="bar navigation-bar"&gt;
+    &lt;div data-role="item" class="bar-item navigation-bar-item"&gt;
+        &lt;div class="element-one"&gt;&lt;/div&gt;
+        &lt;div class="element-two"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>If you wish to put elements outside of the navigation bar item, you will have to specify which element has the <code>item</code> role:</p>
+
+<pre class="prettyprint"><code>&lt;div data-role="navigation-bar"&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div data-role="item"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>navigation-bar</code></td>
-  <td>Defines an element acting as a button. Use the <code>data-navigation-bar</code> property to specify a subclass instead.</td>
-</tr></tbody></table><h2 id="methods">Methods</h2>
+  <td>Defines an element acting as a <code>Moobile.NavigationBar</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-navigation-bar</code> attribute to specify a subclass instead</td>
+</tr></tbody></table><h4>Examples:</h4>
 
-<p>This class does not define additional methods.</p>
+<h5>Specifying an element that acts a navigation bar control using the <code>data-role</code> attribute:</h5>
 
-<h2 id="members">Members</h2>
+<pre class="prettyprint"><code>&lt;div data-role="navigation-bar"&gt;&lt;/li&gt;
+</code></pre>
 
-<p>This class does not define additional members.</p>
+<h5>Specifying an element that acts a navigation bar subclass using the <code>data-role</code> attribute:</h5>
 
-<h2 id="events">Events</h2>
-
-<p>This class does not define additional events.</p>
-
-<h2 id="styles">Styles</h2>
-
-<p>This control does not define any styles beside the styles inherited from <a href="../Control/Bar.html">Moobile.Bar</a>.</p>
+<pre class="prettyprint"><code>&lt;div data-role="navigation-bar" data-navigation-bar="MyNavigationBar" /&gt;
+</code></pre>
 </div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#methods">Methods</a></li><li><a href="#members">Members</a></li><li><a href="#events">Events</a></li><li><a href="#styles">Styles</a></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

@@ -85,18 +85,22 @@
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>image</code></td>
-  <td>Defines an element acting as an image. Use the <code>data-image</code> property to specify a subclass instead.</td>
+  <td>Defines an element acting as a <code>Moobile.Image</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-image</code> attribute to specify a subclass instead</td>
 </tr></tbody></table><h4>Examples:</h4>
 
-<h5>Creating an image using the <code>data-role</code> attribute of an element:</h5>
+<h5>Specifying an element that acts an image control using the <code>data-role</code> attribute:</h5>
 
 <pre class="prettyprint"><code>&lt;img data-role="image" /&gt;
 </code></pre>
 
-<h5>Creating an image using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+<h5>Specifying an element that acts an image subclass using the <code>data-role</code> attribute:</h5>
 
-<pre class="prettyprint"><code>&lt;img data-role="image" data-image="MyImageClass" /&gt;
+<pre class="prettyprint"><code>&lt;img data-role="image" data-image="MyImage" /&gt;
 </code></pre>
 
 <h2 id="events">Events</h2>
@@ -126,35 +130,73 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Image.html">Moobile.Image</a> This Moobile.Image instance.</li>
-</ul><hr><h3 id="getSource">getSource()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var image = new Moobile.Image();
+image.setSource('path/to/an-image.png');
+</code></pre>
+
+<hr><h3 id="getSource">getSource()</h3>
 
 <p>Returns the image source from the <code>src</code> attribute of the element.</p>
 
 <h4>Returns:</h4>
 
 <ul><li>String The image source.</li>
-</ul><hr><h3 id="getImage">getImage()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var image = new Moobile.Image();
+image.setSource('path/to/an-image.png');
+image.getSource(); // returns 'path/to/an-image.png'
+</code></pre>
+
+<hr><h3 id="getImage">getImage()</h3>
 
 <p>Returns the <code>Image</code> object used to preload this image. The <code>preload</code> option must be set to <code>true</code> otherwise this method will return <code>null</code>.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><code>Image</code> The <code>Image</code> object used to preload this image.</li>
-</ul><hr><h3 id="getOriginalSize">getOriginalSize()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var image = new Moobile.Image(null, {preload: true});
+image.setSource('path/to/an-image.png');
+image.getImage(); // return the Image object.
+</code></pre>
+
+<hr><h3 id="getOriginalSize">getOriginalSize()</h3>
 
 <p>Returns the original image size. The <code>preload</code> option must be set to <code>true</code> otherwise the original size will not be calculated.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><code>Object</code> The original image size object with two keys, <code>x</code> for the width and <code>y</code> for the height.</li>
-</ul><hr><h3 id="isLoaded">isLoaded()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var image = new Moobile.Image(null, {preload: true});
+image.setSource('path/to/an-image.png');
+image.addEvent('load', function() {
+    image.getOriginalSize(); // returns {x: X,y: Y}
+});
+</code></pre>
+
+<hr><h3 id="isLoaded">isLoaded()</h3>
 
 <p>Indicates whether the image is loaded.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><code>Boolean</code> Whether the image is loaded.</li>
-</ul></div>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var image = new Moobile.Image(null, {preload: true});
+image.setSource('path/to/an-image.png');
+image.addEvent('load', function() {
+    image.isLoaded(); // returns true
+});
+image.isLoaded(); // returns false
+</code></pre>
+</div>
 
 	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">load</a></li><li><a href="#">unload</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setSource">setSource</a></li><li><a href="#getSource">getSource</a></li><li><a href="#getImage">getImage</a></li><li><a href="#getOriginalSize">getOriginalSize</a></li><li><a href="#isLoaded">isLoaded</a></li></ul></li></ul></div>
 

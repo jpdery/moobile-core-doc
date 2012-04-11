@@ -85,27 +85,27 @@
 <p>Upon initialization, this control creates its label with a <a href="../Control/BarItem.html">Moobile.Text</a> instance using the button element's content. For instance, if you create a button like this:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="button"&gt;
-    &lt;div class="element-1"&gt;&lt;/div&gt;
-    &lt;div class="element-2"&gt;&lt;/div&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
 <p>The result will be:</p>
 
-<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
-    &lt;div data-role="label" class="button-item"&gt;
-        &lt;div class="element-1"&gt;&lt;/div&gt;
-        &lt;div class="element-2"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div data-role="button" class="button"&gt;
+    &lt;div data-role="label" class="button-label"&gt;
+        &lt;div class="element-one"&gt;&lt;/div&gt;
+        &lt;div class="element-two"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
 <p>If you wish to put elements outside of the button's label, you will have to specify which element has the <code>label</code> role:</p>
 
-<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
-    &lt;div class="element-1"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div data-role="button"&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
     &lt;div data-role="label"&gt;&lt;/div&gt;
-    &lt;div class="element-2"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -119,23 +119,29 @@
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>button</code></td>
-  <td>Defines an element acting as a button. Use the <code>data-button</code> property to specify a subclass instead.</td>
+  <td>Defines an element acting as a <code>Moobile.Button</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-button</code> attribute to specify a subclass instead</td>
 </tr><tr><td><code>label</code></td>
-  <td>Defines an element acting as a button label. If unspecified, the contents of the button's element will act as its label.</td>
+  <td>Defines the element acting as the button's label</td>
+  <td><code>Moobile.Button</code> controls</td>
+  <td>If unspecified, the contents of the button's element will become its label.</td>
 </tr></tbody></table><h4>Examples:</h4>
 
-<h5>Creating a button using the <code>data-role</code> attribute of an element:</h5>
+<h5>Specifying an element that acts a button control using the <code>data-role</code> attribute:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="button"&gt;&lt;/div&gt;
 </code></pre>
 
-<h5>Creating a button using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+<h5>Specifying an element that acts a button subclass using the <code>data-role</code> attribute:</h5>
 
-<pre class="prettyprint"><code>&lt;div data-role="button" data-button="MyButtonClass"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div data-role="button" data-button="MyButton"&gt;&lt;/div&gt;
 </code></pre>
 
-<h5>Creating a button and specifying the element that will act as its label.</h5>
+<h5>Specifying an element that acts a button control and the element that acts as its label:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="button"&gt;
     &lt;div data-role="label"&gt;&lt;/div&gt;
@@ -146,7 +152,7 @@
 
 <h3 id="setLabel">setLabel(label)</h3>
 
-<p>Sets the label using either a string or a <code>Moobile.Text</code> instance. When provided with a string, this methods creates a <code>Moobile.Text</code> object and assign the given string as its text.</p>
+<p>Sets the label using either a string or a <a href="../Control/Moobile.Text">Moobile.Text</a> instance. When provided with a string, this methods creates a <code>Moobile.Text</code> object and assign the given string as its text.</p>
 
 <h4>Parameters:</h4>
 
@@ -167,12 +173,10 @@
 button.setLabel('Moo');
 </code></pre>
 
-<h5>Setting the label using a Moobile.Text instance:</h5>
+<h5>Setting the label using a <a href="../Control/Moobile.Text">Moobile.Text</a> instance</h5>
 
-<pre class="prettyprint"><code>var label = new Moobile.Text();
-label.setText('Moo');
-var button = new Moobile.Button();
-button.setLabel(label);
+<pre class="prettyprint"><code>var button = new Moobile.Button();
+button.setLabel(new Moobile.Text().setText('Moo'));
 </code></pre>
 
 <hr><h3 id="getLabel">getLabel()</h3>
@@ -186,8 +190,7 @@ button.setLabel(label);
 
 <pre class="prettyprint"><code>var button = new Moobile.Button();
 button.setLabel('Moo');
-button.getLabel(); // Returns an instance of Moobile.Text
-button.getLabel().getText(); // Returns 'Moo';
+button.getLabel(); // returns a Moobile.Text instance
 </code></pre>
 
 <h2 id="styles">Methods</h2>

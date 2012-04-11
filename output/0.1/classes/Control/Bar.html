@@ -85,17 +85,17 @@
 <p>Upon initialization, this control creates its item with a <a href="../Control/BarItem.html">Moobile.BarItem</a> instance using the bar element's content. For instance, if you create a bar like this:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
-    &lt;div class="element-1"&gt;&lt;/div&gt;
-    &lt;div class="element-2"&gt;&lt;/div&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
 <p>The result will be:</p>
 
-<pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
+<pre class="prettyprint"><code>&lt;div data-role="bar" class="bar"&gt;
     &lt;div data-role="item" class="bar-item"&gt;
-        &lt;div class="element-1"&gt;&lt;/div&gt;
-        &lt;div class="element-2"&gt;&lt;/div&gt;
+        &lt;div class="element-one"&gt;&lt;/div&gt;
+        &lt;div class="element-two"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -103,9 +103,9 @@
 <p>If you wish to put elements outside of the bar item, you will have to specify which element has the <code>item</code> role:</p>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
-    &lt;div class="element-1"&gt;&lt;/div&gt;
+    &lt;div class="element-one"&gt;&lt;/div&gt;
     &lt;div data-role="item"&gt;&lt;/div&gt;
-    &lt;div class="element-2"&gt;&lt;/div&gt;
+    &lt;div class="element-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -119,24 +119,28 @@
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>bar</code></td>
-  <td>Defines an element acting as a <a href="../Control/BarItem.html">Moobile.BarItem</a> control. Use the <code>data-bar</code> property to specify a subclass instead.</td>
+  <td>Defines an element acting as a <code>Moobile.Bar</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-bar</code> attribute to specify a subclass instead</td>
 </tr></tbody></table><h4>Examples:</h4>
 
-<h5>Creating a bar using the <code>data-role</code> attribute of an element:</h5>
+<h5>Specifying an element that acts a bar control using the <code>data-role</code> attribute:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;&lt;/div&gt;
 </code></pre>
 
-<h5>Creating a bar using the <code>data-role</code> attribute of an element and specifying a subclass:</h5>
+<h5>Specifying an element that acts a bar subclass using the <code>data-role</code> attribute:</h5>
 
-<pre class="prettyprint"><code>&lt;div data-role="bar" data-bar="MyBarClass"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div data-role="bar" data-bar="MyBar"&gt;&lt;/div&gt;
 </code></pre>
 
-<h5>Creating a bar and specifying the element that will act as its bar item.</h5>
+<h5>Specifying an element that acts a bar control and the element that acts as its item:</h5>
 
 <pre class="prettyprint"><code>&lt;div data-role="bar"&gt;
-    &lt;div data-role="bar-item"&gt;&lt;/div&gt;
+    &lt;div data-role="item"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -159,10 +163,8 @@
 <ul><li><a href="../Control/Bar.html">Moobile.Bar</a> This bar.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var bar     = new Moobile.Bar();
-var barItem = new Moobile.BarItem();
-var title   = new Moobile.Text().setText('Title');
-item.addChildComponent(title);
+<pre class="prettyprint"><code>var bar = new Moobile.Bar();
+var item = new Moobile.BarItem();
 bar.setItem(item);
 </code></pre>
 
@@ -173,7 +175,13 @@ bar.setItem(item);
 <h4>Returns:</h4>
 
 <ul><li><a href="../Control/BarItem.html">Moobile.BarItem</a> The bar item.</li>
-</ul><h2 id="styles">Styles</h2>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var bar = new Moobile.Bar();
+bar.getItem(); // returns a Moobile.BarItem instance created automatically.
+</code></pre>
+
+<h2 id="styles">Styles</h2>
 
 <h3>default style</h3>
 

@@ -49,7 +49,7 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 			'<div data-role="button" data-name="my-button">Button</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChildComponent('my-button'); // Returns a Moobile.Button instance
+	component.getChildComponent('my-button'); // returns a Moobile.Button instance
 
 ##### Creating a component with multiple children:
 
@@ -60,9 +60,9 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 			'<div data-role="button" data-name="my-button-2">Button 2</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChildComponent('my-image'); // Returns a Moobile.Image instance
-	component.getChildComponent('my-button-1'); // Returns a Moobile.Button instance
-	component.getChildComponent('my-button-2'); // Returns a Moobile.Button instance
+	component.getChildComponent('my-image'); // returns a Moobile.Image instance
+	component.getChildComponent('my-button-1'); // returns a Moobile.Button instance
+	component.getChildComponent('my-button-2'); // returns a Moobile.Button instance
 
 ##### Creating a component with a complex hierarchy:
 
@@ -74,8 +74,15 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 			'</div>' +
 		'</div>';
 	var component = new Moobile.Component(element);
-	component.getChildComponent('my-button-image'); // Returns null! The image is a child of the button.
-	component.getChildComponent('my-button').getChildComponent('my-button-image'); // Returns a Moobile.Image instance.
+	component.getChildComponent('my-button-image'); // returns null! The image is a child of the button.
+	component.getChildComponent('my-button').getChildComponent('my-button-image'); // returns a Moobile.Image instance.
+
+##### Creating a component that passes options using element attributes
+
+	var element =
+		'<div data-option-style-name="moo" data-option-some-option="value">' +
+		'</div>';
+	var component = new Moobile.Component(element);
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -201,28 +208,28 @@ Name               | Type                                           | Descriptio
 
 ##### Adding a component at the top:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChildComponent(mySecondComponent, 'top');
+	var componentOne = new Moobile.Component('<div class="component-one"><span>Lorem</span></div>')
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>');
+	componentOne.addChildComponent(componentTwo, 'top');
 
 Resulting element:
 
-	<div class="first">
-		<div class="second"></div>
+	<div class="component-one">
+		<div class="component-two"></div>
 		<span>Lorem</span>
 	</div>
 
 ##### Adding a component at the botom:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"><span>Lorem</span></div>')
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChildComponent(mySecondComponent, 'bottom');
+	var componentOne = new Moobile.Component('<div class="component-one"><span>Lorem</span></div>')
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>');
+	componentOne.addChildComponent(componentTwo, 'bottom');
 
 Resulting element:
 
-	<div class="first">
+	<div class="component-one">
 		<span>Lorem</span>
-		<div class="second"></div>
+		<div class="component-two"></div>
 	</div>
 
 -----
@@ -245,15 +252,15 @@ Name               | Type                                           | Descriptio
 
 #### Example:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"><div class="me"></div></div>')
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	myFirstComponent.addChildComponentInside(mySecondComponent, '.me');
+	var componentOne = new Moobile.Component('<div class="component-one"><div class="me"></div></div>')
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>');
+	componentOne.addChildComponentInside(componentTwo, '.me');
 
 Resulting element:
 
-	<div class="first">
+	<div class="component-one">
 		<div class="me">
-			<div class="second"></div>
+			<div class="component-two"></div>
 		</div>
 	</div>
 
@@ -276,16 +283,16 @@ Name        | Type                                           | Description
 
 #### Example:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	var myThirdComponent   = new Moobile.Component('<div class="third"></div>');
-	myFirstComponent.addChildComponent(mySecondComponent);
-	myFirstComponent.addChildComponentAfter(myThirdComponent, mySecondComponent);
+	var componentOne = new Moobile.Component('<div class="component-one"></div>');
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>');
+	var componentThree = new Moobile.Component('<div class="third"></div>');
+	componentOne.addChildComponent(componentTwo);
+	componentOne.addChildComponentAfter(componentThree, componentTwo);
 
 Resulting element:
 
-	<div class="first">
-		<div class="second"></div>
+	<div class="component-one">
+		<div class="component-two"></div>
 		<div class="third"></div>
 	</div>
 
@@ -308,17 +315,17 @@ Name        | Type                                           | Description
 
 #### Example:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>');
-	var myThirdComponent   = new Moobile.Component('<div class="third"></div>');
-	myFirstComponent.addChildComponent(mySecondComponent);
-	myFirstComponent.addChildComponentBefore(myThirdComponent, mySecondComponent);
+	var componentOne = new Moobile.Component('<div class="component-one"></div>');
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>');
+	var componentThree = new Moobile.Component('<div class="third"></div>');
+	componentOne.addChildComponent(componentTwo);
+	componentOne.addChildComponentBefore(componentThree, componentTwo);
 
 Resulting element:
 
-	<div class="first">
+	<div class="component-one">
 		<div class="third"></div>
-		<div class="second"></div>
+		<div class="component-two"></div>
 	</div>
 
 -----
@@ -339,10 +346,10 @@ Name   | Type   | Description
 
 #### Example:
 
-	var myFirstComponent  = new Moobile.Component('<div class="first"></div>');
-	var mySecondComponent = new Moobile.Component('<div class="second"></div>', null, 'my-second-component');
-	myFirstComponent.addChildComponent(mySecondComponent);
-	myFirstComponent.getChildComponent('my-second-component'); // Returns mySecondComponent
+	var componentOne = new Moobile.Component('<div class="component-one"></div>');
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>', null, 'my-second-component');
+	componentOne.addChildComponent(componentTwo);
+	componentOne.getChildComponent('my-second-component'); // returns componentTwo
 
 -----
 
@@ -363,12 +370,12 @@ Name   | Type   | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button(null, null, 'foo');
-	var myImage      = new Moobile.Image(null, null, 'foo');
-	myComponent.addChildComponent(myButton);
-	myComponent.addChildComponent(myImage);
-	myComponent.getChildComponentOfType(Moobile.Image, 'foo'); // Returns myImage
+	var component = new Moobile.Component();
+	var button = new Moobile.Button(null, null, 'foo');
+	var image = new Moobile.Image(null, null, 'foo');
+	component.addChildComponent(button);
+	component.addChildComponent(image);
+	component.getChildComponentOfType(Moobile.Image, 'foo'); // returns image
 
 -----
 
@@ -388,12 +395,12 @@ Name    | Type   | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton);
-	myComponent.addChildComponent(myImage);
-	myComponent.getChildComponentAt(0); // Returns myButton
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(button);
+	component.addChildComponent(image);
+	component.getChildComponentAt(0); // returns button
 
 -----
 
@@ -414,12 +421,12 @@ Name    | Type   | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton);
-	myComponent.addChildComponent(myImage);
-	myComponent.getChildComponentOfTypeAt(Moobile.Image, 0); // Returns myImage
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(button);
+	component.addChildComponent(image);
+	component.getChildComponentOfTypeAt(Moobile.Image, 0); // returns image
 
 -----
 
@@ -439,12 +446,12 @@ Name        | Type                                           | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton);
-	myComponent.addChildComponent(myImage);
-	myComponent.getChildComponentIndex(Moobile.Image); // Returns 1
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(button);
+	component.addChildComponent(image);
+	component.getChildComponentIndex(Moobile.Image); // returns 1
 
 -----
 
@@ -458,14 +465,12 @@ Returns all the components in this component.
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton1     = new Moobile.Button();
-	var myButton2     = new Moobile.Button();
-	var myButton3     = new Moobile.Button();
-	myComponent.addChildComponent(myButton1);
-	myComponent.addChildComponent(myButton2);
-	myComponent.addChildComponent(myButton3);
-	myComponent.getChildComponents(); // Returns [myButton1, myButton2, myButton3]
+	var component = new Moobile.Component();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	component.addChildComponent(buttonOne);
+	component.addChildComponent(buttonTwo);
+	component.getChildComponents(); // returns [buttonOne, buttonTwo]
 
 -----
 
@@ -485,16 +490,14 @@ Name   | Type  | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton1    = new Moobile.Button();
-	var myButton2    = new Moobile.Button();
-	var myButton3    = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton1);
-	myComponent.addChildComponent(myButton2);
-	myComponent.addChildComponent(myButton3);
-	myComponent.addChildComponent(myImage);
-	myComponent.getChildComponentsOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+	var component = new Moobile.Component();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(buttonOne);
+	component.addChildComponent(buttonTwo);
+	component.addChildComponent(image);
+	component.getChildComponentsOfType(Moobile.Button); // returns [buttonOne, buttonTwo]
 
 -----
 
@@ -514,10 +517,10 @@ Name        | Type                                           | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	myComponent.addChildComponent(myButton);
-	myComponent.hasChildComponent(myButton); // Returns true
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	component.addChildComponent(button);
+	component.hasChildComponent(button); // returns true
 
 -----
 
@@ -537,12 +540,12 @@ Name   | Type  | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton);
-	myComponent.addChildComponent(myImage);
-	myComponent.hasChildComponentOfType(Moobile.Image); // Returns true
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(button);
+	component.addChildComponent(image);
+	component.hasChildComponentOfType(Moobile.Image); // returns true
 
 -----
 
@@ -564,11 +567,11 @@ Name                 | Type                                           | Descript
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton1    = new Moobile.Button();
-	var myButton2    = new Moobile.Button();
-	myComponent.addChildComponent(myButton1);
-	myComponent.replaceChildComponent(myButton1, myButton2); // Replaces myButton1 with myButton2
+	var component = new Moobile.Component();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	component.addChildComponent(buttonOne);
+	component.replaceChildComponent(buttonOne, buttonTwo); // Replaces buttonOne with buttonTwo
 
 -----
 
@@ -589,10 +592,10 @@ Name                 | Type                                           | Descript
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton     = new Moobile.Button();
-	myComponent.addChildComponent(myButton);
-	myComponent.removeChildComponent(myButton); // Removes myButton
+	var component = new Moobile.Component();
+	var button = new Moobile.Button();
+	component.addChildComponent(button);
+	component.removeChildComponent(button); // Removes button
 
 -----
 
@@ -629,16 +632,14 @@ Name                 | Type    | Description
 
 #### Example:
 
-	var myComponent  = new Moobile.Component();
-	var myButton1    = new Moobile.Button();
-	var myButton2    = new Moobile.Button();
-	var myButton3    = new Moobile.Button();
-	var myImage      = new Moobile.Image();
-	myComponent.addChildComponent(myButton1);
-	myComponent.addChildComponent(myButton2);
-	myComponent.addChildComponent(myButton3);
-	myComponent.addChildComponent(myImage);
-	myComponent.removeAllChildComponentsOfType(Moobile.Button); // Removes myButton1, myButton2, myButton3
+	var component = new Moobile.Component();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	var image = new Moobile.Image();
+	component.addChildComponent(buttonOne);
+	component.addChildComponent(buttonTwo);
+	component.addChildComponent(image);
+	component.removeAllChildComponentsOfType(Moobile.Button); // Removes buttonOne, buttonTwo
 
 -----
 
@@ -1117,19 +1118,17 @@ Name       | Type                                           | Description
 
 #### Examples:
 
-For every element with the `data-role="wrapped"` attribute found in all types of components, an element will be created and wrapped around it.
+##### For every element with the `data-role="wrapped"` attribute found in all types of components, an element will be created and wrapped around it.
 
 	 Moobile.Component.defineRole('wrapped', null, function(element) {
 	 	new Element('div.wrapped').wraps(element);
 	 });
 
-For every elements with the `data-role="popup"` attribute, a new `Moobile.Alert` instance will be created and added to the view as a child component.
+##### For every elements with the `data-role="button"` attribute, a new `Moobile.Button` instance will be created and added to the view as a child component.
 
 	Moobile.Component.defineRole('warning', Moobile.View, function(element) {
-		var alert = new Moobile.Alert();
-		alert.setMessage(element.get('html'));
-		this.addChildComponent(alert, 'after', element);
-		element.destroy();
+		var button = new Moobile.Button(element);
+		this.addChildComponent(button);
 	});
 
 -----

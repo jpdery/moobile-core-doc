@@ -95,7 +95,7 @@
         '&lt;div data-role="button" data-name="my-button"&gt;Button&lt;/div&gt;' +
     '&lt;/div&gt;';
 var component = new Moobile.Component(element);
-component.getChildComponent('my-button'); // Returns a Moobile.Button instance
+component.getChildComponent('my-button'); // returns a Moobile.Button instance
 </code></pre>
 
 <h5>Creating a component with multiple children:</h5>
@@ -107,9 +107,9 @@ component.getChildComponent('my-button'); // Returns a Moobile.Button instance
         '&lt;div data-role="button" data-name="my-button-2"&gt;Button 2&lt;/div&gt;' +
     '&lt;/div&gt;';
 var component = new Moobile.Component(element);
-component.getChildComponent('my-image'); // Returns a Moobile.Image instance
-component.getChildComponent('my-button-1'); // Returns a Moobile.Button instance
-component.getChildComponent('my-button-2'); // Returns a Moobile.Button instance
+component.getChildComponent('my-image'); // returns a Moobile.Image instance
+component.getChildComponent('my-button-1'); // returns a Moobile.Button instance
+component.getChildComponent('my-button-2'); // returns a Moobile.Button instance
 </code></pre>
 
 <h5>Creating a component with a complex hierarchy:</h5>
@@ -122,8 +122,16 @@ component.getChildComponent('my-button-2'); // Returns a Moobile.Button instance
         '&lt;/div&gt;' +
     '&lt;/div&gt;';
 var component = new Moobile.Component(element);
-component.getChildComponent('my-button-image'); // Returns null! The image is a child of the button.
-component.getChildComponent('my-button').getChildComponent('my-button-image'); // Returns a Moobile.Image instance.
+component.getChildComponent('my-button-image'); // returns null! The image is a child of the button.
+component.getChildComponent('my-button').getChildComponent('my-button-image'); // returns a Moobile.Image instance.
+</code></pre>
+
+<h5>Creating a component that passes options using element attributes</h5>
+
+<pre class="prettyprint"><code>var element =
+    '&lt;div data-option-style-name="moo" data-option-some-option="value"&gt;' +
+    '&lt;/div&gt;';
+var component = new Moobile.Component(element);
 </code></pre>
 
 <h2 id="events">Events</h2>
@@ -230,31 +238,31 @@ component.getChildComponent('my-button').getChildComponent('my-button-image'); /
 
 <h5>Adding a component at the top:</h5>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
-myFirstComponent.addChildComponent(mySecondComponent, 'top');
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;');
+componentOne.addChildComponent(componentTwo, 'top');
 </code></pre>
 
 <p>Resulting element:</p>
 
-<pre class="prettyprint"><code>&lt;div class="first"&gt;
-    &lt;div class="second"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div class="component-one"&gt;
+    &lt;div class="component-two"&gt;&lt;/div&gt;
     &lt;span&gt;Lorem&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
 <h5>Adding a component at the botom:</h5>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
-myFirstComponent.addChildComponent(mySecondComponent, 'bottom');
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;span&gt;Lorem&lt;/span&gt;&lt;/div&gt;')
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;');
+componentOne.addChildComponent(componentTwo, 'bottom');
 </code></pre>
 
 <p>Resulting element:</p>
 
-<pre class="prettyprint"><code>&lt;div class="first"&gt;
+<pre class="prettyprint"><code>&lt;div class="component-one"&gt;
     &lt;span&gt;Lorem&lt;/span&gt;
-    &lt;div class="second"&gt;&lt;/div&gt;
+    &lt;div class="component-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -281,16 +289,16 @@ myFirstComponent.addChildComponent(mySecondComponent, 'bottom');
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;div class="me"&gt;&lt;/div&gt;&lt;/div&gt;')
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
-myFirstComponent.addChildComponentInside(mySecondComponent, '.me');
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;div class="me"&gt;&lt;/div&gt;&lt;/div&gt;')
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;');
+componentOne.addChildComponentInside(componentTwo, '.me');
 </code></pre>
 
 <p>Resulting element:</p>
 
-<pre class="prettyprint"><code>&lt;div class="first"&gt;
+<pre class="prettyprint"><code>&lt;div class="component-one"&gt;
     &lt;div class="me"&gt;
-        &lt;div class="second"&gt;&lt;/div&gt;
+        &lt;div class="component-two"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -315,17 +323,17 @@ myFirstComponent.addChildComponentInside(mySecondComponent, '.me');
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;/div&gt;');
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
-var myThirdComponent   = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
-myFirstComponent.addChildComponent(mySecondComponent);
-myFirstComponent.addChildComponentAfter(myThirdComponent, mySecondComponent);
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;/div&gt;');
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;');
+var componentThree = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
+componentOne.addChildComponent(componentTwo);
+componentOne.addChildComponentAfter(componentThree, componentTwo);
 </code></pre>
 
 <p>Resulting element:</p>
 
-<pre class="prettyprint"><code>&lt;div class="first"&gt;
-    &lt;div class="second"&gt;&lt;/div&gt;
+<pre class="prettyprint"><code>&lt;div class="component-one"&gt;
+    &lt;div class="component-two"&gt;&lt;/div&gt;
     &lt;div class="third"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -350,18 +358,18 @@ myFirstComponent.addChildComponentAfter(myThirdComponent, mySecondComponent);
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;/div&gt;');
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;');
-var myThirdComponent   = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
-myFirstComponent.addChildComponent(mySecondComponent);
-myFirstComponent.addChildComponentBefore(myThirdComponent, mySecondComponent);
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;/div&gt;');
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;');
+var componentThree = new Moobile.Component('&lt;div class="third"&gt;&lt;/div&gt;');
+componentOne.addChildComponent(componentTwo);
+componentOne.addChildComponentBefore(componentThree, componentTwo);
 </code></pre>
 
 <p>Resulting element:</p>
 
-<pre class="prettyprint"><code>&lt;div class="first"&gt;
+<pre class="prettyprint"><code>&lt;div class="component-one"&gt;
     &lt;div class="third"&gt;&lt;/div&gt;
-    &lt;div class="second"&gt;&lt;/div&gt;
+    &lt;div class="component-two"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -382,10 +390,10 @@ myFirstComponent.addChildComponentBefore(myThirdComponent, mySecondComponent);
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components were found with that name.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myFirstComponent  = new Moobile.Component('&lt;div class="first"&gt;&lt;/div&gt;');
-var mySecondComponent = new Moobile.Component('&lt;div class="second"&gt;&lt;/div&gt;', null, 'my-second-component');
-myFirstComponent.addChildComponent(mySecondComponent);
-myFirstComponent.getChildComponent('my-second-component'); // Returns mySecondComponent
+<pre class="prettyprint"><code>var componentOne = new Moobile.Component('&lt;div class="component-one"&gt;&lt;/div&gt;');
+var componentTwo = new Moobile.Component('&lt;div class="component-two"&gt;&lt;/div&gt;', null, 'my-second-component');
+componentOne.addChildComponent(componentTwo);
+componentOne.getChildComponent('my-second-component'); // returns componentTwo
 </code></pre>
 
 <hr><h3 id="getChildComponentOfType">getChildComponentOfType(type, name)</h3>
@@ -408,12 +416,12 @@ myFirstComponent.getChildComponent('my-second-component'); // Returns mySecondCo
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components of that type were found with the name.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button(null, null, 'foo');
-var myImage      = new Moobile.Image(null, null, 'foo');
-myComponent.addChildComponent(myButton);
-myComponent.addChildComponent(myImage);
-myComponent.getChildComponentOfType(Moobile.Image, 'foo'); // Returns myImage
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button(null, null, 'foo');
+var image = new Moobile.Image(null, null, 'foo');
+component.addChildComponent(button);
+component.addChildComponent(image);
+component.getChildComponentOfType(Moobile.Image, 'foo'); // returns image
 </code></pre>
 
 <hr><h3 id="getChildComponentAt">getChildComponentAt(index)</h3>
@@ -433,12 +441,12 @@ myComponent.getChildComponentOfType(Moobile.Image, 'foo'); // Returns myImage
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components were found at the index.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton);
-myComponent.addChildComponent(myImage);
-myComponent.getChildComponentAt(0); // Returns myButton
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(button);
+component.addChildComponent(image);
+component.getChildComponentAt(0); // returns button
 </code></pre>
 
 <hr><h3 id="getChildComponentOfTypeAt">getChildComponentOfTypeAt(type, index)</h3>
@@ -461,12 +469,12 @@ myComponent.getChildComponentAt(0); // Returns myButton
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> The component or <code>null</code> if no components of that type were found at the index.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton);
-myComponent.addChildComponent(myImage);
-myComponent.getChildComponentOfTypeAt(Moobile.Image, 0); // Returns myImage
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(button);
+component.addChildComponent(image);
+component.getChildComponentOfTypeAt(Moobile.Image, 0); // returns image
 </code></pre>
 
 <hr><h3 id="getChildComponentIndex">getChildComponentIndex(component)</h3>
@@ -486,12 +494,12 @@ myComponent.getChildComponentOfTypeAt(Moobile.Image, 0); // Returns myImage
 <ul><li><code>Number</code> The component index or <code>-1</code> if the component is not present in this component.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton);
-myComponent.addChildComponent(myImage);
-myComponent.getChildComponentIndex(Moobile.Image); // Returns 1
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(button);
+component.addChildComponent(image);
+component.getChildComponentIndex(Moobile.Image); // returns 1
 </code></pre>
 
 <hr><h3 id="getChildComponents">getChildComponents()</h3>
@@ -503,14 +511,12 @@ myComponent.getChildComponentIndex(Moobile.Image); // Returns 1
 <ul><li><code>Array</code> An array of all the components in this component.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton1     = new Moobile.Button();
-var myButton2     = new Moobile.Button();
-var myButton3     = new Moobile.Button();
-myComponent.addChildComponent(myButton1);
-myComponent.addChildComponent(myButton2);
-myComponent.addChildComponent(myButton3);
-myComponent.getChildComponents(); // Returns [myButton1, myButton2, myButton3]
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var buttonOne = new Moobile.Button();
+var buttonTwo = new Moobile.Button();
+component.addChildComponent(buttonOne);
+component.addChildComponent(buttonTwo);
+component.getChildComponents(); // returns [buttonOne, buttonTwo]
 </code></pre>
 
 <hr><h3 id="getAllChildComponentOfType">getChildComponentsOfType(type)</h3>
@@ -530,16 +536,14 @@ myComponent.getChildComponents(); // Returns [myButton1, myButton2, myButton3]
 <ul><li><code>Array</code> An array of all the components of the type in this component.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton1    = new Moobile.Button();
-var myButton2    = new Moobile.Button();
-var myButton3    = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton1);
-myComponent.addChildComponent(myButton2);
-myComponent.addChildComponent(myButton3);
-myComponent.addChildComponent(myImage);
-myComponent.getChildComponentsOfType(Moobile.Button); // Returns [myButton1, myButton2, myButton3]
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var buttonOne = new Moobile.Button();
+var buttonTwo = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(buttonOne);
+component.addChildComponent(buttonTwo);
+component.addChildComponent(image);
+component.getChildComponentsOfType(Moobile.Button); // returns [buttonOne, buttonTwo]
 </code></pre>
 
 <hr><h3 id="hasChildComponent">hasChildComponent(component)</h3>
@@ -559,10 +563,10 @@ myComponent.getChildComponentsOfType(Moobile.Button); // Returns [myButton1, myB
 <ul><li><code>Boolean</code> Whether the component is present in this component.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-myComponent.addChildComponent(myButton);
-myComponent.hasChildComponent(myButton); // Returns true
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+component.addChildComponent(button);
+component.hasChildComponent(button); // returns true
 </code></pre>
 
 <hr><h3 id="hasChildComponentOfType">hasChildComponentOfType(type)</h3>
@@ -582,12 +586,12 @@ myComponent.hasChildComponent(myButton); // Returns true
 <ul><li><code>Boolean</code> Whether this component has at least one component of that type.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton);
-myComponent.addChildComponent(myImage);
-myComponent.hasChildComponentOfType(Moobile.Image); // Returns true
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(button);
+component.addChildComponent(image);
+component.hasChildComponentOfType(Moobile.Image); // returns true
 </code></pre>
 
 <hr><h3 id="replaceChildComponent">replaceChildComponent(component, replacement, [destroy])</h3>
@@ -613,11 +617,11 @@ myComponent.hasChildComponentOfType(Moobile.Image); // Returns true
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton1    = new Moobile.Button();
-var myButton2    = new Moobile.Button();
-myComponent.addChildComponent(myButton1);
-myComponent.replaceChildComponent(myButton1, myButton2); // Replaces myButton1 with myButton2
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var buttonOne = new Moobile.Button();
+var buttonTwo = new Moobile.Button();
+component.addChildComponent(buttonOne);
+component.replaceChildComponent(buttonOne, buttonTwo); // Replaces buttonOne with buttonTwo
 </code></pre>
 
 <hr><h3 id="removeChildComponent">removeChildComponent(component, [destroy])</h3>
@@ -640,10 +644,10 @@ myComponent.replaceChildComponent(myButton1, myButton2); // Replaces myButton1 w
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton     = new Moobile.Button();
-myComponent.addChildComponent(myButton);
-myComponent.removeChildComponent(myButton); // Removes myButton
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var button = new Moobile.Button();
+component.addChildComponent(button);
+component.removeChildComponent(button); // Removes button
 </code></pre>
 
 <hr><h3 id="removeAllChildComponents">removeAllChildComponents([destroy])</h3>
@@ -681,16 +685,14 @@ myComponent.removeChildComponent(myButton); // Removes myButton
 <ul><li><a href="../Component/Component.html">Moobile.Component</a> This Moobile.Component instance.</li>
 </ul><h4>Example:</h4>
 
-<pre class="prettyprint"><code>var myComponent  = new Moobile.Component();
-var myButton1    = new Moobile.Button();
-var myButton2    = new Moobile.Button();
-var myButton3    = new Moobile.Button();
-var myImage      = new Moobile.Image();
-myComponent.addChildComponent(myButton1);
-myComponent.addChildComponent(myButton2);
-myComponent.addChildComponent(myButton3);
-myComponent.addChildComponent(myImage);
-myComponent.removeAllChildComponentsOfType(Moobile.Button); // Removes myButton1, myButton2, myButton3
+<pre class="prettyprint"><code>var component = new Moobile.Component();
+var buttonOne = new Moobile.Button();
+var buttonTwo = new Moobile.Button();
+var image = new Moobile.Image();
+component.addChildComponent(buttonOne);
+component.addChildComponent(buttonTwo);
+component.addChildComponent(image);
+component.removeAllChildComponentsOfType(Moobile.Button); // Removes buttonOne, buttonTwo
 </code></pre>
 
 <hr><h3 id="removeFromParentComponent">removeFromParentComponent([destroy])</h3>
@@ -1114,20 +1116,18 @@ the end of your implementation.</p>
   <td>The function that defines the role's behavior.</td>
 </tr></tbody></table><h4>Examples:</h4>
 
-<p>For every element with the <code>data-role="wrapped"</code> attribute found in all types of components, an element will be created and wrapped around it.</p>
+<h5>For every element with the <code>data-role="wrapped"</code> attribute found in all types of components, an element will be created and wrapped around it.</h5>
 
 <pre class="prettyprint"><code> Moobile.Component.defineRole('wrapped', null, function(element) {
     new Element('div.wrapped').wraps(element);
  });
 </code></pre>
 
-<p>For every elements with the <code>data-role="popup"</code> attribute, a new <code>Moobile.Alert</code> instance will be created and added to the view as a child component.</p>
+<h5>For every elements with the <code>data-role="button"</code> attribute, a new <code>Moobile.Button</code> instance will be created and added to the view as a child component.</h5>
 
 <pre class="prettyprint"><code>Moobile.Component.defineRole('warning', Moobile.View, function(element) {
-    var alert = new Moobile.Alert();
-    alert.setMessage(element.get('html'));
-    this.addChildComponent(alert, 'after', element);
-    element.destroy();
+    var button = new Moobile.Button(element);
+    this.addChildComponent(button);
 });
 </code></pre>
 

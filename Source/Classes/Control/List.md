@@ -3,7 +3,7 @@ Moobile.List
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a list control.
+Provides a list control that handles list items.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -16,17 +16,17 @@ Initialization {#initialize}
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`element` *Optional* | Element | The list group's element, element id or html string.
-`options` *Optional* | Object  | The list group's options, see below.
-`name`    *Optional* | String  | The list group's name.
+`element` *Optional* | Element | The list's element, element id or html string.
+`options` *Optional* | Object  | The list's options, see below.
+`name`    *Optional* | String  | The list's name.
 
 #### Options:
 
 Name           | Type    | Description
 -------------- | ------- | -----------
-`className`    | String  | The list group's extended CSS class name, defaults to `null`.
-`styleName`    | String  | The list group's default style, defaults to `null`.
-`tagName`      | String  | The list group's element tag name, defaults to `ul`.
+`className`    | String  | The list's extended CSS class name, defaults to `null`.
+`styleName`    | String  | The list's default style, defaults to `null`.
+`tagName`      | String  | The list's element tag name, defaults to `ul`.
 
 #### Generates:
 
@@ -43,39 +43,53 @@ List item can be added to the list by adding elements with the `list-item` `data
 		<li data-role="list-item">Item 4</li>
 	</div>
 
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
+- `didAddChildComponent`: Call the parent method at the `top` of your implementation if you override this method.
+- `didRemoveChildComponent`: Call the parent method at the `top` of your implementation if you override this method.
+
 #### Defined roles:
 
-Name   | Description
------- | -----------
-`list` | Defines an element acting as a list. Use the `data-list` property to specify a subclass instead.
+Name   | Description                                           | Applies to     | Note
+------ | ----------------------------------------------------- | -------------- | ----
+`list` | Defines an element acting as a `Moobile.List` control | All components | Use the `data-list` attribute to specify a subclass instead
+
+#### Examples:
+
+##### Specifying an element that acts a list control using the `data-role` attribute:
+
+	<ul data-role="list"></ul>
+
+##### Specifying an element that acts a list subclass using the `data-role` attribute:
+
+	<ul data-role="list" data-list="MyList"></ul>
 
 Events {#events}
 --------------------------------------------------------------------------------
 
 ### select
 
-Fired when a button is selected.
+Fired when a list item is selected.
 
 #### Arguments
 
 Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md)  | The button that was selected.
+`item`   | [Moobile.Button](../Control/ListItem.md)  | The selected list item.
 
 ### deselect
 
-Fired when a button is deselected.
+Fired when a list-item is deselected.
 
 #### Arguments
 
 Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md)  | The button that was deselected.
-
-Members {#members}
---------------------------------------------------------------------------------
-
-This class does not define additional members.
+`item`   | [Moobile.Button](../Control/ListItem.md)  | The deselected list item.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -96,6 +110,15 @@ Name           | Type                                       | Description
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list  = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(itemOne);
+	list.addButton(itemTwo);
+	list.setSelectedItem(itemOne); // selects the first item
+
 -----
 
 ### getSelectedItem() {#getSelectedItem}
@@ -105,6 +128,16 @@ Returns the selected item.
 #### Returns:
 
 - [Moobile.ListItem](../Control/ListItem.md) The selected item or `null` if no items are selected.
+
+#### Example:
+
+	var list  = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(itemOne);
+	list.addButton(itemTwo);
+	list.setSelectedItem(itemOne);
+	list.getSelectedItem(); // returns itemOne
 
 -----
 
@@ -122,6 +155,15 @@ Name    | Type   | Description
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list  = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(itemOne);
+	list.addButton(itemTwo);
+	list.setSelectedItemIndex(0);
+
 -----
 
 ### getSelectedItemIndex() {#getSelectedItemIndex}
@@ -132,6 +174,16 @@ Returns the selected item index.
 
 - `Number` The selected item index or `-1` if no items are selected.
 
+#### Example:
+
+	var list  = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(itemOne);
+	list.addButton(itemTwo);
+	list.setSelectedItemIndex(0);
+	list.getSelectedItemInde(); // returns 0
+
 -----
 
 ### clearSelectedItem() {#clearSelectedItem}
@@ -141,6 +193,16 @@ Unselects the selected item.
 #### Returns:
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
+
+#### Example:
+
+	var list  = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(itemOne);
+	list.addButton(itemTwo);
+	list.setSelectedItemIndex(0);
+	list.clearSelectedItem();
 
 -----
 
@@ -159,6 +221,12 @@ Name               | Type                                       | Description
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	list.addItem(itemOne);
+
 -----
 
 ### addItemAfter(item, after) {#addItemAfter}
@@ -176,6 +244,14 @@ Name     | Type                                       | Description
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addItem(itemOne);
+	list.addItemAfter(itemTwo, itemOne); // itemTwo is after itemOne
+
 -----
 
 ### addItemBefore(item, before) {#addItemBefore}
@@ -186,18 +262,26 @@ Adds the specified item before an item from this list.
 
 Name     | Type                                       | Description
 -------- | ------------------------------------------ | -----------
-`button` | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`item`   | [Moobile.ListItem](../Control/ListItem.md) | The item.
 `before` | [Moobile.ListItem](../Control/ListItem.md) | The item will be placed before this item.
 
 #### Returns:
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addItem(itemOne);
+	list.addItemBefore(itemTwo, itemOne); // itemTwo is before itemOne
+
 -----
 
 ### getItem(name) {#getItem}
 
-Returns an item that matching the specified name.
+Returns an item that matches the specified name.
 
 #### Parameters:
 
@@ -208,6 +292,13 @@ Name   | Type   | Description
 #### Returns:
 
 - [Moobile.ListItem](../Control/ListItem.md) The item or `null` if no items were found with the name.
+
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem(null, null, 'me');
+	list.addItem(itemOne);
+	list.getItem('me'); // returns itemOne
 
 -----
 
@@ -224,6 +315,15 @@ Name    | Type   | Description
 #### Returns:
 
 - [Moobile.ListItem](../Control/ListItem.md) The item or `null` if no items were found at the index.
+
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
+	list.getItemAt(0); // returns itemOne
 
 -----
 
@@ -242,6 +342,15 @@ Name      | Type                                       | Description
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
 
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
+	list.removeItem(itemOne); // the list contains only itemTwo
+
 -----
 
 ### removeAllItems() {#removeAllItems}
@@ -255,3 +364,12 @@ Name      | Type     | Description
 #### Returns:
 
 - [Moobile.List](../Control/List.md) This Moobile.List instance.
+
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
+	list.removeAllItems(itemOne); // no items remains

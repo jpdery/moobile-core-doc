@@ -39,25 +39,25 @@ Name        | Type   | Description
 Upon initialization, this control creates its item with a [Moobile.BarItem](../Control/BarItem.md) instance using the bar element's content. For instance, if you create a bar like this:
 
 	<div data-role="bar">
-		<div class="element-1"></div>
-		<div class="element-2"></div>
+		<div class="element-one"></div>
+		<div class="element-two"></div>
 	</div>
 
 The result will be:
 
-	<div data-role="bar">
+	<div data-role="bar" class="bar">
 		<div data-role="item" class="bar-item">
-			<div class="element-1"></div>
-			<div class="element-2"></div>
+			<div class="element-one"></div>
+			<div class="element-two"></div>
 		</div>
 	</div>
 
 If you wish to put elements outside of the bar item, you will have to specify which element has the `item` role:
 
 	<div data-role="bar">
-		<div class="element-1"></div>
+		<div class="element-one"></div>
 		<div data-role="item"></div>
-		<div class="element-2"></div>
+		<div class="element-two"></div>
 	</div>
 
 #### Subclassing Notes:
@@ -69,24 +69,24 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name  | Description
------ | -----------
-`bar` | Defines an element acting as a [Moobile.BarItem](../Control/BarItem.md) control. Use the `data-bar` property to specify a subclass instead.
+Name  | Description                                          | Applies to      | Note
+----- | ---------------------------------------------------- | --------------- | ----
+`bar` | Defines an element acting as a `Moobile.Bar` control |  All components | Use the `data-bar` attribute to specify a subclass instead
 
 #### Examples:
 
-##### Creating a bar using the `data-role` attribute of an element:
+##### Specifying an element that acts a bar control using the `data-role` attribute:
 
 	<div data-role="bar"></div>
 
-##### Creating a bar using the `data-role` attribute of an element and specifying a subclass:
+##### Specifying an element that acts a bar subclass using the `data-role` attribute:
 
-	<div data-role="bar" data-bar="MyBarClass"></div>
+	<div data-role="bar" data-bar="MyBar"></div>
 
-##### Creating a bar and specifying the element that will act as its bar item.
+##### Specifying an element that acts a bar control and the element that acts as its item:
 
 	<div data-role="bar">
-		<div data-role="bar-item"></div>
+		<div data-role="item"></div>
 	</div>
 
 Methods {#methods}
@@ -108,10 +108,8 @@ Name   | Type                                     | Description
 
 #### Example:
 
-	var bar     = new Moobile.Bar();
-	var barItem = new Moobile.BarItem();
-	var title   = new Moobile.Text().setText('Title');
-	item.addChildComponent(title);
+	var bar = new Moobile.Bar();
+	var item = new Moobile.BarItem();
 	bar.setItem(item);
 
 -----
@@ -123,6 +121,11 @@ Returns this bar's [Moobile.BarItem](../Control/BarItem.md) control.
 #### Returns:
 
 - [Moobile.BarItem](../Control/BarItem.md) The bar item.
+
+#### Example:
+
+	var bar = new Moobile.Bar();
+	bar.getItem(); // returns a Moobile.BarItem instance created automatically.
 
 Styles {#styles}
 --------------------------------------------------------------------------------

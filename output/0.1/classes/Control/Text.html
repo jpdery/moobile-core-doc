@@ -82,15 +82,23 @@
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>text</code></td>
-  <td>Defines an element acting as a text. Use the <code>data-text</code> property to specify a subclass instead.</td>
-</tr></tbody></table><h2 id="events">Events</h2>
+  <td>Defines an element acting as a <code>Moobile.Text</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-text</code> attribute to specify a subclass instead</td>
+</tr></tbody></table><h4>Examples:</h4>
 
-<p>This class does not define additional events.</p>
+<h5>Specifying an element that acts a text control using the <code>data-role</code> attribute:</h5>
 
-<h2 id="members">Members</h2>
+<pre class="prettyprint"><code>&lt;span data-role="text"&gt;&lt;/span&gt;
+</code></pre>
 
-<p>This class does not define additional members.</p>
+<h5>Specifying an element that acts a list item subclass using the <code>data-role</code> attribute:</h5>
+
+<pre class="prettyprint"><code>&lt;span data-role="text" data-text="MyText"&gt;&lt;/span&gt;
+</code></pre>
 
 <h2 id="methods">Methods</h2>
 
@@ -109,15 +117,27 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Text.html">Moobile.Text</a> This Moobile.Text instance.</li>
-</ul><hr><h3>getText()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var text = new Moobile.Text();
+text.setText('Moo');
+</code></pre>
+
+<hr><h3>getText()</h3>
 
 <p>Return the text using this element's <code>html</code> property. The returned text may contain HTML elements.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><code>String</code> The text.</li>
-</ul></div>
+</ul><h4>Example:</h4>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a></li><li><a href="#members">Members</a></li><li><a href="#methods">Methods</a><ul><li><a href="#">setText</a></li><li><a href="#">getText</a></li></ul></li></ul></div>
+<pre class="prettyprint"><code>var text = new Moobile.Text();
+text.setText('Moo');
+text.getText(); // returns 'Moo'
+</code></pre>
+</div>
+
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#">setText</a></li><li><a href="#">getText</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

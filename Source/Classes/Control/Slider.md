@@ -27,6 +27,8 @@ Name        | Type   | Description
 `className` | String | The slider's extended CSS class name, defaults to `null`.
 `styleName` | String | The slider's default style, defaults to `null`.
 `tagName`   | String | The slider's element tag name, defaults to `div`.
+`min`       | Number | The slider's minimum value, defaults to `0`.
+`max`       | Number | The slider's maximum value, defaults to `100`.
 
 #### Generates:
 
@@ -36,11 +38,29 @@ Name        | Type   | Description
 		</div>
 	</div>
 
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `didBecomeReady`: Call the parent method at the `top` of your implementation if you override this method.
+- `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
+
 #### Defined roles:
 
-Name     | Description
--------- | -----------
-`slider` | Defines an element acting as a slider. Use the `data-slider` property to specify a subclass instead.
+Name     | Description                                             | Applies to     | Note
+-------- | ------------------------------------------------------- | -------------- | -------------------------------------------------------------
+`slider` | Defines an element acting as a `Moobile.Slider` control | All components | Use the `data-slider` attribute to specify a subclass instead
+
+#### Examples:
+
+##### Specifying an element that acts a slider control using the `data-role` attribute:
+
+	<div data-role="slider"></div>
+
+##### Specifying an element that acts a slider subclass using the `data-role` attribute:
+
+	<div data-role="button" data-button="MySlider"></div>
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -52,21 +72,33 @@ Fired when the slider's value change either by setting the value manually or by 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### `Slider` slider {#slider}
+### slider {#slider}
 
 The mootools slider used to move this slider's thumb on the track.
 
+#### Type
+
+	- `Slider`
+
 -----
 
-### `Element` track {#track}
+### trackElement {#trackElement}
 
 The element used to create this slider's track.
 
+#### Type
+
+	- `Element`
+
 -----
 
-### `Element` thumb {#thumb}
+### thumbElement {#thumbElement}
 
 The element used to create this slider's thumb.
+
+#### Type
+
+	- `Element`
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -85,6 +117,11 @@ Name    | Type   | Description
 
 - [Moobile.Slider](../Control/Slider.md) This Moobile.Slider instance.
 
+#### Example:
+
+	var slider = new Moobile.Slider();
+	slider.setValue(50);
+
 -----
 
 ### getValue() {#getValue}
@@ -95,7 +132,8 @@ Returns this slider's current value.
 
 - `Number` The current value.
 
-Styles {#styles}
---------------------------------------------------------------------------------
+#### Example:
 
-This control does not define any styles.
+	var slider = new Moobile.Slider();
+	slider.setValue(50);
+	slider.getValue(); // returns 50

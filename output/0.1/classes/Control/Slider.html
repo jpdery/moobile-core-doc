@@ -73,6 +73,12 @@
 </tr><tr><td><code>tagName</code></td>
   <td>String</td>
   <td>The slider's element tag name, defaults to <code>div</code>.</td>
+</tr><tr><td><code>min</code></td>
+  <td>Number</td>
+  <td>The slider's minimum value, defaults to <code>0</code>.</td>
+</tr><tr><td><code>max</code></td>
+  <td>Number</td>
+  <td>The slider's maximum value, defaults to <code>100</code>.</td>
 </tr></tbody></table><h4>Generates:</h4>
 
 <pre class="prettyprint"><code>&lt;div class="slider"&gt;
@@ -82,13 +88,36 @@
 &lt;/div&gt;
 </code></pre>
 
-<h4>Defined roles:</h4>
+<h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>didBecomeReady</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+<li><code>destroy</code>  : Call the parent method at the <code>bottom</code> of your implementation if you override this method.</li>
+</ul><h4>Defined roles:</h4>
 
 <table><thead><tr><th>Name</th>
   <th>Description</th>
+  <th>Applies to</th>
+  <th>Note</th>
 </tr></thead><tbody><tr><td><code>slider</code></td>
-  <td>Defines an element acting as a slider. Use the <code>data-slider</code> property to specify a subclass instead.</td>
-</tr></tbody></table><h2 id="events">Events</h2>
+  <td>Defines an element acting as a <code>Moobile.Slider</code> control</td>
+  <td>All components</td>
+  <td>Use the <code>data-slider</code> attribute to specify a subclass instead</td>
+</tr></tbody></table><h4>Examples:</h4>
+
+<h5>Specifying an element that acts a slider control using the <code>data-role</code> attribute:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="slider"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>Specifying an element that acts a slider subclass using the <code>data-role</code> attribute:</h5>
+
+<pre class="prettyprint"><code>&lt;div data-role="button" data-button="MySlider"&gt;&lt;/div&gt;
+</code></pre>
+
+<h2 id="events">Events</h2>
 
 <h3>change</h3>
 
@@ -96,17 +125,32 @@
 
 <h2 id="members">Members</h2>
 
-<h3 id="slider"><code>Slider</code> slider</h3>
+<h3 id="slider">slider</h3>
 
 <p>The mootools slider used to move this slider's thumb on the track.</p>
 
-<hr><h3 id="track"><code>Element</code> track</h3>
+<h4>Type</h4>
+
+<pre class="prettyprint"><code>- `Slider`
+</code></pre>
+
+<hr><h3 id="trackElement">trackElement</h3>
 
 <p>The element used to create this slider's track.</p>
 
-<hr><h3 id="thumb"><code>Element</code> thumb</h3>
+<h4>Type</h4>
+
+<pre class="prettyprint"><code>- `Element`
+</code></pre>
+
+<hr><h3 id="thumbElement">thumbElement</h3>
 
 <p>The element used to create this slider's thumb.</p>
+
+<h4>Type</h4>
+
+<pre class="prettyprint"><code>- `Element`
+</code></pre>
 
 <h2 id="methods">Methods</h2>
 
@@ -125,18 +169,27 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><a href="../Control/Slider.html">Moobile.Slider</a> This Moobile.Slider instance.</li>
-</ul><hr><h3 id="getValue">getValue()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var slider = new Moobile.Slider();
+slider.setValue(50);
+</code></pre>
+
+<hr><h3 id="getValue">getValue()</h3>
 
 <p>Returns this slider's current value.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><code>Number</code> The current value.</li>
-</ul><h2 id="styles">Styles</h2>
+</ul><h4>Example:</h4>
 
-<p>This control does not define any styles.</p>
+<pre class="prettyprint"><code>var slider = new Moobile.Slider();
+slider.setValue(50);
+slider.getValue(); // returns 50
+</code></pre>
 </div>
 
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">change</a></li></ul></li><li><a href="#members">Members</a><ul><li><a href="#slider">Slider slider</a></li><li><a href="#track">Element track</a></li><li><a href="#thumb">Element thumb</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setValue">setValue</a></li><li><a href="#getValue">getValue</a></li></ul></li><li><a href="#styles">Styles</a></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">change</a></li></ul></li><li><a href="#members">Members</a><ul><li><a href="#slider">slider</a></li><li><a href="#trackElement">trackElement</a></li><li><a href="#thumbElement">thumbElement</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setValue">setValue</a></li><li><a href="#getValue">getValue</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>

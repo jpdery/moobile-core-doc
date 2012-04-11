@@ -50,29 +50,24 @@ This class overrides the following method:
 
 - `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
 - `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
+- `didAddChildComponent`: Call the parent method at the `top` of your implementation if you override this method.
+- `didRemoveChildComponent`: Call the parent method at the `top` of your implementation if you override this method.
 
 #### Defined roles:
 
-Name           | Description
--------------- | -----------
-`button-group` | Defines an element acting as a button group. Use the `data-button-group` property to specify a subclass instead.
+Name           | Description                                                  | Applies to     | Note
+-------------- | ------------------------------------------------------------ | -------------- | ----
+`button-group` | Defines an element acting as a `Moobile.ButtonGroup` control | All components | Use the `data-button-group` attribute to specify a subclass instead
 
 #### Examples:
 
-##### Creating a button group using the `data-role` attribute of an element:
+##### Specifying an element that acts a button group control using the `data-role` attribute:
 
 	<div data-role="button-group"></div>
 
-##### Creating a button group using the `data-role` attribute of an element and specifying a subclass:
+##### Specifying an element that acts a button group subclass using the `data-role` attribute:
 
-	<div data-role="button-group" data-button="MyButtonGroupClass"></div>
-
-##### Creating a button group and adding buttons:
-
-	<div data-role="button">
-		<div data-role="button">Button 1</div>
-		<div data-role="button">Button 2</div>
-	</div>
+	<div data-role="button-group" data-button="MyButtonGroup"></div>
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -85,7 +80,7 @@ Fired when a button is selected.
 
 Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md)  | The button that was selected.
+`button` | [Moobile.Button](../Control/Button.md)  | The selected button.
 
 ### deselect
 
@@ -119,11 +114,11 @@ Name             | Type                                   | Description
 #### Example:
 
 	var buttonGroup = new Moobile.ButtonGroup();
-	var button1 = new Moobile.Button();
-	var button2 = new Moobile.Button();
-	buttonGroup.addButton(button1);
-	buttonGroup.addButton(button2);
-	buttonGroup.setSelectedButton(button1); // selects the first button
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.setSelectedButton(buttonOne); // selects the first button
 
 -----
 
@@ -134,6 +129,16 @@ Returns the selected button.
 #### Returns:
 
 - [Moobile.Button](../Control/Button.md) The selected button or `null` if no buttons are selected.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.setSelectedButton(buttonOne);
+	buttonGroup.getSelectedButton(); // returns buttonOne
 
 -----
 
@@ -154,10 +159,10 @@ Name    | Type   | Description
 #### Example:
 
 	var buttonGroup = new Moobile.ButtonGroup();
-	var button1 = new Moobile.Button();
-	var button2 = new Moobile.Button();
-	buttonGroup.addButton(button1);
-	buttonGroup.addButton(button2);
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
 	buttonGroup.setSelectedButtonIndex(0); // selects the first button
 
 -----
@@ -170,6 +175,16 @@ Returns the index of the selected button or `-1` if no buttons are selected.
 
 - `Number` The selected button index or `-1` if no buttons are selected.
 
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.setSelectedButtonIndex(0);
+	buttonGroup.getSelectedButtonIndex(); // returns 0
+
 -----
 
 ### clearSelectedButton() {#clearSelectedButton}
@@ -179,6 +194,16 @@ Unselects the selected button.
 #### Returns:
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.setSelectedButtonIndex(0);
+	buttonGroup.clearSelectedButton();
 
 -----
 
@@ -200,8 +225,8 @@ Name               | Type                                   | Description
 #### Example:
 
 	var buttonGroup = new Moobile.ButtonGroup();
-	var button = new Moobile.Button();
-	buttonGroup.addButton(button);
+	var buttonOne = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
 
 -----
 
@@ -223,12 +248,10 @@ Name     | Type                                   | Description
 #### Example:
 
 	var buttonGroup = new Moobile.ButtonGroup();
-	var button1 = new Moobile.Button();
-	var button2 = new Moobile.Button();
-	var button3 = new Moobile.Button();
-	buttonGroup.addButton(button1);
-	buttonGroup.addButton(button2);
-	buttonGroup.addButtonAfter(button3, button1); // button3 is between button1 and button2
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButtonAfter(buttonTwo, buttonOne); // buttonTwo is after buttonOne
 
 -----
 
@@ -250,18 +273,16 @@ Name     | Type                                   | Description
 #### Example:
 
 	var buttonGroup = new Moobile.ButtonGroup();
-	var button1 = new Moobile.Button();
-	var button2 = new Moobile.Button();
-	var button3 = new Moobile.Button();
-	buttonGroup.addButton(button1);
-	buttonGroup.addButton(button2);
-	buttonGroup.addButtonBefore(button3, button2); // button3 is between button1 and button2
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButtonBefore(buttonTwo, buttonOne); // buttonTwo is before buttonOne
 
 -----
 
 ### getButton(name) {#getButton}
 
-Returns a button that matching the specified name.
+Returns a button that matches the specified name.
 
 #### Parameters:
 
@@ -272,6 +293,13 @@ Name   | Type   | Description
 #### Returns:
 
 - [Moobile.Button](../Control/Button.md) The button or `null` if no buttons were found with the name.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button(null, null, 'me');
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.getButton('me'); // returns buttonOne
 
 -----
 
@@ -288,6 +316,15 @@ Name    | Type   | Description
 #### Returns:
 
 - [Moobile.Button](../Control/Button.md) The button or `null` if no buttons were found at the index.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.getButtonAt(0); // returns buttonOne
 
 -----
 
@@ -306,6 +343,15 @@ Name      | Type                                   | Description
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
 
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.removeButton(buttonOne); // the button group contains only buttonTwo
+
 -----
 
 ### removeAllButtons() {#removeAllButtons}
@@ -321,3 +367,12 @@ Name      | Type     | Description
 #### Returns:
 
 - [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.removeAllButtons(); // no buttons remains

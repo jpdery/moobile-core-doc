@@ -35,19 +35,19 @@ Name        | Type    | Description
 
 #### Defined roles:
 
-Name    | Description
-------- | -----------
-`image` | Defines an element acting as an image. Use the `data-image` property to specify a subclass instead.
+Name    | Description                                            | Applies to      | Note
+------- | ------------------------------------------------------ | --------------- | ----
+`image` | Defines an element acting as a `Moobile.Image` control |  All components | Use the `data-image` attribute to specify a subclass instead
 
 #### Examples:
 
-##### Creating an image using the `data-role` attribute of an element:
+##### Specifying an element that acts an image control using the `data-role` attribute:
 
 	<img data-role="image" />
 
-##### Creating an image using the `data-role` attribute of an element and specifying a subclass:
+##### Specifying an element that acts an image subclass using the `data-role` attribute:
 
-	<img data-role="image" data-image="MyImageClass" />
+	<img data-role="image" data-image="MyImage" />
 
 Events {#events}
 --------------------------------------------------------------------------------
@@ -79,6 +79,11 @@ Name     | Type   | Description
 
 - [Moobile.Image](../Control/Image.md) This Moobile.Image instance.
 
+#### Example:
+
+	var image = new Moobile.Image();
+	image.setSource('path/to/an-image.png');
+
 -----
 
 ### getSource() {#getSource}
@@ -88,6 +93,12 @@ Returns the image source from the `src` attribute of the element.
 #### Returns:
 
 - String The image source.
+
+#### Example:
+
+	var image = new Moobile.Image();
+	image.setSource('path/to/an-image.png');
+	image.getSource(); // returns 'path/to/an-image.png'
 
 -----
 
@@ -99,6 +110,12 @@ Returns the `Image` object used to preload this image. The `preload` option must
 
 - `Image` The `Image` object used to preload this image.
 
+#### Example:
+
+	var image = new Moobile.Image(null, {preload: true});
+	image.setSource('path/to/an-image.png');
+	image.getImage(); // return the Image object.
+
 -----
 
 ### getOriginalSize() {#getOriginalSize}
@@ -108,6 +125,14 @@ Returns the original image size. The `preload` option must be set to `true` othe
 #### Returns:
 
 - `Object` The original image size object with two keys, `x` for the width and `y` for the height.
+
+#### Example:
+
+	var image = new Moobile.Image(null, {preload: true});
+	image.setSource('path/to/an-image.png');
+	image.addEvent('load', function() {
+		image.getOriginalSize(); // returns {x: X,y: Y}
+	});
 
 -----
 
@@ -119,3 +144,11 @@ Indicates whether the image is loaded.
 
 - `Boolean` Whether the image is loaded.
 
+#### Example:
+
+	var image = new Moobile.Image(null, {preload: true});
+	image.setSource('path/to/an-image.png');
+	image.addEvent('load', function() {
+		image.isLoaded(); // returns true
+	});
+	image.isLoaded(); // returns false

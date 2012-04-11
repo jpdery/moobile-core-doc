@@ -39,7 +39,7 @@ Name        | Type   | Description
 
 Name           | Description
 -------------- | -----------
-`view`         | Defines an element acting as a view. Use the `data-view` property to specify a subclass instead.
+`view`         | Defines an element acting as a view. Use the `data-view` attribute to specify a subclass instead
 `view-content` | Defines an element acting as a view's content. If unspecified, the contents of the content's element will act as its view content.
 
 #### Note:

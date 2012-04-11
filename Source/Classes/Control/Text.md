@@ -34,19 +34,19 @@ Name        | Type   | Description
 
 #### Defined roles:
 
-Name   | Description
------- | -----------
-`text` | Defines an element acting as a text. Use the `data-text` property to specify a subclass instead.
+Name   | Description                                           | Applies to     | Note
+------ | ----------------------------------------------------- | -------------- | -----------------------------------------------------------
+`text` | Defines an element acting as a `Moobile.Text` control | All components | Use the `data-text` attribute to specify a subclass instead
 
-Events {#events}
---------------------------------------------------------------------------------
+#### Examples:
 
-This class does not define additional events.
+##### Specifying an element that acts a text control using the `data-role` attribute:
 
-Members {#members}
---------------------------------------------------------------------------------
+	<span data-role="text"></span>
 
-This class does not define additional members.
+##### Specifying an element that acts a list item subclass using the `data-role` attribute:
+
+	<span data-role="text" data-text="MyText"></span>
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -65,6 +65,11 @@ Name   | Type   | Description
 
 - [Moobile.Text](../Control/Text.md) This Moobile.Text instance.
 
+#### Example:
+
+	var text = new Moobile.Text();
+	text.setText('Moo');
+
 -----
 
 ### getText()
@@ -74,3 +79,9 @@ Return the text using this element's `html` property. The returned text may cont
 #### Returns:
 
 - `String` The text.
+
+#### Example:
+
+	var text = new Moobile.Text();
+	text.setText('Moo');
+	text.getText(); // returns 'Moo'

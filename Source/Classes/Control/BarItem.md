@@ -40,5 +40,8 @@ This class overrides the following method:
 
 - `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
 
+#### Defined roles:
 
-
+Name   | Description                                              | Applies to                                        | Note
+------ | -------------------------------------------------------- | ------------------------------------------------- | ----
+`item` | Defines an element acting as a `Moobile.BarItem` control | [Moobile.Bar](../Control/Moobile.Bar.md) controls | Use the `data-item` attribute to specify a subclass instead
