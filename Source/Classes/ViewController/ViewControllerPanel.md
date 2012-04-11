@@ -48,7 +48,7 @@ Returns the main view controller.
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* The main view controller.
+- [Moobile.ViewController](../ViewController/ViewController.md) The main view controller.
 
 -----
 
@@ -74,7 +74,7 @@ Returns the side view controller.
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* The side view controller.
+- [Moobile.ViewController](../ViewController/ViewController.md) The side view controller.
 
 Events {#events}
 --------------------------------------------------------------------------------

@@ -3,14 +3,73 @@ Moobile.ViewController
 
 ##### Extends [Moobile.EventFirer](../Event/EventFirer.md)
 
-Provides an object for managing a view and its view controller hierarchy. You will rarely instantiate a `Moobile.ViewController` directly, instead you would instantiate a subclass of `Moobile.ViewController` based on the task it performs.
+Provides an object for managing a view and its view controller hierarchy.
+
+Initialization {#initialize}
+--------------------------------------------------------------------------------
+
+#### Syntax:
+
+	var viewController = new Moobile.ViewController([options], [name]);
+
+#### Parameters:
+
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`options` *Optional* | Object  | The view controller's options.
+`name`    *Optional* | String  | The view controller's name.
+
+#### Subclassing Notes:
+
+Don't instantiate this class. Instead, extend it by creating subclasses for your own implementation.
+
+#### Example
+
+File at /templates/say-hello-view.html:
+
+	<div class="say-hello-view">
+		<h2>Tap the button</h2>
+		<div data-role="button" data-name="tap-me-button">Tap me!</div>
+	</div>
+
+The view controller:
+
+	var SayHelloViewController = new Class({
+
+		Extends: Moobile.ViewController,
+
+		tapMeButton: null,
+
+		loadView: function() {
+			this.view = Moobile.View.at('/templates/say-hello-view.html');
+		},
+
+		viewDidLoad: function() {
+			this.tapMeButton = this.view.getChildComponent('tap-me-button');
+			this.tapMeButton.addEvent('tap', this.bound('onTapMeButtonTap'));
+		},
+
+		destroy: function() {
+			this.tapMeButton.removeEvent('tap', this.bound('onTapMeButtonTap'));
+			this.tapMeButton = null;
+			this.parent();
+		},
+
+		onTapMeButtonTap: function(e, sender) {
+			alert('Mooooooooo!');
+		}
+	});
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### [Moobile.View](../View/View.md) view {#view}
+### view {#view}
 
 The view managed by the current view controller. Must be initialized using the `loadView` method.
+
+#### Type:
+
+- [Moobile.View](../View/View.md)
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -18,6 +77,39 @@ Methods {#methods}
 ### loadView() {#loadView}
 
 Creates the view managed by this view controller. Override this method and assign a view instance to the `view` member of this class. Do not call the parent method as it could overwrite your view.
+
+#### Note:
+
+Do not call the parent method when overriding this method, this would overwrite the current view.
+
+#### Example
+
+##### Loading a view:
+
+	var CowViewController = new Class({
+		Extends: Moobile.ViewController,
+		loadView: function() {
+			var element = new Element('div.my-view').grab(new Element('h1').set('html', 'This is my view'));
+			this.view = new Moobile.View(element);
+		}
+	});
+
+##### Loading a view from a file:
+
+The content of the file at `/templates/my-view.html`:
+
+	<div class="my-view">
+		<h1>This is my view</h1>
+	</div>
+
+The view controller:
+
+	var CowViewController = new Class({
+		Extends: Moobile.ViewController,
+		loadView: function() {
+			this.view = Moobile.View.at('/templates/my-view.html');
+		}
+	});
 
 -----
 
@@ -33,7 +125,13 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
 
 -----
 
@@ -50,7 +148,15 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	var viewControllerThree = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.addChildViewControllerAfter(viewControllerThree, viewControllerTwo); // viewControllerThree is after viewControllerTwo
 
 -----
 
@@ -67,7 +173,15 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	var viewControllerThree = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.addChildViewControllerBefore(viewControllerThree, viewControllerTwo); // viewControllerThree is before viewControllerTwo
 
 -----
 
@@ -83,7 +197,14 @@ Name   | Type   | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* The child view controller or `null` if no child view controllers were found.
+- [Moobile.ViewController](../ViewController/ViewController.md) The child view controller or `null` if no child view controllers were found.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController(null, 'me');
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.getChildViewController('me'); // returns viewControllerTwo
 
 -----
 
@@ -99,7 +220,14 @@ Name    | Type   | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* The child view controller or `null` if no child view controllers exist at the given index.
+- [Moobile.ViewController](../ViewController/ViewController.md) The child view controller or `null` if no child view controllers exist at the given index.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.getChildViewControllerAt(0); // returns viewControllerTwo
 
 -----
 
@@ -117,6 +245,13 @@ Name             | Type                                                         
 
 - *Number* The child view controller index or `-1` if the given child view controller is not in this view controller's hierarchy.
 
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.getChildViewControllerIndex(viewControllerTwo); // returns 0
+
 -----
 
 ### getChildViewControllers() {#getChildViewControllers}
@@ -126,6 +261,15 @@ Return an array containing all child view controllers.
 #### Returns:
 
 - *Array* Array containing all children view controllers.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	var viewControllerThree = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.addChildViewController(viewControllerThree);
+	viewControllerOne.getChildViewControllers(); // returns [viewControllerTwo, viewControllerThree]
 
 -----
 
@@ -143,6 +287,12 @@ Name             | Type                                                         
 
 - *Boolean* Whether the given view controller is a child of this view controller.
 
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.hasChildViewController(viewControllerTwo); // returns true
 
 -----
 
@@ -159,11 +309,18 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.removeChildViewController(viewControllerTwo); // removes viewControllerTwo
 
 -----
 
-### removeChildViewControllers(, [destroy]) {#removeChildViewControllers}
+### removeChildViewControllers([destroy]) {#removeChildViewControllers}
 
 Removes all child view controllers. If `destroy` is `true`, All child view controllers will also be destroyed.
 
@@ -175,7 +332,16 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	var viewControllerThree = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerOne.addChildViewController(viewControllerThree);
+	viewControllerOne.removeChildViewControllers(); // viewControllerTwo and viewControllerThree are removed
 
 -----
 
@@ -191,7 +357,14 @@ Name      | Type    | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.addChildViewController(viewControllerTwo);
+	viewControllerTwo.removeFromParentViewController(); // viewControllerTwo is removed
 
 -----
 
@@ -208,7 +381,13 @@ Name                        | Type                                              
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.presentModalViewController(viewControllerTwo); // the viewControllerTwo's view is presented over the viewControllerOne's view
 
 -----
 
@@ -218,7 +397,14 @@ Dismisses the current modal view controller and destroy it.
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewControllerOne = new Moobile.ViewController();
+	var viewControllerTwo = new Moobile.ViewController();
+	viewControllerOne.presentModalViewController(viewControllerTwo);
+	viewControllerOne.dismissModalViewController(); // the viewControllerTwo's view is removed
 
 -----
 
@@ -229,6 +415,11 @@ Returns the view controller name.
 #### Returns:
 
 - *String* The name.
+
+#### Example:
+
+	var viewController = new Moobile.ViewController(null, 'me');
+	viewController.getName(); // returns 'me'
 
 -----
 
@@ -244,7 +435,12 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewController = new Moobile.ViewController();
+	viewController.setTitle('Moo');
 
 -----
 
@@ -255,6 +451,12 @@ Returns the title.
 #### Returns:
 
 - [Moobile.Text](../Control/Text.md) The title.
+
+#### Example:
+
+	var viewController = new Moobile.ViewController();
+	viewController.setTitle('Moo');
+	viewController.getTitle(); // returns 'Moo'
 
 -----
 
@@ -270,7 +472,12 @@ Name    | Type  | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+#### Example:
+
+	var viewController = new Moobile.ViewController();
+	viewController.setImage('path/to/an-image.png');
 
 -----
 
@@ -280,7 +487,13 @@ Returns the image.
 
 #### Returns:
 
-- *[Moobile.Image](../Control/Image.md)* The image.
+- [Moobile.Image](../Control/Image.md) The image.
+
+#### Example:
+
+	var viewController = new Moobile.ViewController();
+	viewController.setImage('path/to/an-image.png');
+	viewController.getImage(); // returns a Moobile.Image instance.
 
 -----
 
@@ -296,7 +509,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
 
 -----
 
@@ -344,7 +557,7 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
 
 -----
 
@@ -370,7 +583,7 @@ Name                  | Type                                                    
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
 
 -----
 
@@ -396,7 +609,7 @@ Name                  | Type                                                    
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
 
 -----
 
@@ -422,7 +635,7 @@ Name                   | Type                                                   
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
 
 -----
 
@@ -532,7 +745,7 @@ Tells this view controller it has dismissed the current modal view controller. O
 
 -----
 
-### didRotateToOrientation(orientation) {#didRotateToOrientation}
+### didRotate(orientation) {#didRotate}
 
 Tells this view controller the device orientation changed. Override this method to provide your own implementation.
 
@@ -586,9 +799,4 @@ Destroys this view controller's view controller hierarchy as well as the view it
 
 #### Returns:
 
-- *[Moobile.ViewController](../ViewController/ViewController.md)* This Moobile.ViewController instance.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-This class does not fire events at the moment.
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.

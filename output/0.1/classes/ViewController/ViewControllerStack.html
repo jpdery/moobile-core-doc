@@ -23,6 +23,9 @@
 			<li><a href="../Control/NavigationBarItem.html"><span>Moobile.</span>NavigationBarItem</a></li>
 			<li><a href="../Control/Slider.html"><span>Moobile.</span>Slider</a></li>
 			<li><a href="../Control/Text.html"><span>Moobile.</span>Text</a></li>
+		</ul><h2>Dialog</h2>
+
+		<ul class="file-list"><li><a href="../Dialog/Alert.html"><span>Moobile.</span>Alert</a></li>
 		</ul><h2>Event</h2>
 
 		<ul class="file-list"><li><a href="../Event/EventFirer.html"><span>Moobile.</span>EventFirer</a></li>
@@ -30,6 +33,19 @@
 
 		<ul class="file-list"><li><a href="../View/View.html"><span>Moobile.</span>View</a></li>
 			<li><a href="../View/ScrollView.html"><span>Moobile.</span>ScrollView</a></li>
+		</ul><h2>ViewController</h2>
+
+		<ul class="file-list"><li><a href="../ViewController/ViewController.html"><span>Moobile.</span>ViewController</a></li>
+			<li><a href="../ViewController/ViewControllerStack.html"><span>Moobile.</span>ViewControllerStack</a></li>
+		</ul><h2>ViewTransition</h2>
+
+		<ul class="file-list"><li><a href="../ViewTransition/ViewTransition.html"><span>Moobile.</span>ViewTransition</a></li>
+			<li><a href="../ViewTransition/ViewTransition.Slider.html"><span>Moobile.</span>ViewTransition.Slider</a></li>
+			<li><a href="../ViewTransition/ViewTransition.Cubic.html"><span>Moobile.</span>ViewTransition.Cubic</a></li>
+			<li><a href="../ViewTransition/ViewTransition.Cover.html"><span>Moobile.</span>ViewTransition.Cover</a></li>
+			<li><a href="../ViewTransition/ViewTransition.Flip.html"><span>Moobile.</span>ViewTransition.Flip</a></li>
+			<li><a href="../ViewTransition/ViewTransition.Fade.html"><span>Moobile.</span>ViewTransition.Fade</a></li>
+			<li><a href="../ViewTransition/ViewTransition.None.html"><span>Moobile.</span>ViewTransition.None</a></li>
 		</ul></div>
 
 	<div id="content" class="content"><h1>Moobile.ViewControllerStack</h1>
@@ -52,13 +68,85 @@
   <th>Description</th>
 </tr></thead><tbody><tr><td><code>options</code> <em>Optional</em></td>
   <td>Object</td>
-  <td>The view controller stack's options, see below.</td>
+  <td>The view controller stack's options.</td>
 </tr><tr><td><code>name</code>    <em>Optional</em></td>
   <td>String</td>
   <td>The view controller stack's name.</td>
-</tr></tbody></table><h4>Options:</h4>
+</tr></tbody></table><h4>Example:</h4>
 
-<p>This class does not defines options at the moment.</p>
+<p>File at /templates/home-view.html:</p>
+
+<pre class="prettyprint"><code>&lt;div class="home-view"&gt;
+    &lt;h2&gt;Tap the button&lt;/h2&gt;
+    &lt;div data-role="button" data-name="moo-button"&gt;Moo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>File at /templates/moo-view.html:</p>
+
+<pre class="prettyprint"><code>&lt;div class="moo-view"&gt;
+    &lt;div data-role="button" data-name="back-button"&gt;Back&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The view controller:</p>
+
+<pre class="prettyprint"><code>var HomeViewController = new Class({
+
+    Extends: Moobile.ViewController,
+
+    mooButton: null,
+
+    loadView: function() {
+        this.view = Moobile.View.at('/templates/home-view.html');
+    },
+
+    viewDidLoad: function() {
+        this.mooButton = this.view.getChildComponent('moo-button');
+        this.mooButton.addEvent('tap', this.bound('onMooButtonTap'));
+    },
+
+    destroy: function() {
+        this.mooButton.removeEvent('tap', this.bound('onMooButtonTap'));
+        this.mooButton = null;
+        this.parent();
+    },
+
+    onTapMeButtonTap: function(e, sender) {
+        this.getViewControllerStack().pushViewController(new MooViewController(), new Moobile.ViewTransition.Slide); // shows MooViewController using a sliding transition
+    }
+});
+
+var MooViewController = new Class({
+
+    Extends: Moobile.ViewController,
+
+    backButton: null,
+
+    loadView: function() {
+        this.view = Moobile.View.at('/templates/moo-view.html');
+    },
+
+    viewDidLoad: function() {
+        this.backButton = this.view.getChildComponent('back-button');
+        this.backButton.addEvent('tap', this.bound('onBackButtonTap'));
+    },
+
+    destroy: function() {
+        this.backButton.removeEvent('tap', this.bound('onBackButtonTap'));
+        this.backButton = null;
+        this.parent();
+    },
+
+    onTapMeButtonTap: function(e, sender) {
+        this.getParentViewController().popViewController();
+    }
+
+});
+
+var viewControllerStack = new Moobile.ViewControllerStack();
+viewControllerStack.pushViewController(new HomeViewController); // shows HomeViewController without transitions
+</code></pre>
 
 <h2 id="methods">Methods</h2>
 
@@ -80,14 +168,27 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><em><a href="../ViewController/ViewControllerStack.html">Moobile.ViewControllerStack</a></em> This Moobile.ViewControllerStack instance.</li>
-</ul><hr><h3 id="popViewController">popViewController()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var viewControllerStack = new Moobile.ViewControllerStack();
+viewControllerStack.pushViewController(new Moobile.ViewController, new Moobile.ViewTransition.Cubic); // shows a new view controller using a cubic transition
+</code></pre>
+
+<hr><h3 id="popViewController">popViewController()</h3>
 
 <p>Removes the top view controller using the same view transition that was used to push it and destroy it.</p>
 
 <h4>Returns:</h4>
 
 <ul><li><em><a href="../ViewController/ViewControllerStack.html">Moobile.ViewControllerStack</a></em> This Moobile.ViewControllerStack instance.</li>
-</ul><hr><h3 id="popViewControllerUntil">popViewControllerUntil(viewController)</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var viewControllerStack = new Moobile.ViewControllerStack();
+viewControllerStack.pushViewController(new Moobile.ViewController, new Moobile.ViewTransition.Cubic);
+viewControllerStack.popViewController(); // removes MoobileViewController using the cubic transition
+</code></pre>
+
+<hr><h3 id="popViewControllerUntil">popViewControllerUntil(viewController)</h3>
 
 <p>Pops view controllers until a specified view controller is reached.</p>
 
@@ -102,14 +203,36 @@
 </tr></tbody></table><h4>Returns:</h4>
 
 <ul><li><em><a href="../ViewController/ViewControllerStack.html">Moobile.ViewControllerStack</a></em> This Moobile.ViewControllerStack instance.</li>
-</ul><hr><h3 id="getTopViewController">getTopViewController()</h3>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var viewControllerStack = new Moobile.ViewControllerStack();
+var viewControllerOne = new Moobile.ViewController();
+var viewControllerTwo = new Moobile.ViewController();
+var viewControllerThree = new Moobile.ViewController();
+viewControllerStack.pushViewController(viewControllerOne);
+viewControllerStack.pushViewController(viewControllerTwo);
+viewControllerStack.pushViewController(viewControllerThree);
+viewControllerStack.popViewControllerUntil(viewControllerOne); // removes viewControllerThree and viewControllerThree
+</code></pre>
+
+<hr><h3 id="getTopViewController">getTopViewController()</h3>
 
 <p>Returns the current view controller.</p>
 
 <h4>Returns:</h4>
 
-<ul><li><em><a href="../ViewController/ViewController.html">Moobile.ViewController</a></em> This Moobile.ViewControllerStack instance.</li>
-</ul><hr><h3 id="willPushViewController">willPushViewController(viewController)</h3>
+<ul><li><a href="../ViewController/ViewController.html">Moobile.ViewController</a> This Moobile.ViewControllerStack instance.</li>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var viewControllerStack = new Moobile.ViewControllerStack();
+var viewControllerOne = new Moobile.ViewController();
+var viewControllerTwo = new Moobile.ViewController();
+viewControllerStack.pushViewController(viewControllerOne);
+viewControllerStack.pushViewController(viewControllerTwo);
+viewControllerStack.getTopViewController(); // returns viewControllerTwo
+</code></pre>
+
+<hr><h3 id="willPushViewController">willPushViewController(viewController)</h3>
 
 <p>Tells this view controller it's about to push a view controller.</p>
 
@@ -163,11 +286,8 @@
 </tr></thead><tbody><tr><td><code>viewController</code></td>
   <td><a href="../ViewController/ViewController.html">Moobile.ViewController</a></td>
   <td>The popped view controller.</td>
-</tr></tbody></table><h2 id="events">Events</h2>
+</tr></tbody></table></div>
 
-<p>This class does not fire events at the moment.</p>
-</div>
-
-	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialization">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#pushViewController">pushViewController</a></li><li><a href="#popViewController">popViewController</a></li><li><a href="#popViewControllerUntil">popViewControllerUntil</a></li><li><a href="#getTopViewController">getTopViewController</a></li><li><a href="#willPushViewController">willPushViewController</a></li><li><a href="#didPushViewController">didPushViewController</a></li><li><a href="#willPopViewController">willPopViewController</a></li><li><a href="#didPopViewController">didPopViewController</a></li></ul></li><li><a href="#events">Events</a></li></ul></div>
+	<div id="toc" class="toc"><h2>Table of Contents</h2><ul><li><a href="#initialization">Initialization</a></li><li><a href="#methods">Methods</a><ul><li><a href="#pushViewController">pushViewController</a></li><li><a href="#popViewController">popViewController</a></li><li><a href="#popViewControllerUntil">popViewControllerUntil</a></li><li><a href="#getTopViewController">getTopViewController</a></li><li><a href="#willPushViewController">willPushViewController</a></li><li><a href="#didPushViewController">didPushViewController</a></li><li><a href="#willPopViewController">willPopViewController</a></li><li><a href="#didPopViewController">didPopViewController</a></li></ul></li></ul></div>
 
 	<script src="../../js/libs/mootools-core-1.4.5.min.js"></script><script src="../../js/plugins.js"></script><script src="../../js/script.js"></script></body></html>
