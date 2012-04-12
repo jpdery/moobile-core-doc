@@ -29,6 +29,10 @@ Name        | Type   | Description
 
 Don't instantiate this class. Instead, extend it by creating subclasses for your own implementation.
 
+This class overrides the following method:
+
+- `shouldFireEvent`: Returns `false` if hte control is disabled.
+
 Methods {#methods}
 --------------------------------------------------------------------------------
 

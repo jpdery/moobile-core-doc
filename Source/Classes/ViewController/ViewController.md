@@ -302,10 +302,10 @@ Removes the given viewController from the child view controllers. If `destroy` i
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to remove.
-`destroy`        | Boolean                                                       | Whether or not to destroy the view controller upon removal.
+Name                 | Type                                                          | Description
+-------------------- | ------------------------------------------------------------- | -----------
+`viewController`     | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to remove.
+`destroy` *Optional* | Boolean                                                       | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
@@ -326,9 +326,9 @@ Removes all child view controllers. If `destroy` is `true`, All child view contr
 
 #### Parameters:
 
-Name      | Type    | Description
---------- | ------- | -----------
-`destroy` | Boolean | Whether or not to destroy the view controller upon removal.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
@@ -351,9 +351,9 @@ Removes the current instance from its parent.
 
 #### Parameters:
 
-Name      | Type    | Description
---------- | ------- | -----------
-`destroy` | Boolean | Whether or not to destroy the view controller upon removal.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
