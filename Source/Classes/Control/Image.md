@@ -77,7 +77,7 @@ Name     | Type   | Description
 
 #### Returns:
 
-- [Moobile.Image](../Control/Image.md) This Moobile.Image instance.
+- `Moobile.Image` This Moobile.Image instance.
 
 #### Example:
 

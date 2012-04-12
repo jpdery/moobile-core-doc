@@ -28,7 +28,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.WindowController](Window/WindowController.md) This window controller.
+- `Moobile.WindowController` This window controller.
 
 
 -----

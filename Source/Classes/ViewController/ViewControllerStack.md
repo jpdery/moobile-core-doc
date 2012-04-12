@@ -108,7 +108,7 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)* This Moobile.ViewControllerStack instance.
+- `Moobile.ViewControllerStack` This Moobile.ViewControllerStack instance.
 
 #### Example:
 
@@ -123,7 +123,7 @@ Removes the top view controller using the same view transition that was used to 
 
 #### Returns:
 
-- *[Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)* This Moobile.ViewControllerStack instance.
+- `Moobile.ViewControllerStack` This Moobile.ViewControllerStack instance.
 
 #### Example:
 
@@ -145,7 +145,7 @@ Name             | Type                                                         
 
 #### Returns:
 
-- *[Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md)* This Moobile.ViewControllerStack instance.
+- `Moobile.ViewControllerStack` This Moobile.ViewControllerStack instance.
 
 #### Example:
 
@@ -157,7 +157,6 @@ Name             | Type                                                         
 	viewControllerStack.pushViewController(viewControllerTwo);
 	viewControllerStack.pushViewController(viewControllerThree);
 	viewControllerStack.popViewControllerUntil(viewControllerOne); // removes viewControllerThree and viewControllerThree
-
 
 -----
 

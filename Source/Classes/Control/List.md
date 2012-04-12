@@ -108,7 +108,7 @@ Name           | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -153,7 +153,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -192,7 +192,7 @@ Unselects the selected item.
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -219,7 +219,7 @@ Name               | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -242,7 +242,7 @@ Name     | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -267,7 +267,7 @@ Name     | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -340,7 +340,7 @@ Name                 | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -363,7 +363,7 @@ Name                 | Type     | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 

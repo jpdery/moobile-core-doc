@@ -105,7 +105,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.Button](../Control/Button.md) This Moobile.Button instance.
+- `Moobile.Button` This Moobile.Button instance.
 
 #### Examples:
 

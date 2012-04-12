@@ -23,7 +23,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.Alert](../Control/Alert.md) This alert.
+- `Moobile.Alert` This alert.
 
 -----
 
@@ -55,7 +55,7 @@ Name      | Type  | Description
 
 #### Returns:
 
-- [Moobile.Alert](../Control/Alert.md) This alert.
+- `Moobile.Alert` This alert.
 
 -----
 
@@ -81,7 +81,7 @@ Name     | Type                        | Description
 
 #### Returns:
 
-- [Moobile.Alert](../Control/Alert.md) This alert.
+- `Moobile.Alert` This alert.
 
 -----
 

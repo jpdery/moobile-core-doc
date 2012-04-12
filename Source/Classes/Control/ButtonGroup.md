@@ -109,7 +109,7 @@ Name             | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -154,7 +154,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -193,7 +193,7 @@ Unselects the selected button.
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -220,7 +220,7 @@ Name               | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -243,7 +243,7 @@ Name     | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -268,7 +268,7 @@ Name     | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -341,7 +341,7 @@ Name                 | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -366,7 +366,7 @@ Name                 | Type     | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 

@@ -22,7 +22,7 @@ Name               | Type   | Description
 
 #### Returns:
 
-- [Moobile.Entity](Entity/Entity.md) This Class instance.
+- `Moobile.EventFirer` This Class instance.
 
 #### Example:
 

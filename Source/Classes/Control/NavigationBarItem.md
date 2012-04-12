@@ -111,7 +111,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Examples:
 
@@ -158,7 +158,7 @@ Name     | Type                                      | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -181,7 +181,7 @@ Name     | Type                                      | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -229,7 +229,7 @@ Name                 | Type                                         | Descriptio
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -255,7 +255,7 @@ Name                 | Type    | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 

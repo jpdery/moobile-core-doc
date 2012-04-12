@@ -197,12 +197,12 @@ Adds the specified component at the `top` or `bottom` of this component. If `whe
 
 Name               | Type                                           | Description
 ------------------ | ---------------------------------------------- | -----------
-`component`        | [Moobile.Component](../Component/Component.md) | The component.
+`component`        | `Moobile.Component` | The component.
 `where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Examples:
 
@@ -242,13 +242,13 @@ Adds the specified component at the `top` or `bottom` of this component's elemen
 
 Name               | Type                                           | Description
 ------------------ | ---------------------------------------------- | -----------
-`component`        | [Moobile.Component](../Component/Component.md) | The component.
+`component`        | `Moobile.Component` | The component.
 `element`          | Mixed                                          | The component's element or a CSS selector.
 `where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -274,12 +274,12 @@ Adds the specified component after another child of this component.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component.
-`after`     | [Moobile.Component](../Component/Component.md) | The component will be placed after this component.
+`component` | `Moobile.Component` | The component.
+`after`     | `Moobile.Component` | The component will be placed after this component.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -306,12 +306,12 @@ Adds the specified component before another child of this component.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component.
-`before`    | [Moobile.Component](../Component/Component.md) | The component will be placed before this component.
+`component` | `Moobile.Component` | The component.
+`before`    | `Moobile.Component` | The component will be placed before this component.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -342,7 +342,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) The component or `null` if no components were found with that name.
+- `Moobile.Component` The component or `null` if no components were found with that name.
 
 #### Example:
 
@@ -366,7 +366,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) The component or `null` if no components of that type were found with the name.
+- `Moobile.Component` The component or `null` if no components of that type were found with the name.
 
 #### Example:
 
@@ -391,7 +391,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) The component or `null` if no components were found at the index.
+- `Moobile.Component` The component or `null` if no components were found at the index.
 
 #### Example:
 
@@ -417,7 +417,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) The component or `null` if no components of that type were found at the index.
+- `Moobile.Component` The component or `null` if no components of that type were found at the index.
 
 #### Example:
 
@@ -438,7 +438,7 @@ Returns the index of a specified component or `-1` if the component is not a chi
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component to search for.
+`component` | `Moobile.Component` | The component to search for.
 
 #### Returns:
 
@@ -509,7 +509,7 @@ Indicates whether a component is present in this component.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component to search for.
+`component` | `Moobile.Component` | The component to search for.
 
 #### Returns:
 
@@ -557,13 +557,13 @@ Replaces a component with another.
 
 Name                 | Type                                           | Description
 -------------------- | ---------------------------------------------- | -----------
-`component`          | [Moobile.Component](../Component/Component.md) | The component to remove.
-`replacement`        | [Moobile.Component](../Component/Component.md) | The component to replace it with.
+`component`          | `Moobile.Component` | The component to remove.
+`replacement`        | `Moobile.Component` | The component to replace it with.
 `destroy` *Optional* | Boolean                                        | Whether or not to destroy the old component.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -583,12 +583,12 @@ Removes a component.
 
 Name                 | Type                                           | Description
 -------------------- | ---------------------------------------------- | -----------
-`component`          | [Moobile.Component](../Component/Component.md) | The component to remove.
+`component`          | `Moobile.Component` | The component to remove.
 `destroy` *Optional* | Boolean                                        | Whether or not to destroy the component upon removal.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -611,7 +611,7 @@ Name                 | Type    | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -628,7 +628,7 @@ Name                 | Type    | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 #### Example:
 
@@ -655,7 +655,7 @@ Name                 | Type    | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -669,11 +669,11 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 Name     | Type                                           | Description
 -------- | ---------------------------------------------- | -----------
-`parent` | [Moobile.Component](../Component/Component.md) | The parent.
+`parent` | `Moobile.Component` | The parent.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -683,7 +683,7 @@ Returns the parent of this component.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) The parent component.
+- `Moobile.Component` The parent component.
 
 -----
 
@@ -711,7 +711,7 @@ Name     | Type                                  | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -745,7 +745,7 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -783,7 +783,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -809,7 +809,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -825,7 +825,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -841,7 +841,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -932,7 +932,7 @@ This method fires the `show` event.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -944,7 +944,7 @@ This method fires the `hide` event.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 -----
 
@@ -984,7 +984,7 @@ Override this method to provide your own implementation.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that is about to be added.
+`component` | `Moobile.Component` | The component that is about to be added.
 
 -----
 
@@ -998,7 +998,7 @@ Override this method to provide your own implementation.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that has been added.
+`component` | `Moobile.Component` | The component that has been added.
 
 -----
 
@@ -1012,7 +1012,7 @@ Override this method to provide your own implementation.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that is about to be removed.
+`component` | `Moobile.Component` | The component that is about to be removed.
 
 -----
 
@@ -1026,7 +1026,7 @@ Override this method to provide your own implementation.
 
 Name        | Type                                           | Description
 ----------- | ---------------------------------------------- | -----------
-`component` | [Moobile.Component](../Component/Component.md) | The component that has been removed.
+`component` | `Moobile.Component` | The component that has been removed.
 
 -----
 
@@ -1040,7 +1040,7 @@ Override this method to provide your own implementation.
 
 Name     | Type                                           | Description
 -------- | ---------------------------------------------- | -----------
-`parent` | [Moobile.Component](../Component/Component.md) | The component this component will be moved to.
+`parent` | `Moobile.Component` | The component this component will be moved to.
 
 -----
 
@@ -1054,7 +1054,7 @@ Override this method to provide your own implementation.
 
 Name     | Type                                           | Description
 -------- | ---------------------------------------------- | -----------
-`parent` | [Moobile.Component](../Component/Component.md) | The component this component has been moved to.
+`parent` | `Moobile.Component` | The component this component has been moved to.
 
 -----
 
@@ -1099,7 +1099,7 @@ the end of your implementation.
 
 #### Returns:
 
-- [Moobile.Component](../Component/Component.md) This Moobile.Component instance.
+- `Moobile.Component` This Moobile.Component instance.
 
 Static Methods {#static}
 --------------------------------------------------------------------------------
@@ -1113,7 +1113,7 @@ Define the process to execute upon finding an element with the given role.
 Name       | Type                                           | Description
 ---------- | ---------------------------------------------- | -----------
 `name`     | String                                         | The name.
-`target`   | [Moobile.Component](../Component/Component.md) | The target component or `null` to define the role for all components.
+`target`   | `Moobile.Component` | The target component or `null` to define the role for all components.
 `behavior` | Function                                       | The function that defines the role's behavior.
 
 #### Examples:
@@ -1142,7 +1142,7 @@ Defines a style for a component or all components if `target` is set to `null`.
 Name       | Type                                           | Description
 ---------- | ---------------------------------------------- | -----------
 `name`     | String                                         | The style name.
-`target`   | [Moobile.Component](../Component/Component.md) | The target component or `null` to define the role for all components.
+`target`   | `Moobile.Component` | The target component or `null` to define the role for all components.
 `behavior` | Object                                         | The style definition, which consists of an object with an `attach` and `detach` method.
 
 #### Example:

@@ -40,7 +40,7 @@ Name               | Type     | Description
 
 #### Returns:
 
- - *Mixed* The element that was requested or `null` if the content is loaded asynchronously.
+ - `Element` The element that was requested or `null` if the content is loaded asynchronously.
 
 #### Example:
 

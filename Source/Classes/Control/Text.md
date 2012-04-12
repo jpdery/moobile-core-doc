@@ -69,7 +69,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Text](../Control/Text.md) This Moobile.Text instance.
+- `Moobile.Text` This Moobile.Text instance.
 
 #### Example:
 

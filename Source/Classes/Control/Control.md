@@ -50,7 +50,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
+- `Moobile.Control` This Moobile.Control instance.
 
 -----
 
@@ -76,7 +76,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
+- `Moobile.Control` This Moobile.Control instance.
 
 -----
 
@@ -102,7 +102,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.Control](../Control/Control.md) This Moobile.Control instance.
+- `Moobile.Control` This Moobile.Control instance.
 
 -----
 

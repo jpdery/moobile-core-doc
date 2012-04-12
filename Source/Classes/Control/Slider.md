@@ -115,7 +115,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.Slider](../Control/Slider.md) This Moobile.Slider instance.
+- `Moobile.Slider` This Moobile.Slider instance.
 
 #### Example:
 

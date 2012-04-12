@@ -38,7 +38,7 @@ Name                 | Type                                                     
 
 #### Returns:
 
-- *[Moobile.ViewControllerPanel](../ViewController/ViewControllerPanel.md)* This Moobile.ViewControllerPanel instance.
+- `Moobile.ViewControllerPanel` This Moobile.ViewControllerPanel instance.
 
 -----
 
@@ -64,7 +64,7 @@ Name                 | Type                                                     
 
 #### Returns:
 
-- *[Moobile.ViewControllerPanel](../ViewController/ViewControllerPanel.md)* This Moobile.ViewControllerPanel instance.
+- `Moobile.ViewControllerPanel` This Moobile.ViewControllerPanel instance.
 
 -----
 

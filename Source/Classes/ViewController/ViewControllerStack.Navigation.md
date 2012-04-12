@@ -25,13 +25,3 @@ Name              | Type    | Description
 ----------------- | ------- | -----------
 `backButton`      | Boolean | Whether it needs to create a back button when necessary.
 `backButtonLabel` | String  | The back button label, defaults to `Back`.
-
-Methods {#methods}
---------------------------------------------------------------------------------
-
-This class does not defines any new methods at the moment.
-
-Events {#events}
---------------------------------------------------------------------------------
-
-This class does not fire events at the moment.

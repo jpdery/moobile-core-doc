@@ -63,7 +63,7 @@ Starts this activity indicator animation. This method adds the `activity` CSS cl
 
 #### Returns:
 
-- [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
+- `Moobile.ActivityIndicator` This Moobile.ActivityIndicator instance.
 
 #### Example:
 
@@ -78,7 +78,7 @@ Stops this activity indicator animation. This method removes the `activity` CSS 
 
 #### Returns:
 
-- [Moobile.ActivityIndicator](../Control/ActivityIndicator.md) This Moobile.ActivityIndicator instance.
+- `Moobile.ActivityIndicator` This Moobile.ActivityIndicator instance.
 
 #### Example:
 
