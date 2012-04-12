@@ -571,32 +571,6 @@ Returns the view transition.
 
 -----
 
-### setViewControllerStack(viewControllerStack) {#setViewControllerStack}
-
-Sets the view controller stack. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
-
-#### Parameters:
-
-Name                  | Type                                                                    | Description
---------------------- | ----------------------------------------------------------------------- | -----------
-`viewControllerStack` | [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md) | The view controller stack.
-
-#### Returns:
-
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
-
------
-
-### getViewControllerStack() {#getViewControllerStack}
-
-Returns the view controller stack that contains this view controller.
-
-#### Returns:
-
-- [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md) The view controller stack or `null` if this view controller is not within the hierarchy of a view controller stack.
-
------
-
 ### setViewControllerPanel(viewControllerPanel) {#setViewControllerPanel}
 
 Sets the view controller panel containing this view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.

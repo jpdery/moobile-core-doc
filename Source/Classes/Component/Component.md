@@ -97,43 +97,43 @@ A component is *ready* when its hierarchy is assigned to a window and therefore 
 
 ### tap
 
-Fired when this component receives a `tap` event.
+Fired when this component receives a `touchend` event with only one touch. The `tap` event is cancelled when the current touch moves more than `10` pixels.
 
 -----
 
 ### tapstart
 
-Fired when this component receives a `tapstart` event.
+Fired when this component receives a `touchstart` event with only one touch.
 
 -----
 
 ### tapmove
 
-Fired when this component receives a `tapmove` event.
+Fired when this component receives a `touchmove` event with only one touch.
 
 -----
 
 ### tapend
 
-Fired when this component receives a `tapend` event.
+Fired when this component receives a `touchend` event with only one touch.
 
 -----
 
 ### touchstart
 
-Fired when this component receives a `touchstart` event.
+Fired when this component receives a standard `touchstart` event.
 
 -----
 
 ### touchmove
 
-Fired when this component receives a `touchmove` event.
+Fired when this component receives a standard `touchmove` event.
 
 -----
 
 ### touchend
 
-Fired when this component receives a `touchend` event.
+Fired when this component receives a standard `touchend` event.
 
 -----
 

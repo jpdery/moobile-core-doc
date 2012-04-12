@@ -5,16 +5,6 @@ Moobile.ViewTransition.Cover
 
 Provides a view transition that covers the current view.
 
-Initialization {#initialization}
---------------------------------------------------------------------------------
+#### Example:
 
-Methods {#methods}
---------------------------------------------------------------------------------
-
-
-Members {#members}
---------------------------------------------------------------------------------
-
-
-Events {#events}
---------------------------------------------------------------------------------
+<div data-example="../../assets/classes/ViewTransition/ViewTransition.Cover.html"></div>

@@ -5,16 +5,6 @@ Moobile.ViewTransition.Cubic
 
 Provide a cubic view transition.
 
-Initialization {#initialization}
---------------------------------------------------------------------------------
+#### Example:
 
-Methods {#methods}
---------------------------------------------------------------------------------
-
-
-Members {#members}
---------------------------------------------------------------------------------
-
-
-Events {#events}
---------------------------------------------------------------------------------
+<div data-example="../../assets/classes/ViewTransition/ViewTransition.Cubic.html"></div>

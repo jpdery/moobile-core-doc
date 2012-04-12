@@ -22,18 +22,18 @@ Name                 | Type    | Description
 
 #### Options:
 
-Name           | Type    | Description
--------------- | ------- | -----------
-`className`    | String  | The view's extended CSS class name, defaults to `null`.
-`styleName`    | String  | The view's default style, defaults to `null`.
-`tagName`      | String  | The view's element tag name, defaults to `div`.
-`momentum`     | Boolean | Whether the view scrolls with momentum, defaults to `true`.
-`scrollX`      | Boolean | Whether to scroll on the x axis, defaults to `true`.
-`scrollY`      | Boolean | Whether to scroll on the y axis, defaults to `true`.
-`snapToPage`   | Boolean | Whether to snap to the current page upon release, defaults to `false`.
-`snapToPageAt` | Number  | The percentage moved to snap to the next page, defaults to `35`.
-`snapToPageDuration` | Number | The time in miliseconds for the snap animation, defaults to `150`.
-`snapToPageDelay` | Number | The view will automatically snap to the next page if the user scrolls for less than this time in miliseconds, defaults to `150`.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`className`          | String  | The view's extended CSS class name, defaults to `null`.
+`styleName`          | String  | The view's default style, defaults to `null`.
+`tagName`            | String  | The view's element tag name, defaults to `div`.
+`momentum`           | Boolean | Whether the view scrolls with momentum, defaults to `true`.
+`scrollX`            | Boolean | Whether to scroll on the x axis, defaults to `true`.
+`scrollY`            | Boolean | Whether to scroll on the y axis, defaults to `true`.
+`snapToPage`         | Boolean | Whether to snap to the current page upon release, defaults to `false`.
+`snapToPageAt`       | Number  | The percentage moved to snap to the next page, defaults to `35`.
+`snapToPageDuration` | Number  | The time in miliseconds for the snap animation, defaults to `150`.
+`snapToPageDelay`    | Number  | The view will automatically snap to the next page if the user scrolls for less than this time in miliseconds, defaults to `150`.
 
 #### Generates:
 

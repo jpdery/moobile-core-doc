@@ -5,16 +5,6 @@ Moobile.ViewTransition.Fade
 
 Provides a transition that fade under the current view.
 
-Initialization {#initialization}
---------------------------------------------------------------------------------
+#### Example:
 
-Methods {#methods}
---------------------------------------------------------------------------------
-
-
-Members {#members}
---------------------------------------------------------------------------------
-
-
-Events {#events}
---------------------------------------------------------------------------------
+<div data-example="../../assets/classes/ViewTransition/ViewTransition.Fade.html"></div>

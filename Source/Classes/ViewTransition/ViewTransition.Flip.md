@@ -5,16 +5,6 @@ Moobile.ViewTransition.Flip
 
 Provides a transition that flips the current view.
 
-Initialization {#initialization}
---------------------------------------------------------------------------------
+#### Example:
 
-Methods {#methods}
---------------------------------------------------------------------------------
-
-
-Members {#members}
---------------------------------------------------------------------------------
-
-
-Events {#events}
---------------------------------------------------------------------------------
+<div data-example="../../assets/classes/ViewTransition/ViewTransition.Flip.html"></div>

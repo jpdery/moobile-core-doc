@@ -231,3 +231,56 @@ Override this method to provide your own implementation.
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
 `viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The popped view controller.
+
+Other {#other}
+--------------------------------------------------------------------------------
+
+<span class="important">These methods are added to the [Moobile.ViewController](../ViewController/ViewController.md) class:</span>
+
+### setViewControllerStack(viewControllerStack) {#setViewControllerStack}
+
+Sets the view controller stack. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
+
+#### Parameters:
+
+Name                  | Type                                                                    | Description
+--------------------- | ----------------------------------------------------------------------- | -----------
+`viewControllerStack` | [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md) | The view controller stack.
+
+#### Returns:
+
+- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+
+-----
+
+### getViewControllerStack() {#getViewControllerStack}
+
+Returns the view controller stack that contains this view controller.
+
+#### Returns:
+
+- [Moobile.ViewControllerStack](../ViewController/ViewControllerStack.md) The view controller stack or `null` if this view controller is not within the hierarchy of a view controller stack.
+
+-----
+
+### parentViewControllerStackWillChange(viewController) {#parentViewControllerStackWillChange}
+
+Tells this view controller its parent view controller stack is about to change. Override this method to provide your own implementation.
+
+#### Parameters:
+
+Name             | Type                                                          | Description
+---------------- | ------------------------------------------------------------- | -----------
+`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | This view controller's parent view controller.
+
+-----
+
+### parentViewControllerStackDidChange(viewController) {#parentViewControllerStackDidChange}
+
+Tells this view controller its parent view controller stack has changed. Override this method to provide your own implementation.
+
+#### Parameters:
+
+Name             | Type                                                          | Description
+---------------- | ------------------------------------------------------------- | -----------
+`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | This view controller's parent view controller.
