@@ -58,7 +58,7 @@ Name     | Description                                             | Applies to 
 
 	<div data-role="slider"></div>
 
-##### Specifying an element that acts a slider subclass using the `data-role` attribute:
+##### Specifying an element that acts a slider control subclass using the `data-role` attribute:
 
 	<div data-role="button" data-button="MySlider"></div>
 

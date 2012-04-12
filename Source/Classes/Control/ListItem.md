@@ -88,7 +88,7 @@ Name        | Description                                             | Applies 
 		<li data-role="list-item"></li>
 	</ul>
 
-##### Specifying an element that acts a list item subclass using the `data-role` attribute:
+##### Specifying an element that acts a list item control subclass using the `data-role` attribute:
 
 	<ul data-role="list">
 		<li data-role="list-item" data-list-item="MyListItem" />

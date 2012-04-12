@@ -80,7 +80,7 @@ Name     | Description                                             | Applies to 
 
 	<div data-role="button"></div>
 
-##### Specifying an element that acts a button subclass using the `data-role` attribute:
+##### Specifying an element that acts a button control subclass using the `data-role` attribute:
 
 	<div data-role="button" data-button="MyButton"></div>
 

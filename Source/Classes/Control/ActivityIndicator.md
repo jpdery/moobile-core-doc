@@ -50,7 +50,7 @@ Name                 | Description                                              
 
 	<div data-role="activity-indicator"></div>
 
-##### Specifying an element that acts an activity indicator subclass using the `data-role` attribute:
+##### Specifying an element that acts an activity indicator control subclass using the `data-role` attribute:
 
 	<div data-role="activity-indicator" data-activity-indicator="MyActivityIndicator"></div>
 

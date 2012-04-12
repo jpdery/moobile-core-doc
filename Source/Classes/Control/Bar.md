@@ -79,7 +79,7 @@ Name  | Description                                          | Applies to      |
 
 	<div data-role="bar"></div>
 
-##### Specifying an element that acts a bar subclass using the `data-role` attribute:
+##### Specifying an element that acts a bar control subclass using the `data-role` attribute:
 
 	<div data-role="bar" data-bar="MyBar"></div>
 

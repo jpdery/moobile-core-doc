@@ -28,6 +28,12 @@ Name        | Type   | Description
 `styleName` | String | The text's default style, defaults to `null`.
 `tagName`   | String | The text's element tag name, defaults to `span`.
 
+#### Subclassing Notes:
+
+This class overrides the following method:
+
+- `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+
 #### Generates:
 
 	<span class="text"></span>
@@ -44,7 +50,7 @@ Name   | Description                                           | Applies to     
 
 	<span data-role="text"></span>
 
-##### Specifying an element that acts a list item subclass using the `data-role` attribute:
+##### Specifying an element that acts a text control subclass using the `data-role` attribute:
 
 	<span data-role="text" data-text="MyText"></span>
 

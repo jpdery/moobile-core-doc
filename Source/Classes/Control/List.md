@@ -64,7 +64,7 @@ Name   | Description                                           | Applies to     
 
 	<ul data-role="list"></ul>
 
-##### Specifying an element that acts a list subclass using the `data-role` attribute:
+##### Specifying an element that acts a list control subclass using the `data-role` attribute:
 
 	<ul data-role="list" data-list="MyList"></ul>
 

@@ -82,6 +82,6 @@ Name             | Description                                                  
 
 	<div data-role="navigation-bar"></li>
 
-##### Specifying an element that acts a navigation bar subclass using the `data-role` attribute:
+##### Specifying an element that acts a navigation bar control subclass using the `data-role` attribute:
 
 	<div data-role="navigation-bar" data-navigation-bar="MyNavigationBar" />

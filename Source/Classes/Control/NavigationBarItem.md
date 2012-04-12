@@ -90,7 +90,7 @@ Name    | Description                                                          |
 		<div data-role="item"></div>
 	</div>
 
-##### Specifying an element that acts a navigation bar item subclass using the `data-role` attribute:
+##### Specifying an element that acts a navigation bar item control subclass using the `data-role` attribute:
 
 	<div data-role="navigation-bar">
 		<div data-role="item" data-item="MyNavigationBarItem></div>

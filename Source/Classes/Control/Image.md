@@ -45,7 +45,7 @@ Name    | Description                                            | Applies to   
 
 	<img data-role="image" />
 
-##### Specifying an element that acts an image subclass using the `data-role` attribute:
+##### Specifying an element that acts an image control subclass using the `data-role` attribute:
 
 	<img data-role="image" data-image="MyImage" />
 

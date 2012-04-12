@@ -65,7 +65,7 @@ Name           | Description                                                  | 
 
 	<div data-role="button-group"></div>
 
-##### Specifying an element that acts a button group subclass using the `data-role` attribute:
+##### Specifying an element that acts a button group control subclass using the `data-role` attribute:
 
 	<div data-role="button-group" data-button="MyButtonGroup"></div>
 

@@ -89,7 +89,12 @@
 </tr><tr><td><code>tagName</code></td>
   <td>String</td>
   <td>The text's element tag name, defaults to <code>span</code>.</td>
-</tr></tbody></table><h4>Generates:</h4>
+</tr></tbody></table><h4>Subclassing Notes:</h4>
+
+<p>This class overrides the following method:</p>
+
+<ul><li><code>willBuild</code>: Call the parent method at the <code>top</code> of your implementation if you override this method.</li>
+</ul><h4>Generates:</h4>
 
 <pre class="prettyprint"><code>&lt;span class="text"&gt;&lt;/span&gt;
 </code></pre>
@@ -111,7 +116,7 @@
 <pre class="prettyprint"><code>&lt;span data-role="text"&gt;&lt;/span&gt;
 </code></pre>
 
-<h5>Specifying an element that acts a list item subclass using the <code>data-role</code> attribute:</h5>
+<h5>Specifying an element that acts a text control subclass using the <code>data-role</code> attribute:</h5>
 
 <pre class="prettyprint"><code>&lt;span data-role="text" data-text="MyText"&gt;&lt;/span&gt;
 </code></pre>
