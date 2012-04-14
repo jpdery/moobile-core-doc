@@ -28,6 +28,8 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	min-height: 740px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 /* Typography
@@ -38,12 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	color: #222222;
 	margin: 0px;
-}
-
-a,
-a:link,
-a:visited {
-	color: #ffffff;
 }
 
 /* Button
@@ -82,7 +78,8 @@ a:visited {
 	background: #2c2f32;
 	bottom: 25px;
 	color: #ffffff;
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
 	padding-bottom: 10px;
 	position: fixed;
 	top: 25px;
@@ -150,6 +147,12 @@ a:visited {
 	text-decoration: none;
 }
 
+.sidebar li a,
+.sidebar li a:link,
+.sidebar li a:visited {
+	color: #ffffff;
+}
+
 /* API List */
 
 .sidebar ul.file-list {
@@ -182,12 +185,20 @@ a:visited {
 	background: white;
 	bottom: 25px;
 	left: 305px;
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
 	right: 250px;
 	padding: 40px;
 	position: fixed;
 	top: 25px;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.content.intro {
+	right: 25px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .content a {
@@ -371,12 +382,13 @@ a:visited {
 /* Table of Contents
 -----------------------------------------------------------------------------*/
 
-.toc {
+.table-of-contents {
 	-webkit-box-sizing: border-box;
 	color: #333333;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 	bottom: 30px;
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	padding-left: 10px;
@@ -386,12 +398,12 @@ a:visited {
 	width: 225px;
 }
 
-.toc a {
+.table-of-contents a {
 	color: #555555;
 	text-decoration: none;
 }
 
-.toc h2 {
+.table-of-contents h2 {
 	background: rgba(0, 0, 0, 0.15);
 	color: #333333;
 	font-size: 16px;
@@ -402,12 +414,12 @@ a:visited {
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 }
 
-.toc ul {
+.table-of-contents ul {
 	margin-left: 0px;
 	padding-left: 0px;
 }
 
-.toc ul li {
+.table-of-contents ul li {
 	color: #333333;
 	font-size: 15px;
 	font-weight: 500;
@@ -417,14 +429,14 @@ a:visited {
 	margin-bottom: 5px;
 }
 
-.toc ul li li {
+.table-of-contents ul li li {
 	font-size: 13px;
 	font-weight: 400;
 	margin-left: -10px;
 	padding-left: 20px;
 }
 
-.toc ul li li:hover {
+.table-of-contents ul li li:hover {
 	background: rgba(0, 0, 0, 0.1);
 }
 

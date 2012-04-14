@@ -29,7 +29,7 @@ class TableOfContentsFilter extends BaseParamFilterReader implements ChainableRe
         $xpath->registerNamespace('html', "http://www.w3.org/1999/xhtml");
 
         // test for ToC container, if not present don't bother
-        $container = $xpath->query("//div[@id='toc']")->item(0);
+        $container = $xpath->query("//div[@id='table-of-contents']")->item(0);
         if (!$container) return;
 
         $content = $dom->getElementById('content');

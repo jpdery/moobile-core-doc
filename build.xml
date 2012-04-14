@@ -43,6 +43,9 @@
 			</fileset>
 
 			<filterchain>
+				<filterreader classname="classes.phing.filters.SidebarFilter">
+					 <param name="template" value="themes/${theme}/decorator/sidebar.tmpl.html" />
+				</filterreader>
 				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
 				</replacetokens>
@@ -63,6 +66,9 @@
 				</filterreader>
 				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
 				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
+				<filterreader classname="classes.phing.filters.SidebarFilter">
+					 <param name="template" value="themes/${theme}/decorator/sidebar.tmpl.html" />
+				</filterreader>
 				<filterreader classname="classes.phing.filters.TableOfContentsFilter" />
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
