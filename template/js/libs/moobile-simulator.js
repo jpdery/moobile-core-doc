@@ -221,6 +221,11 @@ Moobile.Simulator = new Class({
 
 		var parent = document.id(this.options.container) || document.body;
 
+		if (!Browser.safari && !Browser.chrome) {
+			this.notSupported(parent);
+			return;
+		}
+
 		this.element =
 			new Element('div.simulator').adopt([
 				new Element('div.simulator-display').adopt([
@@ -562,9 +567,17 @@ Moobile.Simulator = new Class({
 		this.applicationPath = path;
 		this.applicationWindow = null;
 
-		this.iframe.set('src', path);
+		this.iframe.set('src', path + '?' + String.uniqueID());
 
 		return this;
+	},
+
+	/**
+	 * @author Jean-Philippe Dery (jeanphilippe.dery@gmail.com)
+	 * @since  0.1
+	 */
+	getApplication: function() {
+		return this.applicationPath;
 	},
 
 	/**
@@ -591,6 +604,47 @@ Moobile.Simulator = new Class({
 	 */
 	getAnimationTimingFunction: function() {
 		return this.options.animationTimingFunction;
+	},
+
+	/**
+	 * @author Jean-Philippe Dery (jeanphilippe.dery@gmail.com)
+	 * @since  0.1
+	 */
+	notSupported: function(container) {
+		new Element('style[type=text/css]')
+		.set('html',
+			'.browser-not-supported {' +
+			'	-webkit-border-radius: 12px;' +
+			'	   -moz-border-radius: 12px;' +
+			'	        border-radius: 12px;' +
+			'	background: black;' +
+			'	background: rgba(0, 0, 0, 0.5);' +
+			'	color: white;' +
+			'	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;' +
+			'	font-weight: 400;' +
+			'	line-height: 22px;' +
+			'	padding: 20px;' +
+			'	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);' +
+			'	width: 400px;' +
+			'}' +
+			'.browser-not-supported strong {' +
+			'	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;' +
+			'	font-weight: 500;' +
+			'	font-size: 28px;' +
+			'	display: block;' +
+			'	margin-bottom: 10px;' +
+			'}' +
+			'.browser-not-supported a {' +
+			'	color: #8ec4de;' +
+			'	text-decoration: none;' +
+			'}'
+		).inject(container);
+		var element = new Element('div.browser-not-supported').set('html',
+			'<strong>Sorry!</strong>' +
+			'Your browser is currently not supported. ' +
+			'This simulator works with <a href="http://www.apple.com/safari/">Safari</a> or <a href="https://www.google.com/chrome">Google Chrome</a>.'
+		);
+		element.inject(container);
 	},
 
 	/**
