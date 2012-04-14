@@ -98,7 +98,7 @@ Methods {#methods}
 
 ### enableTouch() {#enableTouch}
 
-Enable touch interaction of the entire view and it's hierarchy.
+Enable touch interaction of the entire view and its hierarchy.
 
 #### Returns:
 
@@ -108,7 +108,7 @@ Enable touch interaction of the entire view and it's hierarchy.
 
 ### disableTouch() {#disableTouch}
 
-Disable touch interaction of the entire view and it's hierarchy.
+Disable touch interaction of the entire view and its hierarchy.
 
 #### Returns:
 

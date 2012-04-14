@@ -425,7 +425,7 @@ Returns the view controller name.
 
 ### setTitle(title) {#setTitle}
 
-Sets the title using either a string or a `Moobile.Label` instance. When provided with a string, this methods creates a `Moobile.Label` instance and assign the given string as its text.
+Sets the title using either a string or a `Moobile.Label` instance. When provided with a string, this method creates a `Moobile.Label` instance and assign the given string as its text.
 
 #### Parameters:
 
@@ -462,7 +462,7 @@ Returns the title.
 
 ### setImage(image) {#setImage}
 
-Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this methods creates a `Moobile.Image` instance and assign the given string as its source.
+Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this method creates a `Moobile.Image` instance and assign the given string as its source.
 
 #### Parameters:
 
@@ -547,7 +547,7 @@ Returns the managed view.
 
 ### setViewTransition(viewTransition) {#setViewTransition}
 
-Sets the view transition used to push or present a view controller. You should rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view transition used to push or present a view controller. You should rarely use this method as the `Moobile.ViewController` class handles it.
 
 #### Parameters:
 
@@ -573,7 +573,7 @@ Returns the view transition.
 
 ### setViewControllerPanel(viewControllerPanel) {#setViewControllerPanel}
 
-Sets the view controller panel containing this view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller panel containing this view controller. You should rarely use this method as the `Moobile.ViewController` class handles it.
 
 #### Parameters:
 
@@ -599,7 +599,7 @@ Returns the view controller panel containing this view controller.
 
 ### setParentViewController(parentViewController) {#setParentViewController}
 
-Sets the parent view controller. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the parent view controller. You should rarely use this method as the `Moobile.ViewController` class handles it.
 
 #### Parameters:
 

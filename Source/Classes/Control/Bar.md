@@ -3,7 +3,7 @@ Moobile.Bar
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar control that's usually positionned at the top of bottom of a view. The bar itself is not meant to contain components such as buttons or text, instead it has a [Moobile.BarItem](../Control/BarItem.md) control which may contain these components.
+Provides a bar control that's usually positionned at the top of bottom of a view. The bar itself is not meant to contain components such as buttons or text; instead it has a [Moobile.BarItem](../Control/BarItem.md) control which may contain these components.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------

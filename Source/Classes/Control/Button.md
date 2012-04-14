@@ -95,7 +95,7 @@ Methods {#methods}
 
 ### setLabel(label) {#setLabel}
 
-Sets the label using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the label using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 

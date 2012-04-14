@@ -101,7 +101,7 @@ Methods {#methods}
 
 ### setTitle(title) {#setTitle}
 
-Sets the title using either a string or `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the title using either a string or `Moobile.Text` instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 

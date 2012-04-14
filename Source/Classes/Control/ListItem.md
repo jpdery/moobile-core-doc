@@ -99,7 +99,7 @@ Methods {#methods}
 
 ### setLabel(label) {#setLabel}
 
-Sets the label using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the label using either a string or a `Moobile.Text` instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
@@ -143,7 +143,7 @@ Returns the label.
 
 ### setImage(image) {#setImage}
 
-Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this methods creates a `Moobile.Image` object and assign the given string as its source.
+Sets the image using either a string or a `Moobile.Image` instance. When provided with a string, this method creates a `Moobile.Image` object and assign the given string as its source.
 
 #### Parameters:
 
@@ -187,7 +187,7 @@ Returns the image.
 
 ### setDetail(detail) {#setDetail}
 
-Sets the detail text using either a string or a `Moobile.Text` instance. When provided with a string, this methods creates a `Moobile.Text` object and assign the given string as its text.
+Sets the detail text using either a string or a `Moobile.Text` instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 

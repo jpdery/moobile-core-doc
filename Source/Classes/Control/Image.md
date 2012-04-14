@@ -3,7 +3,7 @@ Moobile.Image
 
 ##### Extends *[Moobile.Control](../Control/Control.md)*
 
-Provides an image control that correctly free the memory upon being unloaded.
+Provides an image control that correctly frees the memory upon being unloaded.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ Fired when the image is loaded. If the `preload` option is `true`, this event wi
 
 ### unload
 
-Fired when the image is unloaded by setting its source to `null`.
+Fired when setting the source to `null`.
 
 Methods {#methods}
 --------------------------------------------------------------------------------

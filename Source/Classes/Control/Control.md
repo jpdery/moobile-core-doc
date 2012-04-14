@@ -31,7 +31,7 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 
 This class overrides the following method:
 
-- `shouldFireEvent`: Returns `false` if hte control is disabled.
+- `shouldFireEvent`: Returns `false` if the control is disabled.
 
 Methods {#methods}
 --------------------------------------------------------------------------------

@@ -32,8 +32,8 @@ Name                 | Type    | Description
 `scrollY`            | Boolean | Whether to scroll on the y axis, defaults to `true`.
 `snapToPage`         | Boolean | Whether to snap to the current page upon release, defaults to `false`.
 `snapToPageAt`       | Number  | The percentage moved to snap to the next page, defaults to `35`.
-`snapToPageDuration` | Number  | The time in miliseconds for the snap animation, defaults to `150`.
-`snapToPageDelay`    | Number  | The view will automatically snap to the next page if the user scrolls for less than this time in miliseconds, defaults to `150`.
+`snapToPageDuration` | Number  | The time in milliseconds for the snap animation, defaults to `150`.
+`snapToPageDelay`    | Number  | The view will automatically snap to the next page if the user scrolls for less than this time in milliseconds, defaults to `150`.
 
 #### Generates:
 

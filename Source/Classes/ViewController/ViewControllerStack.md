@@ -238,7 +238,7 @@ Other {#other}
 
 ### setViewControllerStack(viewControllerStack) {#setViewControllerStack}
 
-Sets the view controller stack. You will rarely use this method as it's handled by the `Moobile.ViewController` class.
+Sets the view controller stack. You should rarely use this method as the `Moobile.ViewController` class handles it.
 
 #### Parameters:
 

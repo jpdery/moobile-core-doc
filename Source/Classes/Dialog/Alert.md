@@ -13,7 +13,7 @@ Methods {#methods}
 
 ### setTitle(title)
 
-Set the title using either a string or an instance of a `Label`. When provided with a string, this methods creates a `Label` instance and assign the given string as its text.
+Set the title using either a string or an instance of a `Label`. When provided with a string, this method creates a `Label` instance and assign the given string as its text.
 
 #### Parameters:
 
@@ -44,7 +44,7 @@ Returns the title.
 Sets the message.
 
 This method will set the message using either a string or an instance of
-a `Text`. When provided with a string, this methods creates a `Text`
+a `Text`. When provided with a string, this method creates a `Text`
 instance and assign the given string as its text.
 
 #### Parameters:
