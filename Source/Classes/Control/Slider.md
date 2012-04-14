@@ -78,7 +78,7 @@ The mootools slider used to move this slider's thumb on the track.
 
 #### Type
 
-	- `Slider`
+- `Slider`
 
 -----
 
@@ -88,7 +88,7 @@ The element used to create this slider's track.
 
 #### Type
 
-	- `Element`
+- `Element`
 
 -----
 
@@ -98,7 +98,7 @@ The element used to create this slider's thumb.
 
 #### Type
 
-	- `Element`
+- `Element`
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -115,7 +115,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.Slider](../Control/Slider.md) This Moobile.Slider instance.
+- `Moobile.Slider` This Moobile.Slider instance.
 
 #### Example:
 

@@ -50,24 +50,28 @@ Upon initialization, this view will use the CSS class name either provided as ei
 Events {#events}
 --------------------------------------------------------------------------------
 
-#### dragstart
+### dragstart {#dragstart}
 
 Fired when the user starts scrolling with a touch event.
 
-#### dragend
+### dragend {#dragend}
 
 Fired when the users finishes the touch event.
 
-#### scroll
+### scroll {#scroll}
 
 Fired when the content is being scrolled. However, this event is not called when the scrolling occurs from its own momentum. In this case the event will still be called once the momentum stops.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### `Element` wrapper
+### wrapperElement {#wrapperElement}
 
 The element that wraps the content and make it scrollable.
+
+#### Type
+
+- `Element`
 
 Methods {#methods}
 --------------------------------------------------------------------------------
@@ -86,7 +90,7 @@ Name              | Type   | Description
 
 #### Returns:
 
-- [Moobile.ScrollView](../View/ScrollView.md) This Moobile.ScrollView instance.
+- `Moobile.ScrollView` This Moobile.ScrollView instance.
 
 -----
 
@@ -104,7 +108,7 @@ Name              | Type   | Description
 
 #### Returns:
 
-- [Moobile.ScrollView](../View/ScrollView.md) This Moobile.ScrollView instance.
+- `Moobile.ScrollView` This Moobile.ScrollView instance.
 
 -----
 
@@ -121,7 +125,7 @@ Name              | Type    | Description
 
 #### Returns:
 
-- [Moobile.ScrollView](../View/ScrollView.md) This Moobile.ScrollView instance.
+- `Moobile.ScrollView` This Moobile.ScrollView instance.
 
 -----
 
@@ -142,8 +146,3 @@ Returns the content size including the scrolling area as an object with two keys
 #### Returns:
 
 - `Object` The size including the scrolling area.
-
-Styles {#styles}
---------------------------------------------------------------------------------
-
-This class does not define any styles.

@@ -109,7 +109,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
+- `Moobile.ListItem` This Moobile.ListItem instance
 
 #### Examples:
 
@@ -153,7 +153,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
+- `Moobile.ListItem` This Moobile.ListItem instance
 
 #### Examples:
 
@@ -197,7 +197,7 @@ Name     | Type  | Description
 
 #### Returns:
 
-- [Moobile.ListItem](../Control/ListItem.md) This Moobile.ListItem instance
+- `Moobile.ListItem` This Moobile.ListItem instance
 
 #### Examples:
 

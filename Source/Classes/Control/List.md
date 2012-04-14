@@ -108,15 +108,15 @@ Name           | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
 	var list  = new Moobile.List();
 	var itemOne = new Moobile.ListItem();
 	var itemTwo = new Moobile.ListItem();
-	list.addButton(itemOne);
-	list.addButton(itemTwo);
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
 	list.setSelectedItem(itemOne); // selects the first item
 
 -----
@@ -134,8 +134,8 @@ Returns the selected item.
 	var list  = new Moobile.List();
 	var itemOne = new Moobile.ListItem();
 	var itemTwo = new Moobile.ListItem();
-	list.addButton(itemOne);
-	list.addButton(itemTwo);
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
 	list.setSelectedItem(itemOne);
 	list.getSelectedItem(); // returns itemOne
 
@@ -143,7 +143,7 @@ Returns the selected item.
 
 ### setSelectedItemIndex(index) {#setSelectedItemIndex}
 
-Selects an item using a specified index, `0` being the first item in the list. Specifying an index that matches no buttons will clear the selection.
+Selects an item using a specified index, `0` being the first item in the list. Specifying an index that matches no items will clear the selection.
 
 #### Parameters:
 
@@ -153,15 +153,15 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
 	var list  = new Moobile.List();
 	var itemOne = new Moobile.ListItem();
 	var itemTwo = new Moobile.ListItem();
-	list.addButton(itemOne);
-	list.addButton(itemTwo);
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
 	list.setSelectedItemIndex(0);
 
 -----
@@ -179,8 +179,8 @@ Returns the selected item index.
 	var list  = new Moobile.List();
 	var itemOne = new Moobile.ListItem();
 	var itemTwo = new Moobile.ListItem();
-	list.addButton(itemOne);
-	list.addButton(itemTwo);
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
 	list.setSelectedItemIndex(0);
 	list.getSelectedItemInde(); // returns 0
 
@@ -192,15 +192,15 @@ Unselects the selected item.
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
 	var list  = new Moobile.List();
 	var itemOne = new Moobile.ListItem();
 	var itemTwo = new Moobile.ListItem();
-	list.addButton(itemOne);
-	list.addButton(itemTwo);
+	list.addItem(itemOne);
+	list.addItem(itemTwo);
 	list.setSelectedItemIndex(0);
 	list.clearSelectedItem();
 
@@ -219,7 +219,7 @@ Name               | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -242,7 +242,7 @@ Name     | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -267,7 +267,7 @@ Name     | Type                                       | Description
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -333,14 +333,14 @@ Removes an item.
 
 #### Parameters:
 
-Name      | Type                                       | Description
---------- | ------------------------------------------ | -----------
-`item`    | [Moobile.ListItem](../Control/ListItem.md) | The item to remove.
-`destroy` | Boolean                                    | Whether or not to destroy the item upon removal.
+Name                 | Type                                       | Description
+-------------------- | ------------------------------------------ | -----------
+`item`               | [Moobile.ListItem](../Control/ListItem.md) | The item to remove.
+`destroy` *Optional* | Boolean                                    | Whether or not to destroy the item upon removal.
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 
@@ -357,13 +357,13 @@ Name      | Type                                       | Description
 
 Removes all items.
 
-Name      | Type     | Description
---------- | -------- | -----------
-`destroy` | Boolean  | Whether or not to destroy the item upon removal.
+Name                 | Type     | Description
+-------------------- | -------- | -----------
+`destroy` *Optional* | Boolean  | Whether or not to destroy the item upon removal.
 
 #### Returns:
 
-- [Moobile.List](../Control/List.md) This Moobile.List instance.
+- `Moobile.List` This Moobile.List instance.
 
 #### Example:
 

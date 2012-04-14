@@ -299,7 +299,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .content a {
 	font-family: Monospace;
-	font-size: 14px;
 }
 
 .content code {
@@ -311,6 +310,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: #fdfdfd;
 	color: #222222;
 	font-family: Monospace;
+	font-size: 14px;
 	margin-top: 0px;
 	margin-bottom: 25px;
 	padding: 10px;
@@ -318,7 +318,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .content pre code {
 	color: #222222;
-	font-size: 14px;
 	border: none;
 	background: none;
 	padding: 0px;

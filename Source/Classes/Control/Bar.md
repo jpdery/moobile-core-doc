@@ -104,7 +104,7 @@ Name   | Type                                     | Description
 
 #### Returns:
 
-- [Moobile.Bar](../Control/Bar.md) This bar.
+- `Moobile.Bar` This bar.
 
 #### Example:
 

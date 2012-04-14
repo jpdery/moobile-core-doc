@@ -86,7 +86,7 @@ Do not call the parent method when overriding this method, this would overwrite 
 
 ##### Loading a view:
 
-	var CowViewController = new Class({
+	var MyViewController = new Class({
 		Extends: Moobile.ViewController,
 		loadView: function() {
 			var element = new Element('div.my-view').grab(new Element('h1').set('html', 'This is my view'));
@@ -104,7 +104,7 @@ The content of the file at `/templates/my-view.html`:
 
 The view controller:
 
-	var CowViewController = new Class({
+	var MyViewController = new Class({
 		Extends: Moobile.ViewController,
 		loadView: function() {
 			this.view = Moobile.View.at('/templates/my-view.html');
@@ -121,11 +121,11 @@ Adds the specified view controller at the bottom this view controller hierarchy.
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to add to the hierarchy.
+`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -143,12 +143,12 @@ Adds the specified view controller to the view controller hierarchy after a spec
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to add to the hierarchy.
-`after`          | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller used as a context to put the specified view controller after.
+`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
+`after`          | `Moobile.ViewController` | The view controller used as a context to put the specified view controller after.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -168,12 +168,12 @@ Adds specified view controller to the view controller hierarchy before a specifi
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to add to the hierarchy.
-`before`         | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller used as a context to put the child view controller before.
+`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
+`before`         | `Moobile.ViewController` | The view controller used as a context to put the child view controller before.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -197,7 +197,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) The child view controller or `null` if no child view controllers were found.
+- `Moobile.ViewController` The child view controller or `null` if no child view controllers were found.
 
 #### Example:
 
@@ -220,7 +220,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) The child view controller or `null` if no child view controllers exist at the given index.
+- `Moobile.ViewController` The child view controller or `null` if no child view controllers exist at the given index.
 
 #### Example:
 
@@ -239,7 +239,7 @@ Returns the index of a specified view controller.
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to look up.
+`viewController` | `Moobile.ViewController` | The view controller to look up.
 
 #### Returns:
 
@@ -281,7 +281,7 @@ Indicates whether the given viewController is a child of the current instance.
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to look up.
+`viewController` | `Moobile.ViewController` | The view controller to look up.
 
 #### Returns:
 
@@ -302,14 +302,14 @@ Removes the given viewController from the child view controllers. If `destroy` i
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to remove.
-`destroy`        | Boolean                                                       | Whether or not to destroy the view controller upon removal.
+Name                 | Type                                                          | Description
+-------------------- | ------------------------------------------------------------- | -----------
+`viewController`     | `Moobile.ViewController` | The view controller to remove.
+`destroy` *Optional* | Boolean                                                       | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -326,13 +326,13 @@ Removes all child view controllers. If `destroy` is `true`, All child view contr
 
 #### Parameters:
 
-Name      | Type    | Description
---------- | ------- | -----------
-`destroy` | Boolean | Whether or not to destroy the view controller upon removal.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -351,13 +351,13 @@ Removes the current instance from its parent.
 
 #### Parameters:
 
-Name      | Type    | Description
---------- | ------- | -----------
-`destroy` | Boolean | Whether or not to destroy the view controller upon removal.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -376,12 +376,12 @@ Displays a child view controller over this view controller using a specified tra
 
 Name                        | Type                                                       | Description
 --------------------------- | ---------------------------------------------------------- | -----------
-`viewController`            | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller.
+`viewController`            | `Moobile.ViewController` | The view controller.
 `viewTransition` *Optional* | [Moobile.ViewTransition](../ViewTransition/ViewTransition.md) | The view transition.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -397,7 +397,7 @@ Dismisses the current modal view controller and destroy it.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -435,7 +435,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -472,7 +472,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 #### Example:
 
@@ -509,7 +509,7 @@ Name    | Type    | Description
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 -----
 
@@ -557,7 +557,7 @@ Name             | Type                                                         
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 -----
 
@@ -583,7 +583,7 @@ Name                  | Type                                                    
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 -----
 
@@ -605,11 +605,11 @@ Sets the parent view controller. You will rarely use this method as it's handled
 
 Name                   | Type                                                          | Description
 ---------------------- | ------------------------------------------------------------- | -----------
-`parentViewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The parent view controller.
+`parentViewController` | `Moobile.ViewController` | The parent view controller.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.
 
 -----
 
@@ -619,7 +619,7 @@ Returns the parent view controller.
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) The parent view controller or `null` if this view controller is not within the hierarchy of another view controller.
+- `Moobile.ViewController` The parent view controller or `null` if this view controller is not within the hierarchy of another view controller.
 
 -----
 
@@ -631,7 +631,7 @@ Tells this view controller a child view controller is about to be added. Overrid
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The view controller to be added.
+`viewController` | `Moobile.ViewController` | The view controller to be added.
 
 -----
 
@@ -643,7 +643,7 @@ Tells this view controller a child view controller has been added. Override this
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The added child view controller.
+`viewController` | `Moobile.ViewController` | The added child view controller.
 
 -----
 
@@ -655,7 +655,7 @@ Tells this view controller a child view controller is about to be removed. Overr
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The child view controller about to be removed.
+`viewController` | `Moobile.ViewController` | The child view controller about to be removed.
 
 -----
 
@@ -667,7 +667,7 @@ Tells this view controller a child view controller has been removed. Override th
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | The removed child view controller.
+`viewController` | `Moobile.ViewController` | The removed child view controller.
 
 -----
 
@@ -679,7 +679,7 @@ Tells this view controller its parent view controller is about to change. Overri
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | This view controller's parent view controller.
+`viewController` | `Moobile.ViewController` | This view controller's parent view controller.
 
 -----
 
@@ -691,7 +691,7 @@ Tells this view controller its parent view controller has changed. Override this
 
 Name             | Type                                                          | Description
 ---------------- | ------------------------------------------------------------- | -----------
-`viewController` | [Moobile.ViewController](../ViewController/ViewController.md) | This view controller's parent view controller.
+`viewController` | `Moobile.ViewController` | This view controller's parent view controller.
 
 -----
 
@@ -773,4 +773,4 @@ Destroys this view controller's view controller hierarchy as well as the view it
 
 #### Returns:
 
-- [Moobile.ViewController](../ViewController/ViewController.md) This Moobile.ViewController instance.
+- `Moobile.ViewController` This Moobile.ViewController instance.

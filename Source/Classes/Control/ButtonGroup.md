@@ -109,7 +109,7 @@ Name             | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -154,7 +154,7 @@ Name    | Type   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -193,7 +193,7 @@ Unselects the selected button.
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -220,7 +220,7 @@ Name               | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -243,7 +243,7 @@ Name     | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -268,7 +268,7 @@ Name     | Type                                   | Description
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -334,14 +334,14 @@ Removes a button.
 
 #### Parameters:
 
-Name      | Type                                   | Description
---------- | -------------------------------------- | -----------
-`button`  | [Moobile.Button](../Control/Button.md) | The button to remove.
-`destroy` | Boolean                                | Whether or not to destroy the button upon removal.
+Name                 | Type                                   | Description
+-------------------- | -------------------------------------- | -----------
+`button`             | [Moobile.Button](../Control/Button.md) | The button to remove.
+`destroy` *Optional* | Boolean                                | Whether or not to destroy the button upon removal.
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 
@@ -360,13 +360,13 @@ Removes all buttons.
 
 #### Parameters:
 
-Name      | Type     | Description
---------- | -------- | -----------
-`destroy` | Boolean  | Whether or not to destroy the button upon removal.
+Name                 | Type     | Description
+-------------------- | -------- | -----------
+`destroy` *Optional* | Boolean  | Whether or not to destroy the button upon removal.
 
 #### Returns:
 
-- [Moobile.ButtonGroup](../Control/ButtonGroup.md) This Moobile.ButtonGroup instance.
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
 
 #### Example:
 

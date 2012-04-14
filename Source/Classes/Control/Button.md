@@ -3,7 +3,7 @@ Moobile.Button
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a [Moobile.Bar](../Control/Moobile.Bar.md) will look different from a button within a [Moobile.ButtonGroup](../Control/Moobile.ButtonGroup.md) or a [Moobile.View](../Control/View.md);
+Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a [Moobile.Bar](../Control/Moobile.Bar.md) will look different from a button within an usual component.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.Button](../Control/Button.md) This Moobile.Button instance.
+- `Moobile.Button` This Moobile.Button instance.
 
 #### Examples:
 
@@ -135,21 +135,29 @@ Returns the label.
 	button.setLabel('Moo');
 	button.getLabel(); // returns a Moobile.Text instance
 
-Methods {#styles}
+Styles {#styles}
 --------------------------------------------------------------------------------
 
 ### active
+
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 [TODO: Image]
 
 ### warning
 
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+
 [TODO: Image]
 
 ### back
 
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+
 [TODO: Image]
 
 ### forward
+
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 [TODO: Image]

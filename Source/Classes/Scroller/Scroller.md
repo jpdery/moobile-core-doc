@@ -42,7 +42,7 @@ will not be removed upon destruction as the content wrapper will.
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----
@@ -61,7 +61,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----
@@ -80,7 +80,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----
@@ -98,7 +98,7 @@ Name  | Type | Description
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----
@@ -114,7 +114,7 @@ when the `snapToPage` option is enabled.
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----
@@ -129,7 +129,7 @@ implementation of the `refresh` method.
 
 #### Returns:
 
-- [Moobile.Scroller](Scroller/Scroller.md) This scroller.
+- `Moobile.Scroller` This scroller.
 
 
 -----

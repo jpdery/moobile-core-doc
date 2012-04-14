@@ -172,14 +172,14 @@
   <td>The selected item or <code>null</code> to clear the selection.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list  = new Moobile.List();
 var itemOne = new Moobile.ListItem();
 var itemTwo = new Moobile.ListItem();
-list.addButton(itemOne);
-list.addButton(itemTwo);
+list.addItem(itemOne);
+list.addItem(itemTwo);
 list.setSelectedItem(itemOne); // selects the first item
 </code></pre>
 
@@ -195,15 +195,15 @@ list.setSelectedItem(itemOne); // selects the first item
 <pre class="prettyprint"><code>var list  = new Moobile.List();
 var itemOne = new Moobile.ListItem();
 var itemTwo = new Moobile.ListItem();
-list.addButton(itemOne);
-list.addButton(itemTwo);
+list.addItem(itemOne);
+list.addItem(itemTwo);
 list.setSelectedItem(itemOne);
 list.getSelectedItem(); // returns itemOne
 </code></pre>
 
 <hr><h3 id="setSelectedItemIndex">setSelectedItemIndex(index)</h3>
 
-<p>Selects an item using a specified index, <code>0</code> being the first item in the list. Specifying an index that matches no buttons will clear the selection.</p>
+<p>Selects an item using a specified index, <code>0</code> being the first item in the list. Specifying an index that matches no items will clear the selection.</p>
 
 <h4>Parameters:</h4>
 
@@ -215,14 +215,14 @@ list.getSelectedItem(); // returns itemOne
   <td>The selected item index.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list  = new Moobile.List();
 var itemOne = new Moobile.ListItem();
 var itemTwo = new Moobile.ListItem();
-list.addButton(itemOne);
-list.addButton(itemTwo);
+list.addItem(itemOne);
+list.addItem(itemTwo);
 list.setSelectedItemIndex(0);
 </code></pre>
 
@@ -238,8 +238,8 @@ list.setSelectedItemIndex(0);
 <pre class="prettyprint"><code>var list  = new Moobile.List();
 var itemOne = new Moobile.ListItem();
 var itemTwo = new Moobile.ListItem();
-list.addButton(itemOne);
-list.addButton(itemTwo);
+list.addItem(itemOne);
+list.addItem(itemTwo);
 list.setSelectedItemIndex(0);
 list.getSelectedItemInde(); // returns 0
 </code></pre>
@@ -250,14 +250,14 @@ list.getSelectedItemInde(); // returns 0
 
 <h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list  = new Moobile.List();
 var itemOne = new Moobile.ListItem();
 var itemTwo = new Moobile.ListItem();
-list.addButton(itemOne);
-list.addButton(itemTwo);
+list.addItem(itemOne);
+list.addItem(itemTwo);
 list.setSelectedItemIndex(0);
 list.clearSelectedItem();
 </code></pre>
@@ -279,7 +279,7 @@ list.clearSelectedItem();
   <td>The item's location, either <code>top</code> or <code>bottom</code>, defaults to <code>bottom</code>.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list = new Moobile.List();
@@ -304,7 +304,7 @@ list.addItem(itemOne);
   <td>The item will be placed after this item.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list = new Moobile.List();
@@ -331,7 +331,7 @@ list.addItemAfter(itemTwo, itemOne); // itemTwo is after itemOne
   <td>The item will be placed before this item.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list = new Moobile.List();
@@ -401,12 +401,12 @@ list.getItemAt(0); // returns itemOne
 </tr></thead><tbody><tr><td><code>item</code></td>
   <td><a href="../Control/ListItem.html">Moobile.ListItem</a></td>
   <td>The item to remove.</td>
-</tr><tr><td><code>destroy</code></td>
+</tr><tr><td><code>destroy</code> <em>Optional</em></td>
   <td>Boolean</td>
   <td>Whether or not to destroy the item upon removal.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list = new Moobile.List();
@@ -424,12 +424,12 @@ list.removeItem(itemOne); // the list contains only itemTwo
 <table><thead><tr><th>Name</th>
   <th>Type</th>
   <th>Description</th>
-</tr></thead><tbody><tr><td><code>destroy</code></td>
+</tr></thead><tbody><tr><td><code>destroy</code> <em>Optional</em></td>
   <td>Boolean</td>
   <td>Whether or not to destroy the item upon removal.</td>
 </tr></tbody></table><h4>Returns:</h4>
 
-<ul><li><a href="../Control/List.html">Moobile.List</a> This Moobile.List instance.</li>
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
 </ul><h4>Example:</h4>
 
 <pre class="prettyprint"><code>var list = new Moobile.List();

@@ -102,7 +102,7 @@ Enable touch interaction of the entire view and it's hierarchy.
 
 #### Returns:
 
-- [Moobile.View](../View/View.md) This Moobile.View instance.
+- `Moobile.View` This Moobile.View instance.
 
 -----
 
@@ -112,7 +112,7 @@ Disable touch interaction of the entire view and it's hierarchy.
 
 #### Returns:
 
-- [Moobile.View](../View/View.md) This Moobile.View instance.
+- `Moobile.View` This Moobile.View instance.
 
 -----
 
@@ -130,7 +130,7 @@ Name      | Type    | Description
 
 #### Returns:
 
-- [Moobile.View](../View/View.md) This Moobile.View instance.
+- `Moobile.View` This Moobile.View instance.
 
 -----
 
@@ -171,7 +171,7 @@ Returns the parent view of this component.
 
 #### Returns:
 
-- [Moobile.View](../View/View.md) The parent component.
+- `Moobile.View` The parent component.
 
 -----
 
@@ -185,7 +185,7 @@ Override this method to provide your own implementation.
 
 Name         | Type                            | Description
 ------------ | ------------------------------- | -----------
-`parentView` | [Moobile.View](../View/View.md) | The view that is about to become the parent view of this view.
+`parentView` | `Moobile.View` | The view that is about to become the parent view of this view.
 
 -----
 
@@ -199,4 +199,4 @@ Override this method to provide your own implementation.
 
 Name         | Type                            | Description
 ------------ | ------------------------------- | -----------
-`parentView` | [Moobile.View](../View/View.md) | The view that is about to become the parent view of this view.
+`parentView` | `Moobile.View` | The view that is about to become the parent view of this view.

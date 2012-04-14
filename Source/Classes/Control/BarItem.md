@@ -3,7 +3,7 @@ Moobile.BarItem
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar item control that will be used as the content of a [Moobile.Bar](../Control/Moobile.Bar.md) instance.
+Provides a bar item control that will be used as the content of a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------

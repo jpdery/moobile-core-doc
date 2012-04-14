@@ -3,7 +3,7 @@ Moobile.Text
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a control that contains text and / or text with HTML.
+Provides a control that contains text and HTML.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ Name   | Type   | Description
 
 #### Returns:
 
-- [Moobile.Text](../Control/Text.md) This Moobile.Text instance.
+- `Moobile.Text` This Moobile.Text instance.
 
 #### Example:
 
@@ -80,7 +80,7 @@ Name   | Type   | Description
 
 ### getText()
 
-Return the text using this element's `html` property. The returned text may contain HTML elements.
+Return the text using this text element's `html` property.
 
 #### Returns:
 

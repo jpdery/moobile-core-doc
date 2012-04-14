@@ -111,7 +111,7 @@ Name    | Type  | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Examples:
 
@@ -158,7 +158,7 @@ Name     | Type                                      | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -181,7 +181,7 @@ Name     | Type                                      | Description
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -222,14 +222,14 @@ Removes a button.
 
 #### Parameters:
 
-Name      | Type                                         | Description
---------- | -------------------------------------------- | -----------
-`button`  | [Moobile.Button](../Control/Button.md) | The button to remove.
-`destroy` | Boolean                                      | Whether or not to destroy the button upon removal.
+Name                 | Type                                         | Description
+-------------------- | -------------------------------------------- | -----------
+`button`             | [Moobile.Button](../Control/Button.md)       | The button to remove.
+`destroy` *Optional* | Boolean                                      | Whether or not to destroy the button upon removal.
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
@@ -249,13 +249,13 @@ Removes all buttons.
 
 #### Parameters:
 
-Name      | Type    | Description
---------- | ------- | -----------
-`destroy` | Boolean | Whether or not to destroy the button upon removal.
+Name                 | Type    | Description
+-------------------- | ------- | -----------
+`destroy` *Optional* | Boolean | Whether or not to destroy the button upon removal.
 
 #### Returns:
 
-- [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) This Moobile.NavigationBarItem instance.
+- `Moobile.NavigationBarItem` This Moobile.NavigationBarItem instance.
 
 #### Example:
 
