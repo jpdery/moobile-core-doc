@@ -3,10 +3,7 @@
 <project name="moobile-doc-generator" default="main">
 
 	<property name="version" value="0.1" />
-	<property name="theme" value="moobile" />
 
-	<!-- <taskdef name="build-navigation" classname="Build.Tasks.BuildNavigationTask" />
- -->
 	<!-- ============================================  -->
 	<!-- Target: setup                                 -->
 	<!-- ============================================  -->
@@ -38,13 +35,13 @@
 		<!-- copy the static theme -->
 		<copy todir="./output/${version}">
 
-			<fileset dir="./themes/${theme}/static">
+			<fileset dir="./template">
 				 <include name="**" />
 			</fileset>
 
 			<filterchain>
 				<filterreader classname="classes.phing.filters.SidebarFilter">
-					 <param name="template" value="themes/${theme}/decorator/sidebar.tmpl.html" />
+					 <param name="template" value="./template/sidebar.tmpl.html" />
 				</filterreader>
 				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
@@ -61,21 +58,28 @@
 			<fileset refid="classes-fileset" />
 
 			<filterchain>
+
 				<filterreader classname="classes.phing.filters.MarkdownFilter">
-					 <param name="decorator" value="themes/${theme}/decorator/class.tmpl.html" />
+					 <param name="decorator" value="./template/content.class.tmpl.html" />
 				</filterreader>
 				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
 				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
 				<filterreader classname="classes.phing.filters.SidebarFilter">
-					 <param name="template" value="themes/${theme}/decorator/sidebar.tmpl.html" />
+					 <param name="template" value="./template/sidebar.tmpl.html" />
 				</filterreader>
 				<filterreader classname="classes.phing.filters.TableOfContentsFilter" />
+
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
 				</replacetokens>
+
 			</filterchain>
 
 		</copy>
+
+		<delete file="./output/${version}/content.guide.tmpl.html" />
+		<delete file="./output/${version}/content.class.tmpl.html" />
+		<delete file="./output/${version}/sidebar.tmpl.html" />
 
 	</target>
 

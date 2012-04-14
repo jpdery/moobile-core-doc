@@ -1,6 +1,5 @@
 <?php
 
-require_once 'classes/markdown/Markdown.php';
 require_once 'phing/filters/BaseParamFilterReader.php';
 require_once 'phing/filters/ChainableReader.php';
 

@@ -75,12 +75,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
 	-webkit-overflow-scrolling: touch;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 	background: #2c2f32;
 	bottom: 25px;
 	color: #ffffff;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding-bottom: 10px;
+	padding: 20px;
 	position: fixed;
 	top: 25px;
 	left: 25px;
@@ -94,8 +97,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 20px;
 	font-weight: 500;
 	letter-spacing: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin: 0px;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-bottom: 20px;
 	padding: 5px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -108,9 +113,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	letter-spacing: auto;
 	margin: 0px;
-	margin-left: 20px;
-	margin-right: 20px;
 	margin-bottom: 10px;
+	padding: 0px;
 	padding-bottom: 5px;
 }
 
@@ -130,21 +134,21 @@ h1, h2, h3, h4, h5, h6 {
 	list-style: none;
 	list-style-position: outside;
 	margin: 0px;
-	padding: 2px;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
 .sidebar li:last-child {
 	margin-bottom: 0px !important;
 }
 
-.sidebar li:hover {
-	background: #45A5D2;
-}
-
 .sidebar li a {
+	display: block;
 	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .sidebar li a,
@@ -153,24 +157,35 @@ h1, h2, h3, h4, h5, h6 {
 	color: #ffffff;
 }
 
-/* API List */
+.sidebar li a:hover,
+.sidebar li a.current {
+	background: #45A5D2;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* File List */
 
 .sidebar ul.file-list {
 	margin-top: 0px;
 }
 
-.sidebar ul.file-list li span {
+.sidebar ul.file-list li a span {
 	font-size: 75%;
 	opacity: 0.5;
 }
 
-/* Tutorial List */
+.sidebar ul.file-list li a:hover span,
+.sidebar ul.file-list li a.current span {
+	opacity: 1;
+}
 
-.sidebar ul.tutorial-list li {
+/* Guide List */
+
+.sidebar ul.guide-list li {
 	margin-bottom: 10px;
 }
 
-.sidebar ul.tutorial-list li .descr {
+.sidebar ul.guide-list li .descr {
 	display: none;
 }
 
@@ -377,6 +392,39 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-box-pack: center;
 	display: -webkit-box;
 	width: 100%;
+}
+
+/* Simulator
+-----------------------------------------------------------------------------*/
+
+.content.with-simulator h1,
+.content.with-simulator h2,
+.content.with-simulator h3,
+.content.with-simulator h4,
+.content.with-simulator h5,
+.content.with-simulator p,
+.content.with-simulator pre {
+	margin-right: 420px;
+}
+
+.content .simulator-wrapper {
+	clear: right;
+	float: right;
+	padding-left: 40px;
+	padding-right: 0px;
+	width: 385px;
+}
+
+.content .simulator-wrapper .simulator {
+		-webkit-box-reflect:
+		below 0px
+		-webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(transparent),
+			color-stop(0.5, transparent),
+			to(rgba(255, 255, 255, 0.5)));
 }
 
 /* Table of Contents

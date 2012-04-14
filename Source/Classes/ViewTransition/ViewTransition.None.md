@@ -3,8 +3,14 @@ Moobile.ViewTransition.None
 
 ##### Extends [Moobile.ViewTransition](../ViewTransition/ViewTransition.md)
 
+<div data-simulator-app="assets/classes/ViewTransition/ViewTransition.None.html"></div>
+
 Provide a non-animated view transition.
 
-#### Example:
+Initialization {#initialize}
+--------------------------------------------------------------------------------
 
-<div data-example="../../assets/classes/ViewTransition/ViewTransition.None.html"></div>
+#### Syntax:
+
+	var viewControllerStack = new Moobile.ViewControllerStack();
+	viewControllerStack.pushViewController(new Moobile.ViewController, new Moobile.ViewTransition.None);
