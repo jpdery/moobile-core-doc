@@ -22,11 +22,13 @@ Name                 | Type    | Description
 
 #### Options:
 
-Name           | Type    | Description
--------------- | ------- | -----------
-`className`    | String  | The list's extended CSS class name, defaults to `null`.
-`styleName`    | String  | The list's default style, defaults to `null`.
-`tagName`      | String  | The list's element tag name, defaults to `ul`.
+Name                | Type    | Description
+------------------- | ------- | -----------
+`className`         | String  | The list's extended CSS class name, defaults to `null`.
+`styleName`         | String  | The list's default style, defaults to `null`.
+`tagName`           | String  | The list's element tag name, defaults to `ul`.
+`selectable`        | Boolean | Whether or not this list's items can be selected, defaults to `true`.
+`selectedItemIndex` | Number  | The list's default selected item index, defaults to `-1`.
 
 #### Generates:
 
@@ -373,3 +375,38 @@ Name                 | Type     | Description
 	list.addItem(itemOne);
 	list.addItem(itemTwo);
 	list.removeAllItems(itemOne); // no items remains
+
+-----
+
+### setSelectable(selectable) {#setSelectable}
+
+Sets whether or not items from this list are selectable.
+
+Name         | Type    | Description
+------------ | ------- | -----------
+`selectable` | Boolean | Whether or not the list items are selectable.
+
+#### Returns:
+
+- `Moobile.List` This Moobile.List instance.
+
+#### Example:
+
+	var list = new Moobile.List();
+	list.setSelectable(false);
+
+-----
+
+### isSelectable() {#isSelectable}
+
+Indicates whether or not items from this list are selectable.
+
+#### Returns:
+
+- `Boolean` Whether or not items from this list are selectable.
+
+#### Example:
+
+	var list = new Moobile.List();
+	list.setSelectable(false);
+	list.isSelectable(); // returns false;

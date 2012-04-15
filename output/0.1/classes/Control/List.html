@@ -81,6 +81,12 @@
 </tr><tr><td><code>tagName</code></td>
   <td>String</td>
   <td>The list's element tag name, defaults to <code>ul</code>.</td>
+</tr><tr><td><code>selectable</code></td>
+  <td>Boolean</td>
+  <td>Whether or not this list's items can be selected, defaults to <code>true</code>.</td>
+</tr><tr><td><code>selectedItemIndex</code></td>
+  <td>Number</td>
+  <td>The list's default selected item index, defaults to <code>-1</code>.</td>
 </tr></tbody></table><h4>Generates:</h4>
 
 <pre class="prettyprint"><code>&lt;ul class="list"&gt;&lt;/div&gt;
@@ -439,7 +445,40 @@ list.addItem(itemOne);
 list.addItem(itemTwo);
 list.removeAllItems(itemOne); // no items remains
 </code></pre>
+
+<hr><h3 id="setSelectable">setSelectable(selectable)</h3>
+
+<p>Sets whether or not items from this list are selectable.</p>
+
+<table><thead><tr><th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr></thead><tbody><tr><td><code>selectable</code></td>
+  <td>Boolean</td>
+  <td>Whether or not the list items are selectable.</td>
+</tr></tbody></table><h4>Returns:</h4>
+
+<ul><li><code>Moobile.List</code> This Moobile.List instance.</li>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var list = new Moobile.List();
+list.setSelectable(false);
+</code></pre>
+
+<hr><h3 id="isSelectable">isSelectable()</h3>
+
+<p>Indicates whether or not items from this list are selectable.</p>
+
+<h4>Returns:</h4>
+
+<ul><li><code>Boolean</code> Whether or not items from this list are selectable.</li>
+</ul><h4>Example:</h4>
+
+<pre class="prettyprint"><code>var list = new Moobile.List();
+list.setSelectable(false);
+list.isSelectable(); // returns false;
+</code></pre>
 </div>
-	<div id="table-of-contents" class="table-of-contents"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">select</a></li><li><a href="#">deselect</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setSelectedItem">setSelectedItem</a></li><li><a href="#getSelectedItem">getSelectedItem</a></li><li><a href="#setSelectedItemIndex">setSelectedItemIndex</a></li><li><a href="#getSelectedItemIndex">getSelectedItemIndex</a></li><li><a href="#clearSelectedItem">clearSelectedItem</a></li><li><a href="#addItem">addItem</a></li><li><a href="#addItemAfter">addItemAfter</a></li><li><a href="#addItemBefore">addItemBefore</a></li><li><a href="#getItem">getItem</a></li><li><a href="#getItemAt">getItemAt</a></li><li><a href="#removeItem">removeItem</a></li><li><a href="#removeAllItems">removeAllItems</a></li></ul></li></ul></div>
+	<div id="table-of-contents" class="table-of-contents"><h2>Table of Contents</h2><ul><li><a href="#initialize">Initialization</a></li><li><a href="#events">Events</a><ul><li><a href="#">select</a></li><li><a href="#">deselect</a></li></ul></li><li><a href="#methods">Methods</a><ul><li><a href="#setSelectedItem">setSelectedItem</a></li><li><a href="#getSelectedItem">getSelectedItem</a></li><li><a href="#setSelectedItemIndex">setSelectedItemIndex</a></li><li><a href="#getSelectedItemIndex">getSelectedItemIndex</a></li><li><a href="#clearSelectedItem">clearSelectedItem</a></li><li><a href="#addItem">addItem</a></li><li><a href="#addItemAfter">addItemAfter</a></li><li><a href="#addItemBefore">addItemBefore</a></li><li><a href="#getItem">getItem</a></li><li><a href="#getItemAt">getItemAt</a></li><li><a href="#removeItem">removeItem</a></li><li><a href="#removeAllItems">removeAllItems</a></li><li><a href="#setSelectable">setSelectable</a></li><li><a href="#isSelectable">isSelectable</a></li></ul></li></ul></div>
 
 </body></html>
