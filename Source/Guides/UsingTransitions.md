@@ -5,9 +5,7 @@ This guide will walk you through the steps needed to create an app that moves fr
 
 ### Requirements
 
-This guide requires to:
-
-- Download and extract the [Moobile Boiler Plate](https://github.com/jpdery/moobile-boiler-plate/zipball/master) package.
+To use this guide you must download and extract the [Moobile Boiler Plate](https://moobilejs.com/donwload/moobile-boiler-plate-0.1.zip).
 
 ### Note
 
@@ -15,9 +13,9 @@ If you are using Google Chrome, make sure you start it using the `--allow-file-a
 
 ## Introduction
 
-Transitioning between a view to another requires the `Moobile.ViewControllerStack` object. This object manages an array of view controllers that were pushed into the view controller stack. The view controller stack uses a transition when pushing a view controller and use the same transition (but on reverse) when the view controller is popped.
+Transitioning between one view to another requires the `Moobile.ViewControllerStack` object. This object manages an array of view controllers that were pushed into the view controller stack. The view controller stack uses a transition when pushing a view controller and uses the same transition (but on reverse) when the view controller is popped.
 
-## Create the view controllers
+## Creating the view controllers
 
 We will need to create two view controllers. Open `www/js/app.js` and add the following code:
 
@@ -98,11 +96,11 @@ Replace it with :
 		rootViewController.pushViewController(new ViewControllerOne);
 	});
 
-This creates a view controller stack and push an instance of `ViewControllerOne` *without* a transition.
+This creates a view controller stack and pushes an instance of `ViewControllerOne` *without* a transition.
 
 ## Adding a transition
 
-The next step is to add a `tap` event on the buttons to show the next view controller and come back to the first one.
+The next step is to add a `tap` event on both buttons. This will allow to push the second view controller and return to the first one.
 
 	var ViewControllerOne = new Class({
 
@@ -155,6 +153,6 @@ The next step is to add a `tap` event on the buttons to show the next view contr
 		}
 	});
 
-The `onNextButtonTap` pushes a new view controller to the stack using a `Moobile.ViewTransition.Slide` transition. The `onPrevButtonTap` method remove the current view controller (itself) from the view controller stack using the same transition but on reverse.
+The `onNextButtonTap` pushes a new view controller to the stack using a `Moobile.ViewTransition.Slide` transition. The `onPrevButtonTap` method removes the current view controller (itself) from the view controller stack using the same transition but on reverse.
 
-Open the simulator localted at `moobile-simulator/index.html` in you web browser and enjoy!
+Open the simulator located at `moobile-simulator/index.html` in you web browser and enjoy!

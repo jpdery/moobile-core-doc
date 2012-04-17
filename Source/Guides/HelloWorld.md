@@ -5,15 +5,13 @@ This guide will walk you through the steps needed create an app with a single bu
 
 ### Requirements
 
-This guide requires to:
-
-- Download and extract the [Moobile Boiler Plate](https://github.com/jpdery/moobile-boiler-plate/zipball/master) package.
+To use this guide you must download and extract the [Moobile Boiler Plate](https://moobilejs.com/donwload/moobile-boiler-plate-0.1.zip).
 
 ### Note
 
 If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` command line option [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
 
-## Create a view template
+## Creating a view template
 
 In the `www/templates/views/` directory, create a `hello-world-view.html` file and add the following code:
 
@@ -23,7 +21,7 @@ In the `www/templates/views/` directory, create a `hello-world-view.html` file a
 
 This defines our view element. Adding an element with the `data-role="button"` attribute creates a button. In this case it's named `hello-world-button`.
 
-## Create a view controller and load the view
+## Creating a view controller and load the view
 
 The next step is to create a view controller and load its view. Open `www/app.js` and add the following code:
 
@@ -73,7 +71,7 @@ At this point we need to add a `tap` event on the button. Update the previous co
 
 	});
 
-The `loadView` method is called once the view is totally loaded and it's components can be accessed. In this case we retrieve the button from the view and add a `tap` event. Upon begin tapped this controller creates an alert and displays it.
+The `loadView` method is called once the view is totally loaded and its components can be accessed. In this case we retrieve the button from the view and add a `tap` event. Upon begin tapped this controller creates an alert and displays it.
 
 ## Loading the view controller
 

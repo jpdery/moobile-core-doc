@@ -3,7 +3,7 @@ Getting Started
 
 This guide will walk you through the steps needed to setup a Moobile development environment.
 
-## Browser requirements
+## Browser Requirements
 
 You will need to use one of these browsers to run a Moobile app:
 
@@ -40,7 +40,7 @@ Once extracted this should look like this:
 This folder contains the HTML documentation for the current version of Moobile.
 
 #### moobile-core
-This folder contains Moobile source code with all depedencies. If you need to rebuild the source, use the following command from root directory:
+This folder contains Moobile's source with all dependencies. If you need to rebuild the source, use the following command from root directory:
 
 	moobile-core/build > www/js/libs/moobile-0.1.js
 
