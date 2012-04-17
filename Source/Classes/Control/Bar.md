@@ -130,10 +130,10 @@ Returns this bar's [Moobile.BarItem](../Control/BarItem.md) control.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-### default style
+### default
 
-[TODO: Image]
+<img src="assets/classes/Control/bar-style-default.png" class="component-style" />
 
 ### dark
 
-[TODO: Image]
+<img src="assets/classes/Control/bar-style-dark.png" class="component-style" />

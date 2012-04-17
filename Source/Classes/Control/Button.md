@@ -140,24 +140,24 @@ Styles {#styles}
 
 ### active
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+<img src="assets/classes/Control/button-style-active.png" class="component-style" />
 
-[TODO: Image]
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 ### warning
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+<img src="assets/classes/Control/button-style-warning.png" class="component-style" />
 
-[TODO: Image]
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 ### back
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+<img src="assets/classes/Control/button-style-back.png" class="component-style" />
 
-[TODO: Image]
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
 
 ### forward
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+<img src="assets/classes/Control/button-style-forward.png" class="component-style" />
 
-[TODO: Image]
+This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.

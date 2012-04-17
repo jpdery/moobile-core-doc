@@ -230,14 +230,14 @@ Returns the detail label.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-#### checked
+### checked
 
-[Todo:Image]
+<img src="assets/classes/Control/list-item-style-checked.png" class="component-style" />
 
-#### disclosed
+### disclosed
 
-[Todo:Image]
+<img src="assets/classes/Control/list-item-style-disclosed.png" class="component-style" />
 
-#### detailed
+### detailed
 
-[Todo:Image]
+<img src="assets/classes/Control/list-item-style-detailed.png" class="component-style" />

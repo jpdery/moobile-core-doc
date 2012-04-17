@@ -410,3 +410,15 @@ Indicates whether or not items from this list are selectable.
 	var list = new Moobile.List();
 	list.setSelectable(false);
 	list.isSelectable(); // returns false;
+
+Styles {#styles}
+--------------------------------------------------------------------------------
+
+### default
+
+<img src="assets/classes/Control/list-style-default.png" class="component-style" />
+
+### grouped
+
+<img src="assets/classes/Control/list-style-grouped.png" class="component-style" />
+
