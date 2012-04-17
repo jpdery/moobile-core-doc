@@ -1,0 +1,105 @@
+Hello World
+================================================================================
+
+This guide will walk you through the steps needed create an app with a single button displaying an alert upon being tapped. Through this tutorial, you will learn how to create a view, a view controller and how to customize a view through CSS styles.
+
+### Requirements
+
+This guide requires to:
+
+- Download and extract the [Moobile Boiler Plate](https://github.com/jpdery/moobile-boiler-plate/zipball/master) package.
+
+### Note
+
+If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
+
+## Create a view template
+
+In the `www/templates/views/` directory, create a `hello-world-view.html` file and add the following code:
+
+	<div class="hello-world-view">
+		<div data-role="button" data-name="hello-world-button">Hello World</div>
+	</div>
+
+This defines our view element. Adding an element with the `data-role="button"` attribute creates a button. In this case it's named `hello-world-button`.
+
+## Create a view controller and load the view
+
+The next step is to create a view controller and load its view. Open `www/app.js` and add the following code:
+
+	var HelloWorldViewController = new Class({
+
+		Extends: Moobile.ViewController,
+
+		loadView: function() {
+			this.view = Moobile.View.at('templates/views/hello-world-view.html');
+		}
+
+	});
+
+This creates a new view controller and loads its view using the template at `templates/views/hello-world-view.html`.
+
+## Adding events
+
+At this point we need to add a `tap` event on the button. Update the previous code to look like this:
+
+	var HelloWorldViewController = new Class({
+
+		Extends: Moobile.ViewController,
+
+		helloWorldButton: null,
+
+		loadView: function() {
+			this.view = Moobile.View.at('templates/views/hello-world-view.html');
+		},
+
+		viewDidLoad: function() {
+			this.helloWorldButton = this.view.getChildComponent('hello-world-button');
+			this.helloWorldButton.addEvent('tap', this.bound('onHelloButtonTap'));
+		},
+
+		destroy: function() {
+			this.helloWorldButton.removeEvent('tap', this.bound('onHelloButtonTap'));
+			this.helloWorldButton = null;
+			this.parent();
+		},
+
+		onHelloButtonTap: function() {
+			var alert = new Moobile.Alert();
+			this.view.addChildComponent(alert);
+			alert.setTitle('Hello');
+			alert.showAnimated();
+		}
+
+	});
+
+The `loadView` method is called once the view is totally loaded and it's components can be accessed. In this case we retrieve the button from the view and add a `tap` event. Upon begin tapped this controller creates an alert and displays it.
+
+## The final step
+
+Finally we need to load our view controller. Open the file `www/index.html` and locate this area:
+
+	window.addEvent('ready', function() {
+		var rootViewController = null; // replace this with your own root view controller
+		new Moobile.WindowController().setRootViewController(rootViewController);
+	});
+
+Replace it with this:
+
+	window.addEvent('ready', function() {
+		var rootViewController = new HelloWorldViewController();
+		new Moobile.WindowController().setRootViewController(rootViewController);
+	});
+
+Open the simulator localted at `moobile-simulator/index.html` in you web browser and enjoy!
+
+## One more thing
+
+The presentation of the entire view is somewhat not optimal. The button would certainly look better centered with more padding. Open `www/css/styles.css` and add the following lines:
+
+	.view.hello-world-view .hello-world-view-content {
+		-webkit-box-pack: center;
+		padding: 12px;
+	}
+
+Reload and you're done!

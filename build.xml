@@ -77,6 +77,31 @@
 
 		</copy>
 
+		<!-- generates guides html -->
+		<copy todir="./output/${version}/guides">
+
+			<mapper type="glob" from="*.md" to="*.html" />
+
+			<fileset refid="guides-fileset" />
+
+			<filterchain>
+
+				<filterreader classname="classes.phing.filters.MarkdownFilter">
+					 <param name="decorator" value="./template/content.guide.tmpl.html" />
+				</filterreader>
+				<filterreader classname="classes.phing.filters.MarkdownLinkFilter" />
+				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
+				<filterreader classname="classes.phing.filters.SidebarFilter">
+					 <param name="template" value="./template/sidebar.tmpl.html" />
+				</filterreader>
+ 				<replacetokens begintoken="%%" endtoken="%%">
+					<token key="VERSION" value="${version}" />
+				</replacetokens>
+
+			</filterchain>
+
+		</copy>
+
 		<delete file="./output/${version}/content.guide.tmpl.html" />
 		<delete file="./output/${version}/content.class.tmpl.html" />
 		<delete file="./output/${version}/sidebar.tmpl.html" />
