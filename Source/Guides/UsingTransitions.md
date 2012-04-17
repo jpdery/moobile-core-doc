@@ -11,7 +11,7 @@ This guide requires to:
 
 ### Note
 
-If you are using google chrome, make sure you start it using the `--allow-file-access-from-files` [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
+If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` command line option [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
 
 ## Introduction
 
@@ -86,7 +86,7 @@ Also, open `www/css/styles.css` and add the following code:
 The next step is to set an instance of a `Moobile.ViewControllerStack` as the root view controller. Open `www/index.html` and locate this piece of code:
 
 	window.addEvent('ready', function() {
-		var rootViewController = null; // replace this with your own root view controller
+		var rootViewController = new ViewController.Home(); // replace this with your own root view controller
 		new Moobile.WindowController().setRootViewController(rootViewController);
 	});
 

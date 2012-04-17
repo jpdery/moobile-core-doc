@@ -69,7 +69,7 @@
 		</ul></div>
 	<div id="content" class="content full"><h1>Hello World</h1>
 
-<p>This guide will walk you through the steps needed create an app with a single button displaying an alert upon being tapped. Through this tutorial, you will learn how to create a view, a view controller and how to customize a view through CSS styles.</p>
+<p>This guide will walk you through the steps needed create an app with a single button displaying an alert upon being tapped. Through this tutorial, you will learn how to create a view controller, load its view and customize it using CSS styles.</p>
 
 <h3>Requirements</h3>
 
@@ -78,7 +78,7 @@
 <ul><li>Download and extract the <a href="https://github.com/jpdery/moobile-boiler-plate/zipball/master">Moobile Boiler Plate</a> package.</li>
 </ul><h3>Note</h3>
 
-<p>If you are using Google Chrome, make sure you start it using the <code>--allow-file-access-from-files</code> <a href="http://code.google.com/p/chromium/issues/detail?id=40787">as explained here</a> or it might not work properly.</p>
+<p>If you are using Google Chrome, make sure you start it using the <code>--allow-file-access-from-files</code> command line option <a href="http://code.google.com/p/chromium/issues/detail?id=40787">as explained here</a> or it might not work properly.</p>
 
 <h2>Create a view template</h2>
 
@@ -145,17 +145,17 @@
 
 <p>The <code>loadView</code> method is called once the view is totally loaded and it's components can be accessed. In this case we retrieve the button from the view and add a <code>tap</code> event. Upon begin tapped this controller creates an alert and displays it.</p>
 
-<h2>The final step</h2>
+<h2>Loading the view controller</h2>
 
-<p>Finally we need to load our view controller. Open the file <code>www/index.html</code> and locate this area:</p>
+<p>Finally we need to load our view controller. Open the file <code>www/index.html</code> and locate this code:</p>
 
 <pre class="prettyprint"><code>window.addEvent('ready', function() {
-    var rootViewController = null; // replace this with your own root view controller
+    var rootViewController = new ViewController.Home(); // replace this with your own root view controller
     new Moobile.WindowController().setRootViewController(rootViewController);
 });
 </code></pre>
 
-<p>Replace it with this:</p>
+<p>Replace with this code:</p>
 
 <pre class="prettyprint"><code>window.addEvent('ready', function() {
     var rootViewController = new HelloWorldViewController();
@@ -163,11 +163,11 @@
 });
 </code></pre>
 
-<p>Open the simulator localted at <code>moobile-simulator/index.html</code> in you web browser and enjoy!</p>
+<p>Open the simulator located at <code>moobile-simulator/index.html</code> in you web browser and enjoy!</p>
 
-<h2>One more thing</h2>
+<h2>Making it pretty</h2>
 
-<p>The presentation of the entire view is somewhat not optimal. The button would certainly look better centered with more padding. Open <code>www/css/styles.css</code> and add the following lines:</p>
+<p>The presentation of the entire view is less than optimal. The button would certainly look better centered with more padding. Open <code>www/css/styles.css</code> and add the following lines:</p>
 
 <pre class="prettyprint"><code>.view.hello-world-view .hello-world-view-content {
     -webkit-box-pack: center;

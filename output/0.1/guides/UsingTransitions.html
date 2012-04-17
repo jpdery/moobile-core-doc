@@ -78,7 +78,7 @@
 <ul><li>Download and extract the <a href="https://github.com/jpdery/moobile-boiler-plate/zipball/master">Moobile Boiler Plate</a> package.</li>
 </ul><h3>Note</h3>
 
-<p>If you are using google chrome, make sure you start it using the <code>--allow-file-access-from-files</code> <a href="http://code.google.com/p/chromium/issues/detail?id=40787">as explained here</a> or it might not work properly.</p>
+<p>If you are using Google Chrome, make sure you start it using the <code>--allow-file-access-from-files</code> command line option <a href="http://code.google.com/p/chromium/issues/detail?id=40787">as explained here</a> or it might not work properly.</p>
 
 <h2>Introduction</h2>
 
@@ -154,7 +154,7 @@ var ViewControllerTwo = new Class({
 <p>The next step is to set an instance of a <code>Moobile.ViewControllerStack</code> as the root view controller. Open <code>www/index.html</code> and locate this piece of code:</p>
 
 <pre class="prettyprint"><code>window.addEvent('ready', function() {
-    var rootViewController = null; // replace this with your own root view controller
+    var rootViewController = new ViewController.Home(); // replace this with your own root view controller
     new Moobile.WindowController().setRootViewController(rootViewController);
 });
 </code></pre>

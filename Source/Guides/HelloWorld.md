@@ -1,7 +1,7 @@
 Hello World
 ================================================================================
 
-This guide will walk you through the steps needed create an app with a single button displaying an alert upon being tapped. Through this tutorial, you will learn how to create a view, a view controller and how to customize a view through CSS styles.
+This guide will walk you through the steps needed create an app with a single button displaying an alert upon being tapped. Through this tutorial, you will learn how to create a view controller, load its view and customize it using CSS styles.
 
 ### Requirements
 
@@ -11,7 +11,7 @@ This guide requires to:
 
 ### Note
 
-If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
+If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` command line option [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
 
 ## Create a view template
 
@@ -75,27 +75,27 @@ At this point we need to add a `tap` event on the button. Update the previous co
 
 The `loadView` method is called once the view is totally loaded and it's components can be accessed. In this case we retrieve the button from the view and add a `tap` event. Upon begin tapped this controller creates an alert and displays it.
 
-## The final step
+## Loading the view controller
 
-Finally we need to load our view controller. Open the file `www/index.html` and locate this area:
+Finally we need to load our view controller. Open the file `www/index.html` and locate this code:
 
 	window.addEvent('ready', function() {
-		var rootViewController = null; // replace this with your own root view controller
+		var rootViewController = new ViewController.Home(); // replace this with your own root view controller
 		new Moobile.WindowController().setRootViewController(rootViewController);
 	});
 
-Replace it with this:
+Replace with this code:
 
 	window.addEvent('ready', function() {
 		var rootViewController = new HelloWorldViewController();
 		new Moobile.WindowController().setRootViewController(rootViewController);
 	});
 
-Open the simulator localted at `moobile-simulator/index.html` in you web browser and enjoy!
+Open the simulator located at `moobile-simulator/index.html` in you web browser and enjoy!
 
-## One more thing
+## Making it pretty
 
-The presentation of the entire view is somewhat not optimal. The button would certainly look better centered with more padding. Open `www/css/styles.css` and add the following lines:
+The presentation of the entire view is less than optimal. The button would certainly look better centered with more padding. Open `www/css/styles.css` and add the following lines:
 
 	.view.hello-world-view .hello-world-view-content {
 		-webkit-box-pack: center;

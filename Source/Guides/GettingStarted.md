@@ -14,7 +14,7 @@ Even though most of the development is done on a desktop browser, it's *highly* 
 
 **Note:**
 
-If your app is hosted on your local file system and you want to use google chrome, you will have to start it with the `--allow-file-access-from-files` parameter as Google Chrome will not let you load local files using AJAX. The problem is described [here](http://code.google.com/p/chromium/issues/detail?id=40787&q=ajax%20local&colspec=ID%20Stars%20Pri%20Area%20Feature%20Type%20Status%20Summary%20Modified%20Owner%20Mstone%20OS).
+If you are using Google Chrome, make sure you start it using the `--allow-file-access-from-files` command line option [as explained here](http://code.google.com/p/chromium/issues/detail?id=40787) or it might not work properly.
 
 ## Download the Moobile Boiler Plate
 
