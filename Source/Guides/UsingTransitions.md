@@ -156,3 +156,5 @@ The next step is to add a `tap` event on both buttons. This will allow to push t
 The `onNextButtonTap` pushes a new view controller to the stack using a `Moobile.ViewTransition.Slide` transition. The `onPrevButtonTap` method removes the current view controller (itself) from the view controller stack using the same transition but on reverse.
 
 Open the simulator located at `moobile-simulator/index.html` in you web browser and enjoy!
+
+[Download the demo](http://moobilejs.com/download/demo/Transition.zip)
