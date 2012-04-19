@@ -102,4 +102,4 @@ The presentation of the entire view is less than optimal. The button would certa
 
 Reload and you're done!
 
-[Download the demo](http://moobilejs.com/download/demo/HelloWorld.zip)
+[Download the demo](http://moobilejs.com/downloads/demo-helloworld.zip)

@@ -157,4 +157,4 @@ The `onNextButtonTap` pushes a new view controller to the stack using a `Moobile
 
 Open the simulator located at `moobile-simulator/index.html` in you web browser and enjoy!
 
-[Download the demo](http://moobilejs.com/download/demo/Transition.zip)
+[Download the demo](http://moobilejs.com/downloads/demo-transition.zip)
