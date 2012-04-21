@@ -21,4 +21,11 @@ window.addEvent('domready', function() {
 		}
 	});
 
+	document.getElements('.table-of-contents a').each(function(el) {
+		el.addEvent('click', function(e) {
+			e.stop();
+			document.location.hash = this.href.split('#')[1];
+		});
+	});
+
 });
