@@ -23,7 +23,7 @@
 	<script src="js/script.js"></script>
 
 	<script type="text/javascript">
-		Moobile.Simulator.setResourcePath('assets/shared/resources');
+		Moobile.Simulator.setResourcePath('../../assets/shared/resources');
 	</script>
 
 </head>
@@ -33,6 +33,20 @@
 
 	<div id="sidebar" class="sidebar">%%SIDEBAR%%</div>
 	<div id="content" class="content full intro"></div>
+
+	<script type="text/javascript">
+		if (document.location.protocol !== 'file:') {
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30887977-1']);
+			_gaq.push(['_setDomainName', 'moobilejs.com']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		}
+	</script>
 
 </body>
 </html>

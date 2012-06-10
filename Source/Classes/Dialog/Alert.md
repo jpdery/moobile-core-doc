@@ -127,7 +127,7 @@ Methods {#methods}
 
 ### setTitle(title) {#setTitle}
 
-Sets the title using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
+Sets the title using either a string or a [Moobile.Text](../Control/Text.md) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
@@ -146,7 +146,7 @@ Name    | Type  | Description
 	var alert = new Moobile.Alert();
 	alert.setTitle('Moo');
 
-##### Setting the label using a [Moobile.Text](../Control/Moobile.Text) instance
+##### Setting the label using a [Moobile.Text](../Control/Text.md) instance
 
 	var alert = new Moobile.Alert();
 	alert.setTitle(new Moobile.Text().setText('Moo'));
@@ -171,7 +171,7 @@ Returns the title.
 
 ### setMessage(message) {#setMessage}
 
-Sets the message using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
+Sets the message using either a string or a [Moobile.Text](../Control/Text.md) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
@@ -190,7 +190,7 @@ Name      | Type  | Description
 	var alert = new Moobile.Alert();
 	alert.setMessage('Moo');
 
-##### Setting the message using a [Moobile.Text](../Control/Moobile.Text) instance
+##### Setting the message using a [Moobile.Text](../Control/Text.md) instance
 
 	var alert = new Moobile.Alert();
 	alert.setMessage(new Moobile.Text().setText('Moo'));
@@ -288,7 +288,7 @@ Shows the alert with an animation by adding the `show-animated` CSS class to the
 
 #### Returns:
 
-- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
+- `Moobile.Alert` This Moobile.Alert instance.
 
 -----
 
@@ -298,4 +298,4 @@ Hides the alert with an animation by adding the `hide-animated` CSS class to the
 
 #### Returns:
 
-- *[Moobile.Overlay](../Control/Moobile.Overlay.md)* This overlay.
+- `Moobile.Alert` This Moobile.Alert instance.

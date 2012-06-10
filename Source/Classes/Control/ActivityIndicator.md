@@ -59,7 +59,7 @@ Methods {#methods}
 
 ### start() {#start}
 
-Starts this activity indicator animation. This method adds the `activity` CSS class to the element upon starting.
+Starts this activity indicator animation. This method adds the `active` CSS class to the element upon starting.
 
 #### Returns:
 
@@ -74,7 +74,7 @@ Starts this activity indicator animation. This method adds the `activity` CSS cl
 
 ### stop() {#stop}
 
-Stops this activity indicator animation. This method removes the `activity` CSS class to the element upon stopping.
+Stops this activity indicator animation. This method removes the `active` CSS class to the element upon stopping.
 
 #### Returns:
 

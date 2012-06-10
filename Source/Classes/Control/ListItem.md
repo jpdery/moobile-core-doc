@@ -73,12 +73,12 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name        | Description                                             | Applies to                                                  | Note
------------ | ------------------------------------------------------- | ----------------------------------------------------------- | ----
-`list-item` | Defines an element acting a `Moobile.ListItem` control  | `Moobile.List` control                                      | Use the `data-list-item` attribute to specify a subclass instead
-`label`     | Defines the element acting as the list item label       | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls | If unspecified, the contents of the list item's element will act as its label.
-`image`     | Defines the element acting as the list item image       | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls |
-`detail`    | Defines the element acting as the list item detail text | [Moobile.ListItem](../Control/Moobile.ListItem.md) controls |
+Name        | Description                                             | Applies to                                          | Note
+----------- | ------------------------------------------------------- | --------------------------------------------------- | ----
+`list-item` | Defines an element acting a `Moobile.ListItem` control  | `Moobile.List` control                              | Use the `data-list-item` attribute to specify a subclass instead
+`label`     | Defines the element acting as the list item label       | [Moobile.ListItem](../Control/ListItem.md) controls | If unspecified, the contents of the list item's element will act as its label.
+`image`     | Defines the element acting as the list item image       | [Moobile.ListItem](../Control/ListItem.md) controls |
+`detail`    | Defines the element acting as the list item detail text | [Moobile.ListItem](../Control/ListItem.md) controls |
 
 #### Examples:
 
@@ -118,7 +118,7 @@ Name    | Type  | Description
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel('Moo');
 
-##### Setting the label using a [Moobile.Text](../Control/Moobile.Text) instance
+##### Setting the label using a [Moobile.Text](../Control/Text.md) instance
 
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel(new Moobile.Text().setText('Moo'));
@@ -162,7 +162,7 @@ Name    | Type  | Description
 	var listItem = new Moobile.ListItem();
 	listItem.setImage('path/to/an-image.png');
 
-##### Setting the image using a [Moobile.Image](../Control/Moobile.Image) instance
+##### Setting the image using a [Moobile.Image](../Control/Image.md) instance
 
 	var listItem = new Moobile.ListItem();
 	listItem.setImage(new Moobile.Image().setSource('path/to/an-image.png'));
@@ -206,7 +206,7 @@ Name     | Type  | Description
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel('Moo');
 
-##### Setting the detail text using a [Moobile.Text](../Control/Moobile.Text) instance
+##### Setting the detail text using a [Moobile.Text](../Control/Text.md) instance
 
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel(new Moobile.Text().setText('Moo'));
@@ -230,14 +230,14 @@ Returns the detail label.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-### checked
+### checked {#checked-style}
 
-<img src="assets/classes/Control/list-item-style-checked.png" class="component-style" />
+<img src="../../assets/classes/Control/list-item-style-checked.png" class="component-style" />
 
-### disclosed
+### disclosed {#disclosed-style}
 
-<img src="assets/classes/Control/list-item-style-disclosed.png" class="component-style" />
+<img src="../../assets/classes/Control/list-item-style-disclosed.png" class="component-style" />
 
-### detailed
+### detailed {#detailed-style}
 
-<img src="assets/classes/Control/list-item-style-detailed.png" class="component-style" />
+<img src="../../assets/classes/Control/list-item-style-detailed.png" class="component-style" />

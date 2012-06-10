@@ -73,7 +73,7 @@ Name   | Description                                           | Applies to     
 Events {#events}
 --------------------------------------------------------------------------------
 
-### select
+### select {#select-event}
 
 Fired when a list item is selected.
 
@@ -83,7 +83,7 @@ Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
 `item`   | [Moobile.Button](../Control/ListItem.md)  | The selected list item.
 
-### deselect
+### deselect {#deselect-event}
 
 Fired when a list-item is deselected.
 
@@ -414,11 +414,11 @@ Indicates whether or not items from this list are selectable.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-### default
+### default {#default-style}
 
-<img src="assets/classes/Control/list-style-default.png" class="component-style" />
+<img src="../../assets/classes/Control/list-style-default.png" class="component-style" />
 
-### grouped
+### grouped {#grouped-style}
 
-<img src="assets/classes/Control/list-style-grouped.png" class="component-style" />
+<img src="../../assets/classes/Control/list-style-grouped.png" class="component-style" />
 

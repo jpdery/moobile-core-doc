@@ -3,7 +3,7 @@ Moobile.BarItem
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a bar item control that will be used as the content of a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+Provides a bar item control that will be used as the content of a [Moobile.Bar](../Control/Bar.md) control.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -44,4 +44,4 @@ This class overrides the following method:
 
 Name   | Description                                              | Applies to                                        | Note
 ------ | -------------------------------------------------------- | ------------------------------------------------- | ----
-`item` | Defines an element acting as a `Moobile.BarItem` control | [Moobile.Bar](../Control/Moobile.Bar.md) controls | Use the `data-item` attribute to specify a subclass instead
+`item` | Defines an element acting as a `Moobile.BarItem` control | [Moobile.Bar](../Control/Bar.md) controls | Use the `data-item` attribute to specify a subclass instead

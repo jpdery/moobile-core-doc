@@ -2,7 +2,7 @@
 
 <project name="moobile-doc-generator" default="main">
 
-	<property name="version" value="0.1" />
+	<property name="version" value="0.1.1" />
 
 	<!-- ============================================  -->
 	<!-- Target: setup                                 -->

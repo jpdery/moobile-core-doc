@@ -50,15 +50,15 @@ Upon initialization, this view will use the CSS class name either provided as ei
 Events {#events}
 --------------------------------------------------------------------------------
 
-### dragstart {#dragstart}
+### dragstart {#dragstart-event}
 
 Fired when the user starts scrolling with a touch event.
 
-### dragend {#dragend}
+### dragend {#dragend-event}
 
 Fired when the users finishes the touch event.
 
-### scroll {#scroll}
+### scroll {#scroll-event}
 
 Fired when the content is being scrolled. However, this event is not called when the scrolling occurs from its own momentum. In this case the event will still be called once the momentum stops.
 

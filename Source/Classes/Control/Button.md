@@ -3,7 +3,7 @@ Moobile.Button
 
 ##### Extends [Moobile.Control](../Control/Control.md)
 
-Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a [Moobile.Bar](../Control/Moobile.Bar.md) will look different from a button within an usual component.
+Provides a simple button control. The presentation of button is specific to its container. For instance, a button within a [Moobile.Bar](../Control/Bar.md) will look different from a button within an usual component.
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ Name        | Type   | Description
 
 #### Notes:
 
-Upon initialization, this control creates its label with a [Moobile.Text](../Control/BarItem.md) instance using the button element's content. For instance, if you create a button like this:
+Upon initialization, this control creates its label with a [Moobile.Text](../Control/Text.md) instance using the button element's content. For instance, if you create a button like this:
 
 	<div data-role="button">
 		<div class="element-one"></div>
@@ -95,7 +95,7 @@ Methods {#methods}
 
 ### setLabel(label) {#setLabel}
 
-Sets the label using either a string or a [Moobile.Text](../Control/Moobile.Text) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
+Sets the label using either a string or a [Moobile.Text](../Control/Text.md) instance. When provided with a string, this method creates a `Moobile.Text` object and assign the given string as its text.
 
 #### Parameters:
 
@@ -114,7 +114,7 @@ Name    | Type  | Description
 	var button = new Moobile.Button();
 	button.setLabel('Moo');
 
-##### Setting the label using a [Moobile.Text](../Control/Moobile.Text) instance
+##### Setting the label using a [Moobile.Text](../Control/Text.md) instance
 
 	var button = new Moobile.Button();
 	button.setLabel(new Moobile.Text().setText('Moo'));
@@ -138,26 +138,26 @@ Returns the label.
 Styles {#styles}
 --------------------------------------------------------------------------------
 
-### active
+### active {#active-style}
 
-<img src="assets/classes/Control/button-style-active.png" class="component-style" />
+<img src="../../assets/classes/Control/button-style-active.png" class="component-style" />
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+This style will only be applied for a button within a [Moobile.Bar](../Control/Bar.md) control.
 
-### warning
+### warning {#warning-style}
 
-<img src="assets/classes/Control/button-style-warning.png" class="component-style" />
+<img src="../../assets/classes/Control/button-style-warning.png" class="component-style" />
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+This style will only be applied for a button within a [Moobile.Bar](../Control/Bar.md) control.
 
-### back
+### back {#back-style}
 
-<img src="assets/classes/Control/button-style-back.png" class="component-style" />
+<img src="../../assets/classes/Control/button-style-back.png" class="component-style" />
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+This style will only be applied for a button within a [Moobile.Bar](../Control/Bar.md) control.
 
-### forward
+### forward {#forward-style}
 
-<img src="assets/classes/Control/button-style-forward.png" class="component-style" />
+<img src="../../assets/classes/Control/button-style-forward.png" class="component-style" />
 
-This style will only be applied for a button within a [Moobile.Bar](../Control/Moobile.Bar.md) control.
+This style will only be applied for a button within a [Moobile.Bar](../Control/Bar.md) control.

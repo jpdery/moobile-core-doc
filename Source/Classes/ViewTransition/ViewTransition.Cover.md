@@ -3,8 +3,6 @@ Moobile.ViewTransition.Cover
 
 ##### Extends [Moobile.ViewTransition](../ViewTransition/ViewTransition.md)
 
-<div data-simulator-app="assets/classes/ViewTransition/ViewTransition.Cover.html"></div>
-
 Provides a view transition that covers the current view.
 
 Initialization {#initialize}
@@ -14,3 +12,5 @@ Initialization {#initialize}
 
 	var viewControllerStack = new Moobile.ViewControllerStack();
 	viewControllerStack.pushViewController(new Moobile.ViewController, new Moobile.ViewTransition.Cover);
+
+<div data-simulator-app="../../assets/classes/ViewTransition/ViewTransition.Cover.html"></div>

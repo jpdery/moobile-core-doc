@@ -65,7 +65,7 @@ Name     | Description                                             | Applies to 
 Events {#events}
 --------------------------------------------------------------------------------
 
-### change
+### change {#change-event}
 
 Fired when the slider's value change either by setting the value manually or by moving the slider's thumb.
 

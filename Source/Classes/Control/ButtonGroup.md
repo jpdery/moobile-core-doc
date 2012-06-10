@@ -1,7 +1,7 @@
 Moobile.ButtonGroup
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides a control that group buttons and handle the selection of these buttons.
 
@@ -73,7 +73,7 @@ Name           | Description                                                  | 
 Events {#events}
 --------------------------------------------------------------------------------
 
-### select
+### select {#select-event}
 
 Fired when a button is selected.
 
@@ -83,7 +83,7 @@ Name     | Type                                    | Description
 -------- | --------------------------------------- | -----------
 `button` | [Moobile.Button](../Control/Button.md)  | The selected button.
 
-### deselect
+### deselect {#deselect-event}
 
 Fired when a button is deselected.
 

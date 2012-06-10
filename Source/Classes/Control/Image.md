@@ -52,13 +52,13 @@ Name    | Description                                            | Applies to   
 Events {#events}
 --------------------------------------------------------------------------------
 
-### load
+### load {#load-event}
 
 Fired when the image is loaded. If the `preload` option is `true`, this event will be fired once the image is preloaded otherwise it will be fired as soon as a source is specified.
 
 -----
 
-### unload
+### unload {#unload-event}
 
 Fired when setting the source to `null`.
 

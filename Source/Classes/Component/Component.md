@@ -87,7 +87,7 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 Events {#events}
 --------------------------------------------------------------------------------
 
-### ready
+### ready {#ready-event}
 
 Fired when this component becomes ready.
 
@@ -95,67 +95,67 @@ A component is *ready* when its hierarchy is assigned to a window and therefore 
 
 -----
 
-### tap
+### tap {#tap-event}
 
 Fired when this component receives a `touchend` event with only one touch. The `tap` event is cancelled when the current touch moves more than `10` pixels.
 
 -----
 
-### tapstart
+### tapstart {#tapstart-event}
 
 Fired when this component receives a `touchstart` event with only one touch.
 
 -----
 
-### tapmove
+### tapmove {#tapmove-event}
 
 Fired when this component receives a `touchmove` event with only one touch.
 
 -----
 
-### tapend
+### tapend {#tapend-event}
 
 Fired when this component receives a `touchend` event with only one touch.
 
 -----
 
-### touchstart
+### touchstart {#touchstart-event}
 
 Fired when this component receives a standard `touchstart` event.
 
 -----
 
-### touchmove
+### touchmove {#touchmove-event}
 
 Fired when this component receives a standard `touchmove` event.
 
 -----
 
-### touchend
+### touchend {#touchend-event}
 
 Fired when this component receives a standard `touchend` event.
 
 -----
 
-### pinch
+### pinch {#pinch-event}
 
 Fired when this component receives a `pinch` event.
 
 -----
 
-### swipe
+### swipe {#swipe-event}
 
 Fired when this component receives a `swipe` event.
 
 -----
 
-### show
+### show {#show-event}
 
 Fired when this component becomes visible.
 
 -----
 
-### hide
+### hide {#hide-event}
 
 Fired when this component becomes hidden.
 
@@ -546,6 +546,31 @@ Name   | Type  | Description
 	component.addChildComponent(button);
 	component.addChildComponent(image);
 	component.hasChildComponentOfType(Moobile.Image); // returns true
+
+-----
+
+### getDescendantComponent(name) {#getDescendantComponent}
+
+Returns a component that matches the specified name within all the child components recursively.
+
+#### Parameters:
+
+Name   | Type   | Description
+------ | ------ | -----------
+`name` | String | The name of the component to search for.
+
+#### Returns:
+
+- `Moobile.Component` The component or `null` if no components were found with that name.
+
+#### Example:
+
+	var componentOne = new Moobile.Component('<div class="component-one"></div>');
+	var componentTwo = new Moobile.Component('<div class="component-two"></div>', null, 'my-second-component');
+	var componentThree new Moobile.Component('<div class="component-two"></div>', null, 'my-third-component');
+	componentOne.addChildComponent(componentTwo);
+	componentTwo.addChildComponent(componentThree);
+	componentOne.getChildComponent('my-third-component'); // returns componentThree
 
 -----
 
@@ -974,7 +999,7 @@ Override this method to provide your own implementation.
 
 -----
 
-### willAddChild(component) {#willAddChild}
+### willAddChildComponent(component) {#willAddChildComponent}
 
 Tells this component a component is about to be added.
 
@@ -988,7 +1013,7 @@ Name        | Type                                           | Description
 
 -----
 
-### didAddChild(component) {#didAddChild}
+### didAddChildComponent(component) {#didAddChildComponent}
 
 Tells this component a component has been added.
 
@@ -1002,7 +1027,7 @@ Name        | Type                                           | Description
 
 -----
 
-### willRemoveChild(component) {#willRemoveChild}
+### willRemoveChildComponent(component) {#willRemoveChildComponent}
 
 Tell the component a child component is about to be removed.
 
@@ -1016,7 +1041,7 @@ Name        | Type                                           | Description
 
 -----
 
-### didRemoveChild(component) {#didRemoveChild}
+### didRemoveChildComponent(component) {#didRemoveChildComponent}
 
 Tell the component a child component has been removed.
 
@@ -1030,7 +1055,7 @@ Name        | Type                                           | Description
 
 -----
 
-### parentWillChange(parent) {#parentWillChange}
+### parentComponentWillChange(parent) {#parentComponentWillChange}
 
 Tell the component it's about to be moved to another component.
 
@@ -1044,7 +1069,7 @@ Name     | Type                                           | Description
 
 -----
 
-### parentDidChange(parent) {#parentDidChange}
+### parentComponentDidChange(parent) {#parentComponentDidChange}
 
 Tell the component it has been moved to a new component.
 

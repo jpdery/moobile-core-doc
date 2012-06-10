@@ -79,7 +79,7 @@ This class overrides the following method:
 
 Name    | Description                                                          | Applies to                                                            | Note
 ------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | ----
-`item`  | Defines an element actins as the `Moobile.NavigationBarItem` control | [Moobile.NavigationBar](../Control/Moobile.NavigationBar.md) controls | Use the `data-item` attribute to specify a subclass instead
+`item`  | Defines an element actins as the `Moobile.NavigationBarItem` control | [Moobile.NavigationBar](../Control/NavigationBar.md) controls | Use the `data-item` attribute to specify a subclass instead
 `title` | Defines the element acting as the navigation bar item title.         | `Moobile.NavigationBarItem` controls                                  | If unspecified, the contents of the navigation bar item's element will act as its title.
 
 #### Examples:

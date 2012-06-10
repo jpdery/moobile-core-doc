@@ -3,7 +3,7 @@ Moobile.NavigationBar
 
 ##### Extends [Moobile.Bar](../Control/Bar.md)
 
-Provides an extended [Moobile.Bar](../Control/Bar.md) control that handles a [Moobile.NavigationBarItem](../Control/NavigationBarItem.md);
+Provides an extended [Moobile.Bar](../Control/Bar.md) control that handles a [Moobile.NavigationBarItem](../Control/NavigationBarItem.md).
 
 Initialization {#initialize}
 --------------------------------------------------------------------------------
