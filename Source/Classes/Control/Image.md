@@ -1,7 +1,7 @@
 Moobile.Image
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides an image control that correctly frees the memory upon being unloaded.
 

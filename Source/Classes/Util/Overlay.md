@@ -1,7 +1,7 @@
 Moobile.Overlay
 ================================================================================
 
-##### Extends *[Moobile.Control](../Control/Control.md)*
+##### Extends [Moobile.Control](../Control/Control.md)
 
 Provides an overlay control.
 

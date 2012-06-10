@@ -42,6 +42,7 @@
 			<filterchain>
 				<filterreader classname="classes.phing.filters.SidebarFilter">
 					 <param name="template" value="./template/sidebar.tmpl.html" />
+					 <param name="root" value="" />
 				</filterreader>
 				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />
@@ -66,6 +67,7 @@
 				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
 				<filterreader classname="classes.phing.filters.SidebarFilter">
 					 <param name="template" value="./template/sidebar.tmpl.html" />
+					 <param name="root" value="../../" />
 				</filterreader>
 				<filterreader classname="classes.phing.filters.TableOfContentsFilter" />
 
@@ -93,6 +95,7 @@
 				<filterreader classname="classes.phing.filters.MarkdownCodeFilter" />
 				<filterreader classname="classes.phing.filters.SidebarFilter">
 					 <param name="template" value="./template/sidebar.tmpl.html" />
+					 <param name="root" value="../" />
 				</filterreader>
  				<replacetokens begintoken="%%" endtoken="%%">
 					<token key="VERSION" value="${version}" />

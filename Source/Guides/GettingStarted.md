@@ -34,7 +34,7 @@ This package contains everything you need to start working on a Moobile app such
 
 Once extracted this should look like this:
 
-<img src="assets/guides/GettingStarted/moobile-boiler-plate.png" />
+<img src="../assets/guides/GettingStarted/moobile-boiler-plate.png" />
 
 #### documentation folder
 This folder contains the HTML documentation for the current version of Moobile.
@@ -42,7 +42,7 @@ This folder contains the HTML documentation for the current version of Moobile.
 #### moobile-core
 This folder contains Moobile's source with all dependencies. If you need to rebuild the source, use the following command from root directory:
 
-	moobile-core/build > www/js/libs/moobile-0.1.js
+	moobile-core/build > www/js/libs/moobile-0.1.1.js
 
 #### moobile-psd
 This folder contains various psd files used for the current iOS style.

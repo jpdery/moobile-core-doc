@@ -7,6 +7,8 @@ class SidebarFilter extends BaseParamFilterReader implements ChainableReader {
 
 	private $template = '';
 
+	private $root = '';
+
 	public function read($len = null) {
 
 		if (!$this->getInitialized()) {
@@ -18,7 +20,9 @@ class SidebarFilter extends BaseParamFilterReader implements ChainableReader {
 		if ($buffer === -1)
 			return -1;
 
-		$buffer = str_replace('%%SIDEBAR%%', file_get_contents($this->template), $buffer);
+		$contents = file_get_contents($this->template);
+		$contents = str_replace('{ROOT}', $this->root, $contents);
+		$buffer = str_replace('%%SIDEBAR%%', $contents, $buffer);
 
 		return $buffer;
 	}
@@ -31,10 +35,8 @@ class SidebarFilter extends BaseParamFilterReader implements ChainableReader {
 		$params = $this->getParameters();
 		if ($params !== null) {
 			for ($i = 0; $i < count($params); $i++) {
-				if ('template' === $params[$i]->getName()) {
-					$this->template = $params[$i]->getValue();
-					break;
-				}
+				if ('root' === $params[$i]->getName()) $this->root = $params[$i]->getValue();
+				if ('template' === $params[$i]->getName()) $this->template = $params[$i]->getValue();
 			}
 		}
 	}
