@@ -22,27 +22,27 @@ Name                 | Type    | Description
 
 #### Options:
 
-Name           | Type   | Description
--------------- | ------ | -----------
-`className`    | String | The alert's extended CSS class name, defaults to `null`.
-`styleName`    | String | The alert's default style, defaults to `null`.
-`tagName`      | String | The alert's element tag name, defaults to `div`.
-`buttonLayout` | String | The alert's button layout, either `vertical` or `horizontal`, defaults to `vertical`.
+Name        | Type   | Description
+----------- | ------ | -----------
+`className` | String | The alert's extended CSS class name, defaults to `null`.
+`styleName` | String | The alert's default style, defaults to `null`.
+`tagName`   | String | The alert's element tag name, defaults to `div`.
+`layout`    | String | The alert's button layout, either `vertical` or `horizontal`, defaults to `horizontal`.
 
 #### Generates:
 
-	<div class="alert button-layout-vertical ">
-		<div class="overlay "></div>
-		<div class="alert-wrapper">
+	<div class="alert">
+		<div class="overlay"></div>
+		<div class="alert-box">
 			<div class="alert-header">
-				<span class="text title">Title</span>
+				<span class="text alert-title">Lorem</span>
 			</div>
 			<div class="alert-content">
-				<span class="text message">Test</span>
+				<span class="text alert-message">Lorem ipsum dolor sit amet</span>
 			</div>
 			<div class="alert-footer">
-				<div class="button default">
-					<span class="text button-label">Test</span>
+				<div class="button is-default">
+					<span class="text button-label">OK</span>
 				</div>
 			</div>
 		</div>
@@ -64,19 +64,22 @@ This class overrides the following method:
 ##### Creating an alert inside a `Moobile.ViewController`
 
 	var alert = new Moobile.Alert();
-	this.view.addChildComponent(alert);
 	alert.setTitle('Title');
 	alert.setMessage('Message');
 	alert.showAnimated();
+
+#### Note:
+
+You don't need to manually add this component to another component to show it. It will be automatically added to the window if it has no parent.
 
 -----
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### wrapperElement {#wrapperElement}
+### boxElement {#boxElement}
 
-The element that wraps the alert's header, content and footer elements.
+The element that wraps this alert's header, content and footer elements.
 
 #### Type:
 
@@ -86,7 +89,7 @@ The element that wraps the alert's header, content and footer elements.
 
 ### contentElement {#contentElement}
 
-The element that contains the alert's message.
+The element that contains this alert's message.
 
 #### Type:
 
@@ -96,7 +99,7 @@ The element that contains the alert's message.
 
 ### headerElement {#headerElement}
 
-The element that contains the alert's title.
+The element that contains this alert's title.
 
 #### Type:
 
@@ -106,7 +109,7 @@ The element that contains the alert's title.
 
 ### footerElement {#footerElement}
 
-The element that contains the alert's buttons.
+The element that contains this alert's buttons.
 
 #### Type:
 
@@ -150,6 +153,10 @@ Name    | Type  | Description
 
 	var alert = new Moobile.Alert();
 	alert.setTitle(new Moobile.Text().setText('Moo'));
+
+#### Note:
+
+The CSS class `alert-title-empty` is added to the root element when the title is empty.
 
 -----
 
@@ -195,6 +202,10 @@ Name      | Type  | Description
 	var alert = new Moobile.Alert();
 	alert.setMessage(new Moobile.Text().setText('Moo'));
 
+#### Note:
+
+The CSS class `alert-message-empty` is added to the root element when the message is empty.
+
 -----
 
 ### getMessage() {#getMessage}
@@ -213,15 +224,16 @@ Returns the message.
 
 -----
 
-### addButton(button) {#addButton}
+### addButton(button, [where]) {#addButton}
 
-Adds the given button at the bottom of the button list.
+Adds the specified button at the `top` or `bottom` of this alert's footer. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
 
 #### Parameters:
 
-Name     | Type                                   | Description
--------- | -------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md) | The button.
+Name               | Type   | Description
+------------------ | ------ | -----------
+`button`           | Mixed  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
+`where` *Optional* | String | The button's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -231,6 +243,174 @@ Name     | Type                                   | Description
 
 	var alert = new Moobile.Alert();
 	alert.addButton(new Moobile.Button().setLabel('OK'));
+
+-----
+
+### addButtonAfter(button, after) {#addButtonAfter}
+
+Adds the specified button after a button from this alert. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
+
+#### Parameters:
+
+Name     | Type                                   | Description
+-------- | -------------------------------------- | -----------
+`button` | Mixed                                  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
+`after`  | [Moobile.Button](../Control/Button.md) | The button will be placed after this button.
+
+#### Returns:
+
+- `Moobile.Alert` This Moobile.Alert instance.
+
+#### Example:
+
+	var alert = new Moobile.Alert();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButtonAfter(buttonTwo, buttonOne); // buttonTwo is after buttonOne
+
+-----
+
+### addButtonBefore(button, before) {#addButtonBefore}
+
+Adds the specified button before a button from this alert. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
+
+#### Parameters:
+
+Name     | Type                                   | Description
+-------- | -------------------------------------- | -----------
+`button` | Mixed                                  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
+`after`  | [Moobile.Button](../Control/Button.md) | The button will be placed before this button.
+
+#### Returns:
+
+- `Moobile.Alert` This Moobile.Alert instance.
+
+#### Example:
+
+	var alert = new Moobile.Alert();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButtonBefore(buttonTwo, buttonOne); // buttonTwo is before buttonOne
+
+-----
+
+### getButtons() {#getButtons}
+
+Returns all the buttons in this alert.
+
+#### Returns:
+
+- `Array` An array of all the buttons in this alert.
+
+#### Example:
+
+	var alert = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButton(buttonTwo);
+	alert.getButtons(); // returns [buttonOne, buttonTwo]
+
+-----
+
+### getButton(name) {#getButton}
+
+Returns a button that matches the specified name.
+
+#### Parameters:
+
+Name   | Type   | Description
+------ | ------ | -----------
+`name` | String | The name of the button to search for.
+
+#### Returns:
+
+- [Moobile.Button](../Control/Button.md) The button or `null` if no buttons were found with the name.
+
+#### Example:
+
+	var alert = new Moobile.Alert();
+	var buttonOne = new Moobile.Button(null, null, 'me');
+	alert.addButton(buttonOne);
+	alert.getButton('me'); // returns buttonOne
+
+-----
+
+### getButtonAt(index) {#getButtonAt}
+
+Return a button at a specified index.
+
+#### Parameters:
+
+Name    | Type   | Description
+------- | ------ | -----------
+`index` | Number | The index location of the button.
+
+#### Returns:
+
+- [Moobile.Button](../Control/Button.md) The button or `null` if no buttons were found at the index.
+
+#### Example:
+
+	var alert = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButton(buttonTwo);
+	alert.getButtonAt(0); // returns buttonOne
+
+-----
+
+### removeButton(button, [destroy]) {#removeButton}
+
+Removes a button.
+
+#### Parameters:
+
+Name                 | Type                                   | Description
+-------------------- | -------------------------------------- | -----------
+`button`             | [Moobile.Button](../Control/Button.md) | The button to remove.
+`destroy` *Optional* | Boolean                                | Whether to destroy the button upon removal.
+
+#### Returns:
+
+- `Moobile.Alert` This Moobile.Alert instance.
+
+#### Example:
+
+	var alert = new Moobile.Alert();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButton(buttonTwo);
+	alert.removeButton(buttonOne); // the button group contains only buttonTwo
+
+-----
+
+### removeAllButtons() {#removeAllButtons}
+
+Removes all buttons.
+
+#### Parameters:
+
+Name                 | Type     | Description
+-------------------- | -------- | -----------
+`destroy` *Optional* | Boolean  | Whether to destroy the button upon removal.
+
+#### Returns:
+
+- `Moobile.Alert` This Moobile.Alert instance.
+
+#### Example:
+
+	var alert = new Moobile.Alert();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	alert.addButton(buttonOne);
+	alert.addButton(buttonTwo);
+	alert.removeAllButtons(); // no buttons remains
 
 -----
 
@@ -284,7 +464,7 @@ Name     | Type   | Description
 
 ### showAnimated() {#showAnimated}
 
-Shows the alert with an animation by adding the `show-animated` CSS class to the element. Update the properties of this CSS class to customize the animation.
+Shows this alert with an animation by adding the `show-animated` CSS class to the element. Update the properties of this CSS class to customize the animation.
 
 #### Returns:
 
@@ -294,7 +474,7 @@ Shows the alert with an animation by adding the `show-animated` CSS class to the
 
 ### hideAnimated() {#hideAnimated}
 
-Hides the alert with an animation by adding the `hide-animated` CSS class to the element. Update the properties of this CSS class to customize the animation.
+Hides this alert with an animation by adding the `hide-animated` CSS class to the element. Update the properties of this CSS class to customize the animation.
 
 #### Returns:
 

@@ -27,7 +27,7 @@ Name                | Type    | Description
 `className`         | String  | The list's extended CSS class name, defaults to `null`.
 `styleName`         | String  | The list's default style, defaults to `null`.
 `tagName`           | String  | The list's element tag name, defaults to `ul`.
-`selectable`        | Boolean | Whether or not this list's items can be selected, defaults to `true`.
+`selectable`        | Boolean | Whether this list's items can be selected, defaults to `true`.
 `selectedItemIndex` | Number  | The list's default selected item index, defaults to `-1`.
 
 #### Generates:
@@ -38,12 +38,12 @@ Name                | Type    | Description
 
 List item can be added to the list by adding elements with the `list-item` `data-role` attribute:
 
-	<ul data-role="list"></div>
-		<li data-role="list-item">Item 1</li>
-		<li data-role="list-item">Item 2</li>
-		<li data-role="list-item">Item 3</li>
-		<li data-role="list-item">Item 4</li>
-	</div>
+	<ul data-role="list">
+		<li data-role="item">Item 1</li>
+		<li data-role="item">Item 2</li>
+		<li data-role="item">Item 3</li>
+		<li data-role="item">Item 4</li>
+	</ul>
 
 #### Subclassing Notes:
 
@@ -145,7 +145,7 @@ Returns the selected item.
 
 ### setSelectedItemIndex(index) {#setSelectedItemIndex}
 
-Selects an item using a specified index, `0` being the first item in the list. Specifying an index that matches no items will clear the selection.
+Selects an item using a specified index, `0` being the first item in this list. Specifying an index that matches no items will clear the selection.
 
 #### Parameters:
 
@@ -210,14 +210,14 @@ Unselects the selected item.
 
 ### addItem(item, where) {#addItem}
 
-Adds the specified item at the `top` or `bottom` of this list. If `where` is unspecified, the item will be added at the bottom of this list.
+Adds the specified item at the `top` or `bottom` of this list. If `where` is omitted, the item will be added at the bottom of this list. The item may be a string. In this case, this method will create a [Moobile.ListItem](../Control/ListItem.md) instance and set the specified string as its label.
 
 #### Parameters:
 
-Name               | Type                                       | Description
------------------- | ------------------------------------------ | -----------
-`item`             | [Moobile.ListItem](../Control/ListItem.md) | The item.
-`where` *Optional* | String                                     | The item's location, either `top` or `bottom`, defaults to `bottom`.
+Name               | Type   | Description
+------------------ | ------ | -----------
+`item`             | Mixed  | The item as a string or a [Moobile.ListItem](../Control/ListItem.md) instance.
+`where` *Optional* | String | The item's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -233,13 +233,13 @@ Name               | Type                                       | Description
 
 ### addItemAfter(item, after) {#addItemAfter}
 
-Adds the specified item after an item from this list.
+Adds the specified item after an item from this list. The item may be a string. In this case, this method will create a [Moobile.ListItem](../Control/ListItem.md) instance and set the specified string as its label.
 
 #### Parameters:
 
 Name     | Type                                       | Description
 -------- | ------------------------------------------ | -----------
-`button` | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`button` | Mixed                                      | The item as a string or a [Moobile.ListItem](../Control/ListItem.md) instance.
 `after`  | [Moobile.ListItem](../Control/ListItem.md) | The item will be placed after this item.
 
 #### Returns:
@@ -258,13 +258,13 @@ Name     | Type                                       | Description
 
 ### addItemBefore(item, before) {#addItemBefore}
 
-Adds the specified item before an item from this list.
+Adds the specified item before an item from this list. The item may be a string. In this case, this method will create a [Moobile.ListItem](../Control/ListItem.md) instance and set the specified string as its label.
 
 #### Parameters:
 
 Name     | Type                                       | Description
 -------- | ------------------------------------------ | -----------
-`item`   | [Moobile.ListItem](../Control/ListItem.md) | The item.
+`item`   | Mixed                                      | The item as a string or a [Moobile.ListItem](../Control/ListItem.md) instance.
 `before` | [Moobile.ListItem](../Control/ListItem.md) | The item will be placed before this item.
 
 #### Returns:
@@ -278,6 +278,25 @@ Name     | Type                                       | Description
 	var itemTwo = new Moobile.ListItem();
 	list.addItem(itemOne);
 	list.addItemBefore(itemTwo, itemOne); // itemTwo is before itemOne
+
+-----
+
+### getItems() {#getButtons}
+
+Returns all the items in this list.
+
+#### Returns:
+
+- `Array` An array of all the items in this list.
+
+#### Example:
+
+	var list = new Moobile.List();
+	var itemOne = new Moobile.ListItem();
+	var itemTwo = new Moobile.ListItem();
+	list.addButton(buttonOne);
+	list.addButton(buttonTwo);
+	list.getItems(); // returns [itemOne, itemTwo]
 
 -----
 
@@ -338,7 +357,7 @@ Removes an item.
 Name                 | Type                                       | Description
 -------------------- | ------------------------------------------ | -----------
 `item`               | [Moobile.ListItem](../Control/ListItem.md) | The item to remove.
-`destroy` *Optional* | Boolean                                    | Whether or not to destroy the item upon removal.
+`destroy` *Optional* | Boolean                                    | Whether to destroy the item upon removal.
 
 #### Returns:
 
@@ -361,7 +380,7 @@ Removes all items.
 
 Name                 | Type     | Description
 -------------------- | -------- | -----------
-`destroy` *Optional* | Boolean  | Whether or not to destroy the item upon removal.
+`destroy` *Optional* | Boolean  | Whether to destroy the item upon removal.
 
 #### Returns:
 
@@ -380,11 +399,11 @@ Name                 | Type     | Description
 
 ### setSelectable(selectable) {#setSelectable}
 
-Sets whether or not items from this list are selectable.
+Sets whether items from this list are selectable.
 
 Name         | Type    | Description
 ------------ | ------- | -----------
-`selectable` | Boolean | Whether or not the list items are selectable.
+`selectable` | Boolean | Whether items from this list are selectable.
 
 #### Returns:
 
@@ -399,11 +418,11 @@ Name         | Type    | Description
 
 ### isSelectable() {#isSelectable}
 
-Indicates whether or not items from this list are selectable.
+Indicates whether items from this list are selectable.
 
 #### Returns:
 
-- `Boolean` Whether or not items from this list are selectable.
+- `Boolean` Whether items from this list are selectable.
 
 #### Example:
 

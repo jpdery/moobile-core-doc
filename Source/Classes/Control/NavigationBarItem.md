@@ -77,10 +77,10 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name    | Description                                                          | Applies to                                                            | Note
-------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | ----
-`item`  | Defines an element actins as the `Moobile.NavigationBarItem` control | [Moobile.NavigationBar](../Control/NavigationBar.md) controls | Use the `data-item` attribute to specify a subclass instead
-`title` | Defines the element acting as the navigation bar item title.         | `Moobile.NavigationBarItem` controls                                  | If unspecified, the contents of the navigation bar item's element will act as its title.
+Name    | Description                                                                                           | Applies to                                                    | Note
+------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ----
+`item`  | Defines an element actins as the [Moobile.NavigationBarItem](../Control/NavigationBarItem.md) control | [Moobile.NavigationBar](../Control/NavigationBar.md) controls | Use the `data-item` attribute to specify a subclass instead.
+`title` | Defines the element acting as the navigation bar item title.                                          | Moobile.NavigationBarItem controls                            | If omitted, the contents of the navigation bar item's element will act as its title.
 
 #### Examples:
 
@@ -126,6 +126,10 @@ Name    | Type  | Description
 	var navigationBar = new Moobile.NavigationBar();
 	var navigationBarItem = navigationBar.getItem();
 	navigationBarItem.setTitle(new Moobile.Text().setText('Moo'));
+
+#### Note:
+
+The CSS class `bar-title-empty` is added to the root element when the title is empty.
 
 -----
 
@@ -225,7 +229,7 @@ Removes a button.
 Name                 | Type                                         | Description
 -------------------- | -------------------------------------------- | -----------
 `button`             | [Moobile.Button](../Control/Button.md)       | The button to remove.
-`destroy` *Optional* | Boolean                                      | Whether or not to destroy the button upon removal.
+`destroy` *Optional* | Boolean                                      | Whether to destroy the button upon removal.
 
 #### Returns:
 
@@ -251,7 +255,7 @@ Removes all buttons.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether or not to destroy the button upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the buttons upon removal.
 
 #### Returns:
 

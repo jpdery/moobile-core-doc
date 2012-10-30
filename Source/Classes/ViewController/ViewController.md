@@ -119,9 +119,9 @@ Adds the specified view controller at the bottom this view controller hierarchy.
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to add to the hierarchy.
 
 #### Returns:
 
@@ -141,10 +141,10 @@ Adds the specified view controller to the view controller hierarchy after a spec
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
-`after`          | `Moobile.ViewController` | The view controller used as a context to put the specified view controller after.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to add to the hierarchy.
+`after`          | Moobile.ViewController | The view controller used as a context to put the specified view controller after.
 
 #### Returns:
 
@@ -166,10 +166,10 @@ Adds specified view controller to the view controller hierarchy before a specifi
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to add to the hierarchy.
-`before`         | `Moobile.ViewController` | The view controller used as a context to put the child view controller before.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to add to the hierarchy.
+`before`         | Moobile.ViewController | The view controller used as a context to put the child view controller before.
 
 #### Returns:
 
@@ -193,7 +193,7 @@ Returns a child view controller matching a specified name.
 
 Name   | Type   | Description
 ------ | ------ | -----------
-`name` | String | The child view controller name.
+`name` | String | The child view controller name to search form.
 
 #### Returns:
 
@@ -237,9 +237,9 @@ Returns the index of a specified view controller.
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to look up.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to search for.
 
 #### Returns:
 
@@ -279,9 +279,9 @@ Indicates whether the given viewController is a child of the current instance.
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to look up.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to search for.
 
 #### Returns:
 
@@ -302,10 +302,10 @@ Removes the given viewController from the child view controllers. If `destroy` i
 
 #### Parameters:
 
-Name                 | Type                                                          | Description
--------------------- | ------------------------------------------------------------- | -----------
-`viewController`     | `Moobile.ViewController` | The view controller to remove.
-`destroy` *Optional* | Boolean                                                       | Whether or not to destroy the view controller upon removal.
+Name                 | Type                   | Description
+-------------------- | ---------------------- | -----------
+`viewController`     | Moobile.ViewController | The view controller to remove.
+`destroy` *Optional* | Boolean                | Whether to destroy the view controller upon removal.
 
 #### Returns:
 
@@ -328,7 +328,7 @@ Removes all child view controllers. If `destroy` is `true`, All child view contr
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the view controller upon removal.
 
 #### Returns:
 
@@ -353,7 +353,7 @@ Removes the current instance from its parent.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether or not to destroy the view controller upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the view controller upon removal.
 
 #### Returns:
 
@@ -374,9 +374,9 @@ Displays a child view controller over this view controller using a specified tra
 
 #### Parameters:
 
-Name                        | Type                                                       | Description
---------------------------- | ---------------------------------------------------------- | -----------
-`viewController`            | `Moobile.ViewController` | The view controller.
+Name                        | Type                                                          | Description
+--------------------------- | ------------------------------------------------------------- | -----------
+`viewController`            | Moobile.ViewController                                        | The view controller.
 `viewTransition` *Optional* | [Moobile.ViewTransition](../ViewTransition/ViewTransition.md) | The view transition.
 
 #### Returns:
@@ -603,9 +603,9 @@ Sets the parent view controller. You should rarely use this method as the `Moobi
 
 #### Parameters:
 
-Name                   | Type                                                          | Description
----------------------- | ------------------------------------------------------------- | -----------
-`parentViewController` | `Moobile.ViewController` | The parent view controller.
+Name                   | Type                   | Description
+---------------------- | ---------------------- | -----------
+`parentViewController` | Moobile.ViewController | The parent view controller.
 
 #### Returns:
 
@@ -629,9 +629,9 @@ Tells this view controller a child view controller is about to be added. Overrid
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The view controller to be added.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The view controller to be added.
 
 -----
 
@@ -641,9 +641,9 @@ Tells this view controller a child view controller has been added. Override this
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The added child view controller.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The added child view controller.
 
 -----
 
@@ -653,9 +653,9 @@ Tells this view controller a child view controller is about to be removed. Overr
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The child view controller about to be removed.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The child view controller about to be removed.
 
 -----
 
@@ -665,9 +665,9 @@ Tells this view controller a child view controller has been removed. Override th
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | The removed child view controller.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | The removed child view controller.
 
 -----
 
@@ -677,9 +677,9 @@ Tells this view controller its parent view controller is about to change. Overri
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | This view controller's parent view controller.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | This view controller's parent view controller.
 
 -----
 
@@ -689,9 +689,9 @@ Tells this view controller its parent view controller has changed. Override this
 
 #### Parameters:
 
-Name             | Type                                                          | Description
----------------- | ------------------------------------------------------------- | -----------
-`viewController` | `Moobile.ViewController` | This view controller's parent view controller.
+Name             | Type                   | Description
+---------------- | ---------------------- | -----------
+`viewController` | Moobile.ViewController | This view controller's parent view controller.
 
 -----
 
@@ -719,7 +719,7 @@ Tells this view controller it has dismissed the current modal view controller. O
 
 -----
 
-### didRotate(orientation) {#didRotate}
+### viewDidRotate(orientation) {#viewDidRotate}
 
 Tells this view controller the device orientation changed. Override this method to provide your own implementation.
 

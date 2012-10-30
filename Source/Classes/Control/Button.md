@@ -36,7 +36,7 @@ Name        | Type   | Description
 
 #### Notes:
 
-Upon initialization, this control creates its label with a [Moobile.Text](../Control/Text.md) instance using the button element's content. For instance, if you create a button like this:
+Upon initialization, this control creates its label with a [Moobile.Text](../Control/Text.md) instance using this button element's content. For instance, if you create a button like this:
 
 	<div data-role="button">
 		<div class="element-one"></div>
@@ -69,10 +69,10 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name     | Description                                             | Applies to                | Note
--------- | ------------------------------------------------------- | ------------------------- | ----
-`button` | Defines an element acting as a `Moobile.Button` control | All components            | Use the `data-button` attribute to specify a subclass instead
-`label`  | Defines the element acting as the button's label        | `Moobile.Button` controls | If unspecified, the contents of the button's element will become its label.
+Name     | Description                                             | Applies to              | Note
+-------- | ------------------------------------------------------- | ----------------------- | ----
+`button` | Defines an element acting as a `Moobile.Button` control | All components          | Use the `data-button` attribute to specify a subclass instead
+`label`  | Defines the element acting as the button's label        | Moobile.Button controls | If omitted, the contents of this button's element will become its label.
 
 #### Examples:
 
@@ -101,7 +101,7 @@ Sets the label using either a string or a [Moobile.Text](../Control/Text.md) ins
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`label` | Mixed | The label as a string or a `Moobile.Text` instance.
+`label` | Mixed | The label as a string or a [Moobile.Text](../Control/Text.md) instance.
 
 #### Returns:
 
@@ -118,6 +118,10 @@ Name    | Type  | Description
 
 	var button = new Moobile.Button();
 	button.setLabel(new Moobile.Text().setText('Moo'));
+
+#### Note:
+
+The CSS class `button-label-empty` is added to the root element when the label is empty.
 
 -----
 

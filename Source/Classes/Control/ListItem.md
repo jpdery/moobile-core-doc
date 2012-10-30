@@ -73,25 +73,26 @@ This class overrides the following method:
 
 #### Defined roles:
 
-Name        | Description                                             | Applies to                                          | Note
------------ | ------------------------------------------------------- | --------------------------------------------------- | ----
-`list-item` | Defines an element acting a `Moobile.ListItem` control  | `Moobile.List` control                              | Use the `data-list-item` attribute to specify a subclass instead
-`label`     | Defines the element acting as the list item label       | [Moobile.ListItem](../Control/ListItem.md) controls | If unspecified, the contents of the list item's element will act as its label.
-`image`     | Defines the element acting as the list item image       | [Moobile.ListItem](../Control/ListItem.md) controls |
-`detail`    | Defines the element acting as the list item detail text | [Moobile.ListItem](../Control/ListItem.md) controls |
+Name        | Description                                                                    | Applies to                                          | Note
+----------- | ------------------------------------------------------------------------------ | --------------------------------------------------- | ----
+`list-item` | Defines an element acting a `Moobile.ListItem` control                         | Moobile.List control                                | Use the `data-list-item` attribute to specify a subclass instead.
+`header`    | Defines an element acting a `Moobile.ListItem` control with the `header` style | Moobile.List control                                | Use the `data-list-item` attribute to specify a subclass instead.
+`label`     | Defines the element acting as the list item label                              | [Moobile.ListItem](../Control/ListItem.md) controls | If omitted, the contents of the list item's element will act as its label.
+`image`     | Defines the element acting as the list item image                              | [Moobile.ListItem](../Control/ListItem.md) controls |
+`detail`    | Defines the element acting as the list item detail text                        | [Moobile.ListItem](../Control/ListItem.md) controls |
 
 #### Examples:
 
 ##### Specifying an element that acts a list item control using the `data-role` attribute:
 
 	<ul data-role="list">
-		<li data-role="list-item"></li>
+		<li data-role="item"></li>
 	</ul>
 
 ##### Specifying an element that acts a list item control subclass using the `data-role` attribute:
 
 	<ul data-role="list">
-		<li data-role="list-item" data-list-item="MyListItem" />
+		<li data-role="item" data-list-item="MyListItem" />
 	</ul>
 
 Methods {#methods}
@@ -105,7 +106,7 @@ Sets the label using either a string or a `Moobile.Text` instance. When provided
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`label` | Mixed | The label as a string or a `Moobile.Text` instance.
+`label` | Mixed | The label as a string or a [Moobile.Text](../Control/Text.md) instance.
 
 #### Returns:
 
@@ -122,6 +123,10 @@ Name    | Type  | Description
 
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel(new Moobile.Text().setText('Moo'));
+
+#### Note:
+
+The CSS class `list-item-label-empty` is added to the root element when the label is empty.
 
 -----
 
@@ -149,7 +154,7 @@ Sets the image using either a string or a `Moobile.Image` instance. When provide
 
 Name    | Type  | Description
 ------- | ----- | -----------
-`image` | Mixed | The image as a string or a `Moobile.Image` instance.
+`image` | Mixed | The image as a string or a [Moobile.Image](../Control/Image.md) instance.
 
 #### Returns:
 
@@ -166,6 +171,10 @@ Name    | Type  | Description
 
 	var listItem = new Moobile.ListItem();
 	listItem.setImage(new Moobile.Image().setSource('path/to/an-image.png'));
+
+#### Note:
+
+The CSS class `list-item-image-empty` is added to the root element when the image is empty.
 
 -----
 
@@ -211,6 +220,10 @@ Name     | Type  | Description
 	var listItem = new Moobile.ListItem();
 	listItem.setLabel(new Moobile.Text().setText('Moo'));
 
+#### Note:
+
+The CSS class `list-item-detail-empty` is added to the root element when the detail text is empty.
+
 -----
 
 ### getDetail() {#getDetail}
@@ -229,6 +242,10 @@ Returns the detail label.
 
 Styles {#styles}
 --------------------------------------------------------------------------------
+
+### header {#header-style}
+
+<img src="../../assets/classes/Control/list-item-style-header.png" class="component-style" />
 
 ### checked {#checked-style}
 

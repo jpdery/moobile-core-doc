@@ -91,3 +91,13 @@ Return the text using this text element's `html` property.
 	var text = new Moobile.Text();
 	text.setText('Moo');
 	text.getText(); // returns 'Moo'
+
+-----
+
+### isEmpty() {#isEmpty}
+
+Indicates whether the text value is empty.
+
+#### Returns:
+
+- `Boolean` whether the text value is empty.

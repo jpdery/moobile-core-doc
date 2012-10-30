@@ -52,9 +52,9 @@ Name    | Description                                            | Applies to   
 Events {#events}
 --------------------------------------------------------------------------------
 
-### load {#load-event}
+### preload {#preload-event}
 
-Fired when the image is loaded. If the `preload` option is `true`, this event will be fired once the image is preloaded otherwise it will be fired as soon as a source is specified.
+Fired when this image is loaded. If the `preload` option is `true`, this event will be fired once this image is preloaded otherwise it will be fired as soon as a source is specified.
 
 -----
 
@@ -67,13 +67,13 @@ Methods {#methods}
 
 ### setSource(source) {#setSource}
 
-Sets the image source into the `src` attribute of the element. Passing `null` as the source will unload the image.
+Sets this image's source into the `src` attribute of the element. Passing `null` as the source will unload this image.
 
 #### Parameters:
 
 Name     | Type   | Description
 -------- | ------ | -----------
-`source` | String | The image source.
+`source` | String | The source
 
 #### Returns:
 
@@ -88,11 +88,11 @@ Name     | Type   | Description
 
 ### getSource() {#getSource}
 
-Returns the image source from the `src` attribute of the element.
+Returns the image's source from the `src` attribute of the element.
 
 #### Returns:
 
-- String The image source.
+- String The image's source.
 
 #### Example:
 
@@ -138,11 +138,11 @@ Returns the original image size. The `preload` option must be set to `true` othe
 
 ### isLoaded() {#isLoaded}
 
-Indicates whether the image is loaded.
+Indicates whether this image is loaded.
 
 #### Returns:
 
-- `Boolean` Whether the image is loaded.
+- `Boolean` Whether this image is loaded.
 
 #### Example:
 
@@ -152,3 +152,13 @@ Indicates whether the image is loaded.
 		image.isLoaded(); // returns true
 	});
 	image.isLoaded(); // returns false
+
+-----
+
+### isEmpty() {#isEmpty}
+
+Indicates whether this image has a source.
+
+#### Returns:
+
+- `Boolean` Whether this image has a source.

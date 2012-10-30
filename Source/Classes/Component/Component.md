@@ -77,7 +77,7 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 	component.getChildComponent('my-button-image'); // returns null! The image is a child of the button.
 	component.getChildComponent('my-button').getChildComponent('my-button-image'); // returns a Moobile.Image instance.
 
-##### Creating a component that passes options using element attributes
+##### Creating a component that passes options using element attributes:
 
 	var element =
 		'<div data-option-style-name="moo" data-option-some-option="value">' +
@@ -159,12 +159,24 @@ Fired when this component becomes visible.
 
 Fired when this component becomes hidden.
 
+-----
+
+### owntransitionend {#owntransitionend-event}
+
+Fired when a CSS transition finishes. The transition must be applied to this component's root element.
+
+-----
+
+### ownanimationend {#ownanimationend-event}
+
+Fired when a CSS animation finishes. The animation must be applied to this component's root element.
+
 Members {#members}
 --------------------------------------------------------------------------------
 
 ### element {#element}
 
-The element managed by the component.
+The element managed by this component.
 
 #### Type
 
@@ -191,14 +203,14 @@ Methods {#methods}
 
 ### addChildComponent(component, [where]) {#addChildComponent}
 
-Adds the specified component at the `top` or `bottom` of this component. If `where` is unspecified, the component will be added at the bottom.
+Adds the specified component at the `top` or `bottom` of this component. If `where` is omitted, the specified component will be added at the bottom.
 
 #### Parameters:
 
-Name               | Type                                           | Description
------------------- | ---------------------------------------------- | -----------
-`component`        | `Moobile.Component` | The component.
-`where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
+Name               | Type              | Description
+------------------ | ----------------- | -----------
+`component`        | Moobile.Component | The component.
+`where` *Optional* | String            | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -236,15 +248,15 @@ Resulting element:
 
 ### addChildComponentInside(component, element, [where]) {#addChildComponentInside}
 
-Adds the specified component at the `top` or `bottom` of this component's element. If `where` is unspecified, the component will be added at the `bottom` of the component's element.
+Adds the specified component at the `top` or `bottom` of this component's element. If `where` is omitted, the specified component will be added at the `bottom` of this component's element.
 
 #### Parameters:
 
-Name               | Type                                           | Description
------------------- | ---------------------------------------------- | -----------
-`component`        | `Moobile.Component` | The component.
-`element`          | Mixed                                          | The component's element or a CSS selector.
-`where` *Optional* | String                                         | The component's location, either `top` or `bottom`, defaults to `bottom`.
+Name               | Type              | Description
+------------------ | ----------------- | -----------
+`component`        | Moobile.Component | The component.
+`element`          | Mixed             | The component's element or a CSS selector.
+`where` *Optional* | String            | The component's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -272,10 +284,10 @@ Adds the specified component after another child of this component.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component.
-`after`     | `Moobile.Component` | The component will be placed after this component.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component.
+`after`     | Moobile.Component | The component will be placed after this component.
 
 #### Returns:
 
@@ -304,10 +316,10 @@ Adds the specified component before another child of this component.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component.
-`before`    | `Moobile.Component` | The component will be placed before this component.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component.
+`before`    | Moobile.Component | The component will be placed before this component.
 
 #### Returns:
 
@@ -436,9 +448,9 @@ Returns the index of a specified component or `-1` if the component is not a chi
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component to search for.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component to search for.
 
 #### Returns:
 
@@ -457,11 +469,11 @@ Name        | Type                                           | Description
 
 ### getChildComponents() {#getChildComponents}
 
-Returns all the components in this component.
+Returns all components in this component.
 
 #### Returns:
 
-- `Array` An array of all the components in this component.
+- `Array` An array of all components in this component.
 
 #### Example:
 
@@ -476,7 +488,7 @@ Returns all the components in this component.
 
 ### getChildComponentsOfType(type) {#getAllChildComponentOfType}
 
-Returns all the components of a specified type in this component.
+Returns all components of a specified type in this component.
 
 #### Parameters:
 
@@ -486,7 +498,7 @@ Name   | Type  | Description
 
 #### Returns:
 
-- `Array` An array of all the components of the type in this component.
+- `Array` An array of components of a specified type in this component.
 
 #### Example:
 
@@ -507,9 +519,9 @@ Indicates whether a component is present in this component.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component to search for.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component to search for.
 
 #### Returns:
 
@@ -580,11 +592,11 @@ Replaces a component with another.
 
 #### Parameters:
 
-Name                 | Type                                           | Description
--------------------- | ---------------------------------------------- | -----------
-`component`          | `Moobile.Component` | The component to remove.
-`replacement`        | `Moobile.Component` | The component to replace it with.
-`destroy` *Optional* | Boolean                                        | Whether or not to destroy the old component.
+Name                 | Type              | Description
+-------------------- | ----------------- | -----------
+`component`          | Moobile.Component | The component to remove.
+`replacement`        | Moobile.Component | The component to replace it with.
+`destroy` *Optional* | Boolean           | Whether to destroy the component upon removal.
 
 #### Returns:
 
@@ -606,10 +618,10 @@ Removes a component.
 
 #### Parameters:
 
-Name                 | Type                                           | Description
--------------------- | ---------------------------------------------- | -----------
-`component`          | `Moobile.Component` | The component to remove.
-`destroy` *Optional* | Boolean                                        | Whether or not to destroy the component upon removal.
+Name                 | Type              | Description
+-------------------- | ----------------- | -----------
+`component`          | Moobile.Component | The component to remove.
+`destroy` *Optional* | Boolean           | Whether to destroy the component upon removal.
 
 #### Returns:
 
@@ -632,7 +644,7 @@ Removes all components.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether or not to destroy the components upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the components upon removal.
 
 #### Returns:
 
@@ -649,7 +661,7 @@ Removes all components of a specified type.
 Name                 | Type    | Description
 -------------------- | ------- | -----------
 `type`               | Class   | The component's class.
-`destroy` *Optional* | Boolean | Whether or not to destroy the components upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the components upon removal.
 
 #### Returns:
 
@@ -676,7 +688,7 @@ Removes this component from its parent.
 
 Name                 | Type    | Description
 -------------------- | ------- | -----------
-`destroy` *Optional* | Boolean | Whether or not to destroy the component upon removal.
+`destroy` *Optional* | Boolean | Whether to destroy the component upon removal.
 
 #### Returns:
 
@@ -692,9 +704,9 @@ This method is handled by the `Moobile.Component` class and should not be called
 
 #### Parameters:
 
-Name     | Type                                           | Description
--------- | ---------------------------------------------- | -----------
-`parent` | `Moobile.Component` | The parent.
+Name     | Type              | Description
+-------- | ----------------- | -----------
+`parent` | Moobile.Component | The parent.
 
 #### Returns:
 
@@ -822,6 +834,16 @@ Returns the current style name.
 
 -----
 
+### hasStyle(name) {#hasStyle}
+
+Indicates whether the specified style is currently applied to this component.
+
+#### Returns:
+
+- `Boolean` Whether the specified style is currently applied to this component.
+
+-----
+
 ### addClass(name) {#addClass}
 
 Adds the specified CSS class to this component's element.
@@ -854,15 +876,16 @@ Name   | Type   | Description
 
 -----
 
-### toggleClass(name) {#toggleClass}
+### toggleClass(name, force) {#toggleClass}
 
 Adds or removes the specified CSS class from this component.
 
 #### Parameters:
 
-Name   | Type   | Description
------- | ------ | -----------
-`name` | String | The CSS class.
+Name               | Type    | Description
+------------------ | ------- | -----------
+`name`             | String  | The CSS class.
+`force` *Optional* | Boolean | Force the class to be either added or removed
 
 #### Returns:
 
@@ -888,7 +911,7 @@ Name                  | Type   | Description
 
 ### getElements(selector) {#getElements}
 
-Returns a collection of elements from the component's element that matches the specified selector.
+Returns a collection of elements from this component's element that matches the specified selector.
 
 #### Parameters:
 
@@ -916,7 +939,48 @@ Name      | Type    | Description
 
 - `Boolean` Whether the element exists.
 
-----
+-----
+
+### getRoleElement(name) {#getRoleElement}
+
+Returns the first element within this component's element that matches the specified role.
+
+#### Parameters:
+
+Name   | Type   | Description
+------ | ------ | -----------
+`name` | String | The role.
+
+#### Returns:
+
+- `Element` The first element within this component's element that matches the specified role.
+
+#### Example:
+
+	var component = new Moobile.Component('<div><div data-role="button"></div></div>');
+	component.getRoleElement('button'); // Returns <div data-role="button"></div>
+
+	var component = new Moobile.Component('<div><div data-role="button"><div data-role="label"></div></div></div>');
+	component.getRoleElement('label'); // Returns null because the element with the 'label' role is inside an element with the 'button' role
+
+-----
+
+### getRoleElements(name, limit) {#getRoleElements}
+
+Returns a collection of elements from this component's element that matches the specified role.
+
+#### Parameters:
+
+Name               | Type   | Description
+------------------ | ------ | -----------
+`name`             | String | The role.
+`limit` *Optional* | Number | The maximal amount of elements that can be returned.
+
+#### Returns:
+
+- `Array` A collection of elements from this component's element that matches the specified role.
+
+-----
 
 ### getSize() {#getSize}
 
@@ -929,11 +993,11 @@ The component must be *ready* when calling this method otherwise it won't be mea
 
 - `Object` This component's size.
 
-----
+-----
 
 ### getPosition([relative]) {#getPosition}
 
-Returns this component's position relative to a specified element. If unspecified, the position returned will be relative to its parent.
+Returns this component's position relative to a specified element. If omitted, the position returned will be relative to its parent.
 
 The component must be *ready* when calling this method otherwise it won't be measured.
 
@@ -975,7 +1039,7 @@ This method fires the `hide` event.
 
 ### willBuild() {#willBuild}
 
-Tells this component it's about to be built. This method is called once the component's element is set and before its roles are being processed.
+Tells this component it's about to be built. This method is called once this component's element is set and before its roles are being processed.
 
 Override this method to provide your own implementation.
 
@@ -1007,9 +1071,9 @@ Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component that is about to be added.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component that is about to be added.
 
 -----
 
@@ -1021,71 +1085,99 @@ Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component that has been added.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component that has been added.
 
 -----
 
 ### willRemoveChildComponent(component) {#willRemoveChildComponent}
 
-Tell the component a child component is about to be removed.
+Tell this component a child component is about to be removed.
 
 Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component that is about to be removed.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component that is about to be removed.
 
 -----
 
 ### didRemoveChildComponent(component) {#didRemoveChildComponent}
 
-Tell the component a child component has been removed.
+Tell this component a child component has been removed.
 
 Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name        | Type                                           | Description
------------ | ---------------------------------------------- | -----------
-`component` | `Moobile.Component` | The component that has been removed.
+Name        | Type              | Description
+----------- | ----------------- | -----------
+`component` | Moobile.Component | The component that has been removed.
 
 -----
 
 ### parentComponentWillChange(parent) {#parentComponentWillChange}
 
-Tell the component it's about to be moved to another component.
+Tell this component it's about to be moved to another component.
 
 Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name     | Type                                           | Description
--------- | ---------------------------------------------- | -----------
-`parent` | `Moobile.Component` | The component this component will be moved to.
+Name     | Type              | Description
+-------- | ----------------- | -----------
+`parent` | Moobile.Component | The component this component will be moved to.
 
 -----
 
 ### parentComponentDidChange(parent) {#parentComponentDidChange}
 
-Tell the component it has been moved to a new component.
+Tell this component it has been moved to a new component.
 
 Override this method to provide your own implementation.
 
 #### Parameters:
 
-Name     | Type                                           | Description
--------- | ---------------------------------------------- | -----------
-`parent` | `Moobile.Component` | The component this component has been moved to.
+Name     | Type              | Description
+-------- | ----------------- | -----------
+`parent` | Moobile.Component | The component this component has been moved to.
+
+-----
+
+### windowWillChange(window) {#windowWillChange}
+
+Tell this component it's about to be moved to another window.
+
+Override this method to provide your own implementation.
+
+#### Parameters:
+
+Name     | Type           | Description
+-------- | -------------- | -----------
+`window` | Moobile.Window | The window this component will be moved to.
+
+-----
+
+### windowDidChange(window) {#windowDidChange}
+
+Tell this component it has been moved to a new window.
+
+Override this method to provide your own implementation.
+
+#### Parameters:
+
+Name     | Type           | Description
+-------- | -------------- | -----------
+`parent` | Moobile.Window | The window this component has been moved to.
 
 -----
 
 ### willShow() {#willShow}
 
-Tell the component it's about to become visible.
+Tell thid component it's about to become visible.
 
 Override this method to provide your own implementation.
 
@@ -1093,7 +1185,7 @@ Override this method to provide your own implementation.
 
 ### didShow() {#didShow}
 
-Tell the component it became visible.
+Tell this component it became visible.
 
 Override this method to provide your own implementation.
 
@@ -1101,7 +1193,7 @@ Override this method to provide your own implementation.
 
 ### willHide() {#willHide}
 
-Tell the component it's about to become hidden.
+Tell this component it's about to become hidden.
 
 Override this method to provide your own implementation.
 
@@ -1109,7 +1201,7 @@ Override this method to provide your own implementation.
 
 ### didHide() {#didHide}
 
-Tell the component it became hidden.
+Tell this component it became hidden.
 
 Override this method to provide your own implementation.
 
@@ -1129,31 +1221,56 @@ the end of your implementation.
 Static Methods {#static}
 --------------------------------------------------------------------------------
 
-### Moobile.Component.defineRole(name, target, behavior) {#defineRole}
+### Moobile.Component.defineRole(name, context, options, handler) {#defineRole}
 
 Define the process to execute upon finding an element with the given role.
 
 #### Parameters:
 
-Name       | Type                                           | Description
----------- | ---------------------------------------------- | -----------
-`name`     | String                                         | The name.
-`target`   | `Moobile.Component` | The target component or `null` to define the role for all components.
-`behavior` | Function                                       | The function that defines the role's behavior.
+Name      | Type              | Description
+--------- | ----------------- | -----------
+`name`    | String            | The name.
+`context` | Moobile.Component | The context component or `null` to define the role for all components.
+`options` | Object            | The options.
+`handler` | Function          | The function that handles this role.
+
+#### Options:
+
+Name          | Type    | Description
+------------- | ------- | -----------
+`traversable` | Boolean | Defines whether this component will go continue looking for element with roles within this element upon building, defaults to `false`.
 
 #### Examples:
 
 ##### For every element with the `data-role="wrapped"` attribute found in all types of components, an element will be created and wrapped around it.
 
-	 Moobile.Component.defineRole('wrapped', null, function(element) {
+	 Moobile.Component.defineRole('wrapped', null, null, function(element) {
 	 	new Element('div.wrapped').wraps(element);
 	 });
 
 ##### For every elements with the `data-role="button"` attribute within a `Moobile.ButtonGroup` control, a new `Moobile.Button` instance will be created and added to the group as a child component.
 
-	Moobile.Component.defineRole('button', Moobile.ButtonGroup, function(element) {
+	Moobile.Component.defineRole('button', Moobile.ButtonGroup, null, function(element) {
 		var button = new Moobile.Button(element);
 		this.addChildComponent(button);
+	});
+
+-----
+
+### Moobile.Component.defineAttribute(name, context, handler) {#defineAttribute}
+
+Define the process to execute upon finding a specified attribute of the component's element.
+
+Name      | Type              | Description
+--------- | ----------------- | -----------
+`name`    | String            | The name.
+`context` | Moobile.Component | The context component or `null` to define the role for all components.
+`handler` | Function          | The function that handles this attribute.
+
+#### Example:
+
+	Moobile.Component.defineAttribute('data-style', null, function(value) {
+		this.options.styleName = value;
 	});
 
 -----
@@ -1164,11 +1281,11 @@ Defines a style for a component or all components if `target` is set to `null`.
 
 #### Parameters:
 
-Name       | Type                                           | Description
----------- | ---------------------------------------------- | -----------
-`name`     | String                                         | The style name.
-`target`   | `Moobile.Component` | The target component or `null` to define the role for all components.
-`behavior` | Object                                         | The style definition, which consists of an object with an `attach` and `detach` method.
+Name       | Type              | Description
+---------- | ----------------- | -----------
+`name`     | String            | The style name.
+`target`   | Moobile.Component | The target component or `null` to define the role for all components.
+`behavior` | Object            | The style definition, which consists of an object with an `attach` and `detach` method.
 
 #### Example:
 

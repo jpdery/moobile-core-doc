@@ -30,7 +30,7 @@ We will need to create two view controllers. Open `www/js/app.js` and add the fo
 			this.nextButton = new Moobile.Button();
 			this.nextButton.setLabel('Next view');
 			this.nextButton.addEvent('tap', this.bound('onNextButtonTap'));
-			this.view.addChild(this.nextButton);
+			this.view.addChildComponent(this.nextButton);
 		},
 
 		destroy: function() {
@@ -56,7 +56,7 @@ We will need to create two view controllers. Open `www/js/app.js` and add the fo
 			this.prevButton = new Moobile.Button();
 			this.prevButton.setLabel('Previous view');
 			this.prevButton.addEvent('tap', this.bound('onPrevButtonTap'));
-			this.view.addChild(this.prevButton);
+			this.view.addChildComponent(this.prevButton);
 		},
 
 		destroy: function() {
@@ -113,7 +113,7 @@ The next step is to add a `tap` event on both buttons. This will allow to push t
 			this.nextButton = new Moobile.Button();
 			this.nextButton.setLabel('Next view');
 			this.nextButton.addEvent('tap', this.bound('onNextButtonTap'));
-			this.view.addChild(this.nextButton);
+			this.view.addChildComponent(this.nextButton);
 		},
 
 		destroy: function() {
@@ -139,7 +139,7 @@ The next step is to add a `tap` event on both buttons. This will allow to push t
 			this.prevButton = new Moobile.Button();
 			this.prevButton.setLabel('Previous view');
 			this.prevButton.addEvent('tap', this.bound('onPrevButtonTap'));
-			this.view.addChild(this.prevButton);
+			this.view.addChildComponent(this.prevButton);
 		},
 
 		destroy: function() {

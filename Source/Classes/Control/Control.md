@@ -31,14 +31,14 @@ Don't instantiate this class. Instead, extend it by creating subclasses for your
 
 This class overrides the following method:
 
-- `shouldFireEvent`: Returns `false` if the control is disabled.
+- `shouldFireEvent`: Returns `false` if this control is disabled.
 
 Methods {#methods}
 --------------------------------------------------------------------------------
 
 ### setDisabled(value) {#setDisabled}
 
-Sets whether this control is disabled. The CSS class `is-disabled` is added to the control element upon being disabled.
+Sets whether this control is disabled. The CSS class `is-disabled` is added to this control's element upon being disabled.
 
 Events won't be fired when a control is disabled.
 
@@ -66,7 +66,7 @@ Indicate whether this control is disabled.
 
 ### setSelected(value) {#setSelected}
 
-Sets whether this control is selected. The CSS class `is-selected` is added to the control element upon being disabled.
+Sets whether this control is selected. The CSS class `is-selected` is added to this control's element upon being disabled.
 
 #### Parameters:
 
@@ -92,7 +92,7 @@ Indicates whether this control is selected.
 
 ### setHighlighted(value) {#setHighlighted}
 
-Sets whether this control is selected. The CSS class `is-highlighted` is added to the control element upon being highlighted.
+Sets whether this control is selected. The CSS class `is-highlighted` is added to this control's element upon being highlighted.
 
 #### Parameters:
 

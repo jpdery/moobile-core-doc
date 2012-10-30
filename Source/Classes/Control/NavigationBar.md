@@ -32,7 +32,7 @@ Name        | Type   | Description
 
 	<div class="bar navigation-bar">
 		<div data-role="item" class="bar-item navigation-bar-item">
-			<div class="bar-title">
+			<div class="bar-title-wrapper">
 				<div data-role="title" class="text title"></div>
 			</div>
 		</div>

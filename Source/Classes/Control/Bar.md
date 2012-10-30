@@ -36,7 +36,7 @@ Name        | Type   | Description
 
 #### Notes:
 
-Upon initialization, this control creates its item with a [Moobile.BarItem](../Control/BarItem.md) instance using the bar element's content. For instance, if you create a bar like this:
+Upon initialization, this control creates its item with a [Moobile.BarItem](../Control/BarItem.md) instance using this bar element's content. For instance, if you create a bar like this:
 
 	<div data-role="bar">
 		<div class="element-one"></div>

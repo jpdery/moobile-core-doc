@@ -27,7 +27,8 @@ Name                  | Type    | Description
 `className`           | String  | The button group's extended CSS class name, defaults to `null`.
 `styleName`           | String  | The button group's default style, defaults to `null`.
 `tagName`             | String  | The button group's element tag name, defaults to `div`.
-`deselectable`        | Boolean | Whether a button can be deselected, defaults to `false`.
+`layout`              | String  | The button group's layout, either `horizontal` or `vertical`, defaults to `horizontal`.
+`selectable`          | Boolean | Whether a button can be selected, defaults to `true`.
 `selectedButtonIndex` | Number  | The button group's default selected button index, defaults to `-1`.
 
 #### Generates:
@@ -36,7 +37,7 @@ Name                  | Type    | Description
 
 #### Note:
 
-Buttons can be added to the button group by adding elements with the `button` `data-role` attribute:
+Buttons can be added to this button group by adding elements with the `button` `data-role` attribute:
 
 	<div data-role="button-group">
 		<div data-role="button">Button 1</div>
@@ -210,14 +211,14 @@ Unselects the selected button.
 
 ### addButton(button, [where]) {#addButton}
 
-Adds the specified button at the `top` or `bottom` of this button group. If `where` is unspecified, the button will be added at the bottom of this button group.
+Adds the specified button at the `top` or `bottom` of this button group. If `where` is omitted, the button will be added at the bottom of this button group. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
 
 #### Parameters:
 
-Name               | Type                                   | Description
------------------- | -------------------------------------- | -----------
-`button`           | [Moobile.Button](../Control/Button.md) | The button.
-`where` *Optional* | String                                 | The button's location, either `top` or `bottom`, defaults to `bottom`.
+Name               | Type   | Description
+------------------ | ------ | -----------
+`button`           | Mixed  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
+`where` *Optional* | String | The button's location, either `top` or `bottom`, defaults to `bottom`.
 
 #### Returns:
 
@@ -233,13 +234,13 @@ Name               | Type                                   | Description
 
 ### addButtonAfter(button, after) {#addButtonAfter}
 
-Adds the specified button after a button from this button group.
+Adds the specified button after a button from this button group. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
 
 #### Parameters:
 
 Name     | Type                                   | Description
 -------- | -------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md) | The button.
+`button` | Mixed                                  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
 `after`  | [Moobile.Button](../Control/Button.md) | The button will be placed after this button.
 
 #### Returns:
@@ -258,13 +259,13 @@ Name     | Type                                   | Description
 
 ### addButtonBefore(button, before) {#addButtonBefore}
 
-Adds the specified button before a button from this button group.
+Adds the specified button before a button from this button group. The button may be a string. In this case, this method will create a [Moobile.Button](../Control/Button.md) instance and set the specified string as its label.
 
 #### Parameters:
 
 Name     | Type                                   | Description
 -------- | -------------------------------------- | -----------
-`button` | [Moobile.Button](../Control/Button.md) | The button.
+`button` | Mixed                                  | The button as a string or a [Moobile.Button](../Control/Button.md) instance.
 `after`  | [Moobile.Button](../Control/Button.md) | The button will be placed before this button.
 
 #### Returns:
@@ -278,6 +279,25 @@ Name     | Type                                   | Description
 	var buttonTwo = new Moobile.Button();
 	buttonGroup.addButton(buttonOne);
 	buttonGroup.addButtonBefore(buttonTwo, buttonOne); // buttonTwo is before buttonOne
+
+-----
+
+### getButtons() {#getButtons}
+
+Returns all buttons in this button group.
+
+#### Returns:
+
+- `Array` An array of all buttons in this button group.
+
+#### Example:
+
+	var buttonGroup = new Moobile.ButtonGroup();
+	var buttonOne = new Moobile.Button();
+	var buttonTwo = new Moobile.Button();
+	buttonGroup.addButton(buttonOne);
+	buttonGroup.addButton(buttonTwo);
+	buttonGroup.getButtons(); // returns [buttonOne, buttonTwo]
 
 -----
 
@@ -338,7 +358,7 @@ Removes a button.
 Name                 | Type                                   | Description
 -------------------- | -------------------------------------- | -----------
 `button`             | [Moobile.Button](../Control/Button.md) | The button to remove.
-`destroy` *Optional* | Boolean                                | Whether or not to destroy the button upon removal.
+`destroy` *Optional* | Boolean                                | Whether to destroy the button upon removal.
 
 #### Returns:
 
@@ -363,7 +383,7 @@ Removes all buttons.
 
 Name                 | Type     | Description
 -------------------- | -------- | -----------
-`destroy` *Optional* | Boolean  | Whether or not to destroy the button upon removal.
+`destroy` *Optional* | Boolean  | Whether to destroy the buttons upon removal.
 
 #### Returns:
 
@@ -377,3 +397,29 @@ Name                 | Type     | Description
 	buttonGroup.addButton(buttonOne);
 	buttonGroup.addButton(buttonTwo);
 	buttonGroup.removeAllButtons(); // no buttons remains
+
+-----
+
+### setSelectable(selectable) {#setSelectable}
+
+Sets whether buttons from this button group are selectable.
+
+#### Parameters:
+
+Name         | Type    | Description
+------------ | ------- | -----------
+`selectable` | Boolean | Whether buttons from this button group are selectable.
+
+#### Returns:
+
+- `Moobile.ButtonGroup` This Moobile.ButtonGroup instance.
+
+-----
+
+### isSelectable(selectable) {#isSelectable}
+
+Indicates whether buttons from this button group are selectable.
+
+#### Returns:
+
+- `Boolean` Whether buttons from this button group are selectable.

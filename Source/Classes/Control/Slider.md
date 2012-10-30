@@ -22,13 +22,16 @@ Name                 | Type    | Description
 
 #### Options:
 
-Name        | Type   | Description
------------ | ------ | -----------
-`className` | String | The slider's extended CSS class name, defaults to `null`.
-`styleName` | String | The slider's default style, defaults to `null`.
-`tagName`   | String | The slider's element tag name, defaults to `div`.
-`min`       | Number | The slider's minimum value, defaults to `0`.
-`max`       | Number | The slider's maximum value, defaults to `100`.
+Name        | Type    | Description
+----------- | ------- | -----------
+`className` | String  | The slider's extended CSS class name, defaults to `null`.
+`styleName` | String  | The slider's default style, defaults to `null`.
+`tagName`   | String  | The slider's element tag name, defaults to `div`.
+`value`     | Number  | The slider's initial value.
+`snap`      | Boolean | Whether to snap to each values.
+`mode`      | String  | The slider's mode, either `horizontal` or `vertical`, defaults to `horizontal`.
+`minimum`   | Number  | The slider's minimum value, defaults to `0`.
+`maximum`   | Number  | The slider's maximum value, defaults to `100`.
 
 #### Generates:
 
@@ -43,6 +46,7 @@ Name        | Type   | Description
 This class overrides the following method:
 
 - `willBuild`: Call the parent method at the `top` of your implementation if you override this method.
+- `didBuild`: Call the parent method at the `top` of your implementation if you override this method.
 - `didBecomeReady`: Call the parent method at the `top` of your implementation if you override this method.
 - `destroy`  : Call the parent method at the `bottom` of your implementation if you override this method.
 
@@ -67,24 +71,14 @@ Events {#events}
 
 ### change {#change-event}
 
-Fired when the slider's value change either by setting the value manually or by moving the slider's thumb.
+Fired when this slider's value change either by setting the value manually or by moving this slider's thumb.
 
 Members {#members}
 --------------------------------------------------------------------------------
 
-### slider {#slider}
-
-The mootools slider used to move this slider's thumb on the track.
-
-#### Type
-
-- `Slider`
-
------
-
 ### trackElement {#trackElement}
 
-The element used to create this slider's track.
+The element that defines this slider's movable area.
 
 #### Type
 
@@ -95,6 +89,26 @@ The element used to create this slider's track.
 ### thumbElement {#thumbElement}
 
 The element used to create this slider's thumb.
+
+#### Type
+
+- `Element`
+
+-----
+
+### rangeElement {#rangeElement}
+
+The element that defines this slider's value movable area.
+
+#### Type
+
+- `Element`
+
+-----
+
+### valueElement {#valueElement}
+
+The element that defines the second color of this slider.
 
 #### Type
 
@@ -111,7 +125,7 @@ Sets this slider's value and move it's thumb element to the proper position.
 
 Name    | Type   | Description
 ------- | ------ | -----------
-`value` | Number | The slider value.
+`value` | Number | This slider's value.
 
 #### Returns:
 
@@ -137,3 +151,65 @@ Returns this slider's current value.
 	var slider = new Moobile.Slider();
 	slider.setValue(50);
 	slider.getValue(); // returns 50
+
+-----
+
+### setMinimum(minimum) {#setMinimum}
+
+Sets this slider's minimum value.
+
+#### Parameters:
+
+Name      | Type   | Description
+--------- | ------ | -----------
+`minimum` | Number | This slider's minimum value.
+
+#### Returns:
+
+- `Moobile.Slider` This Moobile.Slider instance.
+
+-----
+
+### getMinimum() {#getMinimum}
+
+Returns this slider's minimum value.
+
+#### Returns:
+
+- `Number` The minimum value.
+
+-----
+
+### setMaximum(maximum) {#setMaximum}
+
+Sets this slider's maximum value.
+
+#### Parameters:
+
+Name      | Type   | Description
+--------- | ------ | -----------
+`maximum` | Number | This slider's maximum value.
+
+#### Returns:
+
+- `Moobile.Slider` This Moobile.Slider instance.
+
+-----
+
+### getMaximum() {#getMaximum}
+
+Returns this slider's maximum value.
+
+#### Returns:
+
+- `Number` The maximum value.
+
+-----
+
+### refresh() {#refresh}
+
+Refreshes the measures of this slider.
+
+#### Returns:
+
+- `Moobile.Slider` This Moobile.Slider instance.

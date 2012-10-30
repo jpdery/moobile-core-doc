@@ -31,16 +31,18 @@ Name        | Type   | Description
 
 #### Generates:
 
-	<div class="view view-stack">
-		<div data-role="view-content" class="view-content view-stack-content"></div>
+	<div class="view view-stack view-layout-vertical">
+		<div data-role="content-wrapper" class="view-content-wrapper">
+			<div data-role="content" class="view-content view-stack-content"></div>
+		</div>
 	</div>
 
 #### Defined roles:
 
-Name           | Description
--------------- | -----------
-`view`         | Defines an element acting as a view. Use the `data-view` attribute to specify a subclass instead
-`view-content` | Defines an element acting as a view's content. If unspecified, the contents of the content's element will act as its view content.
+Name      | Description
+--------- | -----------
+`view`    | Defines an element acting as a view. Use the `data-view` attribute to specify a subclass instead
+`content` | Defines an element acting as a view's content. If omitted, the contents of the view's element will act as its view content.
 
 #### Note:
 

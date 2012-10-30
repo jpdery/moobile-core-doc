@@ -13,4 +13,4 @@ Initialization {#initialize}
 	var viewControllerStack = new Moobile.ViewControllerStack();
 	viewControllerStack.pushViewController(new Moobile.ViewController, new Moobile.ViewTransition.Cover.Box);
 
-<div data-simulator-app="../../assets/classes/ViewTransition/ViewTransition.Cover.Box.html"></div>
+<div data-simulator-app="../../assets/classes/ViewTransition/ViewTransition.Cover.Box.html" data-device="iPad"></div>
