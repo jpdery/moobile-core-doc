@@ -42,7 +42,7 @@ This folder contains the HTML documentation for the current version of Moobile.
 #### moobile-core
 This folder contains Moobile's source with all dependencies. If you need to rebuild the source, use the following command from root directory:
 
-	moobile-core/build > www/js/libs/moobile-0.1.1.js
+	moobile-core/build > www/js/libs/moobile-0.2.js
 
 #### moobile-psd
 This folder contains various psd files used for the current iOS style.
