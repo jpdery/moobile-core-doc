@@ -267,3 +267,10 @@ Override this method to provide your own implementation.
 Name         | Type         | Description
 ------------ | ------------ | -----------
 `parentView` | Moobile.View | The view that is about to become the parent view of this view.
+
+Styles {#styles}
+--------------------------------------------------------------------------------
+
+### dark {#dark-style}
+
+### light {#light-style}

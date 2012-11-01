@@ -5,7 +5,7 @@ This guide will walk you through the steps needed to create an app that moves fr
 
 ### Requirements
 
-To use this guide you must download and extract the [Moobile Boiler Plate](https://moobilejs.com/donwload/moobile-boiler-plate-0.1.1.zip).
+To use this guide you must download and extract the [Moobile Boiler Plate](https://moobilejs.com/donwload/moobile-boiler-plate-0.2.zip).
 
 ### Note
 
